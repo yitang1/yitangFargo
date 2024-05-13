@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		<AssemblyName>yitangFargo</AssemblyName>
+			<NoWarn>$(NoWarn);NU1504;NU1505;NU1701</NoWarn>
+		<TargetFramework>net8.0</TargetFramework>
+		<PlatformTarget>x64</PlatformTarget>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="CalamityMod">
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\CalamityMod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FargowiltasCrossmod">
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\FargowiltasCrossmod.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FargowiltasSouls">
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\FargowiltasSouls.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Luminance">
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\Luminance.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<!-- References -->
+
+</Project>
