@@ -1,7 +1,7 @@
 ### yitangFargo 💚
 这是一个tmodloader的模组（Mod）。
 #### Mod下载：
-点击上面“yitangFargo.tmod“的Mod文件，打开的界面点击右上角三个点，有个Download，点击后等一会即可弹出浏览器下载。
+点击上面“**yitangFargo.tmod**“的Mod文件，打开的界面点击右上角三个点，有个“**Download**”，点击后等一会即可弹出浏览器下载。
 
 #### Mod安装：
 因为此Mod未上传创意工坊，所以需要玩家**手动安装**。
