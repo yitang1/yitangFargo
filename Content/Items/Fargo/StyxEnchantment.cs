@@ -1,13 +1,14 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using FargowiltasSouls.Content.Items.Armor;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Content.Items.Armor;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using FargowiltasSouls;
 
 namespace yitangFargo.Content.Items.Fargo
 {
@@ -36,6 +37,8 @@ namespace yitangFargo.Content.Items.Fargo
             if (player.HasEffect<StyxEffect>())
             {
                 ModContent.GetInstance<StyxCrown>().UpdateArmorSet(player);
+                //不再增加玩家的基础数值
+                player.GetDamage(player.ProcessDamageTypeFromHeldItem()) -= 0.20f;
             }
             //憎恶手杖
             if (player.HasEffect<StyxWand>())

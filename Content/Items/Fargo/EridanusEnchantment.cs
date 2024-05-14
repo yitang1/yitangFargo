@@ -1,12 +1,13 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Armor;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Content.Items.Armor;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using FargowiltasSouls;
 
 namespace yitangFargo.Content.Items.Fargo
 {
@@ -34,6 +35,10 @@ namespace yitangFargo.Content.Items.Fargo
             if (player.HasEffect<EridanusEffect>())
             {
                 ModContent.GetInstance<EridanusHat>().UpdateArmorSet(player);
+                //不再默认增加玩家的基础数值，不然会变得超模，大概
+                DamageClass damageClass = player.ProcessDamageTypeFromHeldItem();
+                player.GetDamage(damageClass) -= 0.20f;
+                player.GetCritChance(damageClass) -= 10;
             }
             //
             //if (player.HasEffect<EridanusCore>())

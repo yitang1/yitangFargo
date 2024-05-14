@@ -1,13 +1,14 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using FargowiltasSouls.Content.Items.Armor;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Content.Items.Armor;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using FargowiltasSouls;
 
 namespace yitangFargo.Content.Items.Fargo
 {
@@ -36,6 +37,8 @@ namespace yitangFargo.Content.Items.Fargo
             if (player.HasEffect<TrueMutantEffect>())
             {
                 ModContent.GetInstance<MutantMask>().UpdateArmorSet(player);
+                //不再对玩家进行基础数值的提升 (话说都突变体后了，这点数值提升还有影响吗……)
+                player.FargoSouls().AttackSpeed -= 0.2f;
             }
             //突变之眼
             if (player.HasEffect<TrueMutantEye>())

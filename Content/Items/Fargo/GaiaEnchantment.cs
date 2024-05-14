@@ -1,11 +1,11 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Armor;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Content.Items.Armor;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
 
 namespace yitangFargo.Content.Items.Fargo
@@ -34,6 +34,11 @@ namespace yitangFargo.Content.Items.Fargo
             if (player.HasEffect<BGaiaEffect>())
             {
                 ModContent.GetInstance<GaiaHelmet>().UpdateArmorSet(player);
+                //不再增加玩家的基础数值，不然会变得超模
+                player.GetAttackSpeed(DamageClass.Melee) -= 0.1f;
+                player.manaCost += 0.1f;
+                player.maxMinions -= 4;
+                player.maxTurrets -= 4;
             }
             //
             //if (player.HasEffect<>())
