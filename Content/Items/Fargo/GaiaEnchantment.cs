@@ -38,7 +38,6 @@ namespace yitangFargo.Content.Items.Fargo
                 player.GetAttackSpeed(DamageClass.Melee) -= 0.1f;
                 player.manaCost += 0.1f;
                 player.maxMinions -= 4;
-                player.maxTurrets -= 4;
             }
             //
             //if (player.HasEffect<>())
