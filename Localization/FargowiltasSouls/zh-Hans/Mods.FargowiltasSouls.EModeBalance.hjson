@@ -1,0 +1,66 @@
+Nerf: ""
+Buff: ""
+Neutral: ""
+Damage: ""
+DamagePositive: ""
+Speed: ""
+SpeedPositive: ""
+RodofDiscord: ""
+Split: 降低分裂频率
+ChlorophyteBullet:
+	'''
+	飞行速度减慢
+	持续时间降低
+	'''
+WaterBolt: ""
+DemonScythe: ""
+HolyDodge: ""
+FrozenTurtleShell: ""
+BrainOfConfusion: ""
+ZenithNone: ""
+ZenithHitRate:
+	'''
+	通过击败以下Boss
+	可获得增强：
+	'''
+VampireKnives: 生命值高于33%时削弱吸血能力
+Zapinator: ""
+CoinGun:
+	'''
+	铂金币和金币的伤害大幅降低
+	银币的伤害小幅降低
+	铜币的伤害提升
+	'''
+OOASet: 当你使用其他职业的武器攻击时，抵消部分召唤伤害降低惩罚
+MiningHelmet: 提高不死矿工的刷新率
+MoonsDrops: Boss在{0}波前不会掉落物品
+MoonsWaves: 死亡会降低当前波数
+WhipSpeed: ""
+WhipStack: ""
+DefensePrefix: ""
+ManaPots: 魔力疾病期间无法使用，但恢复速度提高50%
+MinionStack: 同时召唤超过3个相同召唤物时，它们的伤害会降低（超过12个后不再降低）
+SummonMulticlass: 当你使用其他职业的武器攻击时，召唤伤害降低（在撒旦军队中除外）
+ShadowDodge: ""
+IceBarrier: ""
+SpearRework: 重做长矛挥舞动画
+PalladiumPikeRework: 命中后大幅提升生命再生速度
+CobaltNaginataRework: 命中会造成小范围爆炸
+MythrilHalberdRework:
+	'''
+	不攻击持续2秒后
+	下一击造成5倍伤害
+	'''
+OrichalcumHalberdRework: 挥舞时长矛尖端会释放花瓣
+SuperStarCannon: 最大穿透次数降至7次
+WarmthPotionNerf: ""
+CrossNecklaceNerf: ""
+IceBladeFrostburn: 射弹会造成霜冻减益
+JungleRose:
+	'''
+	提升抓人草类敌怪
+	掉落世纪之果的几率
+	'''
+StarCloak: ""
+// WeatherPain: Increased hit frequency and pierce
+// HoundiusShootius: Increased fireball velocity

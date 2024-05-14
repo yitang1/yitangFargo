@@ -1,0 +1,8 @@
+ModAssemblies/
+yitangCN/
+tModLoader.targets
+*.csproj
+*.sln
+obj/
+bin/
+.vs/

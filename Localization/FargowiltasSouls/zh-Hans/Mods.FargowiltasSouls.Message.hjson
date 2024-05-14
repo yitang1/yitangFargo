@@ -1,0 +1,22 @@
+MasochistModeUnlocked: "{$Mods.FargowiltasSouls.Items.Masochist.DisplayName} 随着新涌现的能量而波动……！"
+
+WorldUpdatingSystem: {
+	EternityOn: 永恒模式已开启！
+	EternityOff: 永恒模式已关闭。
+	EternityWrongDifficulty: 难度过低，永恒模式已关闭……
+	EternityMasterWarning: ""
+	MasochistOn: 大师模式与永恒模式结合：受虐模式已开启！
+	MasochistOnZenith: 大师模式与天顶种子结合：受虐模式已开启！
+	MasochistFTWWarning: 受虐模式与FTW种子结合！[c/FF0000:这个模式非常困难！]请自行承担风险！
+	MasochistOff: 受虐模式已关闭。
+	BloodMoonCancel: 血月改变了主意，并溜之大吉……
+}
+
+Revived: 你复活了！
+NoMusic1: ""
+NoMusic2: ""
+NoDLC1: ""
+NoDLC2: ""
+Wiki: ""
+PatreonNameEffect: 你的特殊捐赠者效果已激活！
+MoonsDeathPenalty: 事件回溯，波数倒退！
