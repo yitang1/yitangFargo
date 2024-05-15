@@ -11,14 +11,14 @@ namespace yitangFargo.Global.Config
 
         [Header("FCItems")]
         [ReloadRequired]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool FCRecipes;
 
         [DefaultValue(false)]
         public bool OldEnchant;
 
         [Header("FCNPC")]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool FCNPC;
 
         [Header("FCBuff")]
