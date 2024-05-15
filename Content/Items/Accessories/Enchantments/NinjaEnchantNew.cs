@@ -20,8 +20,12 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
         {
             if (item.type == ModContent.ItemType<NinjaEnchant>() && ytFargoConfig.Instance.OldEnchant)
             {
-                player.yitangFargo().IamNinja = true;
                 player.AddEffect<NinjaEffectNew>(item);
+            }
+
+            if (item.type == ModContent.ItemType<NinjaEnchant>() && ytFargoConfig.Instance.FCNPC)
+            {
+                player.yitangFargo().IamNinja = true;
             }
         }
 
