@@ -18,14 +18,17 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<NinjaEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<NinjaEnchant>())
             {
-                player.AddEffect<NinjaEffectNew>(item);
-            }
+                if (ytFargoConfig.Instance.OldEnchant)
+                {
+                    player.AddEffect<NinjaEffectNew>(item);
+                }
 
-            if (item.type == ModContent.ItemType<NinjaEnchant>() && ytFargoConfig.Instance.FCNPC)
-            {
-                player.yitangFargo().IamNinja = true;
+                if (ytFargoConfig.Instance.FCNPC)
+                {
+                    player.yitangFargo().IamNinja = true;
+                }
             }
         }
 
