@@ -264,8 +264,8 @@ namespace yitangFargo.NPCs
 
             vanillaES.Add(CustomPrice(ModContent.ItemType<UniverseSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
                 .Add(CustomPrice(ModContent.ItemType<DimensionSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-                .Add(CustomPrice(ModContent.ItemType<TerrariaSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-                .Add(CustomPrice(ModContent.ItemType<MasochistSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+                .Add(CustomPrice(ModContent.ItemType<TerrariaSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+                .Add(CustomPrice(ModContent.ItemType<MasochistSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
                 .Add(CustomPrice(ModContent.ItemType<CalamitySoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
                 .Add(CustomPrice(ModContent.ItemType<EternityForce>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul });
 

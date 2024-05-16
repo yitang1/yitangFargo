@@ -14,7 +14,7 @@ using Terraria.ModLoader;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    [AutoloadEquip(EquipType.Front, EquipType.Back, EquipType.Shield)]
+    [AutoloadEquip(EquipType.Face, EquipType.Front, EquipType.Back, EquipType.Shield)]
     public class MasochistSoulNew : BaseSoul
     {
         public override bool Eternity => true;
@@ -23,7 +23,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         {
             base.SetDefaults();
 
-            Item.value = 5000000;
+            Item.value = Item.buyPrice(5, 0, 0, 0);
             Item.defense = 30;
             Item.useTime = 180;
             Item.useAnimation = 180;

@@ -316,16 +316,6 @@ Items: {
 		Tooltip: ""
 	}
 
-	CalamitySoul: {
-		DisplayName: Calamity Soul
-		Tooltip: ""
-	}
-
-	EternityForce: {
-		DisplayName: Eternity Force
-		Tooltip: ""
-	}
-
 	ColossusSoulNew: {
 		DisplayName: Colossus Soul New
 		Tooltip: ""
@@ -348,11 +338,6 @@ Items: {
 
 	WorldShaperSoulNew: {
 		DisplayName: World Shaper Soul New
-		Tooltip: ""
-	}
-
-	DimensionSoulNew: {
-		DisplayName: Dimension Soul New
 		Tooltip: ""
 	}
 
@@ -383,6 +368,31 @@ Items: {
 
 	UniverseSoulNew: {
 		DisplayName: Universe Soul New
+		Tooltip: ""
+	}
+
+	DimensionSoulNew: {
+		DisplayName: Dimension Soul New
+		Tooltip: ""
+	}
+
+	TerrariaSoulNew: {
+		DisplayName: Terraria Soul New
+		Tooltip: ""
+	}
+
+	MasochistSoulNew: {
+		DisplayName: Masochist Soul New
+		Tooltip: ""
+	}
+
+	CalamitySoul: {
+		DisplayName: Calamity Soul
+		Tooltip: ""
+	}
+
+	EternityForce: {
+		DisplayName: Eternity Force
 		Tooltip: ""
 	}
 
@@ -503,13 +513,19 @@ Configs: {
 		DisplayName: yt Fargo Config
 
 		Headers: {
+			FCRecipes: FC Recipes
 			FCItems: FC Items
 			FCNPC: FC NPC
 			FCBuff: FC Buff
 		}
 
-		FCRecipes: {
-			Label: F C Recipes
+		FargoSoulsRecipe: {
+			Label: Fargo Souls Recipe
+			Tooltip: ""
+		}
+
+		CalamityFargoRecipe: {
+			Label: Calamity Fargo Recipe
 			Tooltip: ""
 		}
 

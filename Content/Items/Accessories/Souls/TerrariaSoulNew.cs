@@ -44,7 +44,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         {
             base.SetDefaults();
 
-            Item.value = 5000000;
+            Item.value = Item.buyPrice(5, 0, 0, 0);
             Item.rare = -12;
         }
 

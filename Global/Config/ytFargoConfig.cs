@@ -9,11 +9,16 @@ namespace yitangFargo.Global.Config
 
         public static ytFargoConfig Instance;
 
-        [Header("FCItems")]
+        [Header("FCRecipes")]
         [ReloadRequired]
         [DefaultValue(true)]
-        public bool FCRecipes;
+        public bool FargoSoulsRecipe;
 
+        [ReloadRequired]
+        [DefaultValue(false)]
+        public bool CalamityFargoRecipe;
+
+        [Header("FCItems")]
         [DefaultValue(false)]
         public bool OldEnchant;
 

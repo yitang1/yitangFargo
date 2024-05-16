@@ -683,36 +683,6 @@ Items: {
 			'''
 	}
 
-	CalamitySoul: {
-		DisplayName: 暴君之魂
-		Tooltip:
-			'''
-			拥有几乎所有灾厄盔甲的套装效果
-			拥有绝大多数灾厄饰品的效果
-			[i:yitangFargo/AnnihilationForce] 嗜血的癫狂笼罩着恐惧之夜，拥有湮灭之力的效果
-			[i:yitangFargo/DesolationForce] 践踏与摧残遍布着废墟之地，拥有荒芜之力的效果
-			[i:yitangFargo/DevastationForce] 永燃的狱火奴役着尘世亡灵，拥有毁灭之力的效果
-			[i:yitangFargo/ExaltationForce] 不朽传说重塑着秩序与混乱，拥有升华之力的效果
-			“而在最后，这片血与火的大地，终于再次归于沉寂……”
-			'''
-	}
-
-	EternityForce: {
-		DisplayName: 永恒之力
-		Tooltip:
-			'''
-			[i:yitangFargo/NekomiEnchantment] 拥有猫猫睡衣盔甲的套装效果
-			[i:yitangFargo/GaiaEnchantment] 拥有盖亚盔甲的套装效果
-			[i:yitangFargo/EridanusEnchantment] 拥有波江盔甲的套装效果
-			[i:yitangFargo/StyxEnchantment] 拥有冥河盔甲的套装效果
-			[i:yitangFargo/TrueMutantEnchantment] 拥有真·突变盔甲的套装效果
-			[i:yitangFargo/NekomiEnchantment] 拥有闪烁崇心的效果
-			[i:yitangFargo/StyxEnchantment] 拥有憎恶手杖的效果
-			[i:yitangFargo/TrueMutantEnchantment] 拥有突变之眼的效果
-			“其蕴含着伐木工0.00001%的力量”
-			'''
-	}
-
 	ColossusSoulNew: {
 		DisplayName: 巨像之魂
 		Tooltip:
@@ -792,22 +762,6 @@ Items: {
 			可在魂石效果配置菜单中禁用此效果
 			拥有贝壳电话、宝藏磁铁和皇家凝胶的效果
 			“无限的可能性”
-			'''
-	}
-
-	DimensionSoulNew: {
-		DisplayName: 维度之魂
-		Tooltip:
-			'''
-			最大生命值增加300点
-			增加8点生命再生速度，伤害减免提高20%
-			[i:yitangFargo/FlightMasterySoulNew][i:yitangFargo/SupersonicSoulNew] 允许无限飞行和超音速奔跑
-			[i:yitangFargo/ColossusSoulNew] 千军万马无法撼动你的意志力，拥有巨像之魂的效果
-			[i:yitangFargo/SupersonicSoulNew] 你风驰电掣般的速度掠过旷野，拥有超音速之魂的效果
-			[i:yitangFargo/FlightMasterySoulNew] 高远的苍穹在你眼中黯然失色，拥有飞行大师之魂的效果
-			[i:yitangFargo/TrawlerSoulNew] 奇珍异宝都尽数收于你的囊中，拥有捕鱼之魂的效果
-			[i:yitangFargo/WorldShaperSoulNew] 你拥有巧夺天工般的创造之力，拥有铸世者之魂的效果
-			“泰拉瑞亚的维度触手可及”
 			'''
 	}
 
@@ -894,6 +848,89 @@ Items: {
 			'''
 	}
 
+	DimensionSoulNew: {
+		DisplayName: 维度之魂
+		Tooltip:
+			'''
+			最大生命值增加300点
+			增加8点生命再生速度，伤害减免提高20%
+			[i:yitangFargo/FlightMasterySoulNew][i:yitangFargo/SupersonicSoulNew] 允许无限飞行和超音速奔跑
+			[i:yitangFargo/ColossusSoulNew] 千军万马无法撼动你的意志力，拥有巨像之魂的效果
+			[i:yitangFargo/SupersonicSoulNew] 你风驰电掣般的速度掠过旷野，拥有超音速之魂的效果
+			[i:yitangFargo/FlightMasterySoulNew] 高远的苍穹在你眼中黯然失色，拥有飞行大师之魂的效果
+			[i:yitangFargo/TrawlerSoulNew] 奇珍异宝都尽数收于你的囊中，拥有捕鱼之魂的效果
+			[i:yitangFargo/WorldShaperSoulNew] 你拥有巧夺天工般的创造之力，拥有铸世者之魂的效果
+			“泰拉瑞亚的维度触手可及”
+			'''
+	}
+
+	TerrariaSoulNew: {
+		DisplayName: 泰拉之魂
+		Tooltip:
+			'''
+			[i:FargowiltasSouls/TimberForce] 苍劲有力的根须深入你的灵魂，拥有森林之力的效果 
+			[i:FargowiltasSouls/TerraForce] 大地的奥秘在你眼中一览无余，拥有泰拉之力的效果 
+			[i:FargowiltasSouls/EarthForce] 生生不息的祝福于你手中绽放，拥有大地之力的效果 
+			[i:FargowiltasSouls/NatureForce] 天地万物在你的指尖翻腾起舞，拥有自然之力的效果 
+			[i:FargowiltasSouls/LifeForce] 流转不灭的自然生灵庇佑着你，拥有生命之力的效果 
+			[i:FargowiltasSouls/SpiritForce] 尘世亡魂追逐着你不朽的精神，拥有心灵之力的效果 
+			[i:FargowiltasSouls/ShadowForce] 回荡恶魔低语的枷锁伴你身形，拥有暗影之力的效果 
+			[i:FargowiltasSouls/WillForce] 力挽狂澜的决心驱散你的迷茫，拥有意志之力的效果 
+			[i:FargowiltasSouls/CosmoForce] 你的身心充满力撼恒星的潜力，拥有宇宙之力的效果 
+			“泰拉之主，天地共证”
+			'''
+	}
+
+	MasochistSoulNew: {
+		DisplayName: 大师之魂
+		Tooltip:
+			'''
+			免疫绝大多数永恒模式的减益
+			手持武器对应的职业伤害提高50%
+			飞行时间延长200%，移动速度提高20%，增加50点盔甲穿透
+			最大生命值翻倍，增加7点生命再生速度，伤害减免提高10%
+			[i:FargowiltasSouls/SinisterIcon] 禁忌诅咒的怨魂在恶战后不复存在，拥有邪恶头骨的效果
+			[i:FargowiltasSouls/SupremeDeathbringerFairy] 征服世界的欲望于你心中涌动不止，拥有至高告死精灵的效果
+			[i:FargowiltasSouls/BionomicCluster] 你眼中蠢蠢欲动的猎物在低声嘶吼，拥有生态球的效果
+			[i:FargowiltasSouls/DubiousCircuitry] 蕴含超凡灵魂的战争机械与你共舞，拥有可疑电路的效果
+			[i:FargowiltasSouls/PureHeart] 邪恶与神圣的守护者成为垫脚之石，拥有纯净之心的效果
+			[i:FargowiltasSouls/LumpOfFlesh] 世界真实的屏障在你脚下轰然倒塌，拥有血肉团的效果
+			[i:FargowiltasSouls/ChaliceoftheMoon] 陨落遗骸的镇魂曲将为你响彻天地，拥有月之圣杯的效果
+			[i:FargowiltasSouls/HeartoftheMasochist] 被侵蚀殆尽的恶兽皆对你俯首称臣，拥有永恒者之心的效果
+			“拥抱精通，拥抱永恒”
+			'''
+	}
+
+	CalamitySoul: {
+		DisplayName: 暴君之魂
+		Tooltip:
+			'''
+			拥有几乎所有灾厄盔甲的套装效果
+			拥有绝大多数灾厄饰品的效果
+			[i:yitangFargo/AnnihilationForce] 嗜血的癫狂笼罩着恐惧之夜，拥有湮灭之力的效果
+			[i:yitangFargo/DesolationForce] 践踏与摧残遍布着废墟之地，拥有荒芜之力的效果
+			[i:yitangFargo/DevastationForce] 永燃的狱火奴役着游荡亡灵，拥有毁灭之力的效果
+			[i:yitangFargo/ExaltationForce] 不朽传说重塑着秩序与混乱，拥有升华之力的效果
+			“而在最后，这片血与火的大地，终于再次归于沉寂……”
+			'''
+	}
+
+	EternityForce: {
+		DisplayName: 永恒之力
+		Tooltip:
+			'''
+			[i:yitangFargo/NekomiEnchantment] 拥有猫猫睡衣盔甲的套装效果
+			[i:yitangFargo/GaiaEnchantment] 拥有盖亚盔甲的套装效果
+			[i:yitangFargo/EridanusEnchantment] 拥有波江盔甲的套装效果
+			[i:yitangFargo/StyxEnchantment] 拥有冥河盔甲的套装效果
+			[i:yitangFargo/TrueMutantEnchantment] 拥有真·突变盔甲的套装效果
+			[i:yitangFargo/NekomiEnchantment] 拥有闪烁崇心的效果
+			[i:yitangFargo/StyxEnchantment] 拥有憎恶手杖的效果
+			[i:yitangFargo/TrueMutantEnchantment] 拥有突变之眼的效果
+			“其蕴含着伐木工0.00001%的力量”
+			'''
+	}
+
 	EternitySoulNew: {
 		DisplayName: 永恒之魂
 		Tooltip:
@@ -904,7 +941,7 @@ Items: {
 			附带10%的生命偷取、提高5%的伤害并增加5点防御
 			此效果可叠加950次，直到你被击中
 			拥有[i:yitangFargo/UniverseSoulNew][c/FF1E1E:寰宇之魂]和[i:yitangFargo/DimensionSoulNew][c/FF8635:维度之魂]的效果
-			拥有[i:FargowiltasSouls/TerrariaSoul][c/36EE48:泰拉之魂]和[i:FargowiltasSouls/MasochistSoul][c/FF3196:大师之魂]的效果
+			拥有[i:yitangFargo/TerrariaSoulNew][c/36EE48:泰拉之魂]和[i:yitangFargo/MasochistSoulNew][c/FF3196:大师之魂]的效果
 			拥有[i:yitangFargo/CalamitySoul][c/EB4A0F:暴君之魂]和[i:yitangFargo/EternityForce][c/08ECF0:永恒之力]的效果
 			'''
 	}
@@ -919,7 +956,7 @@ EternitySoulNewExtra: {
 		[i:yitangFargo/UniverseSoulNew] 攻击速度提高250%
 		[i:yitangFargo/UniverseSoulNew] 射弹速度提高100%
 		[i:yitangFargo/UniverseSoulNew] 击退力提高100%
-		[i:FargowiltasSouls/MasochistSoul] 增加50点盔甲穿透
+		[i:yitangFargo/MasochistSoulNew] 增加50点盔甲穿透
 		[i:yitangFargo/UniverseSoulNew] 暴击造成10倍伤害
 		[i:FargowiltasSouls/DimensionSoul] 增加15点生命再生速度
 		[i:FargowiltasSouls/DimensionSoul] 伤害减免提高40%
@@ -928,8 +965,8 @@ EternitySoulNewExtra: {
 		[i:yitangFargo/UniverseSoulNew] 魔力消耗降低50%
 		[i:yitangFargo/UniverseSoulNew] 仆从数量上限提高30个
 		[i:yitangFargo/UniverseSoulNew] 哨兵数量上限提高20个
-		[i:FargowiltasSouls/TerrariaSoul] 你能够反弹所有射弹
-		[i:FargowiltasSouls/MasochistSoul] 免疫几乎所有永恒模式的减益
+		[i:yitangFargo/TerrariaSoulNew] 你能够反弹所有射弹
+		[i:yitangFargo/MasochistSoulNew] 免疫几乎所有永恒模式的减益
 		[i:FargowiltasSouls/UniverseCore] 拥有宇宙之核的效果
 		[i:yitangFargo/BerserkerSoulNew] 拥有狂战士之魂的效果
 		[i:yitangFargo/SnipersSoulNew] 拥有神枪手之魂的效果
@@ -1319,20 +1356,36 @@ Configs: {
 		DisplayName: yitangFargo模组配置
 
 		Headers: {
+			FCRecipes: 配方相关
 			FCItems: 物品相关
 			FCNPC: NPC相关
 			FCBuff: 减益相关
 		}
 
-		FCRecipes: {
-			Label: 灾法联动配方修改
+		FargoSoulsRecipe: {
+			Label: 配方还原-Fargo魂本体
 			Tooltip:
 				'''
-				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些饰品配方
+				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些魂饰品配方
 				进行了添加新合成材料来达到限制时期的改动，且部分无法通过配置关闭
-				启用这个选项时，这些改动都会被移除，并回调为原来的魂石配方
+				启用这个选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
 				[c/e92c2c:如果启用，请注意，在Fargo's Souls DLC的模组配置里，]
 				[c/e92c2c:关于【适配灾厄的魂石平衡重制】这一选项切记也要][c/64efff:关闭][c/e92c2c:！]
+
+				[c/ffd8a5:★此选项和下一个选项在实际游玩中，应该只选择其中一项开启★]
+				'''
+		}
+
+		CalamityFargoRecipe: {
+			Label: 配方修改-适配灾法联动
+			Tooltip:
+				'''
+				启用这个选项后，对于Fargo魂本体的一些魂饰品配方
+				会对其添加新的合成材料来达到限制时期的目的
+				[c/e92c2c:如果启用，请注意，在Fargo's Souls DLC的模组配置里，]
+				[c/e92c2c:关于【适配灾厄的魂石平衡重制】这一选项切记也要][c/64efff:关闭][c/e92c2c:！]
+
+				[c/ffd8a5:★此选项和上一个选项在实际游玩中，应该只选择其中一项开启★]
 				'''
 		}
 

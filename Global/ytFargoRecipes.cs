@@ -35,6 +35,7 @@ namespace yitangFargo.Global
     {
         public override void AddRecipeGroups()
         {
+            #region 灾厄魔石 配方组
             //天蓝头盔
             RecipeGroup AnyAerospec = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyAerospec"),
@@ -123,10 +124,12 @@ namespace yitangFargo.Global
                 ModContent.ItemType<AuricTeslaHoodedFacemask>(), ModContent.ItemType<AuricTeslaWireHemmedVisage>(),
                 ModContent.ItemType<AuricTeslaPlumedHelm>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyAuric", AnyAuric);
+            #endregion
         }
 
         public override void AddRecipes()
         {
+            #region 添加模组物品配方
             //怒海狂涛(召唤猪鲨仆从)
             Recipe.Create(ModContent.ItemType<StaffOfUnleashedOcean>(), 1)
                 .AddIngredient(ItemID.TempestStaff, 1)
@@ -169,6 +172,7 @@ namespace yitangFargo.Global
                 .AddIngredient(ItemID.SoulofNight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
+            #endregion
         }
 
         public override void PostAddRecipes()
@@ -176,48 +180,46 @@ namespace yitangFargo.Global
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
                 Recipe recipe = Main.recipe[i];
-                if (ytFargoConfig.Instance.FCRecipes)
+
+                #region 移除Fargo魂本体的合成配方
+                //移除Fargo魂Mod一些魂饰品的合成配方
+                if (recipe.createItem.type == ModContent.ItemType<EternitySoul>()
+                    || recipe.createItem.type == ModContent.ItemType<UniverseSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<DimensionSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<MasochistSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<TerrariaSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<ColossusSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<SupersonicSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<FlightMasterySoul>()
+                    || recipe.createItem.type == ModContent.ItemType<TrawlerSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<WorldShaperSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<BerserkerSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<SnipersSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<ArchWizardsSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<ConjuristsSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<VagabondsSoul>()
+                    || recipe.createItem.type == ModContent.ItemType<BrandoftheBrimstoneWitch>())
                 {
-                    //移除Fargo魂Mod一些魂饰品的合成配方
-                    if (recipe.createItem.type == ModContent.ItemType<EternitySoul>()
-                        || recipe.createItem.type == ModContent.ItemType<UniverseSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<DimensionSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<ColossusSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<SupersonicSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<FlightMasterySoul>()
-                        || recipe.createItem.type == ModContent.ItemType<TrawlerSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<WorldShaperSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<BerserkerSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<SnipersSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<ArchWizardsSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<ConjuristsSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<VagabondsSoul>()
-                        || recipe.createItem.type == ModContent.ItemType<BrandoftheBrimstoneWitch>())
-                    {
-                        recipe.DisableRecipe();
-                    }
+                    recipe.DisableRecipe();
                 }
-                else
+                #endregion
+
+                #region 配方修改-适配灾法联动
+
+                //只有开启了一个选项才会生效配方修改，如果玩家把两个选项全开启，则默认还是Fargo魂本体的配方
+                if (ytFargoConfig.Instance.CalamityFargoRecipe && !ytFargoConfig.Instance.FargoSoulsRecipe)
                 {
-                    //如果关闭模组配置里关于配方的选项，那么就禁用本模组添加的克隆版饰品
-                    if (recipe.createItem.type == ModContent.ItemType<EternitySoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<UniverseSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<DimensionSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<ColossusSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<SupersonicSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<FlightMasterySoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<TrawlerSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<WorldShaperSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<BerserkerSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<SnipersSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<ArchWizardsSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<ConjuristsSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<VagabondsSoulNew>()
-                        || recipe.createItem.type == ModContent.ItemType<BrandoftheWitchNew>())
+                    //一级魂的配方添加魔影锭
+                    if (recipe.HasResult<UniverseSoulNew>() || recipe.HasResult<DimensionSoulNew>()
+                        || recipe.HasResult<TerrariaSoulNew>() || recipe.HasResult<MasochistSoulNew>())
                     {
-                        recipe.DisableRecipe();
+                        recipe.AddIngredient<ShadowspecBar>(5);
                     }
+
+
+
                 }
+                #endregion
             }
         }
     }

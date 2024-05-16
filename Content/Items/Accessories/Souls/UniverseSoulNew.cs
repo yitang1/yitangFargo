@@ -1,13 +1,16 @@
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
 using FargowiltasSouls;
 using FargowiltasSouls.Content.Items.Accessories.Expert;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Materials;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.ModPlayers;
-using Terraria;
-using Terraria.DataStructures;
-using Terraria.ID;
-using Terraria.ModLoader;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Materials;
+using yitangFargo.Common.Rarities;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -27,10 +30,8 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             base.SetDefaults();
 
             Item.value = Item.buyPrice(5, 0, 0, 0);
-            Item.rare = ItemRarityID.Expert;
-            Item.expert = true;
+            Item.rare = ModContent.RarityType<Rainbow>();
             Item.defense = 4;
-
             Item.width = 5;
             Item.height = 5;
         }
@@ -42,7 +43,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.GetCritChance(damageClass) += 25;
 
             FargoSoulsPlayer modPlayer = player.FargoSouls();
-            //¸÷ÏîÊı¾İ¼Ó³É
+            //å„é¡¹æ•°æ®åŠ æˆ
             modPlayer.UniverseSoul = true;
             modPlayer.UniverseCore = true;
 
@@ -61,7 +62,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.counterWeight = 556 + Main.rand.Next(6);
             player.yoyoGlove = true;
             player.yoyoString = true;
-            //Ìì½ç¿Ç
+            //å¤©ç•Œå£³
             player.wolfAcc = true;
             player.accMerman = true;
 
@@ -78,7 +79,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.manaFlower = true;
             player.manaMagnet = true;
             player.magicCuffs = true;
-            //µ÷ÓÃµÁÔôµÄÖ°Òµ»êĞ§¹û
+            //è°ƒç”¨ç›—è´¼çš„èŒä¸šé­‚æ•ˆæœ
             ModContent.GetInstance<VagabondsSoulNew>().UpdateAccessory(player, hideVisual);
         }
 

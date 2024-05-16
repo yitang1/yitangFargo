@@ -1,11 +1,13 @@
-using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Content.Items.Materials;
-using FargowiltasSouls.Core.ModPlayers;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using FargowiltasSouls;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Materials;
+using FargowiltasSouls.Core.ModPlayers;
+using yitangFargo.Common.Rarities;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -30,8 +32,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             Item.accessory = true;
             Item.defense = 15;
             Item.value = Item.buyPrice(5, 0, 0, 0);
-            Item.rare = ItemRarityID.Expert;
-            Item.expert = true;
+            Item.rare = ModContent.RarityType<Rainbow>();
 
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.UseSound = SoundID.Item6;
@@ -53,7 +54,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void UpdateInventory(Player player)
         {
-            //���ǵ绰
+            //贝壳电话
             player.accWatch = 3;
             player.accDepthMeter = 1;
             player.accCompass = 1;

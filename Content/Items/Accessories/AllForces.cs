@@ -50,7 +50,7 @@ namespace yitangFargo.Content.Items.Accessories
                 player.AddEffect<MeteorEffectNew>(item);
             }
             //泰拉之魂和永恒之魂 添加旧版魔石的效果
-            if (item.type == ModContent.ItemType<TerrariaSoul>() || item.type == ModContent.ItemType<EternitySoulNew>())
+            if (item.type == ModContent.ItemType<TerrariaSoulNew>() || item.type == ModContent.ItemType<EternitySoulNew>())
             {
                 player.AddEffect<AdamantiteEffectNew>(item);
                 player.AddEffect<NinjaEffectNew>(item);

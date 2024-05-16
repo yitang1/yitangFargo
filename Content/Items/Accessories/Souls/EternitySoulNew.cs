@@ -171,9 +171,9 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             WorldShaperSoulNew.AddEffects(player, Item, hideVisual);
 
             //泰拉之魂
-            ModContent.GetInstance<TerrariaSoul>().UpdateAccessory(player, hideVisual);
+            ModContent.GetInstance<TerrariaSoulNew>().UpdateAccessory(player, hideVisual);
             //大师之魂
-            ModContent.GetInstance<MasochistSoul>().UpdateAccessory(player, hideVisual);
+            ModContent.GetInstance<MasochistSoulNew>().UpdateAccessory(player, hideVisual);
             //暴君之魂
             ModContent.GetInstance<CalamitySoul>().UpdateAccessory(player, hideVisual);
             //永恒之力
@@ -185,8 +185,8 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             CreateRecipe()
                 .AddIngredient<UniverseSoulNew>()
                 .AddIngredient<DimensionSoulNew>()
-                .AddIngredient<TerrariaSoul>()
-                .AddIngredient<MasochistSoul>()
+                .AddIngredient<TerrariaSoulNew>()
+                .AddIngredient<MasochistSoulNew>()
                 .AddIngredient<CalamitySoul>()
                 .AddIngredient<EternityForce>()
                 .AddIngredient<EternalEnergy>(30)
