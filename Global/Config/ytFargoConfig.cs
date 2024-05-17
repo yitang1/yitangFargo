@@ -11,11 +11,11 @@ namespace yitangFargo.Global.Config
 
         [Header("FCRecipes")]
         [ReloadRequired]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool FargoSoulsRecipe;
 
         [ReloadRequired]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool CalamityFargoRecipe;
 
         [Header("FCItems")]
