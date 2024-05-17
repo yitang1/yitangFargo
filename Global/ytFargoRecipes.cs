@@ -204,10 +204,8 @@ namespace yitangFargo.Global
                 }
                 #endregion
 
-                #region 配方修改-适配灾法联动
-
-                //只有开启了一个选项才会生效配方修改，如果玩家把两个选项全开启，则默认还是Fargo魂本体的配方
-                if (ytFargoConfig.Instance.CalamityFargoRecipe && !ytFargoConfig.Instance.FargoSoulsRecipe)
+                #region 配方修改-适配灾法双开
+                if (ytFargoConfig.Instance.CalamityFargoRecipe)
                 {
                     //一级魂的配方添加魔影锭
                     if (recipe.HasResult<UniverseSoulNew>() || recipe.HasResult<DimensionSoulNew>()

@@ -1,11 +1,14 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Essences;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Essences;
+using Microsoft.Xna.Framework;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Weapons.Ranged;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -32,24 +35,49 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<SharpshootersEssence>()
-                .AddIngredient(ItemID.MoltenQuiver)
-                .AddIngredient(ItemID.StalkersQuiver)
-                .AddIngredient(ItemID.ReconScope)
-                .AddIngredient(ItemID.DartPistol)
-                .AddIngredient(ItemID.Megashark)
-                .AddIngredient(ItemID.PulseBow)
-                .AddIngredient(ItemID.NailGun)
-                .AddIngredient(ItemID.PiranhaGun)
-                .AddIngredient(ItemID.SniperRifle)
-                .AddIngredient(ItemID.Tsunami)
-                .AddIngredient(ItemID.StakeLauncher)
-                .AddIngredient(ItemID.ElfMelter)
-                .AddIngredient(ItemID.Xenopopper)
-                .AddIngredient(ItemID.Celeb2)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<SharpshootersEssence>()
+                    .AddIngredient(ItemID.MoltenQuiver)
+                    .AddIngredient(ItemID.StalkersQuiver)
+                    .AddIngredient(ItemID.ReconScope)
+                    .AddIngredient(ItemID.DartPistol)
+                    .AddIngredient(ItemID.Megashark)
+                    .AddIngredient(ItemID.PulseBow)
+                    .AddIngredient(ItemID.NailGun)
+                    .AddIngredient(ItemID.PiranhaGun)
+                    .AddIngredient(ItemID.SniperRifle)
+                    .AddIngredient(ItemID.Tsunami)
+                    .AddIngredient(ItemID.StakeLauncher)
+                    .AddIngredient(ItemID.ElfMelter)
+                    .AddIngredient(ItemID.Xenopopper)
+                    .AddIngredient(ItemID.Celeb2)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<SharpshootersEssence>()
+                    .AddIngredient(ItemID.ReconScope)
+                    .AddIngredient<QuiverofNihility>()
+                    .AddIngredient(ItemID.DartPistol)
+                    .AddIngredient<Hellborn>()
+                    .AddIngredient(ItemID.NailGun)
+                    .AddIngredient(ItemID.StakeLauncher)
+                    .AddIngredient(ItemID.ElfMelter)
+                    .AddIngredient<Vortexpopper>()
+                    .AddIngredient(ItemID.Celeb2)
+                    .AddIngredient<PridefulHuntersPlanarRipper>()
+                    .AddIngredient<HandheldTank>()
+                    .AddIngredient<Alluvion>()
+                    .AddIngredient<Starmageddon>()
+                    .AddIngredient<Ultima>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

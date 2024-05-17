@@ -1,13 +1,13 @@
-﻿using CalamityMod;
+﻿using Terraria;
+using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Weapons.Rogue;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Essences;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ModLoader;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -19,6 +19,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.GetDamage<RogueDamageClass>() += 0.3f;
             player.Calamity().rogueVelocity += 0.15f;
             player.GetCritChance<RogueDamageClass>() += 0.15f;
+
             if (player.AddEffect<NanotechEffect>(Item))
             {
                 ModContent.GetInstance<Nanotech>().UpdateAccessory(player, hideVisual);
@@ -38,6 +39,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         }
         public override void AddRecipes()
         {
+            //盗贼之魂默认为龙后时期
             CreateRecipe()
                 .AddIngredient<OutlawsEssence>()
                 .AddIngredient<EclipseMirror>()

@@ -1,10 +1,12 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Essences;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Essences;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Weapons.Summon;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -28,26 +30,52 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<OccultistsEssence>()
-                .AddIngredient(ItemID.MonkBelt)
-                .AddIngredient(ItemID.SquireShield)
-                .AddIngredient(ItemID.HuntressBuckler)
-                .AddIngredient(ItemID.ApprenticeScarf)
-                .AddIngredient(ItemID.PygmyNecklace)
-                .AddIngredient(ItemID.PapyrusScarab)
-                .AddIngredient(ItemID.Smolstar)
-                .AddIngredient(ItemID.PirateStaff)
-                .AddIngredient(ItemID.OpticStaff)
-                .AddIngredient(ItemID.DeadlySphereStaff)
-                .AddIngredient(ItemID.StormTigerStaff)
-                .AddIngredient(ItemID.StaffoftheFrostHydra)
-                .AddIngredient(ItemID.TempestStaff)
-                .AddIngredient(ItemID.RavenStaff)
-                .AddIngredient(ItemID.XenoStaff)
-                .AddIngredient(ItemID.EmpressBlade)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<OccultistsEssence>()
+                    .AddIngredient(ItemID.MonkBelt)
+                    .AddIngredient(ItemID.SquireShield)
+                    .AddIngredient(ItemID.HuntressBuckler)
+                    .AddIngredient(ItemID.ApprenticeScarf)
+                    .AddIngredient(ItemID.PygmyNecklace)
+                    .AddIngredient(ItemID.PapyrusScarab)
+                    .AddIngredient(ItemID.Smolstar)
+                    .AddIngredient(ItemID.PirateStaff)
+                    .AddIngredient(ItemID.OpticStaff)
+                    .AddIngredient(ItemID.DeadlySphereStaff)
+                    .AddIngredient(ItemID.StormTigerStaff)
+                    .AddIngredient(ItemID.StaffoftheFrostHydra)
+                    .AddIngredient(ItemID.TempestStaff)
+                    .AddIngredient(ItemID.RavenStaff)
+                    .AddIngredient(ItemID.XenoStaff)
+                    .AddIngredient(ItemID.EmpressBlade)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<OccultistsEssence>()
+                    .AddIngredient(ItemID.MonkBelt)
+                    .AddIngredient(ItemID.SquireShield)
+                    .AddIngredient(ItemID.HuntressBuckler)
+                    .AddIngredient(ItemID.ApprenticeScarf)
+                    .AddIngredient(ItemID.PygmyNecklace)
+                    .AddIngredient(ItemID.PapyrusScarab)
+                    .AddIngredient<AncientIceChunk>()
+                    .AddIngredient(ItemID.PirateStaff)
+                    .AddIngredient(ItemID.OpticStaff)
+                    .AddIngredient(ItemID.DeadlySphereStaff)
+                    .AddIngredient<ResurrectionButterfly>()
+                    .AddIngredient(ItemID.StormTigerStaff)
+                    .AddIngredient<StellarTorusStaff>()
+                    .AddIngredient<EndoHydraStaff>()
+                    .AddIngredient<CorvidHarbringerStaff>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Essences;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Content.Items.Accessories.Essences;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Weapons.Magic;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -32,24 +34,49 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<ApprenticesEssence>()
-                .AddIngredient(ItemID.ManaCloak)
-                .AddIngredient(ItemID.MagnetFlower)
-                .AddIngredient(ItemID.ArcaneFlower)
-                .AddIngredient(ItemID.CelestialCuffs)
-                .AddIngredient(ItemID.CelestialEmblem)
-                .AddIngredient(ItemID.MedusaHead)
-                .AddIngredient(ItemID.SharpTears)
-                .AddIngredient(ItemID.MagnetSphere)
-                .AddIngredient(ItemID.RainbowGun)
-                .AddIngredient(ItemID.ApprenticeStaffT3)
-                .AddIngredient(ItemID.SparkleGuitar)
-                .AddIngredient(ItemID.RazorbladeTyphoon)
-                .AddIngredient(ItemID.LaserMachinegun)
-                .AddIngredient(ItemID.LastPrism)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<ApprenticesEssence>()
+                    .AddIngredient(ItemID.ManaCloak)
+                    .AddIngredient(ItemID.MagnetFlower)
+                    .AddIngredient(ItemID.ArcaneFlower)
+                    .AddIngredient(ItemID.CelestialCuffs)
+                    .AddIngredient(ItemID.CelestialEmblem)
+                    .AddIngredient(ItemID.MedusaHead)
+                    .AddIngredient(ItemID.SharpTears)
+                    .AddIngredient(ItemID.MagnetSphere)
+                    .AddIngredient(ItemID.RainbowGun)
+                    .AddIngredient(ItemID.ApprenticeStaffT3)
+                    .AddIngredient(ItemID.SparkleGuitar)
+                    .AddIngredient(ItemID.RazorbladeTyphoon)
+                    .AddIngredient(ItemID.LaserMachinegun)
+                    .AddIngredient(ItemID.LastPrism)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<ApprenticesEssence>()
+                    .AddIngredient(ItemID.ManaCloak)
+                    .AddIngredient(ItemID.MagnetFlower)
+                    .AddIngredient(ItemID.ArcaneFlower)
+                    .AddIngredient(ItemID.CelestialCuffs)
+                    .AddIngredient(ItemID.CelestialEmblem)
+                    .AddIngredient(ItemID.MedusaHead)
+                    .AddIngredient(ItemID.SharpTears)
+                    .AddIngredient<Atlantis>()
+                    .AddIngredient(ItemID.ApprenticeStaffT3)
+                    .AddIngredient<AsteroidStaff>()
+                    .AddIngredient<DarkSpark>()
+                    .AddIngredient<VitriolicViper>()
+                    .AddIngredient<Omicron>()
+                    .AddIngredient<FaceMelter>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

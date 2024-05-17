@@ -1,5 +1,5 @@
-﻿using FargowiltasSouls.Core.Toggler.Content;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
+using FargowiltasSouls.Core.Toggler.Content;
 using yitangFargo.Content.Items.Calamity.Forces;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Fargo;

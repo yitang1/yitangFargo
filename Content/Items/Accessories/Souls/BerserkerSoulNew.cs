@@ -1,11 +1,15 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 using FargowiltasSouls;
 using FargowiltasSouls.Content.Items.Accessories.Essences;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
+using Microsoft.Xna.Framework;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -58,24 +62,49 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<BarbariansEssence>()
-                .AddIngredient(ItemID.StingerNecklace)
-                .AddIngredient(ItemID.YoyoBag)
-                .AddIngredient(ItemID.FireGauntlet)
-                .AddIngredient(ItemID.BerserkerGlove)
-                .AddIngredient(ItemID.CelestialShell)
-                .AddIngredient(ItemID.KOCannon)
-                .AddIngredient(ItemID.IceSickle)
-                .AddIngredient(ItemID.DripplerFlail)
-                .AddIngredient(ItemID.ScourgeoftheCorruptor)
-                .AddIngredient(ItemID.Kraken)
-                .AddIngredient(ItemID.Flairon)
-                .AddIngredient(ItemID.MonkStaffT3)
-                .AddIngredient(ItemID.NorthPole)
-                .AddIngredient(ItemID.Zenith)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<BarbariansEssence>()
+                    .AddIngredient(ItemID.StingerNecklace)
+                    .AddIngredient(ItemID.YoyoBag)
+                    .AddIngredient(ItemID.FireGauntlet)
+                    .AddIngredient(ItemID.BerserkerGlove)
+                    .AddIngredient(ItemID.CelestialShell)
+                    .AddIngredient(ItemID.KOCannon)
+                    .AddIngredient(ItemID.IceSickle)
+                    .AddIngredient(ItemID.DripplerFlail)
+                    .AddIngredient(ItemID.ScourgeoftheCorruptor)
+                    .AddIngredient(ItemID.Kraken)
+                    .AddIngredient(ItemID.Flairon)
+                    .AddIngredient(ItemID.MonkStaffT3)
+                    .AddIngredient(ItemID.NorthPole)
+                    .AddIngredient(ItemID.Zenith)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<BarbariansEssence>()
+                    .AddIngredient(ItemID.StingerNecklace)
+                    .AddIngredient(ItemID.YoyoBag)
+                    .AddIngredient(ItemID.FireGauntlet)
+                    .AddIngredient(ItemID.BerserkerGlove)
+                    .AddIngredient(ItemID.CelestialShell)
+                    .AddIngredient<CelestialClaymore>()
+                    .AddIngredient(ItemID.DripplerFlail)
+                    .AddIngredient(ItemID.Kraken)
+                    .AddIngredient(ItemID.Flairon)
+                    .AddIngredient(ItemID.MonkStaffT3)
+                    .AddIngredient(ItemID.NorthPole)
+                    .AddIngredient<ChronomancersScythe>()
+                    .AddIngredient<PulseDragon>()
+                    .AddIngredient<DevilsDevastation>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }
