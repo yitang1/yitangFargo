@@ -99,7 +99,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.Flairon)
                     .AddIngredient(ItemID.MonkStaffT3)
                     .AddIngredient(ItemID.NorthPole)
-                    .AddIngredient<ChronomancersScythe>()
+                    .AddIngredient(ItemID.Zenith)
                     .AddIngredient<PulseDragon>()
                     .AddIngredient<DevilsDevastation>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))

@@ -64,7 +64,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.ReconScope)
                     .AddIngredient<QuiverofNihility>()
                     .AddIngredient(ItemID.DartPistol)
-                    .AddIngredient<Hellborn>()
+                    .AddIngredient<SeasSearing>()
                     .AddIngredient(ItemID.NailGun)
                     .AddIngredient(ItemID.StakeLauncher)
                     .AddIngredient(ItemID.ElfMelter)

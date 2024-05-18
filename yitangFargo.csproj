@@ -13,16 +13,16 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <Reference Include="CalamityMod">
-	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\CalamityMod.dll</HintPath>
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\2.0.4.2\CalamityMod.dll</HintPath>
 	  </Reference>
 	  <Reference Include="FargowiltasCrossmod">
-	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\FargowiltasCrossmod.dll</HintPath>
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\2.0.4.2\FargowiltasCrossmod.dll</HintPath>
 	  </Reference>
 	  <Reference Include="FargowiltasSouls">
-	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\FargowiltasSouls.dll</HintPath>
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\2.0.4.2\FargowiltasSouls.dll</HintPath>
 	  </Reference>
 	  <Reference Include="Luminance">
-	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\Luminance.dll</HintPath>
+	    <HintPath>F:\0MySelf\Terraria Self\AllTRself\Libraries\2.0.4.2\Luminance.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 
