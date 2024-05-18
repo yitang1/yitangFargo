@@ -1,12 +1,19 @@
-using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.ModPlayers;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.ModPlayers;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Accessories;
+using FargowiltasSouls.Core.Toggler.Content;
+using FargowiltasSouls.Core.Toggler;
+using CalamityMod.Items.Fishing.FishingRods;
+using CalamityMod.Items.Fishing.SunkenSeaCatches;
+using CalamityMod.Items.Weapons.Ranged;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -29,11 +36,11 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         {
             Player Player = player;
             FargoSoulsPlayer modPlayer = player.FargoSouls();
-            //øÏÀŸ…œπ≥
+            //Âø´ÈÄü‰∏äÈí©
             modPlayer.FishSoul1 = true;
-            //∂ÓÕ‚”„œﬂ
+            //È¢ùÂ§ñÈ±ºÁ∫ø
             modPlayer.FishSoul2 = true;
-            //∑¿»€—“”Êæﬂ¥¸
+            //Èò≤ÁÜîÂ≤©Ê∏îÂÖ∑Ë¢ã
             Player.fishingSkill += 60;
             Player.sonarPotion = true;
             Player.cratePotion = true;
@@ -41,11 +48,11 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             Player.accTackleBox = true;
             Player.accFishFinder = true;
             Player.accLavaFishing = true;
-            //ª”∑¢√˜Ω∫
+            //Êå•ÂèëÊòéËÉ∂
             player.AddEffect<TrawlerGel>(item);
-            //Êﬂ◊”ƒ“
+            //Â≠¢Â≠êÂõä
             player.AddEffect<TrawlerSporeSac>(item);
-            //±±º´«±ÀÆ◊∞±∏
+            //ÂåóÊûÅÊΩúÊ∞¥Ë£ÖÂ§á
             Player.arcticDivingGear = true;
             Player.accFlipper = true;
             Player.accDivingHelm = true;
@@ -54,7 +61,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             {
                 Lighting.AddLight((int)Player.Center.X / 16, (int)Player.Center.Y / 16, 0.2f, 0.8f, 0.9f);
             }
-            //ˆË”„¡˙∆¯«Ú
+            //È≤®È±ºÈæôÊ∞îÁêÉ
             player.AddEffect<TrawlerJump>(item);
 
             Player.jumpBoost = true;
@@ -63,22 +70,49 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-            .AddIngredient<AnglerEnchant>()
-            .AddIngredient(ItemID.BalloonHorseshoeSharkron)
-            .AddIngredient(ItemID.ArcticDivingGear)
-            .AddIngredient(ItemID.VolatileGelatin)
-            .AddIngredient(ItemID.SporeSac)
-            .AddIngredient(ItemID.SittingDucksFishingRod)
-            .AddIngredient(ItemID.GoldenFishingRod)
-            .AddIngredient(ItemID.GoldenCarp)
-            .AddIngredient(ItemID.ReaverShark)
-            .AddIngredient(ItemID.Bladetongue)
-            .AddIngredient(ItemID.ObsidianSwordfish)
-            .AddIngredient(ItemID.FuzzyCarrot)
-            .AddIngredient(ItemID.HardySaddle)
-            .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-            .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<AnglerEnchant>()
+                    .AddIngredient(ItemID.BalloonHorseshoeSharkron)
+                    .AddIngredient(ItemID.ArcticDivingGear)
+                    .AddIngredient(ItemID.VolatileGelatin)
+                    .AddIngredient(ItemID.SporeSac)
+                    .AddIngredient(ItemID.SittingDucksFishingRod)
+                    .AddIngredient(ItemID.GoldenFishingRod)
+                    .AddIngredient(ItemID.GoldenCarp)
+                    .AddIngredient(ItemID.ReaverShark)
+                    .AddIngredient(ItemID.ObsidianSwordfish)
+                    .AddIngredient(ItemID.Bladetongue)
+                    .AddIngredient(ItemID.FuzzyCarrot)
+                    .AddIngredient(ItemID.HardySaddle)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<AnglerEnchant>()
+                    .AddIngredient(ItemID.BalloonHorseshoeSharkron)
+                    .AddIngredient<SupremeBaitTackleBoxFishingStation>()
+                    .AddIngredient(ItemID.VolatileGelatin)
+                    .AddIngredient(ItemID.SporeSac)
+                    .AddIngredient<AbyssalDivingSuit>()
+                    .AddIngredient(ItemID.SittingDucksFishingRod)
+                    .AddIngredient(ItemID.GoldenFishingRod)
+                    .AddIngredient(ItemID.GoldenCarp)
+                    .AddIngredient(ItemID.ReaverShark)
+                    .AddIngredient<SparklingEmpress>()
+                    .AddIngredient(ItemID.ObsidianSwordfish)
+                    .AddIngredient(ItemID.Bladetongue)
+                    .AddIngredient<PolarisParrotfish>()
+                    .AddIngredient(ItemID.FuzzyCarrot)
+                    .AddIngredient(ItemID.HardySaddle)
+                    .AddIngredient<TheDevourerofCods>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

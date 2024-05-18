@@ -8,7 +8,7 @@ using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Enchantments;
 using yitangFargo.Content.Items.Accessories.Souls;
 
-namespace yitangFargo.Content.Items.Accessories
+namespace yitangFargo.Global.GlobalItems
 {
     public class AllForces : GlobalItem
     {

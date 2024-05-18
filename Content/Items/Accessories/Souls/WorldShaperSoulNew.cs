@@ -1,11 +1,15 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Mounts;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -123,20 +127,45 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<MinerEnchant>()
-                .AddIngredient(ItemID.Toolbelt)
-                .AddIngredient(ItemID.Toolbox)
-                .AddIngredient(ItemID.HandOfCreation)
-                .AddIngredient(ItemID.ActuationAccessory)
-                .AddIngredient(ItemID.LaserRuler)
-                .AddIngredient(ItemID.RoyalGel)
-                .AddRecipeGroup("FargowiltasSouls:AnyShellphone")
-                .AddRecipeGroup("FargowiltasSouls:AnyDrax")
-                .AddIngredient(ItemID.ShroomiteDiggingClaw)
-                .AddIngredient(ItemID.DrillContainmentUnit)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<MinerEnchant>()
+                    .AddIngredient(ItemID.Toolbelt)
+                    .AddIngredient(ItemID.Toolbox)
+                    .AddIngredient(ItemID.HandOfCreation)
+                    .AddIngredient(ItemID.ActuationAccessory)
+                    .AddIngredient(ItemID.LaserRuler)
+                    .AddIngredient(ItemID.RoyalGel)
+                    .AddRecipeGroup("FargowiltasSouls:AnyShellphone")
+                    .AddRecipeGroup("FargowiltasSouls:AnyDrax")
+                    .AddIngredient(ItemID.ShroomiteDiggingClaw)
+                    .AddIngredient(ItemID.DrillContainmentUnit)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<MinerEnchant>()
+                    .AddIngredient(ItemID.Toolbelt)
+                    .AddIngredient(ItemID.Toolbox)
+                    .AddIngredient(ItemID.HandOfCreation)
+                    .AddIngredient(ItemID.ActuationAccessory)
+                    .AddIngredient(ItemID.LaserRuler)
+                    .AddIngredient<ArchaicPowder>()
+                    .AddIngredient<SpelunkersAmulet>()
+                    .AddIngredient(ItemID.RoyalGel)
+                    .AddRecipeGroup("FargowiltasSouls:AnyShellphone")
+                    .AddRecipeGroup("FargowiltasSouls:AnyDrax")
+                    .AddIngredient(ItemID.ShroomiteDiggingClaw)
+                    .AddIngredient<BlossomPickaxe>()
+                    .AddIngredient<OnyxExcavatorKey>()
+                    .AddIngredient(ItemID.DrillContainmentUnit)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

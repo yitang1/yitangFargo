@@ -1,11 +1,14 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Wings;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -47,24 +50,52 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         }
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient(ItemID.EmpressFlightBooster)
-                .AddIngredient(ItemID.BatWings)
-                .AddIngredient(ItemID.CreativeWings)
-                .AddIngredient(ItemID.FairyWings)
-                .AddIngredient(ItemID.HarpyWings)
-                .AddIngredient(ItemID.BoneWings)
-                .AddIngredient(ItemID.FrozenWings)
-                .AddIngredient(ItemID.FlameWings)
-                .AddIngredient(ItemID.TatteredFairyWings)
-                .AddIngredient(ItemID.FestiveWings)
-                .AddIngredient(ItemID.BetsyWings)
-                .AddIngredient(ItemID.FishronWings)
-                .AddIngredient(ItemID.RainbowWings)
-                .AddIngredient(ItemID.LongRainbowTrailWings)
-                .AddIngredient(ItemID.GravityGlobe)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient(ItemID.EmpressFlightBooster)
+                    .AddIngredient(ItemID.CreativeWings)
+                    .AddIngredient(ItemID.FairyWings)
+                    .AddIngredient(ItemID.FrozenWings)
+                    .AddIngredient(ItemID.HarpyWings)
+                    .AddIngredient(ItemID.BatWings)
+                    .AddIngredient(ItemID.FlameWings)
+                    .AddIngredient(ItemID.BoneWings)
+                    .AddIngredient(ItemID.FestiveWings)
+                    .AddIngredient(ItemID.TatteredFairyWings)
+                    .AddIngredient(ItemID.RainbowWings)
+                    .AddIngredient(ItemID.BetsyWings)
+                    .AddIngredient(ItemID.FishronWings)
+                    .AddIngredient(ItemID.LongRainbowTrailWings)
+                    .AddIngredient(ItemID.GravityGlobe)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<AscendantInsignia>()
+                    .AddIngredient(ItemID.CreativeWings)
+                    .AddIngredient<SkylineWings>()
+                    .AddIngredient(ItemID.FairyWings)
+                    .AddIngredient(ItemID.FrozenWings)
+                    .AddIngredient(ItemID.HarpyWings)
+                    .AddIngredient(ItemID.BatWings)
+                    .AddIngredient(ItemID.FlameWings)
+                    .AddIngredient(ItemID.BoneWings)
+                    .AddIngredient(ItemID.FestiveWings)
+                    .AddIngredient(ItemID.TatteredFairyWings)
+                    .AddIngredient(ItemID.RainbowWings)
+                    .AddIngredient(ItemID.BetsyWings)
+                    .AddIngredient(ItemID.FishronWings)
+                    .AddIngredient(ItemID.LongRainbowTrailWings)
+                    .AddIngredient(ItemID.GravityGlobe)
+                    .AddIngredient<TarragonWings>()
+                    .AddIngredient<SilvaWings>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

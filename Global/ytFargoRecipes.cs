@@ -213,9 +213,6 @@ namespace yitangFargo.Global
                     {
                         recipe.AddIngredient<ShadowspecBar>(5);
                     }
-
-
-
                 }
                 #endregion
 

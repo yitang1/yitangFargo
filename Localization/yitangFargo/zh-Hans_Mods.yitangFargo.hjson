@@ -111,6 +111,8 @@ Toggler: {
 	CSkullCrown: 玄秘颅冠
 	DNebulousCore: 星云之核
 	EDraedonsHeart: 嘉登之心
+	AsgardianAegisEffect: 阿斯加德之庇护
+	AbyssalDivingSuitEffect: 深渊潜游服
 }
 
 Buffs: {
@@ -976,11 +978,11 @@ EternitySoulNewExtra: {
 		[i:FargowiltasSouls/SharpshootersEssence] 拥有神射手精华的效果
 		[i:FargowiltasSouls/ApprenticesEssence] 拥有学徒精华的效果
 		[i:FargowiltasSouls/OccultistsEssence] 拥有术士精华的效果
-		[i:FargowiltasSouls/ColossusSoul] 拥有巨像之魂的效果
-		[i:FargowiltasSouls/SupersonicSoul] 拥有超音速之魂的效果
-		[i:FargowiltasSouls/FlightMasterySoul] 拥有飞行大师之魂的效果
-		[i:FargowiltasSouls/TrawlerSoul] 拥有捕鱼之魂的效果
-		[i:FargowiltasSouls/WorldShaperSoul] 拥有铸世者之魂的效果
+		[i:yitangFargo/ColossusSoulNew] 拥有巨像之魂的效果
+		[i:yitangFargo/SupersonicSoulNew] 拥有超音速之魂的效果
+		[i:yitangFargo/FlightMasterySoulNew] 拥有飞行大师之魂的效果
+		[i:yitangFargo/TrawlerSoulNew] 拥有捕鱼之魂的效果
+		[i:yitangFargo/WorldShaperSoulNew] 拥有铸世者之魂的效果
 		[i:FargowiltasSouls/AeolusBoots] 拥有风神之靴的效果
 		[i:FargowiltasSouls/AnglerEnchant] 拥有渔夫魔石的效果
 		[i:FargowiltasSouls/MinerEnchant] 拥有矿工魔石的效果
@@ -1407,7 +1409,8 @@ Configs: {
 				启用此选项时，会在游戏中添加一个售卖魂石的城镇NPC
 				原版魔石的售卖条件为击败对应月后英灵
 				灾厄魔石是当前时期会售卖上一时期可制作的魔石
-				对于魂和精华饰品，背包中有任意一个会解锁其他职业的饰品
+				对于魂和精华饰品，若处于正确的时期，
+				背包中有任意一个会解锁其他职业的饰品
 				NPC的解锁条件为——物品栏任意位置有忍者魔石、
 				或在饰品栏装备忍者魔石的情况下，击败史莱姆王
 
@@ -1425,7 +1428,7 @@ Configs: {
 				但这样会让战斗变得艰难并延长了整体战斗时间
 				启用这个选项后，会移除月总战中限制职业伤害的减益
 				这样主要是方便限制职业开荒这种玩法的情况
-				
+
 				如果你是散人开荒，可以选择关闭这个选项
 				'''
 		}

@@ -1,10 +1,16 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using yitangFargo.Global.Config;
+using yitangFargo.Common.Toggler;
+using CalamityMod.Items.Accessories;
+using yitangFargo.Content.Items.Calamity.Souls;
+using FargowiltasSouls.Core.Toggler.Content;
+using FargowiltasSouls.Core.Toggler;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -34,6 +40,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
             Player.buffImmune[BuffID.Chilled] = true;
             Player.buffImmune[BuffID.Frozen] = true;
+            player.buffImmune[BuffID.WindPushed] = true;
             Player.buffImmune[BuffID.Stoned] = true;
             Player.buffImmune[BuffID.Weak] = true;
             Player.buffImmune[BuffID.BrokenArmor] = true;
@@ -63,21 +70,41 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-            .AddIngredient(ItemID.HandWarmer)
-            .AddIngredient(ItemID.ObsidianHorseshoe)
-            .AddIngredient(ItemID.WormScarf)
-            .AddIngredient(ItemID.BrainOfConfusion)
-            .AddIngredient(ItemID.CharmofMyths)
-            .AddIngredient(ItemID.BeeCloak)
-            .AddIngredient(ItemID.StarVeil)
-            .AddIngredient(ItemID.ShinyStone)
-            .AddIngredient(ItemID.HeroShield)
-            .AddIngredient(ItemID.FrozenShield)
-            .AddIngredient(ItemID.AnkhShield)
-            .AddIngredient(ItemID.ShimmerCloak)
-            .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-            .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient(ItemID.ObsidianHorseshoe)
+                    .AddIngredient(ItemID.WormScarf)
+                    .AddIngredient(ItemID.BrainOfConfusion)
+                    .AddIngredient(ItemID.CharmofMyths)
+                    .AddIngredient(ItemID.BeeCloak)
+                    .AddIngredient(ItemID.StarVeil)
+                    .AddIngredient(ItemID.ShinyStone)
+                    .AddIngredient(ItemID.HeroShield)
+                    .AddIngredient(ItemID.FrozenShield)
+                    .AddIngredient(ItemID.AnkhShield)
+                    .AddIngredient(ItemID.ShimmerCloak)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient(ItemID.ObsidianHorseshoe)
+                    .AddIngredient(ItemID.BrainOfConfusion)
+                    .AddIngredient(ItemID.CharmofMyths)
+                    .AddIngredient(ItemID.BeeCloak)
+                    .AddIngredient<BloodyWormScarf>()
+                    .AddIngredient(ItemID.StarVeil)
+                    .AddIngredient(ItemID.ShinyStone)
+                    .AddIngredient(ItemID.HeroShield)
+                    .AddIngredient(ItemID.FrozenShield)
+                    .AddIngredient(ItemID.ShimmerCloak)
+                    .AddIngredient<AsgardianAegis>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

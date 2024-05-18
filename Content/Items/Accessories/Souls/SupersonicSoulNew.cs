@@ -1,12 +1,16 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.ModPlayers;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.ModPlayers;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using yitangFargo.Global.Config;
+using CalamityMod.Items.Accessories.Wings;
+using CalamityMod.Items.Mounts.Minecarts;
+using CalamityMod.Items.Mounts;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -119,21 +123,47 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient(ModContent.ItemType<AeolusBoots>())
-                .AddIngredient(ItemID.FlyingCarpet)
-                .AddIngredient(ItemID.SweetheartNecklace)
-                .AddIngredient(ItemID.BalloonHorseshoeHoney)
-                .AddIngredient(ItemID.HorseshoeBundle)
-                .AddIngredient(ItemID.EoCShield)
-                .AddIngredient(ItemID.MasterNinjaGear)
-                .AddIngredient(ItemID.MinecartMech)
-                .AddIngredient(ItemID.BlessedApple)
-                .AddIngredient(ItemID.AncientHorn)
-                .AddIngredient(ItemID.ReindeerBells)
-                .AddIngredient(ItemID.BrainScrambler)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient(ModContent.ItemType<AeolusBoots>())
+                    .AddIngredient(ItemID.FlyingCarpet)
+                    .AddIngredient(ItemID.SweetheartNecklace)
+                    .AddIngredient(ItemID.BalloonHorseshoeHoney)
+                    .AddIngredient(ItemID.HorseshoeBundle)
+                    .AddIngredient(ItemID.EoCShield)
+                    .AddIngredient(ItemID.MasterNinjaGear)
+                    .AddIngredient(ItemID.MinecartMech)
+                    .AddIngredient(ItemID.BlessedApple)
+                    .AddIngredient(ItemID.AncientHorn)
+                    .AddIngredient(ItemID.ReindeerBells)
+                    .AddIngredient(ItemID.BrainScrambler)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                CreateRecipe()
+                    .AddIngredient<TracersSeraph>()
+                    .AddIngredient<AeolusBoots>()
+                    .AddIngredient(ItemID.FlyingCarpet)
+                    .AddIngredient(ItemID.SweetheartNecklace)
+                    .AddIngredient(ItemID.BalloonHorseshoeHoney)
+                    .AddIngredient(ItemID.EoCShield)
+                    .AddIngredient(ItemID.MasterNinjaGear)
+                    .AddIngredient<MOAB>()
+                    .AddIngredient(ItemID.MinecartMech)
+                    .AddIngredient<TundraLeash>()
+                    .AddIngredient(ItemID.BlessedApple)
+                    .AddIngredient(ItemID.AncientHorn)
+                    .AddIngredient(ItemID.ReindeerBells)
+                    .AddIngredient(ItemID.BrainScrambler)
+                    .AddIngredient<FollyFeed>()
+                    .AddIngredient<TheCartofGods>()
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
     }
 }

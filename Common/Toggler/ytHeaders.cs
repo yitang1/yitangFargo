@@ -3,9 +3,16 @@ using FargowiltasSouls.Core.Toggler.Content;
 using yitangFargo.Content.Items.Calamity.Forces;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Fargo;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Common.Toggler
 {
+    ////巨像之魂
+    //public class CalamityColossusHeader : SoulHeader
+    //{
+    //    public override int Item => ModContent.ItemType<ColossusSoul>();
+    //    public override float Priority => 19.2f;
+    //}
     public class BrimstoneWitchHeader : SoulHeader
     {
         public override int Item => ModContent.ItemType<BrandoftheWitchNew>();
