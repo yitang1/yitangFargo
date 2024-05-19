@@ -36,7 +36,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             player.AddEffect<OmegaBlueEffect>(Item);
             player.AddEffect<OmegaBluePhantomic>(Item);
             player.AddEffect<OmegaBlueReaperTooth>(Item);
-            player.AddEffect<OmegaBlueSuit>(Item);
 
             //蓝色欧米茄盔甲
             CalamityPlayer calamityPlayer = player.Calamity();
@@ -64,11 +63,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 ModContent.GetInstance<ReaperToothNecklace>().UpdateAccessory(player, hideVisual);
             }
-            //深渊潜游服
-            if (player.HasEffect<OmegaBlueSuit>())
-            {
-                ModContent.GetInstance<AbyssalDivingSuit>().UpdateAccessory(player, hideVisual);
-            }
+            //灾劫之尖啸
+            ModContent.GetInstance<Affliction>().UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -79,7 +75,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<OmegaBlueTentacles>()
                 .AddIngredient<PhantomicArtifact>()
                 .AddIngredient<ReaperToothNecklace>()
-                .AddIngredient<AbyssalDivingSuit>()
+                .AddIngredient<Affliction>()
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }
@@ -98,12 +94,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override bool IgnoresMutantPresence => true;
     }
     public class OmegaBlueReaperTooth : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class OmegaBlueSuit : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();

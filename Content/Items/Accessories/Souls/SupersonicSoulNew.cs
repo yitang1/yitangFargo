@@ -11,6 +11,7 @@ using yitangFargo.Global.Config;
 using CalamityMod.Items.Accessories.Wings;
 using CalamityMod.Items.Mounts.Minecarts;
 using CalamityMod.Items.Mounts;
+using CalamityMod.Items.Accessories;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -129,15 +130,12 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ModContent.ItemType<AeolusBoots>())
                     .AddIngredient(ItemID.FlyingCarpet)
                     .AddIngredient(ItemID.SweetheartNecklace)
-                    .AddIngredient(ItemID.BalloonHorseshoeHoney)
                     .AddIngredient(ItemID.HorseshoeBundle)
                     .AddIngredient(ItemID.EoCShield)
                     .AddIngredient(ItemID.MasterNinjaGear)
-                    .AddIngredient(ItemID.MinecartMech)
                     .AddIngredient(ItemID.BlessedApple)
-                    .AddIngredient(ItemID.AncientHorn)
+                    .AddIngredient(ItemID.MinecartMech)
                     .AddIngredient(ItemID.ReindeerBells)
-                    .AddIngredient(ItemID.BrainScrambler)
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }
@@ -149,16 +147,13 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient<AeolusBoots>()
                     .AddIngredient(ItemID.FlyingCarpet)
                     .AddIngredient(ItemID.SweetheartNecklace)
-                    .AddIngredient(ItemID.BalloonHorseshoeHoney)
-                    .AddIngredient(ItemID.EoCShield)
-                    .AddIngredient(ItemID.MasterNinjaGear)
                     .AddIngredient<MOAB>()
-                    .AddIngredient(ItemID.MinecartMech)
+                    .AddIngredient<ShieldoftheHighRuler>()
+                    .AddIngredient<StatisVoidSash>()
                     .AddIngredient<TundraLeash>()
                     .AddIngredient(ItemID.BlessedApple)
-                    .AddIngredient(ItemID.AncientHorn)
+                    .AddIngredient(ItemID.MinecartMech)
                     .AddIngredient(ItemID.ReindeerBells)
-                    .AddIngredient(ItemID.BrainScrambler)
                     .AddIngredient<FollyFeed>()
                     .AddIngredient<TheCartofGods>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))

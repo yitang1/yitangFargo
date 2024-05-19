@@ -39,7 +39,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             player.AddEffect<AtaxiaEffect>(Item);
             player.AddEffect<AtaxiaMinion>(Item);
             player.AddEffect<AtaxiaPauldron>(Item);
-            player.AddEffect<AtaxiaShield>(Item);
 
             //渊泉盔甲
             CalamityPlayer calamityPlayer = player.Calamity();
@@ -62,11 +61,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 ModContent.GetInstance<SlagsplitterPauldron>().UpdateAccessory(player, hideVisual);
             }
-            //至高统治之盾
-            if (player.HasEffect<AtaxiaShield>())
-            {
-                ModContent.GetInstance<ShieldoftheHighRuler>().UpdateAccessory(player, hideVisual);
-            }
         }
 
         public override void AddRecipes()
@@ -75,9 +69,9 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnyAtaxia")
                 .AddIngredient<HydrothermicArmor>()
                 .AddIngredient<HydrothermicSubligar>()
+                .AddIngredient<VulcaniteLance>()
                 .AddIngredient<StygianShield>()
                 .AddIngredient<SlagsplitterPauldron>()
-                .AddIngredient<ShieldoftheHighRuler>()
                 .AddTile(TileID.CrystalBall)
                 .Register();
         }
@@ -109,12 +103,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         }
     }
     public class AtaxiaPauldron : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<AtaxiaEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class AtaxiaShield : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AtaxiaEnchant>();

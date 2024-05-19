@@ -19,13 +19,12 @@ Toggler: {
 	AtaxiaEffect: 渊泉 套装效果
 	AtaxiaMinion: 渊泉 沸腾渊泉
 	AtaxiaPauldron: 渊泉 熔火碎矿肩甲
-	AtaxiaShield: 渊泉 至高统治之盾
 	XerocEffect: 皇天 套装效果
 	XerocEtherealExtorter: 皇天 虚空掠夺者
 	XerocSpectralVeil: 皇天 幽灵披风
 	FearmongerEffect: 神惧者 套装效果
+	FearmongerFSkullCrown: 神惧者 玄秘颅冠
 	FearmongerNucleogenesis: 神惧者 核子之源
-	FearmongerStatisVoidSash: 神惧者 斯塔提斯的虚空饰带
 	DesolationHeader: "{$Mods.yitangFargo.Items.DesolationForce.DisplayName}"
 	MolluskVictideEffect: 胜潮 套装效果
 	MolluskVictideESnail: 胜潮 海蜗牛
@@ -58,7 +57,6 @@ Toggler: {
 	OmegaBlueEffect: 蓝色欧米茄 套装效果
 	OmegaBluePhantomic: 蓝色欧米茄 幻魂神物
 	OmegaBlueReaperTooth: 蓝色欧米茄 猎魂鲨齿项链
-	OmegaBlueSuit: 蓝色欧米茄 深渊潜游服
 	DevastationHeader: "{$Mods.yitangFargo.Items.DevastationForce.DisplayName}"
 	WulfrumEffect: 钨钢 套装效果
 	WulfrumRoverDrive: 钨钢 钨钢屏障生成仪
@@ -86,7 +84,7 @@ Toggler: {
 	BloodYVoidC: 硫火 灾劫虚空
 	BloodYVoidE: 硫火 终结虚空
 	GodSlayerEffect: 弑神者 套装效果
-	GodSlayerNAsgardian: 弑神者 阿斯加德之庇护
+	GodSlayerNebulousCore: 弑神者 星云之核
 	SilvaEffect: 始源林海 套装效果
 	SilvaEffectCrystal: 始源林海 始源林海水晶
 	SilvaTheAmalgam: 始源林海 聚合之脑
@@ -108,10 +106,12 @@ Toggler: {
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: 元灵之心
 	BCells: 痴愚金龙干细胞
-	CSkullCrown: 玄秘颅冠
 	DNebulousCore: 星云之核
 	EDraedonsHeart: 嘉登之心
 	AsgardianAegisEffect: 阿斯加德之庇护
+	RampartofDeitiesEffect: 神之壁垒
+	ShieldHighRulerEffect: 至高统治之盾
+	StatisVoidSashEffect: 斯塔提斯的虚空饰带
 	AbyssalDivingSuitEffect: 深渊潜游服
 }
 
@@ -198,7 +198,7 @@ Items: {
 			魔法攻击命中时召唤伤害火球和治疗火球
 			你会召唤一个沸腾渊泉来保护你
 			盗贼攻击每2秒会在周围召唤追踪混沌火焰
-			拥有熔火碎矿肩甲和至高统治之盾的效果
+			拥有熔火碎矿肩甲的效果
 			“远古的炙热之景浮现在眼前”
 			'''
 	}
@@ -212,7 +212,7 @@ Items: {
 			在南瓜月和霜月事件期间获得15%的伤害减免
 			与普通伤害减免分开计算，且可以突破软上限
 			免疫绝大多数冷系和火系的减益
-			拥有斯塔提斯的虚空饰带和核子之源的效果
+			拥有核子之源和玄秘颅冠的效果
 			“你的身影迸发出极致的恐惧之源”
 			'''
 	}
@@ -313,8 +313,7 @@ Items: {
 			期间能大幅提高你的伤害和暴击率
 			同时触手的攻击欲望和攻击范围都会提高
 			此效果有25秒的冷却时间
-			拥有幻魂神物、猎魂鲨齿项链、
-			以及深渊潜游服的效果
+			拥有幻魂神物和猎魂鲨齿项链的效果
 			“深渊的黑暗笼罩着你……”
 			'''
 	}
@@ -431,8 +430,7 @@ Items: {
 			'''
 			获得全职业的龙蒿盔甲、血炎盔甲、
 			弑神者盔甲和始源林海盔甲的套装效果
-			拥有无瑕粹魂晶、神之壁垒、
-			以及寻神者之礼的效果
+			拥有无瑕粹魂晶和寻神者之礼的效果
 			“你的力量已堪比丛林暴君……”
 			'''
 	}
@@ -490,8 +488,7 @@ Items: {
 			生命值全满时所有盗贼属性提高10%
 			如果一次攻击对你造成了超过80点伤害
 			你会获得额外的无敌帧时间
-			拥有元素之握、元素箭袋、
-			以及阿斯加德之庇护的效果
+			拥有元素之握、元素箭袋和星云之核的效果
 			“弑神之力存于你的心中……”
 			'''
 	}
@@ -609,9 +606,9 @@ Items: {
 			[i:yitangFargo/AtaxiaEnchant][i:yitangFargo/XerocEnchant][i:yitangFargo/FearmongerEnchant] 拥有渊泉盔甲、皇天盔甲和神惧者盔甲的套装效果
 			[i:yitangFargo/AerospecEnchant] 拥有角斗士金锁和不稳定花岗岩核心的效果
 			[i:yitangFargo/StatigelEnchant] 拥有魔能谐振仪的效果，两个史莱姆仆从为你而战
-			[i:yitangFargo/AtaxiaEnchant] 拥有熔火碎矿肩甲和至高统治之盾的效果
+			[i:yitangFargo/AtaxiaEnchant] 拥有熔火碎矿肩甲的效果
+			[i:yitangFargo/FearmongerEnchant] 拥有核子之源和玄秘颅冠的效果
 			[i:yitangFargo/XerocEnchant] 拥有虚空掠夺者和幽灵披风的效果
-			[i:yitangFargo/FearmongerEnchant] 拥有斯塔提斯的虚空饰带和核子之源的效果
 			“曾经存在生命与光明的地方，如今只剩下残破的废墟……”
 			'''
 	}
@@ -633,7 +630,7 @@ Items: {
 			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
 			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
 			[i:yitangFargo/AstralEnchant] 拥有星神隐壳、阴阳吸星石和引力靴的效果
-			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物、猎魂鲨齿项链和深渊潜游服的效果
+			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物和猎魂鲨齿项链的效果
 			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
 			'''
 	}
@@ -667,7 +664,7 @@ Items: {
 			[i:yitangFargo/TarragonEnchant] 拥有进升证章、勇气勋章和蚀日尊戒的效果
 			[i:yitangFargo/BloodflareEnchant] 拥有血神圣杯和血炎晶核的效果
 			[i:yitangFargo/BrimflameEnchant] 拥有灾劫虚空和终结虚空的效果
-			[i:yitangFargo/GodSlayerEnchant] 拥有元素之握、元素箭袋和阿斯加德之庇护的效果
+			[i:yitangFargo/GodSlayerEnchant] 拥有元素之握、元素箭袋和星云之核的效果
 			[i:yitangFargo/SilvaEnchant] 拥有聚合之脑、化绵留香石和空灵护符的效果
 			[i:yitangFargo/AuricEnchant] 拥有无瑕粹魂晶、神之壁垒和寻神者之礼的效果
 			“涅槃之光抚慰着你的心灵，淬炼着你的意志”
@@ -679,8 +676,7 @@ Items: {
 		Tooltip:
 			'''
 			拥有元灵之心、痴愚金龙干细胞、
-			灾劫之尖啸、玄秘颅冠、
-			星云之核和嘉登之心的效果
+			以及嘉登之心的效果
 			“不灭而铭心的痛楚，宛如永无释怀之日”
 			'''
 	}
@@ -1368,7 +1364,7 @@ Configs: {
 			Label: 配方还原-Fargo魂本体
 			Tooltip:
 				'''
-				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些魂饰品配方
+				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些饰品配方
 				进行了添加新合成材料来达到限制时期的改动，且部分无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
 				[c/f54c4c:如果启用，请注意，在Fargo's Souls DLC的模组配置里，]
@@ -1382,7 +1378,7 @@ Configs: {
 			Label: 配方修改-适配灾法双开
 			Tooltip:
 				'''
-				启用此选项后，对于Fargo魂本体的一些魂饰品配方
+				启用此选项后，对于Fargo魂本体的一些饰品配方
 				会对其添加新的合成材料来达到限制时期的目的
 				[c/f54c4c:如果启用，请注意，在Fargo's Souls DLC的模组配置里，]
 				[c/f54c4c:关于【适配灾厄的魂石平衡重制】这一选项切记也要][c/64efff:关闭][c/f54c4c:！]

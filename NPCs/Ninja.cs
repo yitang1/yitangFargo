@@ -18,6 +18,7 @@ using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Fargo;
 using static yitangFargo.yitangFargo;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.NPCs
 {
@@ -155,7 +156,8 @@ namespace yitangFargo.NPCs
             var modsES = new NPCShop(Type, "ModsES");
 
             #region Condition条件
-            //灾厄Mod的Boss击败条件
+
+            #region 灾厄Mod的Boss击败条件
             Condition DownedDesertScourge = new Condition("DesertScourge", () => DownedBossSystem.downedDesertScourge);
             Condition DownedCrabulon = new Condition("Crabulon", () => DownedBossSystem.downedCrabulon);
             Condition DownedPerfs = new Condition("Perfs", () => DownedBossSystem.downedPerforator);
@@ -189,7 +191,9 @@ namespace yitangFargo.NPCs
             Condition DownedSuperCalamitas = new Condition("SCal", () => DownedBossSystem.downedCalamitas);
             Condition DownedExoOrCal = new Condition("ExoOrCal", () => DownedBossSystem.downedExoMechs || DownedBossSystem.downedCalamitas);
             Condition DownedExoAndCal = new Condition("ExoAndCal", () => DownedBossSystem.downedExoMechs && DownedBossSystem.downedCalamitas);
-            //Fargo的Boss击败条件
+            #endregion
+
+            #region Fargo的Boss击败条件
             Condition DownedDeviantt = new Condition("DownedDeviantt", () => WorldSavingSystem.DownedDevi);
             Condition DownedAbom = new Condition("DownedAbom", () => WorldSavingSystem.DownedAbom);
             Condition DownedMutant = new Condition("DownedMutant", () => WorldSavingSystem.DownedMutant);
@@ -207,6 +211,7 @@ namespace yitangFargo.NPCs
             Condition DownedCursedCoffin = new Condition("DownedCursedCoffin", () => WorldSavingSystem.DownedBoss[11]);
             Condition DownedBanishedBaron = new Condition("DownedBanishedBaron", () => WorldSavingSystem.DownedBoss[12]);
             Condition DownedMagmaw = new Condition("DownedMagmaw", () => WorldSavingSystem.DownedBoss[13]);
+            #endregion
 
             Condition HasClassEssences = new Condition("HasClassEssences", () =>
             Main.LocalPlayer.HasItem(ModContent.ItemType<BarbariansEssence>())
@@ -215,37 +220,43 @@ namespace yitangFargo.NPCs
             || Main.LocalPlayer.HasItem(ModContent.ItemType<OccultistsEssence>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<OutlawsEssence>()));
 
-            Condition HasClassSouls = new Condition("HasClassSouls", () =>
-            DownedBossSystem.downedDoG && (Main.LocalPlayer.HasItem(ModContent.ItemType<BerserkerSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SnipersSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchWizardsSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ConjuristsSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoulNew>())));
-
-            //延伸条件 (已击败丛林龙，且物品栏里有任意一个寰宇之魂下级)
-            Condition HasClassSoulsYharon = new Condition("HasClassSoulsYharon", () =>
+            #region 开启【配方修改-适配灾法双开】选项后
+            //已击败丛林龙，且物品栏内有任意一个寰宇之魂下级
+            Condition HasClassSoulsCalamity = new Condition("HasClassSoulsCalamity", () =>
             DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ModContent.ItemType<BerserkerSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<SnipersSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchWizardsSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<ConjuristsSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<VagabondsSoulNew>())));
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<VagabondsSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoulNew>())));
 
-            Condition HasDimeSouls = new Condition("HasDimeSouls", () =>
-            DownedBossSystem.downedDoG && (Main.LocalPlayer.HasItem(ModContent.ItemType<ColossusSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<FlightMasterySoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<TrawlerSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<WorldShaperSoulNew>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<DimensionSoulNew>())));
-
-            //延伸条件 (已击败丛林龙，且物品栏里有任意一个维度之魂下级)
-            Condition HasDimeSoulsYharon = new Condition("HasClassSoulsYharon", () =>
+            //已击败丛林龙，且物品栏内有任意一个维度之魂下级
+            Condition HasDimeSoulsCalamity = new Condition("HasDimeSoulsCalamity", () =>
             DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ModContent.ItemType<ColossusSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<SupersonicSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<FlightMasterySoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<TrawlerSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<WorldShaperSoulNew>())
             || Main.LocalPlayer.HasItem(ModContent.ItemType<DimensionSoulNew>())));
+            #endregion
+
+            #region 开启【配方修改-Fargo魂本体】选项后
+            //月后，且物品栏内有任意一个寰宇之魂下级 (不包括盗贼魂)
+            Condition HasClassSoulsFargo = new Condition("HasClassSoulsFargo", () =>
+            Main.LocalPlayer.HasItem(ModContent.ItemType<BerserkerSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<SnipersSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchWizardsSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<ConjuristsSoulNew>()));
+
+            //月后，且物品栏内有任意一个维度之魂下级
+            Condition HasDimeSoulsFargo = new Condition("HasDimeSoulsFargo", () =>
+            Main.LocalPlayer.HasItem(ModContent.ItemType<ColossusSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<SupersonicSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<FlightMasterySoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<TrawlerSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<WorldShaperSoulNew>())
+            || Main.LocalPlayer.HasItem(ModContent.ItemType<DimensionSoulNew>()));
+            #endregion
 
             Condition HasEternitySoul = new Condition("HasEternitySoul", () =>
             Main.LocalPlayer.HasItem(ModContent.ItemType<EternitySoulNew>()));
@@ -259,17 +270,43 @@ namespace yitangFargo.NPCs
                 .Add(CustomPrice(ModContent.ItemType<OccultistsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
                 .Add(CustomPrice(ModContent.ItemType<OutlawsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences });
 
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSouls })
-            .Add(CustomPrice(ModContent.ItemType<SnipersSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSouls })
-            .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSouls })
-            .Add(CustomPrice(ModContent.ItemType<ConjuristsSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSouls })
-            .Add(CustomPrice(ModContent.ItemType<VagabondsSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsYharon });
+            #region 寰宇之魂下级
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<SnipersSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<ConjuristsSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<VagabondsSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
+            }
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<SnipersSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<ConjuristsSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<VagabondsSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
+            }
+            #endregion
 
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSouls })
-                .Add(CustomPrice(ModContent.ItemType<SupersonicSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsYharon })
-                .Add(CustomPrice(ModContent.ItemType<FlightMasterySoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSouls })
-                .Add(CustomPrice(ModContent.ItemType<TrawlerSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSouls })
-                .Add(CustomPrice(ModContent.ItemType<WorldShaperSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSouls });
+            #region 维度之魂下级
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<SupersonicSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<FlightMasterySoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<TrawlerSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                    .Add(CustomPrice(ModContent.ItemType<WorldShaperSoulNew>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity });
+            }
+            if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<SupersonicSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<FlightMasterySoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<TrawlerSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ModContent.ItemType<WorldShaperSoulNew>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo });
+            }
+            #endregion
 
             vanillaES.Add(CustomPrice(ModContent.ItemType<UniverseSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
                 .Add(CustomPrice(ModContent.ItemType<DimensionSoulNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })

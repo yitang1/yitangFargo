@@ -36,7 +36,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<GodSlayerEffect>(Item);
-            player.AddEffect<GodSlayerNAsgardian>(Item);
+            player.AddEffect<GodSlayerNebulousCore>(Item);
 
             //弑神者盔甲
             CalamityPlayer calamityPlayer = player.Calamity();
@@ -58,10 +58,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             ModContent.GetInstance<ElementalGauntlet>().UpdateAccessory(player, hideVisual);
             //元素箭袋
             ModContent.GetInstance<ElementalQuiver>().UpdateAccessory(player, hideVisual);
-            //阿斯加德之庇护
-            if (player.HasEffect<GodSlayerNAsgardian>())
+            //星云之核
+            if (player.HasEffect<GodSlayerNebulousCore>())
             {
-                ModContent.GetInstance<AsgardianAegis>().UpdateAccessory(player, hideVisual);
+                ModContent.GetInstance<NebulousCore>().UpdateAccessory(player, hideVisual);
             }
         }
 
@@ -73,7 +73,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<GodSlayerLeggings>()
                 .AddIngredient<ElementalGauntlet>()
                 .AddIngredient<ElementalQuiver>()
-                .AddIngredient<AsgardianAegis>()
+                .AddIngredient<NebulousCore>()
                 .AddTile<CosmicAnvil>()
                 .Register();
         }
@@ -85,7 +85,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override int ToggleItemType => ModContent.ItemType<GodSlayerEnchant>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class GodSlayerNAsgardian : AccessoryEffect
+    public class GodSlayerNebulousCore : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<GodSlayerEnchant>();

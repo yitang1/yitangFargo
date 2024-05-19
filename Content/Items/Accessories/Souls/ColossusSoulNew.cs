@@ -93,15 +93,13 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                 CreateRecipe()
                     .AddIngredient(ItemID.ObsidianHorseshoe)
                     .AddIngredient(ItemID.BrainOfConfusion)
-                    .AddIngredient(ItemID.CharmofMyths)
                     .AddIngredient(ItemID.BeeCloak)
                     .AddIngredient<BloodyWormScarf>()
-                    .AddIngredient(ItemID.StarVeil)
                     .AddIngredient(ItemID.ShinyStone)
                     .AddIngredient(ItemID.HeroShield)
-                    .AddIngredient(ItemID.FrozenShield)
                     .AddIngredient(ItemID.ShimmerCloak)
                     .AddIngredient<AsgardianAegis>()
+                    .AddIngredient<RampartofDeities>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }

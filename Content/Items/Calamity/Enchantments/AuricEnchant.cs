@@ -17,6 +17,7 @@ using CalamityMod.CalPlayer.Dashes;
 using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls;
 using CalamityMod.Projectiles.Summon;
+using CalamityMod.Items.Weapons.Magic;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -41,7 +42,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             player.AddEffect<AuricEffect>(Item);
             player.AddEffect<AuricMinion>(Item);
             player.AddEffect<AuricPurity>(Item);
-            player.AddEffect<AuricRampart>(Item);
             player.AddEffect<AuricYharimsGift>(Item);
 
             //古圣金源盔甲
@@ -92,11 +92,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 ModContent.GetInstance<Radiance>().UpdateAccessory(player, hideVisual);
             }
-            //神之壁垒
-            if (player.HasEffect<AuricRampart>())
-            {
-                ModContent.GetInstance<RampartofDeities>().UpdateAccessory(player, hideVisual);
-            }
             //寻神者之礼
             if (player.HasEffect<AuricYharimsGift>())
             {
@@ -110,8 +105,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnyAuric")
                 .AddIngredient<AuricTeslaBodyArmor>()
                 .AddIngredient<AuricTeslaCuisses>()
+                .AddIngredient<TheWand>()
                 .AddIngredient<Radiance>()
-                .AddIngredient<RampartofDeities>()
                 .AddIngredient<YharimsGift>()
                 .AddTile<CosmicAnvil>()
                 .Register();
@@ -144,12 +139,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         }
     }
     public class AuricPurity : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<AuricEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class AuricRampart : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AuricEnchant>();

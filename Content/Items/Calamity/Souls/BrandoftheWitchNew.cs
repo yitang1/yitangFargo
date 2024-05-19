@@ -41,18 +41,6 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             {
                 ModContent.GetInstance<DynamoStemCells>().UpdateAccessory(player, hideVisual);
             }
-            //灾劫之尖啸
-            ModContent.GetInstance<Affliction>().UpdateAccessory(player, hideVisual);
-            //玄秘颅冠
-            if (player.AddEffect<CSkullCrown>(Item))
-            {
-                ModContent.GetInstance<OccultSkullCrown>().UpdateAccessory(player, hideVisual);
-            }
-            //星云之核
-            if (player.AddEffect<DNebulousCore>(Item))
-            {
-                ModContent.GetInstance<NebulousCore>().UpdateAccessory(player, hideVisual);
-            }
             //嘉登之心
             if (player.AddEffect<EDraedonsHeart>(Item))
             {
@@ -65,11 +53,7 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             CreateRecipe()
                 .AddIngredient<HeartoftheElements>()
                 .AddIngredient<DynamoStemCells>()
-                .AddIngredient<Affliction>()
-                .AddIngredient<OccultSkullCrown>()
-                .AddIngredient<NebulousCore>()
                 .AddIngredient<DraedonsHeart>()
-                .AddIngredient<ShadowspecBar>(5)
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
         }
@@ -92,11 +76,6 @@ namespace yitangFargo.Content.Items.Calamity.Souls
     public class CSkullCrown : BrandWitchEffect
     {
         public override int ToggleItemType => ModContent.ItemType<OccultSkullCrown>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class DNebulousCore : BrandWitchEffect
-    {
-        public override int ToggleItemType => ModContent.ItemType<AsgardianAegis>();
         public override bool IgnoresMutantPresence => true;
     }
     public class EDraedonsHeart : BrandWitchEffect

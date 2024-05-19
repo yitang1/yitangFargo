@@ -19,13 +19,12 @@ Toggler: {
 	AtaxiaEffect: Hydrothermic Armor Bonus
 	AtaxiaMinion: Hydrothermic Minion
 	AtaxiaPauldron: Hydrothermic Slagsplitter Pauldron
-	AtaxiaShield: Hydrothermic Shield
 	XerocEffect: Empyrean Armor Bonus
 	XerocEtherealExtorter: Empyrean Ethereal Extorter
 	XerocSpectralVeil: Empyrean Spectral Veil
 	FearmongerEffect: Fearmonger Armor Bonus
+	FearmongerFSkullCrown: Fearmonger Skull Crown
 	FearmongerNucleogenesis: Fearmonger Nucleogenesis
-	FearmongerStatisVoidSash: Fearmonger Statis Void Sash
 	DesolationHeader: "{$Mods.yitangFargo.Items.DesolationForce.DisplayName}"
 	MolluskVictideEffect: Victide Armor Bonus
 	MolluskVictideESnail: Victide Snail
@@ -58,7 +57,6 @@ Toggler: {
 	OmegaBlueEffect: Omega Blue Armor Bonus
 	OmegaBluePhantomic: Omega Blue Phantomic
 	OmegaBlueReaperTooth: Omega Blue Reaper Tooth
-	OmegaBlueSuit: Omega Blue Suit
 	DevastationHeader: "{$Mods.yitangFargo.Items.DevastationForce.DisplayName}"
 	WulfrumEffect: Wulfrum Armor Bonus
 	WulfrumRoverDrive: Wulfrum WulfrumRoverDrive
@@ -86,7 +84,7 @@ Toggler: {
 	BloodYVoidC: Brimflame Void of Calamity
 	BloodYVoidE: Brimflame Void of Extinction
 	GodSlayerEffect: GodSlayer Armor Bonus
-	GodSlayerNAsgardian: GodSlayer Asgardian
+	GodSlayerNebulousCore: GodSlayer Nebulous Core
 	SilvaEffect: Silva Armor Bonus
 	SilvaEffectCrystal: Silva Crystal
 	SilvaTheAmalgam: Silva The Amalgam
@@ -108,10 +106,12 @@ Toggler: {
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: Heart of the Elements
 	BCells: Dynamo Stem Cells
-	CSkullCrown: Occult Skull Crown
 	DNebulousCore: Nebulous Core
 	EDraedonsHeart: Draedons Heart
 	AsgardianAegisEffect: Asgardian Aegis
+	RampartofDeitiesEffect: Rampart of Deities
+	ShieldHighRulerEffect: Shield of High Ruler
+	StatisVoidSashEffect: Statis Void Sash
 	AbyssalDivingSuitEffect: Abyssal Diving Suit
 }
 

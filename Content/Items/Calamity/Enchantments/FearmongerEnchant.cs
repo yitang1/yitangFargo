@@ -14,6 +14,7 @@ using CalamityMod;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Buffs.StatDebuffs;
 using Terraria.ID;
+using yitangFargo.Content.Items.Calamity.Souls;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -36,8 +37,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<FearmongerEffect>(Item);
+            player.AddEffect<FearmongerFSkullCrown>(Item);
             player.AddEffect<FearmongerNucleogenesis>(Item);
-            player.AddEffect<FearmongerStatisVoidSash>(Item);
 
             //神惧者盔甲套装效果
             if (player.HasEffect<FearmongerEffect>())
@@ -64,15 +65,15 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 }
                 Lighting.AddLight(player.Center, 0.3f, 0.18f, 0f);
             }
+            //玄秘颅冠
+            if (player.HasEffect<FearmongerFSkullCrown>())
+            {
+                ModContent.GetInstance<OccultSkullCrown>().UpdateAccessory(player, hideVisual);
+            }
             //核子之源
             if (player.HasEffect<FearmongerNucleogenesis>())
             {
                 ModContent.GetInstance<Nucleogenesis>().UpdateAccessory(player, hideVisual);
-            }
-            //斯塔提斯的虚空饰带
-            if (player.HasEffect<FearmongerStatisVoidSash>())
-            {
-                ModContent.GetInstance<StatisVoidSash>().UpdateAccessory(player, hideVisual);
             }
         }
 
@@ -82,8 +83,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<FearmongerGreathelm>()
                 .AddIngredient<FearmongerPlateMail>()
                 .AddIngredient<FearmongerGreaves>()
-                .AddIngredient<CorvidHarbringerStaff>()
-                .AddIngredient<StatisVoidSash>()
+                .AddIngredient<GuidelightofOblivion>()
+                .AddIngredient<OccultSkullCrown>()
                 .AddIngredient<Nucleogenesis>()
                 .AddTile<CosmicAnvil>()
                 .Register();
@@ -96,13 +97,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override int ToggleItemType => ModContent.ItemType<FearmongerEnchant>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class FearmongerNucleogenesis : AccessoryEffect
+    public class FearmongerFSkullCrown : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<FearmongerEnchant>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class FearmongerStatisVoidSash : AccessoryEffect
+    public class FearmongerNucleogenesis : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<FearmongerEnchant>();
