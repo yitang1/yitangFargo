@@ -14,11 +14,15 @@ using FargowiltasSouls.Core.Toggler;
 using CalamityMod.Items.Fishing.FishingRods;
 using CalamityMod.Items.Fishing.SunkenSeaCatches;
 using CalamityMod.Items.Weapons.Ranged;
+using System.Collections.Generic;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    public class TrawlerSoulNew : BaseSoul
+    public class TrawlerSoulNew : BaseSoul, ILocalizedModType
     {
+        public new string LocalizationCategory => "Items";
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -66,6 +70,18 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
             Player.jumpBoost = true;
             Player.noFallDmg = true;
+        }
+
+        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                tooltips.ReplaceText("[TrawlerEffects]", this.GetLocalizedValue("TrawlerCalamity"));
+            }
+            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                tooltips.ReplaceText("[TrawlerEffects]", this.GetLocalizedValue("TrawlerFargo"));
+            }
         }
 
         public override void AddRecipes()

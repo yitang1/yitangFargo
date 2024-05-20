@@ -12,11 +12,15 @@ using CalamityMod.Items.Accessories.Wings;
 using CalamityMod.Items.Mounts.Minecarts;
 using CalamityMod.Items.Mounts;
 using CalamityMod.Items.Accessories;
+using System.Collections.Generic;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    public class SupersonicSoulNew : BaseSoul
+    public class SupersonicSoulNew : BaseSoul, ILocalizedModType
     {
+        public new string LocalizationCategory => "Items";
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -119,6 +123,18 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             if (Player.AddEffect<SupersonicPanic>(item))
             {
                 Player.panic = true;
+            }
+        }
+
+        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                tooltips.ReplaceText("[SupersonicEffects]", this.GetLocalizedValue("SupersonicCalamity"));
+            }
+            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                tooltips.ReplaceText("[SupersonicEffects]", this.GetLocalizedValue("SupersonicFargo"));
             }
         }
 

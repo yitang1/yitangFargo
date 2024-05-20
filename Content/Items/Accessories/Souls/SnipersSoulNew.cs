@@ -9,11 +9,16 @@ using Microsoft.Xna.Framework;
 using yitangFargo.Global.Config;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Weapons.Ranged;
+using System.Collections.Generic;
+using Terraria.Localization;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    public class SnipersSoulNew : BaseSoul
+    public class SnipersSoulNew : BaseSoul, ILocalizedModType
     {
+        public new string LocalizationCategory => "Items";
+
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -31,6 +36,18 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
             //狙击镜
             player.AddEffect<SniperScopeEffect>(Item);
+        }
+
+        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                tooltips.ReplaceText("[SnipersEffects]", this.GetLocalizedValue("SnipersCalamity"));
+            }
+            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                tooltips.ReplaceText("[SnipersEffects]", this.GetLocalizedValue("SnipersFargo"));
+            }
         }
 
         public override void AddRecipes()
@@ -62,6 +79,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                 CreateRecipe()
                     .AddIngredient<SharpshootersEssence>()
                     .AddIngredient(ItemID.ReconScope)
+                    .AddIngredient<DynamoStemCells>()
                     .AddIngredient<QuiverofNihility>()
                     .AddIngredient(ItemID.DartPistol)
                     .AddIngredient<SeasSearing>()

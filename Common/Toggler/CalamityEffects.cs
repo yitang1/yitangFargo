@@ -10,6 +10,20 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Common.Toggler
 {
+    //虚无箭袋
+    public class QuiverofNihilityEffect : AccessoryEffect
+    {
+        public override Header ToggleHeader => Header.GetHeader<CalamitySnipersHeader>();
+        public override int ToggleItemType => ModContent.ItemType<QuiverofNihility>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    //痴愚金龙干细胞
+    public class StemCellsEffect : AccessoryEffect
+    {
+        public override Header ToggleHeader => Header.GetHeader<CalamitySnipersHeader>();
+        public override int ToggleItemType => ModContent.ItemType<DynamoStemCells>();
+        public override bool IgnoresMutantPresence => true;
+    }
     //阿斯加德之庇护
     public class AsgardianAegisEffect : AccessoryEffect
     {

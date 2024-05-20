@@ -92,7 +92,6 @@ Toggler: {
 	AuricEffect: Auric Armor Bonus
 	AuricMinion: Auric Minion
 	AuricPurity: Auric Purity
-	AuricRampart: Auric Rampart of Deities
 	AuricYharimsGift: Auric Yharims Gift
 	EternityHeader: "{$Mods.yitangFargo.Items.EternityForce.DisplayName}"
 	ANekomiEffect: Nekomi Armor Bonus
@@ -105,9 +104,11 @@ Toggler: {
 	TrueMutantEye: TrueMutant Eye
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: Heart of the Elements
-	BCells: Dynamo Stem Cells
 	DNebulousCore: Nebulous Core
 	EDraedonsHeart: Draedons Heart
+	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
+	QuiverofNihilityEffect: Quiver of Nihility
+	StemCellsEffect: Stem Cells
 	AsgardianAegisEffect: Asgardian Aegis
 	RampartofDeitiesEffect: Rampart of Deities
 	ShieldHighRulerEffect: Shield of High Ruler
@@ -315,12 +316,16 @@ Items: {
 
 	BrandoftheWitchNew: {
 		DisplayName: Brand of the Witch New
-		Tooltip: ""
+		Tooltip: "[BrandoftheWitchEffects]"
+		BrandoftheWitchFargo: ""
+		BrandoftheWitchCalamity: ""
 	}
 
 	ColossusSoulNew: {
 		DisplayName: Colossus Soul New
-		Tooltip: ""
+		Tooltip: "[ColossusEffects]"
+		ColossusFargo: ""
+		ColossusCalamity: ""
 	}
 
 	FlightMasterySoulNew: {
@@ -330,12 +335,16 @@ Items: {
 
 	SupersonicSoulNew: {
 		DisplayName: Supersonic Soul New
-		Tooltip: ""
+		Tooltip: "[SupersonicEffects]"
+		SupersonicFargo: ""
+		SupersonicCalamity: ""
 	}
 
 	TrawlerSoulNew: {
 		DisplayName: Trawler Soul New
-		Tooltip: ""
+		Tooltip: "[TrawlerEffects]"
+		TrawlerFargo: ""
+		TrawlerCalamity: ""
 	}
 
 	WorldShaperSoulNew: {
@@ -360,7 +369,9 @@ Items: {
 
 	SnipersSoulNew: {
 		DisplayName: Snipers Soul New
-		Tooltip: ""
+		Tooltip: "[SnipersEffects]"
+		SnipersFargo: ""
+		SnipersCalamity: ""
 	}
 
 	VagabondsSoulNew: {
@@ -370,7 +381,9 @@ Items: {
 
 	UniverseSoulNew: {
 		DisplayName: Universe Soul New
-		Tooltip: ""
+		Tooltip: "[UniverseEffects]"
+		UniverseFargo: ""
+		UniverseCalamity: ""
 	}
 
 	DimensionSoulNew: {

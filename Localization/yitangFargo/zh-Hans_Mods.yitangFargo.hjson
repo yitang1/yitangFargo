@@ -92,7 +92,6 @@ Toggler: {
 	AuricEffect: 古圣金源 套装效果
 	AuricMinion: 古圣金源 召唤仆从
 	AuricPurity: 古圣金源 无瑕粹魂晶
-	AuricRampart: 古圣金源 神之壁垒
 	AuricYharimsGift: 古圣金源 寻神者之礼
 	EternityHeader: "{$Mods.yitangFargo.Items.EternityForce.DisplayName}"
 	ANekomiEffect: 猫猫睡衣 套装效果
@@ -105,9 +104,11 @@ Toggler: {
 	TrueMutantEye: 真·突变 突变之眼
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: 元灵之心
-	BCells: 痴愚金龙干细胞
 	DNebulousCore: 星云之核
 	EDraedonsHeart: 嘉登之心
+	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
+	QuiverofNihilityEffect: 虚无箭袋
+	StemCellsEffect: 痴愚金龙干细胞
 	AsgardianAegisEffect: 阿斯加德之庇护
 	RampartofDeitiesEffect: 神之壁垒
 	ShieldHighRulerEffect: 至高统治之盾
@@ -675,10 +676,17 @@ Items: {
 		DisplayName: 硫火女巫烙印
 		Tooltip:
 			'''
-			拥有元灵之心、痴愚金龙干细胞、
-			以及嘉登之心的效果
+			拥有元灵之心和嘉登之心的效果
+			[BrandoftheWitchEffects]
 			“不灭而铭心的痛楚，宛如永无释怀之日”
 			'''
+		BrandoftheWitchFargo:
+			'''
+			拥有至高统治之盾、深渊潜游服、
+			痴愚金龙干细胞、斯塔提斯的虚空饰带、
+			阿斯加德之庇护和神之壁垒的效果
+			'''
+		BrandoftheWitchCalamity: ""
 	}
 
 	ColossusSoulNew: {
@@ -690,10 +698,20 @@ Items: {
 			增加5点生命再生速度
 			免疫一些减益、击退和掉落伤害
 			提升敌人以你为目标的几率
+			[ColossusEffects]
+			“你无人可挡”
+			'''
+		ColossusFargo:
+			'''
 			拥有混乱之脑、星星面纱、
 			蜜蜂斗篷、闪亮石、圣骑士护盾
 			以及冰冻海龟壳的效果
-			“你无人可挡”
+			'''
+		ColossusCalamity:
+			'''
+			拥有混乱之脑、蜜蜂斗篷、
+			闪亮石、阿斯加德之庇护
+			以及神之壁垒的效果
 			'''
 	}
 
@@ -722,9 +740,18 @@ Items: {
 			提升跳跃高度和跳跃速度，允许自动跳跃
 			获得游泳能力，大幅延长水下呼吸时间
 			你走过的草地上会长出花朵
-			拥有飞毯、克苏鲁护盾、忍者大师装备、
-			以及甜心项链和琥珀马掌气球的效果
+			[SupersonicEffects]
 			“我就是速度”
+			'''
+		SupersonicFargo:
+			'''
+			拥有飞毯、克苏鲁护盾、甜心项链
+			以及忍者大师装备的效果
+			'''
+		SupersonicCalamity:
+			'''
+			拥有飞毯、至高统治之盾、甜心项链
+			以及斯塔提斯的虚空饰带的效果
 			'''
 	}
 
@@ -736,10 +763,20 @@ Items: {
 			钓竿会额外扔出10根鱼线
 			你几乎立刻就能钓到鱼
 			拥有声纳和宝匣药水的效果
+			[TrawlerEffects]
+			“愿者上钩”
+			'''
+		TrawlerFargo:
+			'''
 			拥有防熔岩渔具袋、孢子囊、
 			挥发明胶、粉马掌气球、
 			以及北极潜水装备的效果
-			“愿者上钩”
+			'''
+		TrawlerCalamity:
+			'''
+			拥有万能渔具包、孢子囊、
+			挥发明胶、粉马掌气球
+			以及深渊潜游服的效果
 			'''
 	}
 
@@ -811,8 +848,14 @@ Items: {
 			远程伤害提高30%
 			远程暴击率提高15%
 			20%的几率不消耗弹药
-			拥有狙击镜的效果
+			[SnipersEffects]
 			“预备，瞄准，开火”
+			'''
+		SnipersFargo: 拥有狙击镜的效果
+		SnipersCalamity:
+			'''
+			拥有狙击镜、虚无箭袋、
+			以及痴愚金龙干细胞的效果
 			'''
 	}
 
@@ -836,6 +879,7 @@ Items: {
 			所有武器的攻击速度和射弹速度提高50%、击退力翻倍
 			[i:FargowiltasSouls/UniverseCore] 暴击会造成4倍伤害，并会造成宇宙之火减益
 			[i:yitangFargo/BerserkerSoulNew] 拥有烈火手套、悠悠球袋和天界壳的效果
+			[UniverseEffects]
 			[i:yitangFargo/SnipersSoulNew][i:yitangFargo/ArchWizardsSoulNew] 拥有狙击镜的效果，最大魔力值增加300点
 			[i:yitangFargo/ArchWizardsSoulNew] 拥有天界手铐和魔力花的效果
 			[i:yitangFargo/ConjuristsSoulNew] 仆从和哨兵数量上限提高6个
@@ -844,6 +888,8 @@ Items: {
 			[i:yitangFargo/VagabondsSoulNew] 拥有浴火龙鳞和敬天神盗盒的效果
 			“诸天也向你俯首”
 			'''
+		UniverseFargo: ""
+		UniverseCalamity: "[i:yitangFargo/SnipersSoulNew] 拥有虚无箭袋和痴愚金龙干细胞的效果"
 	}
 
 	DimensionSoulNew: {
@@ -1388,7 +1434,7 @@ Configs: {
 		}
 
 		OldEnchant: {
-			Label: 添加旧版魔石效果
+			Label: 添加旧版原版魔石效果
 			Tooltip:
 				'''
 				启用此选项后，会在游戏中给一些原版魔石添加旧版本的效果

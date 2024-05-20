@@ -11,11 +11,15 @@ using CalamityMod.Items.Accessories;
 using yitangFargo.Content.Items.Calamity.Souls;
 using FargowiltasSouls.Core.Toggler.Content;
 using FargowiltasSouls.Core.Toggler;
+using System.Collections.Generic;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    public class ColossusSoulNew : BaseSoul
+    public class ColossusSoulNew : BaseSoul, ILocalizedModType
     {
+        public new string LocalizationCategory => "Items";
+
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -66,6 +70,18 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.AddEffect<FrozenTurtleEffect>(item);
             player.AddEffect<PaladinShieldEffect>(item);
             player.AddEffect<ShimmerImmunityEffect>(item);
+        }
+
+        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                tooltips.ReplaceText("[ColossusEffects]", this.GetLocalizedValue("ColossusCalamity"));
+            }
+            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                tooltips.ReplaceText("[ColossusEffects]", this.GetLocalizedValue("ColossusFargo"));
+            }
         }
 
         public override void AddRecipes()
