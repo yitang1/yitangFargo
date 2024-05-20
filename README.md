@@ -2,7 +2,7 @@
 这是一个tmodloader的模组（Mod）。  
 此模组开发时的定位是适配“**灾法双开**”这种玩法的QOL类Mod（Quality of Life）。
 #### Mod下载：
-* 点击上面“**yitangFargo.tmod**“的Mod文件，打开的界面点击右上角三个点，有个“**Download**”，点击后等一会即可弹出浏览器下载。（在此Mod发布的gitee网址点击后会直接出现下载两字）  
+* 点击上面“**yitangFargo.tmod**“的Mod文件，打开的界面点击右上角三个点，有个“**Download**”，点击后等一会即可弹出浏览器下载。（在此Mod发布的gitee网址点击这个文件，会直接出现下载两字）  
   
 * 或者👉[点击这里](https://github.com/yitang1/yitangFargo/releases)
 
