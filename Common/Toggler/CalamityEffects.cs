@@ -24,6 +24,13 @@ namespace yitangFargo.Common.Toggler
         public override int ToggleItemType => ModContent.ItemType<DynamoStemCells>();
         public override bool IgnoresMutantPresence => true;
     }
+    //聚合之脑
+    public class AmalgamEffect : AccessoryEffect
+    {
+        public override Header ToggleHeader => Header.GetHeader<ColossusHeader>();
+        public override int ToggleItemType => ModContent.ItemType<TheAmalgam>();
+        public override bool IgnoresMutantPresence => true;
+    }
     //阿斯加德之庇护
     public class AsgardianAegisEffect : AccessoryEffect
     {

@@ -43,6 +43,11 @@ namespace yitangFargo.Global.GlobalItems
                 if (item.type == ModContent.ItemType<ColossusSoulNew>() || item.type == ModContent.ItemType<DimensionSoulNew>()
                     || item.type == ModContent.ItemType<EternitySoulNew>())
                 {
+                    //聚合之脑
+                    if (player.AddEffect<AmalgamEffect>(item))
+                    {
+                        ModContent.GetInstance<TheAmalgam>().UpdateAccessory(player, hideVisual);
+                    }
                     //阿斯加德之庇护
                     if (player.AddEffect<AsgardianAegisEffect>(item))
                     {

@@ -52,7 +52,6 @@ Toggler: {
 	UmbraphileGlove: Umbraphile Glove
 	AstralEffect: Astral Armor Bonus
 	AstralHideofAstrum: Astral Hide of Astrum
-	AstralTheAbsorber: Astral The Absorber
 	AstralSabaton: Astral Sabaton
 	OmegaBlueEffect: Omega Blue Armor Bonus
 	OmegaBluePhantomic: Omega Blue Phantomic
@@ -87,7 +86,7 @@ Toggler: {
 	GodSlayerNebulousCore: GodSlayer Nebulous Core
 	SilvaEffect: Silva Armor Bonus
 	SilvaEffectCrystal: Silva Crystal
-	SilvaTheAmalgam: Silva The Amalgam
+	SilvaTheAbsorber: Silva The Absorber
 	SilvaTheSponge: Silva The Sponge
 	AuricEffect: Auric Armor Bonus
 	AuricMinion: Auric Minion
@@ -109,6 +108,7 @@ Toggler: {
 	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
 	QuiverofNihilityEffect: Quiver of Nihility
 	StemCellsEffect: Stem Cells
+	AmalgamEffect: The Amalgam
 	AsgardianAegisEffect: Asgardian Aegis
 	RampartofDeitiesEffect: Rampart of Deities
 	ShieldHighRulerEffect: Shield of High Ruler

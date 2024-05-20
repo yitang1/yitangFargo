@@ -9,6 +9,7 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
 using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
+using CalamityMod.Items.Weapons.Summon;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -32,7 +33,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<AstralEffect>(Item);
             player.AddEffect<AstralHideofAstrum>(Item);
-            player.AddEffect<AstralTheAbsorber>(Item);
             player.AddEffect<AstralSabaton>(Item);
 
             //星幻盔甲
@@ -44,11 +44,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             if (player.HasEffect<AstralHideofAstrum>())
             {
                 ModContent.GetInstance<HideofAstrumDeus>().UpdateAccessory(player, hideVisual);
-            }
-            //阴阳吸星石
-            if (player.HasEffect<AstralTheAbsorber>())
-            {
-                ModContent.GetInstance<TheAbsorber>().UpdateAccessory(player, hideVisual);
             }
             //引力靴
             if (player.HasEffect<AstralSabaton>())
@@ -63,8 +58,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<AstralHelm>()
                 .AddIngredient<AstralBreastplate>()
                 .AddIngredient<AstralLeggings>()
+                .AddIngredient<HivePod>()
                 .AddIngredient<HideofAstrumDeus>()
-                .AddIngredient<TheAbsorber>()
                 .AddIngredient<GravistarSabaton>()
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();
@@ -78,12 +73,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override bool IgnoresMutantPresence => true;
     }
     public class AstralHideofAstrum : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<AstralEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class AstralTheAbsorber : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AstralEnchant>();

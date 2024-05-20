@@ -52,7 +52,6 @@ Toggler: {
 	UmbraphileGlove: 日影 精准手套
 	AstralEffect: 星幻 套装效果
 	AstralHideofAstrum: 星幻 星神隐壳
-	AstralTheAbsorber: 星幻 阴阳吸星石
 	AstralSabaton: 星幻 引力靴
 	OmegaBlueEffect: 蓝色欧米茄 套装效果
 	OmegaBluePhantomic: 蓝色欧米茄 幻魂神物
@@ -87,7 +86,7 @@ Toggler: {
 	GodSlayerNebulousCore: 弑神者 星云之核
 	SilvaEffect: 始源林海 套装效果
 	SilvaEffectCrystal: 始源林海 始源林海水晶
-	SilvaTheAmalgam: 始源林海 聚合之脑
+	SilvaTheAbsorber: 始源林海 阴阳吸星石
 	SilvaTheSponge: 始源林海 化绵留香石
 	AuricEffect: 古圣金源 套装效果
 	AuricMinion: 古圣金源 召唤仆从
@@ -109,6 +108,7 @@ Toggler: {
 	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
 	QuiverofNihilityEffect: 虚无箭袋
 	StemCellsEffect: 痴愚金龙干细胞
+	AmalgamEffect: 聚合之脑
 	AsgardianAegisEffect: 阿斯加德之庇护
 	RampartofDeitiesEffect: 神之壁垒
 	ShieldHighRulerEffect: 至高统治之盾
@@ -250,8 +250,7 @@ Items: {
 			'''
 			对敌人造成暴击时会降下落星
 			此效果有1秒的冷却时间
-			拥有星神隐壳、阴阳吸星石、
-			以及引力靴的效果
+			拥有星神隐壳和引力靴的效果
 			“幻星感染已经吞噬了你……”
 			'''
 	}
@@ -507,7 +506,7 @@ Items: {
 			无法穿透的魔法射弹击中敌人后
 			有几率产生强大的自然能量爆炸
 			召唤一个向敌人发射生命能量的始源林海水晶
-			拥有聚合之脑、化绵留香石和空灵护符的效果
+			拥有阴阳吸星石、化绵留香石和空灵护符的效果
 			“无尽的生命能量于你身上喷涌而出……”
 			'''
 	}
@@ -630,7 +629,7 @@ Items: {
 			[i:yitangFargo/SnowRuffianEnchant] 拥有潜遁者宝石和腐烂犬齿的效果
 			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
 			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
-			[i:yitangFargo/AstralEnchant] 拥有星神隐壳、阴阳吸星石和引力靴的效果
+			[i:yitangFargo/AstralEnchant] 拥有星神隐壳和引力靴的效果
 			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物和猎魂鲨齿项链的效果
 			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
 			'''
@@ -666,7 +665,7 @@ Items: {
 			[i:yitangFargo/BloodflareEnchant] 拥有血神圣杯和血炎晶核的效果
 			[i:yitangFargo/BrimflameEnchant] 拥有灾劫虚空和终结虚空的效果
 			[i:yitangFargo/GodSlayerEnchant] 拥有元素之握、元素箭袋和星云之核的效果
-			[i:yitangFargo/SilvaEnchant] 拥有聚合之脑、化绵留香石和空灵护符的效果
+			[i:yitangFargo/SilvaEnchant] 拥有阴阳吸星石、化绵留香石和空灵护符的效果
 			[i:yitangFargo/AuricEnchant] 拥有无瑕粹魂晶、神之壁垒和寻神者之礼的效果
 			“涅槃之光抚慰着你的心灵，淬炼着你的意志”
 			'''
@@ -683,7 +682,8 @@ Items: {
 		BrandoftheWitchFargo:
 			'''
 			拥有至高统治之盾、深渊潜游服、
-			痴愚金龙干细胞、斯塔提斯的虚空饰带、
+			痴愚金龙干细胞、虚无箭袋、
+			斯塔提斯的虚空饰带、聚合之脑、
 			阿斯加德之庇护和神之壁垒的效果
 			'''
 		BrandoftheWitchCalamity: ""
@@ -709,7 +709,7 @@ Items: {
 			'''
 		ColossusCalamity:
 			'''
-			拥有混乱之脑、蜜蜂斗篷、
+			拥有聚合之脑、蜜蜂斗篷、
 			闪亮石、阿斯加德之庇护
 			以及神之壁垒的效果
 			'''

@@ -53,10 +53,20 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
                 FargoSoulsPlayer fargoPlayer = player.FargoSouls();
+                //虚无箭袋
+                if (player.AddEffect<QuiverofNihilityEffect>(Item))
+                {
+                    ModContent.GetInstance<QuiverofNihility>().UpdateAccessory(player, hideVisual);
+                }
                 //痴愚金龙干细胞
                 if (player.AddEffect<StemCellsEffect>(Item))
                 {
                     ModContent.GetInstance<DynamoStemCells>().UpdateAccessory(player, hideVisual);
+                }
+                //聚合之脑
+                if (player.AddEffect<AmalgamEffect>(Item))
+                {
+                    ModContent.GetInstance<TheAmalgam>().UpdateAccessory(player, hideVisual);
                 }
                 //阿斯加德之庇护
                 if (player.AddEffect<AsgardianAegisEffect>(Item))
@@ -95,11 +105,11 @@ namespace yitangFargo.Content.Items.Calamity.Souls
         {
             if (ytFargoConfig.Instance.CalamityFargoRecipe)
             {
-                tooltips.ReplaceText("[BrandoftheWitchNew]", this.GetLocalizedValue("BrandoftheWitchCalamity"));
+                tooltips.ReplaceText("[BrandoftheWitchEffects]", this.GetLocalizedValue("BrandoftheWitchCalamity"));
             }
             else if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
-                tooltips.ReplaceText("[BrandoftheWitchNew]", this.GetLocalizedValue("BrandoftheWitchFargo"));
+                tooltips.ReplaceText("[BrandoftheWitchEffects]", this.GetLocalizedValue("BrandoftheWitchFargo"));
             }
         }
 
@@ -112,7 +122,9 @@ namespace yitangFargo.Content.Items.Calamity.Souls
                     .AddIngredient<ShieldoftheHighRuler>()
                     .AddIngredient<AbyssalDivingSuit>()
                     .AddIngredient<DynamoStemCells>()
+                    .AddIngredient<QuiverofNihility>()
                     .AddIngredient<StatisVoidSash>()
+                    .AddIngredient<TheAmalgam>()
                     .AddIngredient<AsgardianAegis>()
                     .AddIngredient<RampartofDeities>()
                     .AddIngredient<DraedonsHeart>()

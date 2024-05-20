@@ -38,7 +38,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<SilvaEffect>(Item);
             player.AddEffect<SilvaEffectCrystal>(Item);
-            player.AddEffect<SilvaTheAmalgam>(Item);
+            player.AddEffect<SilvaTheAbsorber>(Item);
             player.AddEffect<SilvaTheSponge>(Item);
 
             //始源林海盔甲
@@ -53,10 +53,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 calamityPlayer.silvaSummon = true;
             }
-            //聚合之脑
-            if (player.HasEffect<SilvaTheAmalgam>())
+            //阴阳吸星石
+            if (player.HasEffect<SilvaTheAbsorber>())
             {
-                ModContent.GetInstance<TheAmalgam>().UpdateAccessory(player, hideVisual);
+                ModContent.GetInstance<TheAbsorber>().UpdateAccessory(player, hideVisual);
             }
             //化绵留香石
             if (player.HasEffect<SilvaTheSponge>())
@@ -73,7 +73,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnySilva")
                 .AddIngredient<SilvaArmor>()
                 .AddIngredient<SilvaLeggings>()
-                .AddIngredient<TheAmalgam>()
+                .AddIngredient<TheAbsorber>()
                 .AddIngredient<TheSponge>()
                 .AddIngredient<EtherealTalisman>()
                 .AddTile<CosmicAnvil>()
@@ -106,7 +106,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
     }
-    public class SilvaTheAmalgam : AccessoryEffect
+    public class SilvaTheAbsorber : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
