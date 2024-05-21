@@ -55,7 +55,6 @@ Toggler: {
 	AstralSabaton: 星幻 引力靴
 	OmegaBlueEffect: 蓝色欧米茄 套装效果
 	OmegaBluePhantomic: 蓝色欧米茄 幻魂神物
-	OmegaBlueReaperTooth: 蓝色欧米茄 猎魂鲨齿项链
 	DevastationHeader: "{$Mods.yitangFargo.Items.DevastationForce.DisplayName}"
 	WulfrumEffect: 钨钢 套装效果
 	WulfrumRoverDrive: 钨钢 钨钢屏障生成仪
@@ -74,7 +73,6 @@ Toggler: {
 	DemonShadeGCommunity: 魔影 幻灭心元石
 	ExaltationHeader: "{$Mods.yitangFargo.Items.ExaltationForce.DisplayName}"
 	TarragonEffect: 龙蒿 套装效果
-	TarragonInsignia: 龙蒿 进升证章
 	BloodEffect: 血炎 套装效果
 	BloodMinion: 血炎 噬魂幽花地雷
 	BloodTheChalice: 血炎 血神圣杯
@@ -103,8 +101,15 @@ Toggler: {
 	TrueMutantEye: 真·突变 突变之眼
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: 元灵之心
-	DNebulousCore: 星云之核
+	BFrostFlare: 霜冻之炎
+	CLeviathanAmbergris: 利维坦龙涎香
+	DBlunderBooster: 悖论增幅器
 	EDraedonsHeart: 嘉登之心
+	FFungalClump: 真菌块
+	GHowlsHeart: 哈尔之心
+	HTheEvolution: 进化者
+	CalamityBerserkerHeader: "{$Mods.yitangFargo.Items.BerserkerSoulNew.DisplayName}"
+	ReaperToothEffect: 猎魂鲨齿项链
 	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
 	QuiverofNihilityEffect: 虚无箭袋
 	StemCellsEffect: 痴愚金龙干细胞
@@ -313,7 +318,7 @@ Items: {
 			期间能大幅提高你的伤害和暴击率
 			同时触手的攻击欲望和攻击范围都会提高
 			此效果有25秒的冷却时间
-			拥有幻魂神物和猎魂鲨齿项链的效果
+			拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
 			“深渊的黑暗笼罩着你……”
 			'''
 	}
@@ -526,7 +531,7 @@ Items: {
 			召唤围绕着你的生命光环，对附近敌人持续造成伤害
 			每造成50次盗贼暴击时，你会获得2.5秒无敌时间
 			若你处于被减益影响的状态，则提升10%的盗贼伤害
-			拥有进升证章、勇气勋章和蚀日尊戒的效果
+			拥有勇气勋章和蚀日尊戒的效果
 			“布瑞莱尔的不朽之力在你体内流淌……”
 			'''
 	}
@@ -630,7 +635,7 @@ Items: {
 			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
 			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
 			[i:yitangFargo/AstralEnchant] 拥有星神隐壳和引力靴的效果
-			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物和猎魂鲨齿项链的效果
+			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
 			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
 			'''
 	}
@@ -661,7 +666,7 @@ Items: {
 			[i:yitangFargo/GodSlayerEnchant] 拥有弑神者盔甲的套装效果
 			[i:yitangFargo/SilvaEnchant] 拥有始源林海盔甲的套装效果
 			[i:yitangFargo/AuricEnchant] 拥有古圣金源盔甲的套装效果
-			[i:yitangFargo/TarragonEnchant] 拥有进升证章、勇气勋章和蚀日尊戒的效果
+			[i:yitangFargo/TarragonEnchant] 拥有勇气勋章和蚀日尊戒的效果
 			[i:yitangFargo/BloodflareEnchant] 拥有血神圣杯和血炎晶核的效果
 			[i:yitangFargo/BrimflameEnchant] 拥有灾劫虚空和终结虚空的效果
 			[i:yitangFargo/GodSlayerEnchant] 拥有元素之握、元素箭袋和星云之核的效果
@@ -675,16 +680,19 @@ Items: {
 		DisplayName: 硫火女巫烙印
 		Tooltip:
 			'''
-			拥有元灵之心和嘉登之心的效果
+			拥有真菌块、蜜蜂护符、哈尔之心、霜冻之炎、
+			利维坦龙涎香、元灵之心、悖论增幅器、
+			阳炎战旗、进化者和嘉登之心的效果
 			[BrandoftheWitchEffects]
 			“不灭而铭心的痛楚，宛如永无释怀之日”
 			'''
 		BrandoftheWitchFargo:
 			'''
 			拥有至高统治之盾、深渊潜游服、
-			痴愚金龙干细胞、虚无箭袋、
-			斯塔提斯的虚空饰带、聚合之脑、
-			阿斯加德之庇护和神之壁垒的效果
+			痴愚金龙干细胞、猎魂鲨齿项链、
+			虚无箭袋、斯塔提斯的虚空饰带、
+			聚合之脑、阿斯加德之庇护
+			以及神之壁垒的效果
 			'''
 		BrandoftheWitchCalamity: ""
 	}
@@ -821,9 +829,18 @@ Items: {
 			近战攻速提高20%
 			近战暴击率提高15%
 			提高近战击退力
+			[BerserkerEffects]
+			“吾之传说，生者弗能传颂”
+			'''
+		BerserkerFargo:
+			'''
 			拥有烈火手套、悠悠球袋、
 			以及天界壳的效果
-			“吾之传说，生者弗能传颂”
+			'''
+		BerserkerCalamity:
+			'''
+			拥有烈火手套、悠悠球袋、
+			天界壳和猎魂鲨齿项链的效果
 			'''
 	}
 

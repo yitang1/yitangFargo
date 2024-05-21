@@ -13,6 +13,7 @@ using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
 using CalamityMod.CalPlayer;
 using CalamityMod;
+using CalamityMod.Items.Weapons.Melee;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -35,7 +36,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<TarragonEffect>(Item);
-            player.AddEffect<TarragonInsignia>(Item);
 
             //龙蒿盔甲
             CalamityPlayer calamityPlayer = player.Calamity();
@@ -47,11 +47,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 calamityPlayer.tarraMage = true;
                 calamityPlayer.tarraSummon = true;
                 calamityPlayer.tarraThrowing = true;
-            }
-            //进升证章
-            if (player.HasEffect<TarragonInsignia>())
-            {
-                ModContent.GetInstance<AscendantInsignia>().UpdateAccessory(player, hideVisual);
             }
             //蚀日尊戒 (这两个全是正面添加数值的饰品效果，就直接默认生效好了)
             ModContent.GetInstance<DarkSunRing>().UpdateAccessory(player, hideVisual);
@@ -65,7 +60,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnyTarragon")
                 .AddIngredient<TarragonBreastplate>()
                 .AddIngredient<TarragonLeggings>()
-                .AddIngredient<AscendantInsignia>()
+                .AddIngredient<HolyCollider>()
                 .AddIngredient<DarkSunRing>()
                 .AddIngredient<BadgeofBravery>()
                 .AddTile(TileID.LunarCraftingStation)
@@ -74,12 +69,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
     }
 
     public class TarragonEffect : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<TarragonEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class TarragonInsignia : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<TarragonEnchant>();

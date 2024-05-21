@@ -10,11 +10,15 @@ using yitangFargo.Global.Config;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Items.Weapons.DraedonsArsenal;
+using System.Collections.Generic;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
-    public class BerserkerSoulNew : BaseSoul
+    public class BerserkerSoulNew : BaseSoul, ILocalizedModType
     {
+        public new string LocalizationCategory => "Items";
+
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -60,6 +64,18 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.lifeRegen += 2;
         }
 
+        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+        {
+            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            {
+                tooltips.ReplaceText("[BerserkerEffects]", this.GetLocalizedValue("BerserkerCalamity"));
+            }
+            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
+            {
+                tooltips.ReplaceText("[BerserkerEffects]", this.GetLocalizedValue("BerserkerFargo"));
+            }
+        }
+
         public override void AddRecipes()
         {
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
@@ -93,6 +109,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.FireGauntlet)
                     .AddIngredient(ItemID.BerserkerGlove)
                     .AddIngredient(ItemID.CelestialShell)
+                    .AddIngredient<ReaperToothNecklace>()
                     .AddIngredient<CelestialClaymore>()
                     .AddIngredient(ItemID.DripplerFlail)
                     .AddIngredient(ItemID.Kraken)

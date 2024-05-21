@@ -35,7 +35,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<OmegaBlueEffect>(Item);
             player.AddEffect<OmegaBluePhantomic>(Item);
-            player.AddEffect<OmegaBlueReaperTooth>(Item);
 
             //蓝色欧米茄盔甲
             CalamityPlayer calamityPlayer = player.Calamity();
@@ -58,11 +57,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 ModContent.GetInstance<PhantomicArtifact>().UpdateAccessory(player, hideVisual);
             }
-            //猎魂鲨齿项链
-            if (player.HasEffect<OmegaBlueReaperTooth>())
-            {
-                ModContent.GetInstance<ReaperToothNecklace>().UpdateAccessory(player, hideVisual);
-            }
+            //惧魂神物
+            ModContent.GetInstance<EldritchSoulArtifact>().UpdateAccessory(player, hideVisual);
             //灾劫之尖啸
             ModContent.GetInstance<Affliction>().UpdateAccessory(player, hideVisual);
         }
@@ -74,7 +70,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<OmegaBlueChestplate>()
                 .AddIngredient<OmegaBlueTentacles>()
                 .AddIngredient<PhantomicArtifact>()
-                .AddIngredient<ReaperToothNecklace>()
+                .AddIngredient<EldritchSoulArtifact>()
                 .AddIngredient<Affliction>()
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();
@@ -88,12 +84,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override bool IgnoresMutantPresence => true;
     }
     public class OmegaBluePhantomic : AccessoryEffect
-    {
-        public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
-        public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class OmegaBlueReaperTooth : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();

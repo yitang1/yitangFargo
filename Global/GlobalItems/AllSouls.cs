@@ -23,6 +23,17 @@ namespace yitangFargo.Global.GlobalItems
             if (ytFargoConfig.Instance.CalamityFargoRecipe)
             {
                 FargoSoulsPlayer fargoPlayer = player.FargoSouls();
+                //狂战士之魂
+                if (item.type == ModContent.ItemType<BerserkerSoulNew>() || item.type == ModContent.ItemType<UniverseSoulNew>()
+                    || item.type == ModContent.ItemType<EternitySoulNew>())
+                {
+                    //猎魂鲨齿项链
+                    if (player.AddEffect<ReaperToothEffect>(item))
+                    {
+                        ModContent.GetInstance<ReaperToothNecklace>().UpdateAccessory(player, hideVisual);
+                    }
+                }
+
                 //神枪手之魂
                 if (item.type == ModContent.ItemType<SnipersSoulNew>() || item.type == ModContent.ItemType<UniverseSoulNew>()
                     || item.type == ModContent.ItemType<EternitySoulNew>())

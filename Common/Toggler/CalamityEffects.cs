@@ -10,6 +10,13 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Common.Toggler
 {
+    //猎魂鲨齿项链
+    public class ReaperToothEffect : AccessoryEffect
+    {
+        public override Header ToggleHeader => Header.GetHeader<CalamityBerserkerHeader>();
+        public override int ToggleItemType => ModContent.ItemType<ReaperToothNecklace>();
+        public override bool IgnoresMutantPresence => true;
+    }
     //虚无箭袋
     public class QuiverofNihilityEffect : AccessoryEffect
     {

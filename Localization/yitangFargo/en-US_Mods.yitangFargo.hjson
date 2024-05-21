@@ -55,7 +55,6 @@ Toggler: {
 	AstralSabaton: Astral Sabaton
 	OmegaBlueEffect: Omega Blue Armor Bonus
 	OmegaBluePhantomic: Omega Blue Phantomic
-	OmegaBlueReaperTooth: Omega Blue Reaper Tooth
 	DevastationHeader: "{$Mods.yitangFargo.Items.DevastationForce.DisplayName}"
 	WulfrumEffect: Wulfrum Armor Bonus
 	WulfrumRoverDrive: Wulfrum WulfrumRoverDrive
@@ -74,7 +73,6 @@ Toggler: {
 	DemonShadeGCommunity: DemonShade Community
 	ExaltationHeader: "{$Mods.yitangFargo.Items.ExaltationForce.DisplayName}"
 	TarragonEffect: Tarragon Armor Bonus
-	TarragonInsignia: Tarragon Insignia
 	BloodEffect: Bloodflare Armor Bonus
 	BloodMinion: Bloodflare Minion
 	BloodTheChalice: Bloodflare The Chalice
@@ -103,8 +101,15 @@ Toggler: {
 	TrueMutantEye: TrueMutant Eye
 	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
 	AHeartElements: Heart of the Elements
-	DNebulousCore: Nebulous Core
+	BFrostFlare: Frost Flare
+	CLeviathanAmbergris: Leviathan Ambergris
+	DBlunderBooster: Blunder Booster
 	EDraedonsHeart: Draedons Heart
+	FFungalClump: Fungal Clump
+	GHowlsHeart: Howls Heart
+	HTheEvolution: The Evolution
+	CalamityBerserkerHeader: "{$Mods.yitangFargo.Items.BerserkerSoulNew.DisplayName}"
+	ReaperToothEffect: Reaper Tooth Necklace
 	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
 	QuiverofNihilityEffect: Quiver of Nihility
 	StemCellsEffect: Stem Cells
@@ -359,7 +364,9 @@ Items: {
 
 	BerserkerSoulNew: {
 		DisplayName: Berserker Soul New
-		Tooltip: ""
+		Tooltip: "[BerserkerEffects]"
+		BerserkerFargo: ""
+		BerserkerCalamity: ""
 	}
 
 	ConjuristsSoulNew: {

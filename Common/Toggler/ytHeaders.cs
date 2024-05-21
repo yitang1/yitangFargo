@@ -8,6 +8,12 @@ using yitangFargo.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Common.Toggler
 {
+    //狂战士之魂
+    public class CalamityBerserkerHeader : SoulHeader
+    {
+        public override int Item => ModContent.ItemType<BerserkerSoulNew>();
+        public override float Priority => 2.11f;
+    }
     //神枪手之魂
     public class CalamitySnipersHeader : SoulHeader
     {

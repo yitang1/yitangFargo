@@ -38,21 +38,62 @@ namespace yitangFargo.Content.Items.Calamity.Souls
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            #region 默认配方里的饰品
+            //真菌块
+            if (player.AddEffect<FFungalClump>(Item))
+            {
+                ModContent.GetInstance<FungalClump>().UpdateAccessory(player, hideVisual);
+            }
+            //蜜蜂护符
+            ModContent.GetInstance<TheBee>().UpdateAccessory(player, hideVisual);
+            //哈尔之心
+            if (player.AddEffect<GHowlsHeart>(Item))
+            {
+                ModContent.GetInstance<HowlsHeart>().UpdateAccessory(player, hideVisual);
+            }
+            //霜冻之炎
+            if (player.AddEffect<BFrostFlare>(Item))
+            {
+                ModContent.GetInstance<FrostFlare>().UpdateAccessory(player, hideVisual);
+            }
+            //利维坦龙涎香
+            if (player.AddEffect<CLeviathanAmbergris>(Item))
+            {
+                ModContent.GetInstance<LeviathanAmbergris>().UpdateAccessory(player, hideVisual);
+            }
             //元灵之心
             if (player.AddEffect<AHeartElements>(Item))
             {
                 ModContent.GetInstance<HeartoftheElements>().UpdateAccessory(player, hideVisual);
+            }
+            //悖论增幅器
+            if (player.AddEffect<DBlunderBooster>(Item))
+            {
+                ModContent.GetInstance<BlunderBooster>().UpdateAccessory(player, hideVisual);
+            }
+            //阳炎战旗
+            ModContent.GetInstance<WarbanneroftheSun>().UpdateAccessory(player, hideVisual);
+            //进化者
+            if (player.AddEffect<HTheEvolution>(Item))
+            {
+                ModContent.GetInstance<TheEvolution>().UpdateAccessory(player, hideVisual);
             }
             //嘉登之心
             if (player.AddEffect<EDraedonsHeart>(Item))
             {
                 ModContent.GetInstance<DraedonsHeart>().UpdateAccessory(player, hideVisual);
             }
+            #endregion
 
             #region 如果开启【配方修改-Fargo魂本体】配置选项的话
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
                 FargoSoulsPlayer fargoPlayer = player.FargoSouls();
+                //猎魂鲨齿项链
+                if (player.AddEffect<ReaperToothEffect>(Item))
+                {
+                    ModContent.GetInstance<ReaperToothNecklace>().UpdateAccessory(player, hideVisual);
+                }
                 //虚无箭袋
                 if (player.AddEffect<QuiverofNihilityEffect>(Item))
                 {
@@ -118,23 +159,41 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
                 CreateRecipe()
+                    .AddIngredient<FungalClump>()
+                    .AddIngredient<TheBee>()
+                    .AddIngredient<HowlsHeart>()
+                    .AddIngredient<FrostFlare>()
+                    .AddIngredient<LeviathanAmbergris>()
                     .AddIngredient<HeartoftheElements>()
+                    .AddIngredient<BlunderBooster>()
+                    .AddIngredient<WarbanneroftheSun>()
+                    .AddIngredient<TheEvolution>()
+                    .AddIngredient<DraedonsHeart>()
+
                     .AddIngredient<ShieldoftheHighRuler>()
                     .AddIngredient<AbyssalDivingSuit>()
                     .AddIngredient<DynamoStemCells>()
+                    .AddIngredient<ReaperToothNecklace>()
                     .AddIngredient<QuiverofNihility>()
                     .AddIngredient<StatisVoidSash>()
                     .AddIngredient<TheAmalgam>()
                     .AddIngredient<AsgardianAegis>()
                     .AddIngredient<RampartofDeities>()
-                    .AddIngredient<DraedonsHeart>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }
             if (ytFargoConfig.Instance.CalamityFargoRecipe)
             {
                 CreateRecipe()
+                    .AddIngredient<FungalClump>()
+                    .AddIngredient<TheBee>()
+                    .AddIngredient<HowlsHeart>()
+                    .AddIngredient<FrostFlare>()
+                    .AddIngredient<LeviathanAmbergris>()
                     .AddIngredient<HeartoftheElements>()
+                    .AddIngredient<BlunderBooster>()
+                    .AddIngredient<WarbanneroftheSun>()
+                    .AddIngredient<TheEvolution>()
                     .AddIngredient<DraedonsHeart>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
@@ -151,9 +210,39 @@ namespace yitangFargo.Content.Items.Calamity.Souls
         public override int ToggleItemType => ModContent.ItemType<HeartoftheElements>();
         public override bool IgnoresMutantPresence => true;
     }
+    public class BFrostFlare : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<FrostFlare>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    public class CLeviathanAmbergris : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<LeviathanAmbergris>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    public class DBlunderBooster : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<BlunderBooster>();
+        public override bool IgnoresMutantPresence => true;
+    }
     public class EDraedonsHeart : BrandWitchEffect
     {
         public override int ToggleItemType => ModContent.ItemType<DraedonsHeart>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    public class FFungalClump : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<FungalClump>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    public class GHowlsHeart : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<HowlsHeart>();
+        public override bool IgnoresMutantPresence => true;
+    }
+    public class HTheEvolution : BrandWitchEffect
+    {
+        public override int ToggleItemType => ModContent.ItemType<TheEvolution>();
         public override bool IgnoresMutantPresence => true;
     }
 }
