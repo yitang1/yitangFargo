@@ -19,7 +19,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
         {
             base.SetDefaults();
 
-            Item.value = 750000;
+            Item.value = Item.buyPrice(0, 75, 0, 0);
 
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.UseSound = SoundID.Item6;

@@ -45,7 +45,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             base.SetDefaults();
 
             Item.value = Item.buyPrice(5, 0, 0, 0);
-            Item.rare = -12;
+            Item.rare = ItemRarityID.Expert;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

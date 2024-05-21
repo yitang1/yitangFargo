@@ -32,6 +32,13 @@ namespace yitangFargo.Common
             if (line != null)
                 line.Text = line.Text.Replace(replacedKey, newKey);
         }
+        //物品名字在两种以上的颜色之间切换
+        //public static Color ColorSwap(Color firstColor, Color secondColor, float seconds)
+        //{
+        //    double timeMult = (double)(MathHelper.TwoPi / seconds);
+        //    float colorMePurple = (float)((Math.Sin(timeMult * Main.GlobalTimeWrappedHourly) + 1) * 0.5f);
+        //    return Color.Lerp(firstColor, secondColor, colorMePurple);
+        //}
 
         public static void DrawInventoryCustomScale(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale, float wantedScale = 1f, Vector2 drawOffset = default)
         {

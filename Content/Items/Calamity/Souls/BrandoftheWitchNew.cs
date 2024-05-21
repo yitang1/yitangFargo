@@ -31,8 +31,8 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             Item.width = 20;
             Item.height = 20;
             Item.accessory = true;
-            Item.value = Item.buyPrice(2, 50, 0, 0);
-            Item.rare = ModContent.RarityType<Violet>();
+            Item.value = Item.buyPrice(5, 0, 0, 0);
+            Item.rare = ModContent.RarityType<CalamityRed>();
             Item.defense = 50;
         }
 

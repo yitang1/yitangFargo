@@ -19,6 +19,9 @@ namespace yitangFargo.Content.Items.Accessories.Souls
     {
         public new string LocalizationCategory => "Items";
 
+        //public static readonly Color ItemColor = new(255, 111, 6);
+        //protected override Color? nameColor => ItemColor;
+
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -29,8 +32,6 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             base.SetDefaults();
             Item.defense = 4;
         }
-        public static readonly Color ItemColor = new(255, 111, 6);
-        protected override Color? nameColor => ItemColor;
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

@@ -19,13 +19,13 @@ namespace yitangFargo.Content.Items.Accessories.Souls
     {
         public new string LocalizationCategory => "Items";
 
+        //public static readonly Color ItemColor = new(188, 253, 68);
+        //protected override Color? nameColor => ItemColor;
+
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
         }
-
-        public static readonly Color ItemColor = new(188, 253, 68);
-        protected override Color? nameColor => ItemColor;
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

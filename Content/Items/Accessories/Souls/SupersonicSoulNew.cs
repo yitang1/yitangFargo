@@ -21,14 +21,15 @@ namespace yitangFargo.Content.Items.Accessories.Souls
     {
         public new string LocalizationCategory => "Items";
 
+        //public static readonly Color ItemColor = new(238, 0, 69);
+        //protected override Color? nameColor => ItemColor;
+
         public override void SetDefaults()
         {
             base.SetDefaults();
 
-            Item.value = 750000;
+            Item.value = Item.buyPrice(0, 75, 0, 0);
         }
-        public static readonly Color ItemColor = new(238, 0, 69);
-        protected override Color? nameColor => ItemColor;
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

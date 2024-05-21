@@ -1,12 +1,15 @@
 ﻿using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using yitangFargo.Common;
+using yitangFargo.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Global.GlobalItems
 {
@@ -34,14 +37,41 @@ namespace yitangFargo.Global.GlobalItems
                 EditTooltipByNum(0, (line) => line.Text += "\n" + Language.GetTextValue("Mods.yitangFargo.ContentTexts.CommonTips"));
             }
 
+            TooltipLine nameLine = tooltips.FirstOrDefault(x => x.Name == "ItemName" && x.Mod == "Terraria");
+            if (nameLine != null)
+            {
+                SpecialRarityColor(item, nameLine);
+            }
+
             ////混沌传送杖扣血说明
             //if (item.type == ItemID.RodofDiscord)
             //{
             //    tooltips.Replace("导致混沌状态", Language.GetTextValue("Mods.yitangFargo.ContentTexts.RodofDiscord"));
             //    //tooltips.Add(new TooltipLine(Mod, "RodofDiscord", Language.GetTextValue("Mods.yitangFargo.ContentTexts.RodofDiscord")));
             //}
-
-
+        }
+        private void SpecialRarityColor(Item item, TooltipLine nameLine)
+        {
+            if (item.type == ModContent.ItemType<BerserkerSoulNew>())
+            {
+                nameLine.OverrideColor = new Color(255, 111, 6);
+            }
+            if (item.type == ModContent.ItemType<SnipersSoulNew>())
+            {
+                nameLine.OverrideColor = new Color(188, 253, 68);
+            }
+            if (item.type == ModContent.ItemType<ColossusSoulNew>())
+            {
+                nameLine.OverrideColor = new Color(252, 59, 0);
+            }
+            if (item.type == ModContent.ItemType<SupersonicSoulNew>())
+            {
+                nameLine.OverrideColor = new Color(238, 0, 69);
+            }
+            if (item.type == ModContent.ItemType<TrawlerSoulNew>())
+            {
+                nameLine.OverrideColor = new Color(0, 238, 125);
+            }
         }
 
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
