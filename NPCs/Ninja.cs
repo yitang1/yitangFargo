@@ -404,6 +404,8 @@ namespace yitangFargo.NPCs
             modsES.Add(CustomPrice(ModContent.ItemType<CosmosBag>(), Item.buyPrice(0, 80, 0, 0)), new Condition[] { DownedCosmosChampion });
             modsES.Add(CustomPrice(ModContent.ItemType<AbomBag>(), Item.buyPrice(2, 50, 0, 0)), new Condition[] { DownedAbom });
             modsES.Add(CustomPrice(ModContent.ItemType<MutantBag>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedMutant });
+            //硫火女巫烙印
+            modsES.Add(CustomPrice(ModContent.ItemType<BrandoftheWitchNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedExoAndCal });
             //湮灭之力
             modsES.Add(ModContent.ItemType<AerospecEnchant>(), new Condition[] { DownedSlimeGod });
             modsES.Add(ModContent.ItemType<StatigelEnchant>(), new Condition[] { Condition.Hardmode });
