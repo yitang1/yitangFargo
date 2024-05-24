@@ -1,8 +1,8 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Core.Systems;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.Systems;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoSystem
 {
@@ -97,6 +97,5 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoSystem
             Buff,
             Neutral
         }
-
     }
 }

@@ -1,16 +1,20 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Forces;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.ModPlayers;
-using FargowiltasSouls.Core.Systems;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.ModPlayers;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Forces;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using FargowiltasSouls.Core.Systems;
 using yitangFargo.Content.Buffs;
 using yitangFargo.Content.Items.Accessories.Enchantments;
+using yitangFargo.Content.Items.Others;
 using yitangFargo.Global.FuckFargo.FuckFargoSystem;
+using FargowiltasCrossmod.Core.Calamity.Globals;
+using CalamityMod;
 
 namespace yitangFargo.Common
 {
@@ -38,15 +42,34 @@ namespace yitangFargo.Common
             }
         }
 
+        public override void Initialize()
+        {
+            celestialSeal = false;
+        }
+        public override void SaveData(TagCompound tag)
+        {
+            tag["CelestialSeal"] = celestialSeal;
+        }
+
+        public override void LoadData(TagCompound tag)
+        {
+            celestialSeal = tag.GetBool("CelestialSeal");
+        }
+
         public override void UpdateDead()
         {
             WizardEnchantActiveNew = false;
             DisruptedFocus = false;
         }
 
-        public override void ModifyWeaponDamage(Item item, ref StatModifier damage)
+        public override void PostUpdate()
         {
-            GlobalSystemFC.BalanceWeaponStats(Player, item, ref damage);
+            if (Player.yitangFargo().celestialSeal)
+            {
+                Player.Calamity().extraAccessoryML = false;
+                Player.FargoSouls().MutantsPactSlot = false;
+                Player.GetModPlayer<CalExtraSlotPlayer>().MutantPactShouldBeEnabled = false;
+            }
         }
 
         public override void PostUpdateEquips()
@@ -113,6 +136,11 @@ namespace yitangFargo.Common
                 }
             }
             return count;
+        }
+
+        public override void ModifyWeaponDamage(Item item, ref StatModifier damage)
+        {
+            GlobalSystemFC.BalanceWeaponStats(Player, item, ref damage);
         }
 
         public override float UseSpeedMultiplier(Item item)
@@ -340,5 +368,6 @@ namespace yitangFargo.Common
         public bool VenomMinions = false;
         public bool VenomNecklace = false;
         public bool IamNinja = false;
+        public bool celestialSeal;
     }
 }

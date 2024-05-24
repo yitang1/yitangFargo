@@ -1,8 +1,9 @@
-﻿using CalamityMod.NPCs.TownNPCs;
-using System;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CalamityMod.NPCs.TownNPCs;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalNPC
 {

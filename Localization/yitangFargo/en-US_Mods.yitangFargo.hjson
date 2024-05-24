@@ -422,6 +422,11 @@ Items: {
 		DisplayName: Eternity Soul New
 		Tooltip: ""
 	}
+
+	CelestialSeal: {
+		DisplayName: Celestial Seal
+		Tooltip: ""
+	}
 }
 
 EternitySoulNewExtra: {

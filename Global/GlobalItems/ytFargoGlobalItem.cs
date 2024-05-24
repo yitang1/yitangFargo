@@ -1,13 +1,15 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using CalamityMod.Items.PermanentBoosters;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
+using FargowiltasSouls.Content.Items.Consumables;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Souls;
 
@@ -15,6 +17,15 @@ namespace yitangFargo.Global.GlobalItems
 {
     public class ytFargoGlobalItem : GlobalItem
     {
+        public override bool CanUseItem(Item item, Player player)
+        {
+            if (item.type == ModContent.ItemType<CelestialOnion>() || item.type == ModContent.ItemType<MutantsPact>())
+            {
+                return false;
+            }
+            return true;
+        }
+
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
             void ApplyTooltipEdits(IList<TooltipLine> lines, Func<Item, TooltipLine, bool> predicate, Action<TooltipLine> action)
