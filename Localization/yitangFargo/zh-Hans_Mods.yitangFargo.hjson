@@ -894,19 +894,15 @@ Items: {
 			'''
 			手持武器对应的职业伤害提高66%、暴击率提高25%
 			所有武器的攻击速度和射弹速度提高50%、击退力翻倍
-			[i:FargowiltasSouls/UniverseCore] 暴击会造成4倍伤害，并会造成宇宙之火减益
-			[i:yitangFargo/BerserkerSoulNew] 拥有烈火手套、悠悠球袋和天界壳的效果
-			[UniverseEffects]
-			[i:yitangFargo/SnipersSoulNew][i:yitangFargo/ArchWizardsSoulNew] 拥有狙击镜的效果，最大魔力值增加300点
-			[i:yitangFargo/ArchWizardsSoulNew] 拥有天界手铐和魔力花的效果
-			[i:yitangFargo/ConjuristsSoulNew] 仆从和哨兵数量上限提高6个
-			[i:yitangFargo/ConjuristsSoulNew] 鞭子的攻击范围扩大15%、攻击速度提高20%
-			[i:yitangFargo/VagabondsSoulNew] 拥有纳米技术和日蚀魔镜的效果
-			[i:yitangFargo/VagabondsSoulNew] 拥有浴火龙鳞和敬天神盗盒的效果
+			暴击会造成4倍伤害，暴击会造成宇宙之火减益
+			最大魔力值增加300点，仆从和哨兵数量上限提高6个
+			[i:yitangFargo/BerserkerSoulNew] 撼天动地的战吼激荡着战场，拥有狂战士之魂的效果
+			[i:yitangFargo/SnipersSoulNew] 雷霆般的精准之击撕裂苍空，拥有神枪手之魂的效果
+			[i:yitangFargo/ArchWizardsSoulNew] 远古的奥术光辉正浩荡涌现，拥有巫师之魂的效果
+			[i:yitangFargo/ConjuristsSoulNew] 统御万灵的共鸣颂唱于世间，拥有召唤之魂的效果
+			[i:yitangFargo/VagabondsSoulNew] 虚妄的幻影编织着命运之舞，拥有流浪者之魂的效果
 			“诸天也向你俯首”
 			'''
-		UniverseFargo: ""
-		UniverseCalamity: "[i:yitangFargo/SnipersSoulNew] 拥有虚无箭袋和痴愚金龙干细胞的效果"
 	}
 
 	DimensionSoulNew: {

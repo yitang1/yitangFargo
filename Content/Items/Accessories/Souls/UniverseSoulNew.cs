@@ -8,7 +8,6 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Materials;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.ModPlayers;
-using yitangFargo.Global.Config;
 using CalamityMod.Items.Materials;
 using yitangFargo.Common.Rarities;
 using System.Collections.Generic;
@@ -85,18 +84,6 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             player.magicCuffs = true;
             //调用盗贼的职业魂效果
             ModContent.GetInstance<VagabondsSoulNew>().UpdateAccessory(player, hideVisual);
-        }
-
-        public override void SafeModifyTooltips(List<TooltipLine> tooltips)
-        {
-            if (ytFargoConfig.Instance.CalamityFargoRecipe)
-            {
-                tooltips.ReplaceText("[UniverseEffects]", this.GetLocalizedValue("UniverseCalamity"));
-            }
-            else if (ytFargoConfig.Instance.FargoSoulsRecipe)
-            {
-                tooltips.ReplaceText("[UniverseEffects]", this.GetLocalizedValue("UniverseFargo"));
-            }
         }
 
         public override void AddRecipes()
