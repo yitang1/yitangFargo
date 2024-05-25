@@ -388,9 +388,7 @@ Items: {
 
 	UniverseSoulNew: {
 		DisplayName: Universe Soul New
-		Tooltip: "[UniverseEffects]"
-		UniverseFargo: ""
-		UniverseCalamity: ""
+		Tooltip: ""
 	}
 
 	DimensionSoulNew: {
