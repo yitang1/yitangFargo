@@ -28,32 +28,51 @@ namespace yitangFargo.Common
             VenomMinions = false;
             VenomNecklace = false;
             IamNinja = false;
-            if (WizardEnchantActiveNew)
-            {
-                WizardEnchantActiveNew = false;
-                for (int i = 3; i <= 11; i++)
-                {
-                    if (!Player.armor[i].IsAir && (Player.armor[i].type == ModContent.ItemType<WizardEnchant>() || Player.armor[i].type == ModContent.ItemType<CosmoForce>()))
-                    {
-                        WizardEnchantActiveNew = true;
-                        break;
-                    }
-                }
-            }
+            //FargoSoulsPlayer modPlayerF = Player.FargoSouls();
+            //if (modPlayerF.WizardEnchantActive)
+            //{
+            //    for (int i = 3; i <= 10; i++)
+            //    {
+            //        if (!Player.armor[i].IsAir && (Player.armor[i].type == ModContent.ItemType<WizardEnchant>() || Player.armor[i].type == ModContent.ItemType<CosmoForce>()))
+            //        {
+            //            Item ench = Player.armor[i + 1];
+            //            if (ench != null && !ench.IsAir && ench.ModItem != null && ench.ModItem is BaseEnchant)
+            //            {
+            //                modPlayerF.WizardedItem = ench;
+            //            }
+            //            break;
+            //        }
+            //    }
+            //}
+            //if (WizardEnchantActiveNew)
+            //{
+            //    WizardEnchantActiveNew = false;
+            //    for (int i = 3; i <= 11; i++)
+            //    {
+            //        if (!Player.armor[i].IsAir && (Player.armor[i].type == ModContent.ItemType<WizardEnchant>() || Player.armor[i].type == ModContent.ItemType<CosmoForce>()))
+            //        {
+            //            WizardEnchantActiveNew = true;
+            //            break;
+            //        }
+            //    }
+            //}
         }
 
         public override void Initialize()
         {
             celestialSeal = false;
+            ytCNEnable = false;
         }
         public override void SaveData(TagCompound tag)
         {
             tag["CelestialSeal"] = celestialSeal;
+            tag["ytCNEnable"] = ytCNEnable;
         }
 
         public override void LoadData(TagCompound tag)
         {
             celestialSeal = tag.GetBool("CelestialSeal");
+            ytCNEnable = tag.GetBool("ytCNEnable");
         }
 
         public override void UpdateDead()
@@ -369,5 +388,6 @@ namespace yitangFargo.Common
         public bool VenomNecklace = false;
         public bool IamNinja = false;
         public bool celestialSeal;
+        public bool ytCNEnable = false;
     }
 }

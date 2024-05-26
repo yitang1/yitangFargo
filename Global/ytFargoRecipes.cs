@@ -216,14 +216,6 @@ namespace yitangFargo.Global
                 }
                 #endregion
 
-                //天顶剑
-                if (!ModLoader.HasMod("yitangCN"))
-                {
-                    if (recipe.HasResult(ItemID.Zenith))
-                    {
-                        recipe.RemoveIngredient(ModContent.ItemType<AuricBar>());
-                    }
-                }
             }
         }
     }

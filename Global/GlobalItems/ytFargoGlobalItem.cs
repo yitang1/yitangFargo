@@ -84,24 +84,5 @@ namespace yitangFargo.Global.GlobalItems
                 nameLine.OverrideColor = new Color(0, 238, 125);
             }
         }
-
-        public override void UpdateAccessory(Item item, Player player, bool hideVisual)
-        {
-            if (!ModLoader.HasMod("yitangCN"))
-            {
-                //十字章护身符和十字章护盾因为配方里新加了暖手宝，所以免疫冷冻和冰冻
-                if (item.type == ItemID.AnkhCharm)
-                {
-                    player.buffImmune[BuffID.Chilled] = true;
-                    player.buffImmune[BuffID.Frozen] = true;
-                }
-                if (item.type == ItemID.AnkhShield)
-                {
-                    player.buffImmune[BuffID.Chilled] = true;
-                    player.buffImmune[BuffID.Frozen] = true;
-                    player.buffImmune[BuffID.WindPushed] = true; //添加灾厄免疫强风的设定
-                }
-            }
-        }
     }
 }
