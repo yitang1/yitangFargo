@@ -8,6 +8,9 @@ using yitangFargo.Common.Rarities;
 using yitangFargo.Common;
 using CalamityMod.Items.PermanentBoosters;
 using FargowiltasSouls.Content.Items.Consumables;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using FargowiltasSouls.Content.Items.Accessories.Forces;
+using FargowiltasSouls;
 
 namespace yitangFargo.Content.Items.Others
 {
@@ -62,5 +65,16 @@ namespace yitangFargo.Content.Items.Others
             return Player.yitangFargo().celestialSeal;
         }
         public override bool IsHidden() => IsEmpty && !IsEnabled();
+
+        public override void ApplyEquipEffects()
+        {
+            int lastAccIndex = 7 + Player.GetAmountOfExtraAccessorySlotsToShow();
+            if (Player.armor[lastAccIndex].type == ModContent.ItemType<WizardEnchant>() || Player.armor[lastAccIndex].type == ModContent.ItemType<CosmoForce>())
+            {
+                Player.FargoSouls().WizardedItem = FunctionalItem;
+            }
+
+            base.ApplyEquipEffects();
+        }
     }
 }
