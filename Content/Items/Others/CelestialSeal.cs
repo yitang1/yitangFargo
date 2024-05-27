@@ -11,6 +11,8 @@ using FargowiltasSouls.Content.Items.Consumables;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Content.Items.Accessories.Forces;
 using FargowiltasSouls;
+using System.Drawing.Text;
+using FargowiltasSouls.Common;
 
 namespace yitangFargo.Content.Items.Others
 {
@@ -48,9 +50,9 @@ namespace yitangFargo.Content.Items.Others
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient<CelestialOnion>()
+                .AddIngredient(ItemID.DemonHeart)
                 .AddIngredient<MutantsPact>()
-                .AddIngredient(ItemID.LunarBar, 5)
+                .AddIngredient<CelestialOnion>()
                 .AddTile(TileID.LunarCraftingStation)
                 .Register();
         }

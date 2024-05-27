@@ -15,6 +15,7 @@ using yitangFargo.Content.Items.Others;
 using yitangFargo.Global.FuckFargo.FuckFargoSystem;
 using FargowiltasCrossmod.Core.Calamity.Globals;
 using CalamityMod;
+using FargowiltasSouls.Common;
 
 namespace yitangFargo.Common
 {
@@ -28,22 +29,6 @@ namespace yitangFargo.Common
             VenomMinions = false;
             VenomNecklace = false;
             IamNinja = false;
-            //FargoSoulsPlayer modPlayerF = Player.FargoSouls();
-            //if (modPlayerF.WizardEnchantActive)
-            //{
-            //    for (int i = 3; i <= 10; i++)
-            //    {
-            //        if (!Player.armor[i].IsAir && (Player.armor[i].type == ModContent.ItemType<WizardEnchant>() || Player.armor[i].type == ModContent.ItemType<CosmoForce>()))
-            //        {
-            //            Item ench = Player.armor[i + 1];
-            //            if (ench != null && !ench.IsAir && ench.ModItem != null && ench.ModItem is BaseEnchant)
-            //            {
-            //                modPlayerF.WizardedItem = ench;
-            //            }
-            //            break;
-            //        }
-            //    }
-            //}
             //if (WizardEnchantActiveNew)
             //{
             //    WizardEnchantActiveNew = false;
@@ -61,18 +46,15 @@ namespace yitangFargo.Common
         public override void Initialize()
         {
             celestialSeal = false;
-            ytCNEnable = false;
         }
         public override void SaveData(TagCompound tag)
         {
             tag["CelestialSeal"] = celestialSeal;
-            tag["ytCNEnable"] = ytCNEnable;
         }
 
         public override void LoadData(TagCompound tag)
         {
             celestialSeal = tag.GetBool("CelestialSeal");
-            ytCNEnable = tag.GetBool("ytCNEnable");
         }
 
         public override void UpdateDead()
@@ -85,6 +67,7 @@ namespace yitangFargo.Common
         {
             if (Player.yitangFargo().celestialSeal)
             {
+                DropPactSlot();
                 Player.Calamity().extraAccessoryML = false;
                 Player.FargoSouls().MutantsPactSlot = false;
                 Player.GetModPlayer<CalExtraSlotPlayer>().MutantPactShouldBeEnabled = false;
@@ -371,6 +354,29 @@ namespace yitangFargo.Common
             }
         }
 
+        private void DropPactSlot()
+        {
+            void DropItem(Item item)
+            {
+                Item.NewItem(Player.GetSource_DropAsItem(), Player.Center, item);
+            }
+            void DropSlot(ref ModAccessorySlot slot)
+            {
+                DropItem(slot.FunctionalItem);
+                slot.FunctionalItem = new();
+                DropItem(slot.VanityItem);
+                slot.VanityItem = new();
+                DropItem(slot.DyeItem);
+                slot.DyeItem = new();
+            }
+            ModAccessorySlot eSlot0 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot0>().Type, Player);
+            ModAccessorySlot eSlot1 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot1>().Type, Player);
+            ModAccessorySlot eSlot2 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot2>().Type, Player);
+            DropSlot(ref eSlot0);
+            DropSlot(ref eSlot1);
+            DropSlot(ref eSlot2);
+        }
+
         public bool MinionCritsYT;
         public float AttackSpeed;
         public bool WizardEnchantActiveNew;
@@ -388,6 +394,5 @@ namespace yitangFargo.Common
         public bool VenomNecklace = false;
         public bool IamNinja = false;
         public bool celestialSeal;
-        public bool ytCNEnable = false;
     }
 }

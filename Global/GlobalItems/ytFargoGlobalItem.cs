@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Souls;
+using Terraria.GameContent.ItemDropRules;
 
 namespace yitangFargo.Global.GlobalItems
 {
@@ -19,7 +20,11 @@ namespace yitangFargo.Global.GlobalItems
     {
         public override bool CanUseItem(Item item, Player player)
         {
-            if (item.type == ModContent.ItemType<CelestialOnion>() || item.type == ModContent.ItemType<MutantsPact>())
+            if (item.type == ModContent.ItemType<CelestialOnion>())
+            {
+                return false;
+            }
+            if (item.type == ModContent.ItemType<MutantsPact>() && player.yitangFargo().celestialSeal)
             {
                 return false;
             }
@@ -82,6 +87,14 @@ namespace yitangFargo.Global.GlobalItems
             if (item.type == ModContent.ItemType<TrawlerSoulNew>())
             {
                 nameLine.OverrideColor = new Color(0, 238, 125);
+            }
+        }
+
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
+        {
+            if (item.type == ItemID.WallOfFleshBossBag)
+            {
+                itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemID.DemonHeart, 1, 1, 1));
             }
         }
     }

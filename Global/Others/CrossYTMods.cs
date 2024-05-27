@@ -52,32 +52,4 @@ namespace yitangFargo.Global.Others
             }
         }
     }
-
-    //public class CrossYTExtraSlot : ModAccessorySlot
-    //{
-    //    public override bool IsEnabled()
-    //    {
-    //        if (!Player.active)
-    //            return false;
-    //        if (ModLoader.HasMod("yitangCN"))
-    //        {
-    //            Player.yitangFargo().ytCNEnable = true;
-    //        }
-    //        return Player.yitangFargo().ytCNEnable;
-    //    }
-    //    public override bool IsHidden() => IsEmpty && !IsEnabled();
-
-    //    public override string FunctionalTexture => "FargowiltasSouls/Assets/UI/EnchantSlotIcon";
-
-    //    public override void ApplyEquipEffects()
-    //    {
-    //        int lastAccIndex = 8 + Player.GetAmountOfExtraAccessorySlotsToShow();
-    //        if (Player.armor[lastAccIndex].type == ModContent.ItemType<WizardEnchant>() || Player.armor[lastAccIndex].type == ModContent.ItemType<CosmoForce>())
-    //        {
-    //            Player.FargoSouls().WizardedItem = FunctionalItem;
-    //        }
-
-    //        base.ApplyEquipEffects();
-    //    }
-    //}
 }
