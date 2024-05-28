@@ -41,8 +41,29 @@ namespace yitangFargo.Global
                 if (NinjaNPC == -1 && !BossRushEvent.BossRushActive)
                 {
                     NPC.NewNPC(npc.GetSource_Death(), (int)npc.Center.X, (int)npc.Center.Y, ModContent.NPCType<Ninja>(), 0, 0f, 0f, 0f, 0f, 255);
+                    yitangFargoSystem.hasChatedNinja++;
                 }
+            }   
+        }
+
+        public override void GetChat(NPC npc, ref string chat)
+        {
+            //忍者NPC第一次在世界中成功生成的时候，hasChatedNinja字段经过++变为1，触发下面的对话。
+            if (npc.type == ModContent.NPCType<Ninja>() && yitangFargoSystem.hasChatedNinja == 1)
+            {
+                chat = "呃……这里是？泰拉人，是你把我救出来的吗？我的天……谢谢你……";
+                yitangFargoSystem.hasChatedNinja = 2;
             }
+            /*触发过上面的第一次对话内容后，字段被赋值为2，此时这个方法内的对话都不满足条件，以后都不会触发。
+            ★除非忍者NPC又死亡了，那么此时又经历了一次hasChatedNinja++，此时字段变为3，
+            那么触发下面对话，现在这是玩家第二次对刚刚生成的NPC对话。*/
+            if (npc.type == ModContent.NPCType<Ninja>() && yitangFargoSystem.hasChatedNinja > 2)
+            {
+                chat = "呃呃……我好像经历了什么轮回，怎么又会进到史莱姆王的肚子里呢？";
+                yitangFargoSystem.hasChatedNinja = 2;
+            }
+            //之后字段又被重新设为2，
+            //如果NPC第三次或三次以上再次死亡，那么字段又变为3，继续触发第二条对话，之后又会重设为2。
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)

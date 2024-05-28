@@ -35,6 +35,5 @@ namespace yitangFargo
             else
                 return Color.Lerp(deviColor, mutantColor, (ColorTimer - 200) / 100);
         }
-
     }
 }
