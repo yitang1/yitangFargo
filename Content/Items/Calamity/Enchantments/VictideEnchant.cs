@@ -1,19 +1,19 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Victide;
-using FargowiltasSouls.Content.Buffs.Masomode;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using CalamityMod;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Victide;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Content.Buffs.Masomode;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
-using CalamityMod;
-using FargowiltasSouls;
-using CalamityMod.Projectiles.Summon;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

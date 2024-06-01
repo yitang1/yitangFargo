@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Accessories;
+﻿using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Accessories.Wings;
 using CalamityMod.Items.Materials;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
 using yitangFargo.Global.Config;
 using static Terraria.ModLoader.ModContent;
 

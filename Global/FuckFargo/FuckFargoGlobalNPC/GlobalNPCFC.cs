@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CalamityMod.Events;
 using CalamityMod.NPCs.ExoMechs;
 using CalamityMod.NPCs.SupremeCalamitas;
 using FargowiltasSouls.Content.Bosses.AbomBoss;
@@ -8,7 +9,6 @@ using FargowiltasSouls.Content.Bosses.DeviBoss;
 using FargowiltasSouls.Content.Bosses.MutantBoss;
 using yitangFargo.Content.Buffs;
 using yitangFargo.Global.Config;
-using CalamityMod.Events;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalNPC
 {

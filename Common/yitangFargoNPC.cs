@@ -1,7 +1,7 @@
-﻿using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using yitangFargo.Content.Items.Accessories.Enchantments;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
 
 namespace yitangFargo.Common
 {

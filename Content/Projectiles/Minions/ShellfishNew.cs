@@ -2,14 +2,14 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 using CalamityMod;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Buffs.Summon;
 using CalamityMod.CalPlayer;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using yitangFargo.Content.Items.Calamity.Enchantments;
 using CalamityMod.Projectiles;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using yitangFargo.Content.Items.Calamity.Enchantments;
 
 namespace yitangFargo.Content.Projectiles.Minions
 {
@@ -297,7 +297,7 @@ namespace yitangFargo.Content.Projectiles.Minions
                 }
                 int npcIndex = (int)Projectile.ai[1];
                 NPC host = Main.npc[npcIndex];
-                if (Projectile.localAI[0] >= 600000f) //tryna make it stay on there "forever" without glitching
+                if (Projectile.localAI[0] >= 600000f)
                 {
                     breakAway = true;
                 }
@@ -338,7 +338,6 @@ namespace yitangFargo.Content.Projectiles.Minions
                 for (int npcIndex = 0; npcIndex < Main.maxNPCs; npcIndex++)
                 {
                     NPC npc = Main.npc[npcIndex];
-                    //covers most edge cases like voodoo dolls
                     if (npc.active && !npc.dontTakeDamage && npc.defense < 9999 && npc.Calamity().DR < 0.99f &&
                         ((Projectile.friendly && (!npc.friendly || (npc.type == NPCID.Guide && Projectile.owner < Main.maxPlayers && player.killGuide) || (npc.type == NPCID.Clothier && Projectile.owner < Main.maxPlayers && player.killClothier))) ||
                         (Projectile.hostile && npc.friendly && !npc.dontTakeDamageFromHostiles)) && (Projectile.owner < 0 || npc.immune[Projectile.owner] == 0 || Projectile.maxPenetrate == 1))
@@ -346,7 +345,6 @@ namespace yitangFargo.Content.Projectiles.Minions
                         if (npc.noTileCollide || !Projectile.ownerHitCheck)
                         {
                             bool stickingToNPC;
-                            //Solar Crawltipede tail has special collision
                             if (npc.type == NPCID.SolarCrawltipedeTail)
                             {
                                 Rectangle rect = npc.getRect();
@@ -363,23 +361,19 @@ namespace yitangFargo.Content.Projectiles.Minions
                             }
                             if (stickingToNPC)
                             {
-                                //reflect projectile if the npc can reflect it (like Selenians)
                                 if (npc.reflectsProjectiles && Projectile.CanBeReflected())
                                 {
                                     npc.ReflectProjectile(Projectile);
                                     return;
                                 }
 
-                                //let the projectile know it is sticking and the npc it is sticking too
                                 Projectile.ai[0] = 1f;
                                 Projectile.ai[1] = npcIndex;
 
-                                //follow the NPC
                                 Projectile.velocity = (npc.Center - Projectile.Center) * 0.75f;
 
                                 Projectile.netUpdate = true;
 
-                                //Count how many projectiles are attached, delete as necessary
                                 Point[] array2 = new Point[10];
                                 int projCount = 0;
                                 for (int projIndex = 0; projIndex < Main.maxProjectiles; projIndex++)

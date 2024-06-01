@@ -1,14 +1,14 @@
-﻿using CalamityMod;
-using CalamityMod.Projectiles.Summon;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.IO;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
+using Microsoft.Xna.Framework;
+using CalamityMod;
+using CalamityMod.Projectiles.Summon;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 
 namespace yitangFargo.Content.Projectiles.Minions

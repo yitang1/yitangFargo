@@ -1,7 +1,7 @@
-global using LumUtils = Luminance.Common.Utilities.Utilities;
-using Microsoft.Xna.Framework;
+﻿global using LumUtils = Luminance.Common.Utilities.Utilities;
 using Terraria;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace yitangFargo
 {

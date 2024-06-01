@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using yitangFargo.Content.Items.Calamity.Forces;
-using yitangFargo.Common.Rarities;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Materials;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
+using yitangFargo.Common.Rarities;
+using yitangFargo.Content.Items.Calamity.Forces;
 
 namespace yitangFargo.Content.Items.Calamity.Souls
 {

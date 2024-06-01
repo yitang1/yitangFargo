@@ -7,10 +7,10 @@ using CalamityMod;
 using CalamityMod.Events;
 using CalamityMod.Projectiles.Summon;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using yitangFargo.NPCs;
+using yitangFargo.Global.Config;
 using yitangFargo.Common;
 using yitangFargo.Content.Projectiles.Minions;
-using yitangFargo.Global.Config;
-using yitangFargo.NPCs;
 
 namespace yitangFargo.Global
 {
@@ -63,7 +63,7 @@ namespace yitangFargo.Global
                 yitangFargoSystem.hasChatedNinja = 2;
             }
             //之后字段又被重新设为2，
-            //如果NPC第三次或三次以上再次死亡，那么字段又变为3，继续触发第二条对话，之后又会重设为2。
+            //如果NPC第三次或三次以上再次死亡，那么字段又变为3，继续触发第二条对话，之后又会重设为2，循环。
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)

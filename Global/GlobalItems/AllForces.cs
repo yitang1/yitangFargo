@@ -1,9 +1,9 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Content.Items.Accessories.Forces;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
 using Terraria;
 using Terraria.ModLoader;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using FargowiltasSouls.Content.Items.Accessories.Forces;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
 using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Enchantments;
 using yitangFargo.Content.Items.Accessories.Souls;

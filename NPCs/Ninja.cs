@@ -13,12 +13,12 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Accessories.Essences;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Essences;
+using yitangFargo.Global.Config;
+using yitangFargo.Content.Items.Fargo;
 using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Souls;
-using yitangFargo.Content.Items.Fargo;
 using static yitangFargo.yitangFargo;
-using yitangFargo.Global.Config;
 
 namespace yitangFargo.NPCs
 {

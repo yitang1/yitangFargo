@@ -1,12 +1,12 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Content.Items.Armor;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
 
 namespace yitangFargo.Content.Items.Fargo

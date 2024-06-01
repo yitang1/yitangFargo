@@ -1,9 +1,9 @@
-﻿using FargowiltasSouls.Content.Items.Accessories.Essences;
-using FargowiltasSouls.Content.Items.Armor;
-using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using FargowiltasSouls.Content.Items.Armor;
+using FargowiltasSouls.Content.Items.Accessories.Essences;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
 {

@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using CalamityMod.Items.PermanentBoosters;
-using FargowiltasSouls.Content.Items.Accessories.Masomode;
-using FargowiltasSouls.Content.Items.Consumables;
+using Terraria.GameContent.ItemDropRules;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using CalamityMod.Items.PermanentBoosters;
+using FargowiltasSouls.Content.Items.Consumables;
+using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Souls;
-using Terraria.GameContent.ItemDropRules;
 
 namespace yitangFargo.Global.GlobalItems
 {

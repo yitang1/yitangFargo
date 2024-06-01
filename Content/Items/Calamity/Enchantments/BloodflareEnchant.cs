@@ -1,19 +1,19 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using CalamityMod.CalPlayer;
+using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Bloodflare;
 using CalamityMod.Rarities;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Global.Config;
-using CalamityMod.CalPlayer;
-using CalamityMod;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

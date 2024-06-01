@@ -1,17 +1,17 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Mollusk;
+using CalamityMod.Projectiles.Summon;
 using FargowiltasSouls;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Content.Projectiles.Minions;
-using CalamityMod.Projectiles.Summon;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

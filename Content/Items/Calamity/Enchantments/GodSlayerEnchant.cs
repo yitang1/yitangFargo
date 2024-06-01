@@ -1,5 +1,10 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using CalamityMod.CalPlayer;
+using CalamityMod;
+using CalamityMod.CalPlayer.Dashes;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.GodSlayer;
 using CalamityMod.Rarities;
@@ -7,13 +12,8 @@ using CalamityMod.Tiles.Furniture.CraftingStations;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
-using CalamityMod.CalPlayer;
-using CalamityMod;
-using CalamityMod.CalPlayer.Dashes;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

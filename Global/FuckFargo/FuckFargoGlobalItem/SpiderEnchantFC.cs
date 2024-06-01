@@ -1,9 +1,9 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.ModPlayers;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.ModPlayers;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem

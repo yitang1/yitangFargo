@@ -17,17 +17,17 @@ using CalamityMod.Items.Armor.Tarragon;
 using CalamityMod.Items.Armor.Victide;
 using CalamityMod.Items.Materials;
 using CalamityMod.Items.Placeables.Ores;
-using FargowiltasCrossmod.Content.Calamity.Items.Accessories;
-using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
-using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Materials;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Patreon.DemonKing;
 using FargowiltasSouls.Content.Patreon.DevAesthetic;
-using yitangFargo.Content.Items.Accessories.Souls;
-using yitangFargo.Content.Items.Calamity.Souls;
-using yitangFargo.Global.Config;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using FargowiltasSouls.Content.Items.Consumables;
+using FargowiltasCrossmod.Content.Calamity.Items.Accessories;
+using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
+using yitangFargo.Global.Config;
+using yitangFargo.Content.Items.Accessories.Souls;
+using yitangFargo.Content.Items.Calamity.Souls;
 
 namespace yitangFargo.Global
 {

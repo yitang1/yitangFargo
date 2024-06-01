@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.GameContent.UI.Elements;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
+using Terraria.GameContent.UI.Elements;
+using Microsoft.Xna.Framework;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoSystem
 {

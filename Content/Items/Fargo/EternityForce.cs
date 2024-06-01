@@ -1,8 +1,8 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using yitangFargo.Common.Rarities;
 using FargowiltasSouls.Content.Items.Accessories.Forces;
+using yitangFargo.Common.Rarities;
 
 namespace yitangFargo.Content.Items.Fargo
 {

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Rarities;
-using FargowiltasSouls.Content.Items.Accessories.Forces;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
+using CalamityMod.Rarities;
 using yitangFargo.Content.Items.Calamity.Enchantments;
+using FargowiltasSouls.Content.Items.Accessories.Forces;
 
 namespace yitangFargo.Content.Items.Calamity.Forces
 {

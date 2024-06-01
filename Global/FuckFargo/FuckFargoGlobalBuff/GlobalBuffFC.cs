@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using FargowiltasCrossmod.Content.Calamity.Buffs;
 using FargowiltasSouls;
 using FargowiltasSouls.Content.Buffs.Boss;
 using FargowiltasSouls.Content.Buffs.Masomode;
+using FargowiltasCrossmod.Content.Calamity.Buffs;
 using yitangFargo.Global.Config;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalBuff

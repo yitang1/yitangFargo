@@ -4,15 +4,15 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using yitangFargo.Common.Rarities;
-using yitangFargo.Common;
+using System.Drawing.Text;
 using CalamityMod.Items.PermanentBoosters;
+using FargowiltasSouls;
+using FargowiltasSouls.Common;
 using FargowiltasSouls.Content.Items.Consumables;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Content.Items.Accessories.Forces;
-using FargowiltasSouls;
-using System.Drawing.Text;
-using FargowiltasSouls.Common;
+using yitangFargo.Common.Rarities;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Others
 {

@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using FargowiltasSouls;
-using CalamityMod.Items.Accessories;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using yitangFargo.Content.Items.Accessories.Souls;
-using yitangFargo.Common.Toggler;
-using FargowiltasSouls.Core.ModPlayers;
-using yitangFargo.Content.Items.Calamity.Souls;
-using yitangFargo.Global.Config;
-using System.Collections.Generic;
 using Terraria.Localization;
+using System.Collections.Generic;
+using CalamityMod.Items.Accessories;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.ModPlayers;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
 using yitangFargo.Common;
+using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Content.Items.Calamity.Souls;
+using yitangFargo.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Global.GlobalItems
 {

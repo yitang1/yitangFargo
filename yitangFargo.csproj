@@ -7,8 +7,6 @@
 	<PropertyGroup>
 		<AssemblyName>yitangFargo</AssemblyName>
 			<NoWarn>$(NoWarn);NU1504;NU1505;NU1701</NoWarn>
-		<TargetFramework>net8.0</TargetFramework>
-		<PlatformTarget>x64</PlatformTarget>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 	<ItemGroup>

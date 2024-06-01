@@ -19,7 +19,7 @@ namespace yitangFargo.Content.Items.Calamity.Forces
          所以如果每个时期再用当前时期唯一的盔甲合成魔石，那玩家就没得穿了，而且重复合成也会感到繁琐，
          因此月后魔石就设定成：当前时期更换了新的盔甲后，可以顺带合成上个时期的魔石，然后考虑是否穿戴。
          (然而无论如何都无法避免的是——要制作古圣金源魔石就必须要合成至少两次的4个月后盔甲……)
-         (但是还有反转：本模组的NPC商店表示，“What are you talking about？能直接购买的事为什么要手动合成？”)*/
+         (但是还有反转：本模组的NPC商店表示，“What are you talking about, bro？能直接购买的事为什么要手动合成呢？”)*/
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             //龙蒿魔石

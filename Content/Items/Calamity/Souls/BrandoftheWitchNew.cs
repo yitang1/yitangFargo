@@ -2,6 +2,7 @@
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Materials;
 using CalamityMod.Rarities;
@@ -12,7 +13,6 @@ using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.Toggler;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Global.Config;
-using System.Collections.Generic;
 using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Souls

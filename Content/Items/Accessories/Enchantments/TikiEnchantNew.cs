@@ -1,12 +1,12 @@
-﻿using FargowiltasSouls;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using FargowiltasSouls.Core.Toggler.Content;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using System.Collections.Generic;
+using FargowiltasSouls;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Core.Toggler.Content;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Global.Config;
 

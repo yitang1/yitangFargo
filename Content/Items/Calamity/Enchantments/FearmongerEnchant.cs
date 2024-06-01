@@ -1,19 +1,19 @@
 ﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using CalamityMod;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Fearmonger;
 using CalamityMod.Items.Weapons.Summon;
 using CalamityMod.Rarities;
 using CalamityMod.Tiles.Furniture.CraftingStations;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
-using CalamityMod;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatDebuffs;
-using Terraria.ID;
 using yitangFargo.Content.Items.Calamity.Souls;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments

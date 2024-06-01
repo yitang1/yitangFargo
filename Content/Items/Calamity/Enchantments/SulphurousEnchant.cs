@@ -1,16 +1,16 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using CalamityMod;
+using CalamityMod.ExtraJumps;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Sulphurous;
 using CalamityMod.Items.Weapons.Summon;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
-using CalamityMod;
-using CalamityMod.ExtraJumps;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

@@ -1,10 +1,10 @@
-﻿using FargowiltasSouls.Core.AccessoryEffectSystem;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
+﻿using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
 using yitangFargo.Content.Items.Accessories.Enchantments;
 
 namespace yitangFargo.Content.Projectiles.Minions

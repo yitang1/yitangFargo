@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items;
-using CalamityMod.Items.PermanentBoosters;
-using CalamityMod.Items.SummonItems;
-using FargowiltasSouls.Content.Items;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using CalamityMod.Items;
+using CalamityMod.Items.PermanentBoosters;
+using CalamityMod.Items.SummonItems;
+using FargowiltasSouls.Content.Items;
 using yitangFargo.Common;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem

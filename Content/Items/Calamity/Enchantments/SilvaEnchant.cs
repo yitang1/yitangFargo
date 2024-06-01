@@ -1,20 +1,20 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using CalamityMod.CalPlayer;
+using CalamityMod;
+using CalamityMod.Projectiles.Summon;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Silva;
 using CalamityMod.Rarities;
 using CalamityMod.Tiles.Furniture.CraftingStations;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
-using CalamityMod.CalPlayer;
-using CalamityMod;
-using FargowiltasSouls;
-using CalamityMod.Projectiles.Summon;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {

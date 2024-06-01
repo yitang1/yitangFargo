@@ -1,6 +1,6 @@
 displayName = yitangFargo
 author = yitang
-version = 0.3.9.6
+version = 0.3.9.7
 modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod
 weakReferences = 
 buildIgnore = .git\*, .vs\*, bin\*, obj\*, Properties\*, .gitignore, *.csproj, *.sln
