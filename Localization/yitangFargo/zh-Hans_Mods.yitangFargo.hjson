@@ -65,7 +65,7 @@ Toggler: {
 	ReaverStone: 掠夺者 绽花石
 	PlagueEffectBringer: 瘟疫 套装效果 (瘟疫使者)
 	PlagueEffectReaper: 瘟疫 套装效果 (瘟疫死神)
-	PlaguePHive: 瘟疫 瘟疫蜂巢
+	PlaguePAlchemicalFlask: 瘟疫 冶金烧瓶
 	PlagueToxicHeart: 瘟疫 毒疫之心
 	DemonShadeEffect: 魔影 套装效果
 	DemonShadeFAngelic: 魔影 圣天誓盟
@@ -396,7 +396,7 @@ Items: {
 			此效果有25秒的冷却时间
 			获得瘟疫冲刺的能力，冲刺轨迹上会留下毒云
 			召唤一个小小的瘟疫使者来保护你
-			拥有瘟疫蜂巢和毒疫之心的效果
+			拥有冶金烧瓶和毒疫之心的效果
 			“以毒攻毒，药到病除”
 			'''
 	}
@@ -651,7 +651,7 @@ Items: {
 			[i:yitangFargo/DemonShadeEnchant] 拥有魔影盔甲的套装效果
 			[i:yitangFargo/WulfrumEnchant] 拥有钨钢屏障生成仪和气功念珠的效果
 			[i:yitangFargo/ReaverEnchant] 拥有恼怒项链和绽花石的效果
-			[i:yitangFargo/PlagueEnchant] 拥有瘟疫蜂巢和毒疫之心的效果
+			[i:yitangFargo/PlagueEnchant] 拥有冶金烧瓶和毒疫之心的效果
 			[i:yitangFargo/DemonShadeEnchant] 拥有圣天誓盟、渎神魂晶和幻灭心元石的效果
 			“让那些反抗你的一切生灵下地狱吧”
 			'''

@@ -43,7 +43,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<PlagueEffectBringer>(Item);
             player.AddEffect<PlagueEffectReaper>(Item);
-            player.AddEffect<PlaguePHive>(Item);
+            player.AddEffect<PlaguePAlchemicalFlask>(Item);
             player.AddEffect<PlagueToxicHeart>(Item);
 
             /*瘟疫死神盔甲和瘟疫使者盔甲
@@ -93,10 +93,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                     }
                 }
             }
-            //瘟疫蜂巢
-            if (player.HasEffect<PlaguePHive>())
+            //冶金烧瓶
+            if (player.HasEffect<PlaguePAlchemicalFlask>())
             {
-                ModContent.GetInstance<PlagueHive>().UpdateAccessory(player, hideVisual);
+                ModContent.GetInstance<AlchemicalFlask>().UpdateAccessory(player, hideVisual);
             }
             //毒疫之心
             if (player.HasEffect<PlagueToxicHeart>())
@@ -112,7 +112,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnyPlagueBreastplate")
                 .AddRecipeGroup("yitangFargo:AnyPlagueBoot")
                 .AddIngredient<SoulHarvester>()
-                .AddIngredient<PlagueHive>()
+                .AddIngredient<AlchemicalFlask>()
                 .AddIngredient<ToxicHeart>()
                 .AddTile(TileID.CrystalBall)
                 .Register();
@@ -144,7 +144,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class PlaguePHive : AccessoryEffect
+    public class PlaguePAlchemicalFlask : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
