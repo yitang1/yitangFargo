@@ -409,7 +409,7 @@ Mods: {
 				Tooltip:
 					'''
 					物块的放置速度提高10%
-					物块的放置范围扩大5格
+					挖掘和放置范围扩大5格
 					当你进行挖掘或放置物块时
 					身后会发射激光攻击附近的敌人
 					'''
@@ -437,7 +437,7 @@ Mods: {
 				DisplayName: 勘探之力
 				Tooltip:
 					'''
-					[i:FargowiltasCrossmod/MarniteEnchantment] 物块的放置速度提高25%，放置范围扩大10格
+					[i:FargowiltasCrossmod/MarniteEnchantment] 物块的放置速度提高25%，挖掘和放置范围扩大10格
 					[i:FargowiltasCrossmod/MarniteEnchantment] 挖掘或放置物块时，身后会发射激光攻击附近的敌人
 					[i:FargowiltasCrossmod/WulfrumEnchantment] 友好的钨钢无人机会帮助你收集掉落物
 					[i:FargowiltasCrossmod/DesertProwlerEnchantment] 用超级跳跃替代你的普通跳跃，提升水平加速度
@@ -717,7 +717,7 @@ Mods: {
 				'''
 				激光的伤害提高
 				物块的放置速度额外提高15%
-				放置范围额外扩大5格
+				挖掘和放置范围额外扩大5格
 				'''
 			DesertProwler:
 				'''
