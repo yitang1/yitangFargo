@@ -90,6 +90,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AerospecEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //天武神
         public override void PostUpdateEquips(Player player)
         {
@@ -115,5 +116,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AerospecEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

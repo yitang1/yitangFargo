@@ -127,7 +127,7 @@ AbomPresenceBuff: {
 	DisplayName: 憎恶驾到
 	Description:
 		'''
-		降低20点防御，伤害减免降低20%
+		降低30点防御，伤害减免降低25%
 		禁用闪避效果，禁用生命再生
 		禁用生命偷取效果
 		无法使用超音速之魂快速移动
@@ -859,14 +859,22 @@ WretchedHexBuff: {
 		'''
 }
 
-CorruptedBuff: {
-	DisplayName: 腐化之蚀
-	Description: 腐化之蚀
+WitheredBuff: {
+	DisplayName: 凋零
+	Description:
+		'''
+		降低10点防御
+		接触伤害降低20%
+		'''
 }
 
-CorruptedBuffForce: {
-	DisplayName: 腐化之蚀
-	Description: 腐化之蚀
+WitheredWizardBuff: {
+	DisplayName: 凋零
+	Description:
+		'''
+		大幅降低防御力
+		接触伤害降低20%
+		'''
 }
 
 JungleMimicSummonBuff: {
@@ -922,4 +930,23 @@ MagicalCurseBuff: {
 PearlwoodStarBuff: {
 	DisplayName: 破坏之星
 	Description: 破坏之星将会跟随你
+}
+
+MoonFangBuff: {
+	// DisplayName: Moon Fang
+	// Description: Cannot regenerate life
+}
+
+WitheredForceBuff: {
+	DisplayName: 凋零
+	Description:
+		'''
+		大幅降低防御力
+		接触伤害降低20%
+		'''
+}
+
+TimberBleedBuff: {
+	DisplayName: 森林之血
+	Description: 大幅降低伤害和生命再生速度
 }

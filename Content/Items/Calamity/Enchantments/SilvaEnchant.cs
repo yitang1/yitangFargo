@@ -86,12 +86,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class SilvaEffectCrystal : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //始源林海水晶
         public override void PostUpdateEquips(Player player)
         {
@@ -111,11 +113,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class SilvaTheSponge : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

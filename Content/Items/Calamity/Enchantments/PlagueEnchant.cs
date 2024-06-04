@@ -124,6 +124,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //瘟疫使者盔甲 瘟疫使者仆从
         public override void PostUpdateEquips(Player player)
         {
@@ -143,17 +144,20 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class PlaguePAlchemicalFlask : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class PlagueToxicHeart : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<PlagueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

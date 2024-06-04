@@ -74,17 +74,20 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SulphurousEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class FathomSulphurousSand : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SulphurousEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class FathomSulphurousSpine : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SulphurousEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

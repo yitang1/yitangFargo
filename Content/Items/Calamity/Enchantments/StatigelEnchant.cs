@@ -80,13 +80,15 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<StatigelEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class StatigelSlimeMinions : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<StatigelEnchant>();
         public override bool IgnoresMutantPresence => true;
-        
+        public override bool MinionEffect => true;
+
         public override void PostUpdateEquips(Player player)
         {
             if (player.whoAmI == Main.myPlayer)

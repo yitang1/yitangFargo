@@ -62,5 +62,5 @@ JungleRose:
 	掉落世纪之果的几率
 	'''
 StarCloak: ""
-// WeatherPain: Increased hit frequency and pierce
-// HoundiusShootius: Increased fireball velocity
+WeatherPain: 提升穿透和打击频率
+HoundiusShootius: 射弹速度提高

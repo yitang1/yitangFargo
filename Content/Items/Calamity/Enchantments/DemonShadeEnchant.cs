@@ -82,6 +82,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<DemonShadeEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //红恶魔
         public override void PostUpdateEquips(Player player)
         {
@@ -107,6 +108,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<DemonShadeEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class DemonShadeGCommunity : AccessoryEffect
     {

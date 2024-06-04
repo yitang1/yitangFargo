@@ -64,11 +64,13 @@ namespace yitangFargo.Content.Items.Fargo
         public override Header ToggleHeader => Header.GetHeader<EternityHeader>();
         public override int ToggleItemType => ModContent.ItemType<StyxEnchantment>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class StyxWand : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<EternityHeader>();
         public override int ToggleItemType => ModContent.ItemType<StyxEnchantment>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

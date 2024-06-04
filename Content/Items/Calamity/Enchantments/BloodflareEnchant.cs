@@ -89,12 +89,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<BloodflareEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class BloodMinion : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<BloodflareEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
     }
     public class BloodTheChalice : AccessoryEffect
     {

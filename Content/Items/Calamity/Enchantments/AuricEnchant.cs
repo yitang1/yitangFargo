@@ -124,6 +124,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AuricEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //始源林海水晶
         public override void PostUpdateEquips(Player player)
         {
@@ -149,5 +150,6 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AuricEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

@@ -135,6 +135,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
         public override int ToggleItemType => ModContent.ItemType<AncientHallowEnchant>();
         public override Header ToggleHeader => Header.GetHeader<SpiritHeader>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
 
         public override void PostUpdateEquips(Player player)
         {

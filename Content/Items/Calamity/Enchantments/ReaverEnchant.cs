@@ -98,12 +98,15 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<ReaverEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
+
     }
     public class ReaverEffectOrb : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<ReaverEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //掠夺者毒球
         public override void PostUpdateEquips(Player player)
         {
@@ -122,11 +125,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<ReaverEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class ReaverStone : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<ReaverEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

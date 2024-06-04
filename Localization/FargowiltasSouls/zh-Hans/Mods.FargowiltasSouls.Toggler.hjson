@@ -1,4 +1,7 @@
+DisableAllAttackEffects: 禁用所有的额外攻击效果
+DisableAllMinionEffects: 禁用所有的召唤物效果
 TimberHeader: "{$Mods.FargowiltasSouls.Items.TimberForce.DisplayName}"
+WoodCompletionEffect: 木 图鉴解锁加快
 BorealEffect: 针叶木 雪球
 MahoganyEffect: 红木 钩爪加成
 EbonwoodEffect: 乌木 暗影焰光环

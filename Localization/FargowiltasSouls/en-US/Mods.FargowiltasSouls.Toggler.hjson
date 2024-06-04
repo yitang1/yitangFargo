@@ -1,4 +1,7 @@
+DisableAllAttackEffects: Disable All Extra Attack Effects
+DisableAllMinionEffects: Disable All Minion Effects
 TimberHeader: "{$Mods.FargowiltasSouls.Items.TimberForce.DisplayName}"
+WoodCompletionEffect: Wood Completion Speedup
 BorealEffect: Boreal Snowballs
 MahoganyEffect: Mahogany Hook Speed
 EbonwoodEffect: Ebonwood Shadowflame

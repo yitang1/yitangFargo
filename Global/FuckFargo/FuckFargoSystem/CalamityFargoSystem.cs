@@ -24,6 +24,8 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoSystem
         private static List<TextSnippet> Translate(On_ChatManager.orig_ParseMessage orig, string text, Color baseColor)
         {
             text = Regex.Replace(text, "A new item has been unlocked in Deviantt's shop!", "戴薇安解锁了新商品！");
+            text = Regex.Replace(text, "Rogue Damage: ", "盗贼伤害：");
+            text = Regex.Replace(text, "Rogue Critical: ", "盗贼暴击率：");
             return orig.Invoke(text, baseColor);
         }
     }

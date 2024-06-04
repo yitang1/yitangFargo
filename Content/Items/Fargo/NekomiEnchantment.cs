@@ -61,11 +61,13 @@ namespace yitangFargo.Content.Items.Fargo
         public override Header ToggleHeader => Header.GetHeader<EternityHeader>();
         public override int ToggleItemType => ModContent.ItemType<NekomiEnchantment>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class ANekomiSparkling : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<EternityHeader>();
         public override int ToggleItemType => ModContent.ItemType<NekomiEnchantment>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

@@ -63,6 +63,7 @@ namespace yitangFargo.Content.Items.Fargo
         public override Header ToggleHeader => Header.GetHeader<EternityHeader>();
         public override int ToggleItemType => ModContent.ItemType<EridanusEnchantment>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
     }
     //public class EridanusCore : AccessoryEffect
     //{

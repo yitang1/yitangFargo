@@ -78,12 +78,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<XerocEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class XerocEtherealExtorter : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<XerocEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class XerocSpectralVeil : AccessoryEffect
     {

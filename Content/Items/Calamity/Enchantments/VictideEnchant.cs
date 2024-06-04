@@ -100,12 +100,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<VictideEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class MolluskVictideESnail : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<VictideEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //海蜗牛
         public override void PostUpdateEquips(Player player)
         {
@@ -125,11 +127,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<VictideEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class MolluskVictideSpark : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<VictideEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

@@ -82,11 +82,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class OmegaBluePhantomic : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<OmegaBlueEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

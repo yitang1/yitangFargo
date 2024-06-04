@@ -88,12 +88,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<DaedalusEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class DaedalusEffectCrystal : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<DaedalusEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //代达罗斯水晶
         public override void PostUpdateEquips(Player player)
         {
@@ -113,6 +115,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<DaedalusEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //代达罗斯守卫仆从
         public override void PostUpdateEquips(Player player)
         {

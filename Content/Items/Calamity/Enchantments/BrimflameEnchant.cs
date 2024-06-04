@@ -77,11 +77,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<BrimflameEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class BloodYVoidE : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<BrimflameEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
 }

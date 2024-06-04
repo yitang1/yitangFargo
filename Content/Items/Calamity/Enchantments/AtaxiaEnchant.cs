@@ -82,12 +82,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AtaxiaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class AtaxiaMinion : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<AnnihilationHeader>();
         public override int ToggleItemType => ModContent.ItemType<AtaxiaEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool MinionEffect => true;
         //沸腾渊泉
         public override void PostUpdateEquips(Player player)
         {

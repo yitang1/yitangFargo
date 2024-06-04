@@ -82,6 +82,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override Header ToggleHeader => Header.GetHeader<DevastationHeader>();
         public override int ToggleItemType => ModContent.ItemType<WulfrumEnchant>();
         public override bool IgnoresMutantPresence => true;
+        public override bool ExtraAttackEffect => true;
     }
     public class WulfrumTrinketofChi : AccessoryEffect
     {

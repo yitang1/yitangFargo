@@ -20,10 +20,10 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalBuff
                 //player.FargoSouls().AttackSpeed += 0.30f;
             }
             //移除混乱之脑闪避后的Debuff
-            if (player.HasBuff<BrainOfConfusionBuff>())
-            {
-                player.ClearBuff(ModContent.BuffType<BrainOfConfusionBuff>());
-            }
+            //if (player.HasBuff<BrainOfConfusionBuff>())
+            //{
+            //    player.ClearBuff(ModContent.BuffType<BrainOfConfusionBuff>());
+            //}
 
             switch (type)
             {

@@ -56,7 +56,6 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
         public override Header ToggleHeader => Header.GetHeader<EarthHeader>();
         public override int ToggleItemType => ModContent.ItemType<OrichalcumEnchant>();
         public override bool IgnoresMutantPresence => true;
-
         public override bool ExtraAttackEffect => true;
 
         public static void OriDotModifier(NPC npc, Player player, ref int damage)

@@ -678,14 +678,14 @@ WretchedHexBuff: {
 	Description: Shadowflame tentacles and vastly increased damage, but vastly decreased speed and defenses
 }
 
-CorruptedBuff: {
-	DisplayName: Corrupted Buff
-	Description: Mods.FargowiltasSouls.Buffs.CorruptedBuff.Description
+WitheredBuff: {
+	DisplayName: Withered
+	Description: Mods.FargowiltasSouls.Buffs.WithereddBuff.Description
 }
 
-CorruptedBuffForce: {
-	DisplayName: Corrupted Buff Force
-	Description: Mods.FargowiltasSouls.Buffs.CorruptedBuffForce.Description
+WitheredWizardBuff: {
+	DisplayName: Withered
+	Description: Mods.FargowiltasSouls.Buffs.WitheredWizardBuff.Description
 }
 
 JungleMimicSummonBuff: {
@@ -733,4 +733,19 @@ MagicalCurseBuff: {
 PearlwoodStarBuff: {
 	DisplayName: Pearlwood Star Buff
 	Description: Mods.FargowiltasSouls.Buffs.PearlwoodStarBuff.Description
+}
+
+MoonFangBuff: {
+	DisplayName: Moon Fang
+	Description: Cannot regenerate life
+}
+
+WitheredForceBuff: {
+	DisplayName: Withered Force Buff
+	Description: Mods.FargowiltasSouls.Buffs.WitheredForceBuff.Description
+}
+
+TimberBleedBuff: {
+	DisplayName: Timber Bleed Buff
+	Description: Mods.FargowiltasSouls.Buffs.TimberBleedBuff.Description
 }
