@@ -51,7 +51,7 @@ Mods: {
 				}
 
 				BalanceRework: {
-					Label: 灾厄/魂石平衡重制
+					Label: 灾厄/Fargo平衡重制
 					Tooltip:
 						'''
 						改变部分Fargo魂石的合成配方以保持与灾厄之间的平衡
@@ -70,7 +70,7 @@ Mods: {
 						此更改纯粹是为了与以下功能保持一致：
 						-在永恒模式下，召唤Boss时，召唤物品会被退还
 						(这实际上与召唤不消耗机制相同)
-						-突变体NPC的商店
+						-突变体NPC的商店功能
 						-Fargo突变添加的变种召唤物品
 						'''
 				}
@@ -156,7 +156,7 @@ Mods: {
 			}
 
 			ABombInMyNation: {
-				DisplayName: 蜜蜂奴役装置
+				DisplayName: 瘟疫爆破装置
 				Tooltip: 召唤瘟疫使者歌莉娅
 			}
 
@@ -413,7 +413,7 @@ Mods: {
 					挖掘和放置范围扩大5格
 					当你进行挖掘或放置物块时
 					身后会发射激光攻击附近的敌人
-					[i:CalamityMod/MarniteRepulsionShield]拥有合成岩斥力盾的效果
+					拥有合成岩斥力盾的效果
 					'''
 			}
 
@@ -423,7 +423,7 @@ Mods: {
 					'''
 					按住“上”键进行蓄力
 					松开后会进行一次强力的沙暴跳跃
-					在水平移动时也可以进行跳跃
+					在水平移动时也可以进行蓄力跳跃
 					'''
 			}
 
@@ -665,7 +665,7 @@ Mods: {
 			Eruption.DisplayName: 火焰爆发
 			VampireBat.DisplayName: 吸血鬼蝙蝠
 			SulphurBubble.DisplayName: 硫磺跳跃
-			VictideSpike.DisplayName: 胜朝海胆尖刺
+			VictideSpike.DisplayName: 胜潮海胆尖刺
 			GoldenShowerShot.DisplayName: 黄金雨滴
 			HiveMindFiretrail.DisplayName: 诅咒火焰
 			BrainMassProjectile.DisplayName: 腐烂脑组织
@@ -742,13 +742,13 @@ Mods: {
 			PlaguebringerEffect: 瘟疫使者 减益传播
 			StatigelEffect: 斯塔提斯 移速和伤害
 			SulphurEffect: 硫磺 二连跳
-			VictideEffect: 胜朝 海胆尖刺
+			VictideEffect: 胜潮 海胆尖刺
 			// TitanHeartEffect: Titan Size
 			UmbraphileEffect: 日影 吸血蝙蝠
 		}
 
 		WizardEffect: {
-			Aerospec: 暴击率的提升翻倍
+			Aerospec: 提升的暴击率翻倍
 			Marnite:
 				'''
 				激光的伤害提高

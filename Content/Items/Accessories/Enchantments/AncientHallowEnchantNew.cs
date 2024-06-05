@@ -22,7 +22,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<AncientHallowEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<AncientHallowEnchant>() && ytFargoConfig.Instance.OldVanillaEnchant)
             {
                 player.AddEffect<AncientHallowShieldNew>(item);
                 player.AddEffect<AncientHallowMinionNew>(item);

@@ -28,6 +28,8 @@ using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
 using yitangFargo.Global.Config;
 using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Souls;
+using yitangFargo.Content.Items.Calamity.Enchantments;
+using yitangFargo.Content.Items.Calamity.Forces;
 
 namespace yitangFargo.Global
 {
@@ -35,7 +37,7 @@ namespace yitangFargo.Global
     {
         public override void AddRecipeGroups()
         {
-            #region 灾厄魔石 配方组
+            #region 旧版灾厄魔石 配方组
             //天蓝头盔
             RecipeGroup AnyAerospec = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyAerospec"),
@@ -216,6 +218,49 @@ namespace yitangFargo.Global
                 }
                 #endregion
 
+                #region 添加旧版灾厄魔石
+                if (!ytFargoConfig.Instance.OldCalamityEnchant)
+                {
+                    //如果没有开启这个选项，那么旧版灾厄魔石的相关合成配方都会被禁用掉。(不至于直接移除物品)
+                    if (recipe.createItem.type == ModContent.ItemType<AerospecEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<StatigelEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<AtaxiaEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<XerocEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<FearmongerEnchant>()
+
+                        || recipe.createItem.type == ModContent.ItemType<MolluskEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<VictideEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<FathomSwarmerEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<SulphurousEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<DaedalusEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<SnowRuffianEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<UmbraphileEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<AstralEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<OmegaBlueEnchant>()
+
+                        || recipe.createItem.type == ModContent.ItemType<WulfrumEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<ReaverEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<PlagueEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<DemonShadeEnchant>()
+
+                        || recipe.createItem.type == ModContent.ItemType<TarragonEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<BloodflareEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<BrimflameEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<GodSlayerEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<SilvaEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<AuricEnchant>()
+
+                        || recipe.createItem.type == ModContent.ItemType<AnnihilationForce>()
+                        || recipe.createItem.type == ModContent.ItemType<DesolationForce>()
+                        || recipe.createItem.type == ModContent.ItemType<DevastationForce>()
+                        || recipe.createItem.type == ModContent.ItemType<ExaltationForce>()
+
+                        || recipe.createItem.type == ModContent.ItemType<CalamitySoul>())
+                    {
+                        recipe.DisableRecipe();
+                    }
+                }
+                #endregion
             }
         }
     }

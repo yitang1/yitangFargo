@@ -20,7 +20,11 @@ namespace yitangFargo.Global.Config
 
         [Header("FCItems")]
         [DefaultValue(false)]
-        public bool OldEnchant;
+        public bool OldVanillaEnchant;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool OldCalamityEnchant;
 
         [Header("FCNPC")]
         [DefaultValue(false)]

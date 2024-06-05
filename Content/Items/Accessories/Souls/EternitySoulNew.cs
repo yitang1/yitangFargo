@@ -17,6 +17,7 @@ using FargowiltasSouls.Core.ModPlayers;
 using Luminance.Core.Graphics;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Fargo;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
@@ -175,23 +176,42 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             //大师之魂
             ModContent.GetInstance<MasochistSoulNew>().UpdateAccessory(player, hideVisual);
             //暴君之魂
-            ModContent.GetInstance<CalamitySoul>().UpdateAccessory(player, hideVisual);
+            if (ytFargoConfig.Instance.OldCalamityEnchant)
+            {
+                ModContent.GetInstance<CalamitySoul>().UpdateAccessory(player, hideVisual);
+            }
             //永恒之力
             ModContent.GetInstance<EternityForce>().UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<UniverseSoulNew>()
-                .AddIngredient<DimensionSoulNew>()
-                .AddIngredient<TerrariaSoulNew>()
-                .AddIngredient<MasochistSoulNew>()
-                .AddIngredient<CalamitySoul>()
-                .AddIngredient<EternityForce>()
-                .AddIngredient<EternalEnergy>(30)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
-                .Register();
+            if (ytFargoConfig.Instance.OldCalamityEnchant)
+            {
+                CreateRecipe()
+                    .AddIngredient<UniverseSoulNew>()
+                    .AddIngredient<DimensionSoulNew>()
+                    .AddIngredient<TerrariaSoulNew>()
+                    .AddIngredient<MasochistSoulNew>()
+                    .AddIngredient<CalamitySoul>()
+                    .AddIngredient<EternityForce>()
+                    .AddIngredient<EternalEnergy>(30)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
+            else
+            {
+                CreateRecipe()
+                    .AddIngredient<UniverseSoulNew>()
+                    .AddIngredient<DimensionSoulNew>()
+                    .AddIngredient<TerrariaSoulNew>()
+                    .AddIngredient<MasochistSoulNew>()
+                    //.AddIngredient<CalamitySoul>()
+                    .AddIngredient<EternityForce>()
+                    .AddIngredient<EternalEnergy>(30)
+                    .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                    .Register();
+            }
         }
 
         public class EternitySoulSystem : ModSystem

@@ -20,7 +20,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<AdamantiteEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<AdamantiteEnchant>() && ytFargoConfig.Instance.OldVanillaEnchant)
             {
                 player.AddEffect<AdamantiteEffectNew>(item);
             }

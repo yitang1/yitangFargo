@@ -406,34 +406,38 @@ namespace yitangFargo.NPCs
             modsES.Add(CustomPrice(ModContent.ItemType<MutantBag>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedMutant });
             //硫火女巫烙印
             modsES.Add(CustomPrice(ModContent.ItemType<BrandoftheWitchNew>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedExoAndCal });
-            //湮灭之力
-            modsES.Add(ModContent.ItemType<AerospecEnchant>(), new Condition[] { DownedSlimeGod });
-            modsES.Add(ModContent.ItemType<StatigelEnchant>(), new Condition[] { Condition.Hardmode });
-            modsES.Add(ModContent.ItemType<AtaxiaEnchant>(), new Condition[] { Condition.DownedCultist });
-            modsES.Add(ModContent.ItemType<XerocEnchant>(), new Condition[] { DownedTheThree });
-            modsES.Add(ModContent.ItemType<FearmongerEnchant>(), new Condition[] { DownedYharon });
-            //荒芜之力
-            modsES.Add(ModContent.ItemType<VictideEnchant>(), new Condition[] { DownedPerfsHiveMind });
-            modsES.Add(ModContent.ItemType<MolluskEnchant>(), new Condition[] { Condition.DownedMechBossAll });
-            modsES.Add(ModContent.ItemType<SnowRuffianEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu });
-            modsES.Add(ModContent.ItemType<DaedalusEnchant>(), new Condition[] { Condition.DownedMechBossAll });
-            modsES.Add(ModContent.ItemType<SulphurousEnchant>(), new Condition[] { Condition.DownedMechBossAll });
-            modsES.Add(ModContent.ItemType<FathomSwarmerEnchant>(), new Condition[] { Condition.DownedGolem });
-            modsES.Add(ModContent.ItemType<UmbraphileEnchant>(), new Condition[] { Condition.DownedGolem });
-            modsES.Add(ModContent.ItemType<AstralEnchant>(), new Condition[] { Condition.DownedMoonLord });
-            modsES.Add(ModContent.ItemType<OmegaBlueEnchant>(), new Condition[] { DownedDevourerOfGods });
-            //毁灭之力
-            modsES.Add(ModContent.ItemType<WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu });
-            modsES.Add(ModContent.ItemType<ReaverEnchant>(), new Condition[] { Condition.DownedGolem });
-            modsES.Add(ModContent.ItemType<PlagueEnchant>(), new Condition[] { Condition.DownedCultist });
-            modsES.Add(ModContent.ItemType<DemonShadeEnchant>(), new Condition[] { DownedExoAndCal });
-            //升华之力
-            modsES.Add(ModContent.ItemType<TarragonEnchant>(), new Condition[] { DownedDevourerOfGods });
-            modsES.Add(ModContent.ItemType<BrimflameEnchant>(), new Condition[] { Condition.DownedCultist });
-            modsES.Add(ModContent.ItemType<BloodflareEnchant>(), new Condition[] { DownedDevourerOfGods });
-            modsES.Add(ModContent.ItemType<GodSlayerEnchant>(), new Condition[] { DownedYharon });
-            modsES.Add(ModContent.ItemType<SilvaEnchant>(), new Condition[] { DownedYharon });
-            modsES.Add(ModContent.ItemType<AuricEnchant>(), new Condition[] { DownedExoOrCal });
+            
+            if (ytFargoConfig.Instance.OldCalamityEnchant)
+            {
+                //湮灭之力
+                modsES.Add(ModContent.ItemType<AerospecEnchant>(), new Condition[] { DownedSlimeGod });
+                modsES.Add(ModContent.ItemType<StatigelEnchant>(), new Condition[] { Condition.Hardmode });
+                modsES.Add(ModContent.ItemType<AtaxiaEnchant>(), new Condition[] { Condition.DownedCultist });
+                modsES.Add(ModContent.ItemType<XerocEnchant>(), new Condition[] { DownedTheThree });
+                modsES.Add(ModContent.ItemType<FearmongerEnchant>(), new Condition[] { DownedYharon });
+                //荒芜之力
+                modsES.Add(ModContent.ItemType<VictideEnchant>(), new Condition[] { DownedPerfsHiveMind });
+                modsES.Add(ModContent.ItemType<MolluskEnchant>(), new Condition[] { Condition.DownedMechBossAll });
+                modsES.Add(ModContent.ItemType<SnowRuffianEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu });
+                modsES.Add(ModContent.ItemType<DaedalusEnchant>(), new Condition[] { Condition.DownedMechBossAll });
+                modsES.Add(ModContent.ItemType<SulphurousEnchant>(), new Condition[] { Condition.DownedMechBossAll });
+                modsES.Add(ModContent.ItemType<FathomSwarmerEnchant>(), new Condition[] { Condition.DownedGolem });
+                modsES.Add(ModContent.ItemType<UmbraphileEnchant>(), new Condition[] { Condition.DownedGolem });
+                modsES.Add(ModContent.ItemType<AstralEnchant>(), new Condition[] { Condition.DownedMoonLord });
+                modsES.Add(ModContent.ItemType<OmegaBlueEnchant>(), new Condition[] { DownedDevourerOfGods });
+                //毁灭之力
+                modsES.Add(ModContent.ItemType<WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu });
+                modsES.Add(ModContent.ItemType<ReaverEnchant>(), new Condition[] { Condition.DownedGolem });
+                modsES.Add(ModContent.ItemType<PlagueEnchant>(), new Condition[] { Condition.DownedCultist });
+                modsES.Add(ModContent.ItemType<DemonShadeEnchant>(), new Condition[] { DownedExoAndCal });
+                //升华之力
+                modsES.Add(ModContent.ItemType<TarragonEnchant>(), new Condition[] { DownedDevourerOfGods });
+                modsES.Add(ModContent.ItemType<BrimflameEnchant>(), new Condition[] { Condition.DownedCultist });
+                modsES.Add(ModContent.ItemType<BloodflareEnchant>(), new Condition[] { DownedDevourerOfGods });
+                modsES.Add(ModContent.ItemType<GodSlayerEnchant>(), new Condition[] { DownedYharon });
+                modsES.Add(ModContent.ItemType<SilvaEnchant>(), new Condition[] { DownedYharon });
+                modsES.Add(ModContent.ItemType<AuricEnchant>(), new Condition[] { DownedExoOrCal });
+            }
             //永恒之力
             modsES.Add(ModContent.ItemType<NekomiEnchantment>(), new Condition[] { DownedDeviantt });
             modsES.Add(ModContent.ItemType<GaiaEnchantment>(), new Condition[] { Condition.DownedCultist });

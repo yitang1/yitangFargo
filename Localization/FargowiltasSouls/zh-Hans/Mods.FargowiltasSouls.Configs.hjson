@@ -63,7 +63,7 @@ SoulConfig: {
 	}
 
 	PreBossNightGlow: {
-		Label: Boss前敌人发光
+		Label: Boss前时期敌人发光
 		Tooltip:
 			'''
 			在永恒模式中

@@ -16,7 +16,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<TikiEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<TikiEnchant>() && ytFargoConfig.Instance.OldVanillaEnchant)
             {
                 player.AddEffect<TikiEffectNew>(item);
                 if (player.FargoSouls().ForceEffect<TikiEnchant>())

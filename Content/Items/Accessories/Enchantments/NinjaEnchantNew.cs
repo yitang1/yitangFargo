@@ -20,7 +20,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
         {
             if (item.type == ModContent.ItemType<NinjaEnchant>())
             {
-                if (ytFargoConfig.Instance.OldEnchant)
+                if (ytFargoConfig.Instance.OldVanillaEnchant)
                 {
                     player.AddEffect<NinjaEffectNew>(item);
                 }

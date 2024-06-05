@@ -425,6 +425,21 @@ Items: {
 		DisplayName: Celestial Seal
 		Tooltip: ""
 	}
+
+	OldVanillaEnchantIcon: {
+		DisplayName: Old Vanilla Enchant Icon
+		Tooltip: ""
+	}
+
+	OldCalamityEnchantIcon: {
+		DisplayName: Old Calamity Enchant Icon
+		Tooltip: ""
+	}
+
+	FCNPCIcon: {
+		DisplayName: F C N P C Icon
+		Tooltip: ""
+	}
 }
 
 EternitySoulNewExtra: {
@@ -554,8 +569,13 @@ Configs: {
 			Tooltip: ""
 		}
 
-		OldEnchant: {
-			Label: Old Enchant
+		OldVanillaEnchant: {
+			Label: Old Vanilla Enchant
+			Tooltip: ""
+		}
+
+		OldCalamityEnchant: {
+			Label: Old Calamity Enchant
 			Tooltip: ""
 		}
 

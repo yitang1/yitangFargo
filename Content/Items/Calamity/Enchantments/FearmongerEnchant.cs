@@ -83,7 +83,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<FearmongerGreathelm>()
                 .AddIngredient<FearmongerPlateMail>()
                 .AddIngredient<FearmongerGreaves>()
-                .AddIngredient<GuidelightofOblivion>()
+                .AddIngredient<CorvidHarbringerStaff>()
                 .AddIngredient<OccultSkullCrown>()
                 .AddIngredient<Nucleogenesis>()
                 .AddTile<CosmicAnvil>()

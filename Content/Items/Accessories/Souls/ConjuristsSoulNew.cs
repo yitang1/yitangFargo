@@ -71,7 +71,6 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient<ResurrectionButterfly>()
                     .AddIngredient<StellarTorusStaff>()
                     .AddIngredient<EndoHydraStaff>()
-                    .AddIngredient<CorvidHarbringerStaff>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }

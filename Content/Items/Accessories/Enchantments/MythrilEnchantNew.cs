@@ -15,7 +15,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<MythrilEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<MythrilEnchant>() && ytFargoConfig.Instance.OldVanillaEnchant)
             {
                 player.AddEffect<MythrilEffectNew>(item);
             }

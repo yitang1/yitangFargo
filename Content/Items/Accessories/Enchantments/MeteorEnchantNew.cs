@@ -19,7 +19,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
-            if (item.type == ModContent.ItemType<MeteorEnchant>() && ytFargoConfig.Instance.OldEnchant)
+            if (item.type == ModContent.ItemType<MeteorEnchant>() && ytFargoConfig.Instance.OldVanillaEnchant)
             {
                 player.AddEffect<MeteorEffectNew>(item);
             }
