@@ -15,11 +15,6 @@ namespace yitangFargo.Global.GlobalItems
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
         {
             yitangFargoPlayer modPlayerY = player.yitangFargo();
-            //巫师魔石的饰品能力生效检测，即添加了一个新的判断字段
-            if (item.type == ModContent.ItemType<WizardEnchant>())
-            {
-                modPlayerY.WizardEnchantActiveNew = true;
-            }
             //大地之力 + 添加旧版精金魔石、山铜魔石、秘银魔石的效果
             if (item.type == ModContent.ItemType<EarthForce>())
             {

@@ -11,7 +11,7 @@ using yitangFargo.Common;
 
 namespace yitangFargo.Global.Others
 {
-    //一些和我个人的另一个Mod(ytCN)功能冲突的地方，在这里进行[只保留一个]的判断
+    //一些和我个人的另一个Mod功能冲突的地方，在这里进行[只保留一个]的判断
     public class CrossYTGlobalItem : GlobalItem
     {
         public override void UpdateAccessory(Item item, Player player, bool hideVisual)
@@ -51,5 +51,20 @@ namespace yitangFargo.Global.Others
                 }
             }
         }
+    }
+
+    public class ytExtraAccessorySlot : ModAccessorySlot
+    {
+        public bool LoadyitangCN = false;
+
+        public override bool IsEnabled()
+        {
+            if (ModLoader.HasMod("yitangCN"))
+            {
+                LoadyitangCN = true;
+            }
+            return LoadyitangCN;
+        }
+        public override bool IsHidden() => IsEmpty && !IsEnabled();
     }
 }

@@ -126,8 +126,7 @@ Platinum:
 Pumpkin:
 	'''
 	南瓜接触时获得的治疗量翻倍
-	南瓜在飞行时也能生成
-	余烬造成的伤害提高
+	南瓜在飞行时也能生成，余烬造成的伤害提高
 	'''
 Rain:
 	'''
@@ -137,8 +136,7 @@ Rain:
 RedRiding: 箭雨冷却时间缩短并造成更高的伤害
 RichMahogany:
 	'''
-	牵引速度乘以2.5
-	伤害减免提高至30%
+	牵引速度乘以2.5，伤害减免提高至30%
 	荆棘效果提升至500%
 	'''
 Shadewood:
@@ -205,5 +203,5 @@ Vortex: 无增强
 Wood: 怪物图鉴和旗帜解锁速度提高至5倍
 AshWood: 火球会发射地更加频繁
 NoUpgrade: 无增强
-Active: 已强化
-Inactive: 未强化
+Active: ""
+Inactive: ""

@@ -68,15 +68,15 @@ namespace yitangFargo.Content.Items.Others
         }
         public override bool IsHidden() => IsEmpty && !IsEnabled();
 
-        public override void ApplyEquipEffects()
-        {
-            int lastAccIndex = 7 + Player.GetAmountOfExtraAccessorySlotsToShow();
-            if (Player.armor[lastAccIndex].type == ModContent.ItemType<WizardEnchant>() || Player.armor[lastAccIndex].type == ModContent.ItemType<CosmoForce>())
-            {
-                Player.FargoSouls().WizardedItem = FunctionalItem;
-            }
+        //public override void ApplyEquipEffects()
+        //{
+        //    int lastAccIndex = 7 + Player.GetAmountOfExtraAccessorySlotsToShow();
+        //    if (Player.armor[lastAccIndex].type == ModContent.ItemType<WizardEnchant>() || Player.armor[lastAccIndex].type == ModContent.ItemType<CosmoForce>())
+        //    {
+        //        Player.FargoSouls().WizardedItem = FunctionalItem;
+        //    }
 
-            base.ApplyEquipEffects();
-        }
+        //    base.ApplyEquipEffects();
+        //}
     }
 }

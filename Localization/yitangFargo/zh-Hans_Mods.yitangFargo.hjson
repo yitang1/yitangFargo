@@ -953,15 +953,15 @@ Items: {
 		DisplayName: 泰拉之魂
 		Tooltip:
 			'''
-			[i:FargowiltasSouls/TimberForce] 苍劲有力的根须深入你的灵魂，拥有森林之力的效果
-			[i:FargowiltasSouls/TerraForce] 大地的奥秘在你眼中一览无余，拥有泰拉之力的效果
-			[i:FargowiltasSouls/EarthForce] 生生不息的祝福于你手中绽放，拥有大地之力的效果
-			[i:FargowiltasSouls/NatureForce] 天地万物在你的指尖翻腾起舞，拥有自然之力的效果
-			[i:FargowiltasSouls/LifeForce] 流转不灭的自然生灵庇佑着你，拥有生命之力的效果
-			[i:FargowiltasSouls/SpiritForce] 尘世亡魂追逐着你不朽的精神，拥有心灵之力的效果
-			[i:FargowiltasSouls/ShadowForce] 回荡恶魔低语的枷锁伴你身形，拥有暗影之力的效果
-			[i:FargowiltasSouls/WillForce] 力挽狂澜的决心驱散你的迷茫，拥有意志之力的效果
-			[i:FargowiltasSouls/CosmoForce] 你的身心充满力撼恒星的潜力，拥有宇宙之力的效果
+			[i:FargowiltasSouls/TimberForce] 苍劲有力的根须深入你的灵魂，拥有森林之力的效果 
+			[i:FargowiltasSouls/TerraForce] 大地的奥秘在你眼中一览无余，拥有泰拉之力的效果 
+			[i:FargowiltasSouls/EarthForce] 生生不息的祝福于你手中绽放，拥有大地之力的效果 
+			[i:FargowiltasSouls/NatureForce] 天地万物在你的指尖翻腾起舞，拥有自然之力的效果 
+			[i:FargowiltasSouls/LifeForce] 流转不灭的自然生灵庇佑着你，拥有生命之力的效果 
+			[i:FargowiltasSouls/SpiritForce] 尘世亡魂追逐着你不朽的精神，拥有心灵之力的效果 
+			[i:FargowiltasSouls/ShadowForce] 回荡恶魔低语的枷锁伴你身形，拥有暗影之力的效果 
+			[i:FargowiltasSouls/WillForce] 力挽狂澜的决心驱散你的迷茫，拥有意志之力的效果 
+			[i:FargowiltasSouls/CosmoForce] 你的身心充满力撼恒星的潜力，拥有宇宙之力的效果 
 			“泰拉之主，天地共证”
 			'''
 	}
@@ -997,6 +997,7 @@ Items: {
 			[i:yitangFargo/DevastationForce] 永燃的狱火奴役着游荡亡灵，拥有毁灭之力的效果
 			[i:yitangFargo/ExaltationForce] 不朽传说重塑着秩序与混乱，拥有升华之力的效果
 			“而在最后，这片血与火的大地，终于再次归于沉寂……”
+			[c/10E279:旧版物品]
 			'''
 	}
 
@@ -1043,17 +1044,17 @@ Items: {
 	}
 
 	OldVanillaEnchantIcon: {
-		DisplayName: 模组配置小图标
+		DisplayName: 模组配置图标
 		Tooltip: ""
 	}
 
 	OldCalamityEnchantIcon: {
-		DisplayName: 模组配置小图标
+		DisplayName: 模组配置图标
 		Tooltip: ""
 	}
 
 	FCNPCIcon: {
-		DisplayName: 模组配置小图标
+		DisplayName: 模组配置图标
 		Tooltip: ""
 	}
 }
@@ -1481,7 +1482,7 @@ Configs: {
 				进行了添加新合成材料来达到限制时期的改动，且部分无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
 				[c/f54c4c:请注意，无论是否启用，在Fargo's Souls DLC的模组配置里，]
-				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项都要][c/64EFFF:关闭][c/f54c4c:。]
+				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项，推荐将其][c/64EFFF:关闭][c/f54c4c:。]
 
 				[c/FFD8A5:★此选项和下一个选项在实际游玩中，应该只选择其中一项开启★]
 				'''
@@ -1494,7 +1495,7 @@ Configs: {
 				启用此选项后，对于Fargo魂本体的一些饰品配方
 				会对其添加新的合成材料来达到限制时期的目的
 				[c/f54c4c:请注意，无论是否启用，在Fargo's Souls DLC的模组配置里，]
-				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项都要][c/64EFFF:关闭][c/f54c4c:。]
+				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项，推荐将其][c/64EFFF:关闭][c/f54c4c:。]
 
 				[c/FFD8A5:★此选项和上一个选项在实际游玩中，应该只选择其中一项开启★]
 				'''

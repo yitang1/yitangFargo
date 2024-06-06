@@ -29,18 +29,6 @@ namespace yitangFargo.Common
             VenomMinions = false;
             VenomNecklace = false;
             IamNinja = false;
-            //if (WizardEnchantActiveNew)
-            //{
-            //    WizardEnchantActiveNew = false;
-            //    for (int i = 3; i <= 11; i++)
-            //    {
-            //        if (!Player.armor[i].IsAir && (Player.armor[i].type == ModContent.ItemType<WizardEnchant>() || Player.armor[i].type == ModContent.ItemType<CosmoForce>()))
-            //        {
-            //            WizardEnchantActiveNew = true;
-            //            break;
-            //        }
-            //    }
-            //}
         }
 
         public override void Initialize()
@@ -59,7 +47,6 @@ namespace yitangFargo.Common
 
         public override void UpdateDead()
         {
-            WizardEnchantActiveNew = false;
             DisruptedFocus = false;
         }
 
@@ -379,7 +366,6 @@ namespace yitangFargo.Common
 
         public bool MinionCritsYT;
         public float AttackSpeed;
-        public bool WizardEnchantActiveNew;
         public int CrimsonRegenAmount;
         public bool TikiMinion;
         public int actualMinions;

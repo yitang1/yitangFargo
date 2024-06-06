@@ -7,6 +7,8 @@ using CalamityMod.Items.PermanentBoosters;
 using CalamityMod.Items.SummonItems;
 using FargowiltasSouls.Content.Items;
 using yitangFargo.Common;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using Terraria.ID;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
 {
@@ -33,6 +35,12 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             if (item.type == ModContent.ItemType<Rock>())
             {
                 tooltips.Replace("[c/AAAAAA:Sold by Squirrel]", "");
+            }
+
+            if (item.ModItem != null && item.ModItem is BaseEnchant)
+            {
+                tooltips.Replace(" ", "");
+                tooltips.Replace("]:", "] ");
             }
         }
     }

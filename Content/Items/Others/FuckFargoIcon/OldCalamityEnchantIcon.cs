@@ -13,7 +13,7 @@ namespace yitangFargo.Content.Items.Others.FuckFargoIcon
         {
             Item.width = 20;
             Item.height = 20;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ItemRarityID.White;
         }
     }
 }
