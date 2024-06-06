@@ -41,30 +41,26 @@ namespace yitangFargo.Global.Others
             for (int i = 0; i < Recipe.numRecipes; i++)
             {
                 Recipe recipe = Main.recipe[i];
-                //灾厄天顶剑的配方
+                
                 if (!ModLoader.HasMod("yitangCN"))
                 {
+                    //灾厄天顶剑的配方
                     if (recipe.HasResult(ItemID.Zenith))
                     {
                         recipe.RemoveIngredient(ModContent.ItemType<AuricBar>());
                     }
+                    //永夜刃
+                    if (recipe.HasResult(ItemID.NightsEdge))
+                    {
+                        recipe.RemoveIngredient(ModContent.ItemType<PurifiedGel>());
+                    }
+                    //十字章护身符
+                    if (recipe.HasResult(ItemID.AnkhCharm))
+                    {
+                        recipe.AddIngredient(ItemID.HandWarmer, 1);
+                    }
                 }
             }
         }
-    }
-
-    public class ytExtraAccessorySlot : ModAccessorySlot
-    {
-        public bool LoadyitangCN = false;
-
-        public override bool IsEnabled()
-        {
-            if (ModLoader.HasMod("yitangCN"))
-            {
-                LoadyitangCN = true;
-            }
-            return LoadyitangCN;
-        }
-        public override bool IsHidden() => IsEmpty && !IsEnabled();
     }
 }
