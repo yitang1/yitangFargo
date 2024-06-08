@@ -49,7 +49,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 //战盔不要降低飞行时间
                 if (player.wingTimeMax > 0)
                 {
-                    player.wingTimeMax = (int)(player.wingTimeMax / 0.8f);
+                    player.wingTimeMax = (int)(player.wingTimeMax / 0.7f);
                 }
                 //掠夺者面罩
                 player.noFallDmg = true;
