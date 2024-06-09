@@ -1474,17 +1474,16 @@ Configs: {
 			FCItems: 物品相关
 			FCNPC: NPC相关
 			FCBuff: 减益相关
+			FCBalance: 平衡相关
 		}
 
 		FargoSoulsRecipe: {
 			Label: "[i:FargowiltasSouls/BarbariansEssence] 配方还原-Fargo魂本体"
 			Tooltip:
 				'''
-				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些饰品配方
+				灾法联动Mod (Fargo's Souls DLC) 对Fargo魂本体的一些魂类饰品配方
 				进行了添加新合成材料来达到限制时期的改动，且部分无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
-				[c/f54c4c:请注意，无论是否启用，在Fargo's Souls DLC的模组配置里，]
-				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项，推荐将其][c/64EFFF:关闭]
 
 				[c/FFD8A5:★此选项和下一个选项在实际游玩中，应该只选择其中一项开启★]
 				'''
@@ -1494,12 +1493,28 @@ Configs: {
 			Label: "[i:FargowiltasCrossmod/OutlawsEssence] 配方修改-适配灾法双开"
 			Tooltip:
 				'''
-				启用此选项后，对于Fargo魂本体的一些饰品配方
+				启用此选项后，对于Fargo魂本体的一些魂类饰品配方
 				会对其添加新的合成材料来达到限制时期的目的
-				[c/f54c4c:请注意，无论是否启用，在Fargo's Souls DLC的模组配置里，]
-				[c/f54c4c:关于【灾厄/Fargo平衡重制】这一选项，推荐将其][c/64EFFF:关闭]
 
 				[c/FFD8A5:★此选项和上一个选项在实际游玩中，应该只选择其中一项开启★]
+				'''
+		}
+
+		FuckBalance: {
+			Label: "[i:CalamityMod/AngelTreads] 回调改动和削弱"
+			Tooltip:
+				'''
+				Fargo's Souls DLC模组默认对大量内容进行了平衡和削弱
+				启用此选项后，以下改动都会[c/64EFFF:被回调或移除]：
+				1.大量的武器和饰品被削弱了伤害
+				2.钨魔石对真近战类武器的尺寸削弱
+				3.粘液盾的凝胶球无法再造成涂油减益
+				4.天使之靴和风神之靴系列合成配方的锁时期改动
+				5.突变体后的武器配方被添加了古恒石
+				6.唤灵魔符的配方被添加了神圣晶石
+				7.所有力级饰品的配方被添加了神圣晶石
+				8.憎恶诅咒的配方被添加了圣金源锭
+				9.十字章护盾的配方被添加了暗影之魂
 				'''
 		}
 

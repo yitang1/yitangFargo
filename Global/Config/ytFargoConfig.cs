@@ -18,6 +18,11 @@ namespace yitangFargo.Global.Config
         [DefaultValue(true)]
         public bool CalamityFargoRecipe;
 
+        [Header("FCBalance")]
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool FuckBalance;
+
         [Header("FCItems")]
         [DefaultValue(false)]
         public bool OldVanillaEnchant;
@@ -36,5 +41,6 @@ namespace yitangFargo.Global.Config
 
         [DefaultValue(false)]
         public bool NoBossDebuff;
+
     }
 }

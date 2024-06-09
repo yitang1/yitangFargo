@@ -28,7 +28,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalNPC
                 && (npc.type == ModContent.NPCType<DeviBoss>() || npc.type == ModContent.NPCType<AbomBoss>()
                 || npc.type == ModContent.NPCType<MutantBoss>()
                 || npc.type == ModContent.NPCType<Draedon>() || npc.type == ModContent.NPCType<SupremeCalamitas>()
-                /*|| BossRushEvent.BossRushActive*/))
+                || BossRushEvent.BossRushActive))
             {
                 Main.LocalPlayer.AddBuff(ModContent.BuffType<BossAbsence>(), 2);
             }

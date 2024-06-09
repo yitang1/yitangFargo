@@ -557,6 +557,7 @@ Configs: {
 			FCItems: FC Items
 			FCNPC: FC NPC
 			FCBuff: FC Buff
+			FCBalance: FC Balance
 		}
 
 		FargoSoulsRecipe: {
@@ -566,6 +567,11 @@ Configs: {
 
 		CalamityFargoRecipe: {
 			Label: Calamity Fargo Recipe
+			Tooltip: ""
+		}
+
+		FuckBalance: {
+			Label: Fuck Balance
 			Tooltip: ""
 		}
 

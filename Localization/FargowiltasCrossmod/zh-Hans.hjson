@@ -50,18 +50,6 @@ Mods: {
 					Balance: 平衡
 				}
 
-				BalanceRework: {
-					Label: 灾厄/Fargo平衡重制
-					Tooltip:
-						'''
-						改变部分Fargo魂石的合成配方以保持与灾厄之间的平衡
-						(主要在游戏的月亮领主后阶段)
-						修改了部分灾厄与Fargo魂石中武器饰品与Boss的数值
-						以获取更平衡的游戏体验
-						让Fargo魂石的部分内容适配灾厄的一些机制(例如防御损伤)
-						'''
-				}
-
 				ConsumableSummons: {
 					Label: Boss召唤物品在永恒模式下消耗
 					Tooltip:
