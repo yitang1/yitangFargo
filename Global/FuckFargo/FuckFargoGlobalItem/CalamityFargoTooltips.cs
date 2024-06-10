@@ -60,6 +60,12 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             {
                 tooltips.Replace("Flight stats decreased when fighting non-Souls Mod bosses", "");
             }
+            if (item.type == ItemID.CobaltSword || item.type == ItemID.PalladiumSword ||
+                item.type == ItemID.OrichalcumSword || item.type == ItemID.MythrilSword ||
+                item.type == ItemID.OrichalcumHalberd)
+            {
+                tooltips.Replace("Stat buffs decreased", "");
+            }
 
             #endregion
 

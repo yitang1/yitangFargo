@@ -102,6 +102,16 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
                     damage /= 0.51f;
                     item.shootSpeed = 30;
                 }
+                //肉后新三矿武器
+                if (item.type == ItemID.CobaltSword || item.type == ItemID.PalladiumSword
+                    || item.type == ItemID.MythrilSword || item.type == ItemID.OrichalcumSword)
+                {
+                    player.FargoSouls().AttackSpeed *= 1.5f;
+                }
+                if (item.type == ItemID.OrichalcumSword || item.type == ItemID.OrichalcumHalberd)
+                {
+                    damage /= 0.725f;
+                }
             }
         }
 
