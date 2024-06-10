@@ -17,7 +17,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
 {
     public class CalamityFargoRecipes : ModSystem
     {
-        //修改灾法联动Mod里更改的一些配方
+        //修改Fargo DLC Mod里更改的一些配方
         public override void PostAddRecipes()
         {
             for (int i = 0; i < Recipe.numRecipes; i++)

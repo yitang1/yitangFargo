@@ -4,13 +4,16 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using System.Security.Cryptography;
-using FargowiltasSouls.Content.Projectiles.BossWeapons;
-using yitangFargo.Global.Config;
+using Terraria.DataStructures;
+using CalamityMod;
 using CalamityMod.Projectiles.Magic;
 using CalamityMod.Projectiles.Summon;
 using CalamityMod.Projectiles.Typeless;
 using FargowiltasCrossmod.Core.Calamity;
-using CalamityMod;
+using FargowiltasSouls.Content.Projectiles.BossWeapons;
+using FargowiltasSouls.Content.Projectiles;
+using yitangFargo.Global.Config;
+using yitangFargo.Global.FuckFargo.FuckFargoGlobalItem;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
 {
@@ -20,6 +23,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
         {
             if (ytFargoConfig.Instance.FuckBalance)
             {
+                //粘液盾
                 if (proj.type == ModContent.ProjectileType<SlimeBall>())
                 {
                     target.AddBuff(BuffID.Oiled, 240);
@@ -57,6 +61,31 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
                         if (ContentSamples.ProjectilesByType[i].minionSlots > 0 && Main.player[projectile.owner].ownedProjectileCounts[i] > 0)
                         {
                             modifiers.FinalDamage /= 0.3f;
+                        }
+                    }
+                }
+            }
+        }
+
+        public override void OnSpawn(Projectile projectile, IEntitySource source)
+        {
+            if (ytFargoConfig.Instance.FuckBalance)
+            {
+                if (projectile.TryGetGlobalProjectile(out FargoSoulsGlobalProjectile fargoProj))
+                {
+                    if (fargoProj.TungstenScale != 1)
+                    {
+                        Player player = Main.player[projectile.owner];
+                        Item item = player.HeldItem;
+                        if (item != null && (item.DamageType == ModContent.GetInstance<TrueMeleeDamageClass>()
+                            || item.DamageType == ModContent.GetInstance<TrueMeleeNoSpeedDamageClass>()))
+                        {
+                            float scale = CalamityFargoGlobalItem.TrueMeleeTungstenScaleUnNerf(player);
+                            projectile.position = projectile.Center;
+                            projectile.width = (int)(projectile.width * scale);
+                            projectile.height = (int)(projectile.height * scale);
+                            projectile.Center = projectile.position;
+                            projectile.scale *= scale;
                         }
                     }
                 }

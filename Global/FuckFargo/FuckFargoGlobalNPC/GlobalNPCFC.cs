@@ -23,15 +23,15 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalNPC
                 Main.LocalPlayer.AddBuff(ModContent.BuffType<NullCurseNoBuff>(), 2);
             }
             //免疫“驾到”减益的Buff
-            if (ytFargoConfig.Instance.NoBossDebuff
-                && Main.LocalPlayer.active && !Main.LocalPlayer.dead && !Main.LocalPlayer.ghost
-                && (npc.type == ModContent.NPCType<DeviBoss>() || npc.type == ModContent.NPCType<AbomBoss>()
-                || npc.type == ModContent.NPCType<MutantBoss>()
-                || npc.type == ModContent.NPCType<Draedon>() || npc.type == ModContent.NPCType<SupremeCalamitas>()
-                || BossRushEvent.BossRushActive))
-            {
-                Main.LocalPlayer.AddBuff(ModContent.BuffType<BossAbsence>(), 2);
-            }
+            //if (ytFargoConfig.Instance.NoBossDebuff
+            //    && Main.LocalPlayer.active && !Main.LocalPlayer.dead && !Main.LocalPlayer.ghost
+            //    && (npc.type == ModContent.NPCType<DeviBoss>() || npc.type == ModContent.NPCType<AbomBoss>()
+            //    || npc.type == ModContent.NPCType<MutantBoss>()
+            //    || npc.type == ModContent.NPCType<Draedon>() || npc.type == ModContent.NPCType<SupremeCalamitas>()
+            //    || BossRushEvent.BossRushActive))
+            //{
+            //    Main.LocalPlayer.AddBuff(ModContent.BuffType<BossAbsence>(), 2);
+            //}
             return true;
         }
     }

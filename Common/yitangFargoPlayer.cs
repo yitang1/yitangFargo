@@ -157,11 +157,11 @@ namespace yitangFargo.Common
             //旧版秘银魔石 攻速提升
             if (!Player.HasBuff<DisruptedFocus>() && Player.HasEffect<MythrilEffectNew>())
             {
-                float Mythrilspeed = forceEffect ? 0.3f : 0.15f;
-                AttackSpeed += Mythrilspeed;
+                float MythrilSpeed = forceEffect ? 0.3f : 0.15f;
+                AttackSpeed += MythrilSpeed;
                 if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot])
                 {
-                    AttackSpeed -= Mythrilspeed;
+                    AttackSpeed -= MythrilSpeed;
                 }
             }
 
@@ -202,6 +202,13 @@ namespace yitangFargo.Common
             {
                 modifiers.FinalDamage /= 2f;
             }
+
+            FargoSoulsPlayer fargoPlayer = Player.FargoSouls();
+            if (Player.HasEffect<TungstenEffect>() && fargoPlayer.Toggler != null
+                && (fargoPlayer.ForceEffect<TungstenEnchant>() || item.shoot == ProjectileID.None))
+            {
+                TungstenTrueMeleeDamageUnNerf(Player, ref modifiers, item);
+            }
         }
 
         public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref NPC.HitModifiers modifiers)
@@ -241,6 +248,20 @@ namespace yitangFargo.Common
             }
 
             ModifyHitNPCBoth(target, ref modifiers, proj.DamageType);
+
+            if (Player.HasEffect<TungstenEffect>() && proj.FargoSouls().TungstenScale != 1)
+            {
+                TungstenTrueMeleeDamageUnNerf(Player, ref modifiers);
+            }
+        }
+
+        public static void TungstenTrueMeleeDamageUnNerf(Player player, ref NPC.HitModifiers modifiers, Item item = null)
+        {
+            if (item == null)
+                item = player.HeldItem;
+            if (item != null && (item.DamageType == ModContent.GetInstance<TrueMeleeDamageClass>()
+                || item.DamageType == ModContent.GetInstance<TrueMeleeNoSpeedDamageClass>()))
+                modifiers.FinalDamage *= 1.15f;
         }
 
         public override void ModifyHitByNPC(NPC npc, ref Player.HurtModifiers modifiers)

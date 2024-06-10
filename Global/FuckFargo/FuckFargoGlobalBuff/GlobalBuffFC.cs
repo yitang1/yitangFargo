@@ -24,6 +24,14 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalBuff
             //{
             //    player.ClearBuff(ModContent.BuffType<BrainOfConfusionBuff>());
             //}
+            //移除“驾到”减益
+            if (ytFargoConfig.Instance.NoBossDebuff)
+            {
+                player.buffImmune[ModContent.BuffType<DeviPresenceBuff>()] = true;
+                player.buffImmune[ModContent.BuffType<AbomPresenceBuff>()] = true;
+                player.buffImmune[ModContent.BuffType<MutantPresenceBuff>()] = true;
+                player.buffImmune[ModContent.BuffType<CalamitousPresenceBuff>()] = true;
+            }
 
             switch (type)
             {

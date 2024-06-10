@@ -1,0 +1,71 @@
+tModLoader: {
+	ShopOverflow: ""
+	NoAttackSpeedScaling: ""
+	SpecialAttackSpeedScaling: ""
+	ModifiedByModsHoldSHIFT: ""
+	ModifiedByMods: ""
+	ModReloadRequiredMemberTooltip: ""
+	LatestNews: ""
+	SwitchVersionInfoButton: ""
+	SavingModdedWorldData: Saving modded world data
+	ModDependentsTooltip:
+		'''
+		Required by:
+		{0}
+		'''
+	ModsDisableAndDependents: ""
+	ModsEnableAndDependencies: ""
+}
+
+Mods: {
+	ModLoader: {
+		Items: {
+			Linus_Body: {
+				DisplayName: Hunter Garb
+				Tooltip:
+					'''
+					'One of the standard articles of hunter attire fashioned at the workshop,
+					accompanied with a short cape that wipes away blood.
+					Allows one to stalk beasts unannounced, by cover of night.'
+					'''
+			}
+
+			Linus_Head: {
+				DisplayName: Hunter Hat
+				Tooltip:
+					'''
+					'One of the standard articles of hunter attire fashioned at the workshop.
+					Recognizable by its withered feathers, this cap is fashioned after one of the old hunters.'
+					'''
+			}
+
+			Linus_Legs: {
+				DisplayName: Hunter Trousers
+				Tooltip:
+					'''
+					'One of the standard articles of hunter attire, fashioned at the workshop.
+					Allows one to stalk beasts unannounced, by cover of night.'
+					'''
+			}
+
+			Linus_Wings: {
+				DisplayName: A Call Beyond
+				Tooltip:
+					'''
+					'One of the secret rites of the Choir.
+					But it seems to have been repurposed by Linus.'
+					'''
+			}
+
+			xAqult_Wings: {
+				DisplayName: Catalyst's Prismic Sabers
+				Tooltip:
+					'''
+					Light and Dark
+					Perfectly balanced, as all things should be
+					(xAqult's Vanity Set)
+					'''
+			}
+		}
+	}
+}

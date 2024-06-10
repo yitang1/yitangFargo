@@ -141,11 +141,6 @@ Buffs: {
 		DisplayName: Disrupted Focus
 		Description: Mods.yitangFargo.Buffs.DisruptedFocus.Description
 	}
-
-	BossAbsence: {
-		DisplayName: Boss Absence
-		Description: Mods.yitangFargo.Buffs.BossAbsence.Description
-	}
 }
 
 ContentTexts: {
