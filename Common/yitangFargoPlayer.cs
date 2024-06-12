@@ -3,19 +3,19 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework;
+using CalamityMod;
 using FargowiltasSouls;
 using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Forces;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.Systems;
-using yitangFargo.Content.Buffs;
-using yitangFargo.Content.Items.Accessories.Enchantments;
-using yitangFargo.Content.Items.Others;
-using yitangFargo.Global.FuckFargo.FuckFargoSystem;
 using FargowiltasCrossmod.Core.Calamity.Globals;
-using CalamityMod;
 using FargowiltasSouls.Common;
+using yitangFargo.Content.Buffs;
+using yitangFargo.Content.Items.Others;
+using yitangFargo.Content.Items.Accessories.Enchantments;
+using yitangFargo.Global.FuckFargo.FuckFargoSystem;
 
 namespace yitangFargo.Common
 {
@@ -24,7 +24,7 @@ namespace yitangFargo.Common
         public override void ResetEffects()
         {
             MinionCritsYT = false;
-            AttackSpeed = 1f;
+            //AttackSpeed = 1f;
             DisruptedFocus = false;
             VenomMinions = false;
             VenomNecklace = false;
@@ -134,50 +134,59 @@ namespace yitangFargo.Common
 
         public override float UseSpeedMultiplier(Item item)
         {
-            int useTime = item.useTime;
-            int useAnimate = item.useAnimation;
+            //int useTime = item.useTime;
+            //int useAnimate = item.useAnimation;
 
-            if (useTime <= 0 || useAnimate <= 0 || item.damage <= 0)
-            {
-                return base.UseSpeedMultiplier(item);
-            }
-
-            bool forceEffect = Player.FargoSouls().ForceEffect(item.type);
+            //if (useTime <= 0 || useAnimate <= 0 || item.damage <= 0)
+            //{
+            //    return base.UseSpeedMultiplier(item);
+            //}
+            FargoSoulsPlayer fargoPlayer = Player.FargoSouls();
 
             //旧版忍者魔石 攻速翻倍
             if (Player.HasEffect<NinjaEffectNew>())
             {
-                AttackSpeed *= 2f;
-                //召唤杖不要攻速翻倍，不然一次会召唤好几个
+                fargoPlayer.AttackSpeed *= 2f;
+                //召唤杖
                 if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot])
                 {
-                    AttackSpeed /= 2f;
+                    fargoPlayer.AttackSpeed /= 2f;
+                }
+                if (item.damage <= 0)
+                {
+                    fargoPlayer.AttackSpeed /= 2f;
                 }
             }
             //旧版秘银魔石 攻速提升
+            bool forceEffect = Player.FargoSouls().ForceEffect(item.type);
+
             if (!Player.HasBuff<DisruptedFocus>() && Player.HasEffect<MythrilEffectNew>())
             {
                 float MythrilSpeed = forceEffect ? 0.3f : 0.15f;
-                AttackSpeed += MythrilSpeed;
+                fargoPlayer.AttackSpeed += MythrilSpeed;
                 if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot])
                 {
-                    AttackSpeed -= MythrilSpeed;
+                    fargoPlayer.AttackSpeed -= MythrilSpeed;
+                }
+                if (item.damage <= 0)
+                {
+                    fargoPlayer.AttackSpeed -= MythrilSpeed;
                 }
             }
 
-            while (useTime / AttackSpeed < 1)
-            {
-                AttackSpeed -= 0.01f;
-            }
-            while (useAnimate / AttackSpeed < 3)
-            {
-                AttackSpeed -= 0.01f;
-            }
-            if (AttackSpeed < 0.1f)
-            {
-                AttackSpeed = 0.1f;
-            }
-            return AttackSpeed;
+            //while (useTime / AttackSpeed < 1)
+            //{
+            //    AttackSpeed -= 0.01f;
+            //}
+            //while (useAnimate / AttackSpeed < 3)
+            //{
+            //    AttackSpeed -= 0.01f;
+            //}
+            //if (AttackSpeed < 0.1f)
+            //{
+            //    AttackSpeed = 0.1f;
+            //}
+            return fargoPlayer.AttackSpeed;
         }
 
         public void ModifyHitNPCBoth(NPC target, ref NPC.HitModifiers modifiers, DamageClass damageClass)
@@ -218,7 +227,7 @@ namespace yitangFargo.Common
             {
                 modifiers.SourceDamage /= 1.15f;
             }
-            //旧版忍者魔石 伤害减半(对于有射弹的武器)
+            //旧版忍者魔石 伤害减半(对于武器的射弹)
             if (Player.HasEffect<NinjaEffectNew>())
             {
                 modifiers.FinalDamage /= 2f;
@@ -386,7 +395,7 @@ namespace yitangFargo.Common
         }
 
         public bool MinionCritsYT;
-        public float AttackSpeed;
+        //public float AttackSpeed;
         public int CrimsonRegenAmount;
         public bool TikiMinion;
         public int actualMinions;
