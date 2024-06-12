@@ -90,7 +90,10 @@ Toggler: {
 	AuricMinion: 古圣金源 召唤仆从
 	AuricPurity: 古圣金源 无瑕粹魂晶
 	AuricYharimsGift: 古圣金源 寻神者之礼
-	EternityHeader: "{$Mods.yitangFargo.Items.EternityForce.DisplayName}"
+	MiracleHeader: 奇迹之力
+	AMarniteEffect: 合成岩 套装效果
+	AMarniteShieldEffect: 合成岩 合成岩斥力盾
+	EternityHeader: 永恒之力
 	ANekomiEffect: 猫猫睡衣 套装效果
 	ANekomiSparkling: 猫猫睡衣 闪烁崇心
 	BGaiaEffect: 盖亚 套装效果
@@ -99,7 +102,7 @@ Toggler: {
 	StyxWand: 冥河 憎恶手杖
 	TrueMutantEffect: 真·突变 套装效果
 	TrueMutantEye: 真·突变 突变之眼
-	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
+	BrimstoneWitchHeader: 硫火女巫烙印
 	AHeartElements: 元灵之心
 	BFrostFlare: 霜冻之炎
 	CLeviathanAmbergris: 利维坦龙涎香
@@ -108,9 +111,9 @@ Toggler: {
 	FFungalClump: 真菌块
 	GHowlsHeart: 哈尔之心
 	HTheEvolution: 进化者
-	CalamityBerserkerHeader: "{$Mods.yitangFargo.Items.BerserkerSoulNew.DisplayName}"
+	CalamityBerserkerHeader: 狂战士之魂
 	ReaperToothEffect: 猎魂鲨齿项链
-	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
+	CalamitySnipersHeader: 神枪手之魂
 	QuiverofNihilityEffect: 虚无箭袋
 	StemCellsEffect: 痴愚金龙干细胞
 	AmalgamEffect: 聚合之脑
@@ -1049,6 +1052,18 @@ Items: {
 	FCNPCIcon: {
 		DisplayName: 模组配置图标
 		Tooltip: ""
+	}
+
+	MarniteEnchant: {
+		DisplayName: 合成岩魔石
+		Tooltip:
+			'''
+			物块和墙的放置速度提高50%
+			物块放置范围和工具范围扩大10格
+			拥有合成岩斥力盾、
+			以及砌砖刀和加长握爪的效果
+			“可供专业团队使用”
+			'''
 	}
 }
 

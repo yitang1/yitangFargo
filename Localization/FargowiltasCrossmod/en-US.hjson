@@ -23,7 +23,7 @@ Mods: {
 
 		EternityDeathDifficulty: {
 			Name: Eternity-Death
-			ShortDescription: "[c/00FFFF:A challenging mode from Fargo's Mods that includes] [c/800080:Death Mode] [c/00FFFF:changes.]"
+			ShortDescription: "[c/00FFFF:A challenging mode from Fargo's Mods that includes] [c/800080:Death Mode] [c/00FFFF:changes and extra Vanilla boss AI.]"
 			ExpandedDescription:
 				'''
 				Enables [c/00FFFF:Eternity Mode] and [c/800080:Death Mode,] and enables Master Mode drops.
@@ -704,7 +704,7 @@ Mods: {
 		}
 
 		WizardEffect: {
-			Aerospec: Crit bonus doubled
+			Aerospec: Crit and damage bonus doubled
 			Marnite: Stronger daggers, +15% placement speed and +5 placement range
 			DesertProwler: Stronger jumps
 			Wulfrum: Scanned Enemies take even more extra damage from debuffs
@@ -724,5 +724,12 @@ Mods: {
 		}
 
 		Cooldowns.DaedalusPlatformCooldown: Daedalus Platform
+
+		ExpandedTooltips: {
+			FountainAstral: Forces surrounding biome state to Astral Infection upon activation
+			FountainCrags: Forces surrounding biome state to Brimstone Crags upon activation
+			FountainSulphur: Forces surrounding biome state to Sulphurous Sea upon activation
+			FountainSunken: Forces surrounding biome state to Sunken Sea upon activation
+		}
 	}
 }

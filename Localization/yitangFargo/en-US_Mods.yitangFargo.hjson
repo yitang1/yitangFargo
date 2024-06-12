@@ -8,7 +8,7 @@ Toggler: {
 	NinjaEffectNew: Ninja(Old)
 	OrichalcumEffectNew: Orichalcum(Old)
 	TikiEffectNew: Tiki(Old)
-	AnnihilationHeader: "{$Mods.yitangFargo.Items.AnnihilationForce.DisplayName}"
+	AnnihilationHeader: Annihilation Force
 	AerospecEffect: Aerospec Armor Bonus
 	AerospecEValkyrie: Aerospec Valkyrie
 	AerospecGladiatorsLocket: Aerospec Gladiators Locket
@@ -25,7 +25,7 @@ Toggler: {
 	FearmongerEffect: Fearmonger Armor Bonus
 	FearmongerFSkullCrown: Fearmonger Skull Crown
 	FearmongerNucleogenesis: Fearmonger Nucleogenesis
-	DesolationHeader: "{$Mods.yitangFargo.Items.DesolationForce.DisplayName}"
+	DesolationHeader: Desolation Force
 	MolluskVictideEffect: Victide Armor Bonus
 	MolluskVictideESnail: Victide Snail
 	MolluskVictideLuxors: Victide Luxors
@@ -55,7 +55,7 @@ Toggler: {
 	AstralSabaton: Astral Sabaton
 	OmegaBlueEffect: Omega Blue Armor Bonus
 	OmegaBluePhantomic: Omega Blue Phantomic
-	DevastationHeader: "{$Mods.yitangFargo.Items.DevastationForce.DisplayName}"
+	DevastationHeader: Devastation Force
 	WulfrumEffect: Wulfrum Armor Bonus
 	WulfrumRoverDrive: Wulfrum WulfrumRoverDrive
 	WulfrumTrinketofChi: Wulfrum Chi
@@ -71,7 +71,7 @@ Toggler: {
 	DemonShadeFAngelic: DemonShade Angelic
 	DemonShadeFCrystal: DemonShade Crystal
 	DemonShadeGCommunity: DemonShade Community
-	ExaltationHeader: "{$Mods.yitangFargo.Items.ExaltationForce.DisplayName}"
+	ExaltationHeader: Exaltation Force
 	TarragonEffect: Tarragon Armor Bonus
 	BloodEffect: Bloodflare Armor Bonus
 	BloodMinion: Bloodflare Minion
@@ -90,7 +90,10 @@ Toggler: {
 	AuricMinion: Auric Minion
 	AuricPurity: Auric Purity
 	AuricYharimsGift: Auric Yharims Gift
-	EternityHeader: "{$Mods.yitangFargo.Items.EternityForce.DisplayName}"
+	MiracleHeader: Miracle Force
+	AMarniteEffect: Marnite Armor Bonus
+	AMarniteShieldEffect: Marnite Shield
+	EternityHeader: Eternity Force
 	ANekomiEffect: Nekomi Armor Bonus
 	ANekomiSparkling: Nekomi Sparkling
 	BGaiaEffect: Gaia Armor Bonus
@@ -99,7 +102,7 @@ Toggler: {
 	StyxWand: Styx Wand
 	TrueMutantEffect: TrueMutant Armor Bonus
 	TrueMutantEye: TrueMutant Eye
-	BrimstoneWitchHeader: "{$Mods.yitangFargo.Items.BrandoftheWitchNew.DisplayName}"
+	BrimstoneWitchHeader: Brand of the Witch
 	AHeartElements: Heart of the Elements
 	BFrostFlare: Frost Flare
 	CLeviathanAmbergris: Leviathan Ambergris
@@ -108,9 +111,9 @@ Toggler: {
 	FFungalClump: Fungal Clump
 	GHowlsHeart: Howls Heart
 	HTheEvolution: The Evolution
-	CalamityBerserkerHeader: "{$Mods.yitangFargo.Items.BerserkerSoulNew.DisplayName}"
+	CalamityBerserkerHeader: Berserker Soul
 	ReaperToothEffect: Reaper Tooth Necklace
-	CalamitySnipersHeader: "{$Mods.yitangFargo.Items.SnipersSoulNew.DisplayName}"
+	CalamitySnipersHeader: Snipers Soul
 	QuiverofNihilityEffect: Quiver of Nihility
 	StemCellsEffect: Stem Cells
 	AmalgamEffect: The Amalgam
@@ -433,6 +436,11 @@ Items: {
 
 	FCNPCIcon: {
 		DisplayName: F C N P C Icon
+		Tooltip: ""
+	}
+
+	MarniteEnchant: {
+		DisplayName: Marnite Enchant
 		Tooltip: ""
 	}
 }

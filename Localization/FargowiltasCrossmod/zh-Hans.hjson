@@ -25,7 +25,7 @@ Mods: {
 			ShortDescription:
 				'''
 				[c/00FFFF:以Fargo魂的永恒模式为主]
-				[c/00FFFF:并包含了部分][c/800080:死亡模式][c/00FFFF:的更具极高挑战性的难度]
+				[c/00FFFF:并包含了部分][c/800080:死亡模式][c/00FFFF:和额外原版BossAI的更具极高挑战性的难度]
 				'''
 			ExpandedDescription:
 				'''
@@ -385,7 +385,7 @@ Mods: {
 				Tooltip:
 					'''
 					每进行一次跳跃或二连跳
-					你都会获得5%的暴击率
+					暴击率和召唤伤害都会提高5%
 					任何二连跳都能参与计算
 					落地时叠加的暴击率会重置
 					'''
@@ -434,7 +434,7 @@ Mods: {
 				DisplayName: 探索之力
 				Tooltip:
 					'''
-					[i:FargowiltasCrossmod/AerospecEnchantment] 每次跳跃或二连跳时，都会提高10%的暴击率
+					[i:FargowiltasCrossmod/AerospecEnchantment] 每次跳跃或二连跳时，都会提高10%的暴击率和召唤伤害
 					[i:FargowiltasCrossmod/DesertProwlerEnchantment] 按住“上”键可进行蓄力，松开后会进行一次强力的沙暴跳跃
 					[i:FargowiltasCrossmod/MarniteEnchantment] 物块的放置速度提高25%，挖掘和放置范围扩大10格
 					[i:FargowiltasCrossmod/MarniteEnchantment] 挖掘或放置物块时，身后会发射激光攻击附近的敌人
@@ -736,7 +736,7 @@ Mods: {
 		}
 
 		WizardEffect: {
-			Aerospec: 提升的暴击率翻倍
+			Aerospec: 提升的暴击率和召唤伤害翻倍
 			Marnite:
 				'''
 				激光的伤害提高
@@ -781,5 +781,12 @@ Mods: {
 		}
 
 		Cooldowns.DaedalusPlatformCooldown: 代达罗斯平台
+
+		ExpandedTooltips: {
+			// FountainAstral: Forces surrounding biome state to Astral Infection upon activation
+			// FountainCrags: Forces surrounding biome state to Brimstone Crags upon activation
+			// FountainSulphur: Forces surrounding biome state to Sulphurous Sea upon activation
+			// FountainSunken: Forces surrounding biome state to Sunken Sea upon activation
+		}
 	}
 }

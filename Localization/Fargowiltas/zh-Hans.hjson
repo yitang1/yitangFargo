@@ -158,6 +158,11 @@ Mods: {
 					Tooltip: ""
 				}
 
+				PermanentStationsNearby: {
+					Label: "[i:3198] 增益站在靠近时会自动生效"
+					Tooltip: ""
+				}
+
 				BossZen: {
 					Label: "[i:3117] Boss战期间不刷新敌怪"
 					Tooltip: ""
@@ -252,7 +257,7 @@ Mods: {
 
 				DisableTombstones: {
 					Label: "[i:Fargowiltas/GraveBuster] 禁用墓碑生成"
-					Tooltip: 当玩家死亡时不再会生成墓碑
+					Tooltip: 当玩家死亡时不再生成墓碑
 				}
 			}
 
@@ -260,7 +265,7 @@ Mods: {
 				DisplayName: 客户端配置
 
 				ExpandedTooltips: {
-					Label: "[i:171] 物品注释里显示本模组对该物品涉及的改动"
+					Label: "[i:171] 物品注释内显示本模组对该物品涉及的改动"
 					Tooltip: ""
 				}
 
