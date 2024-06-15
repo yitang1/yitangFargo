@@ -31,8 +31,8 @@ Toggler: {
 	MolluskVictideLuxors: Victide Luxors
 	MolluskVictideSpark: Victide Spark
 	MolluskEffect: Mollusk Armor Bonus
-	MolluskGiantPearl: Mollusk Pearl
-	MolluskFAquaticEmblem: Mollusk Aquatic Emblem
+	MolluskFDeepDiver: Mollusk Deep Diver
+	MolluskGAquaticEmblem: Mollusk Aquatic Emblem
 	DaedalusEffect: Daedalus Armor Bonus
 	DaedalusEffectCrystal: Daedalus Crystal
 	DaedalusEffectGolem: Daedalus Golem
@@ -84,7 +84,7 @@ Toggler: {
 	GodSlayerNebulousCore: GodSlayer Nebulous Core
 	SilvaEffect: Silva Armor Bonus
 	SilvaEffectCrystal: Silva Crystal
-	SilvaTheAbsorber: Silva The Absorber
+	SilvaHeartElements: Silva Heart Elements
 	SilvaTheSponge: Silva The Sponge
 	AuricEffect: Auric Armor Bonus
 	AuricMinion: Auric Minion
@@ -93,6 +93,15 @@ Toggler: {
 	MiracleHeader: Miracle Force
 	AMarniteEffect: Marnite Armor Bonus
 	AMarniteShieldEffect: Marnite Shield
+	BDesertProwlerEffect: Desert Prowler Armor Bonus
+	BDesertProwlerRusty: Desert Prowler Rusty Medallion
+	CTitanHeartEffect: Titan Heart Armor Bonus
+	DLunicCorpsEffect: Lunic Corps Armor Bonus
+	DLunicCorpsTheAbsorber: Lunic Corps The Absorber
+	EPrismaticEffect: Prismatic Armor Bonus
+	EPrismaticTheEvolution: Prismatic The Evolution
+	FGemTechEffect: Gem Tech Armor Bonus
+	FGemTechHeart: Gem Tech Draedons Heart
 	EternityHeader: Eternity Force
 	ANekomiEffect: Nekomi Armor Bonus
 	ANekomiSparkling: Nekomi Sparkling
@@ -103,14 +112,12 @@ Toggler: {
 	TrueMutantEffect: TrueMutant Armor Bonus
 	TrueMutantEye: TrueMutant Eye
 	BrimstoneWitchHeader: Brand of the Witch
-	AHeartElements: Heart of the Elements
 	BFrostFlare: Frost Flare
 	CLeviathanAmbergris: Leviathan Ambergris
 	DBlunderBooster: Blunder Booster
-	EDraedonsHeart: Draedons Heart
+	EAquaticHeart: Aquatic Heart
 	FFungalClump: Fungal Clump
 	GHowlsHeart: Howls Heart
-	HTheEvolution: The Evolution
 	CalamityBerserkerHeader: Berserker Soul
 	ReaperToothEffect: Reaper Tooth Necklace
 	CalamitySnipersHeader: Snipers Soul
@@ -144,6 +151,16 @@ Buffs: {
 		DisplayName: Disrupted Focus
 		Description: Mods.yitangFargo.Buffs.DisruptedFocus.Description
 	}
+
+	DesertProwlerBuff: {
+		DisplayName: Desert Prowler Buff
+		Description: Mods.yitangFargo.Buffs.DesertProwlerBuff.Description
+	}
+
+	LunicCorpsShieldBuff: {
+		DisplayName: Lunic Corps Shield Buff
+		Description: Mods.yitangFargo.Buffs.LunicCorpsShieldBuff.Description
+	}
 }
 
 ContentTexts: {
@@ -174,6 +191,11 @@ Items: {
 
 	XerocEnchant: {
 		DisplayName: Xeroc Enchant
+		Tooltip: ""
+	}
+
+	TitanHeartEnchant: {
+		DisplayName: Titan Heart Enchant
 		Tooltip: ""
 	}
 
@@ -272,6 +294,37 @@ Items: {
 		Tooltip: ""
 	}
 
+	MarniteEnchant: {
+		DisplayName: Marnite Enchant
+		Tooltip: ""
+	}
+
+	DesertProwlerEnchant: {
+		DisplayName: Desert Prowler Enchant
+		Tooltip: ""
+	}
+
+	LunicCorpsEnchant: {
+		DisplayName: Lunic Corps Enchant
+		Tooltip: ""
+	}
+
+	PrismaticEnchant: {
+		DisplayName: Prismatic Enchant
+		Tooltip: ""
+	}
+
+	GemTechEnchant: {
+		DisplayName: Gem Tech Enchant
+		Tooltip:
+			'''
+			[GemTechGeneral]
+			[GemTechBonus]
+			'''
+		GemTechGeneral: ""
+		GemTechBonus: ""
+	}
+
 	EridanusEnchantment: {
 		DisplayName: Eridanus Enchantment
 		Tooltip: ""
@@ -314,6 +367,11 @@ Items: {
 
 	ExaltationForce: {
 		DisplayName: Exaltation Force
+		Tooltip: ""
+	}
+
+	MiracleForce: {
+		DisplayName: Miracle Force
 		Tooltip: ""
 	}
 
@@ -436,11 +494,6 @@ Items: {
 
 	FCNPCIcon: {
 		DisplayName: F C N P C Icon
-		Tooltip: ""
-	}
-
-	MarniteEnchant: {
-		DisplayName: Marnite Enchant
 		Tooltip: ""
 	}
 }

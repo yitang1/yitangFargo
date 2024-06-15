@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
@@ -423,6 +423,7 @@ namespace yitangFargo.NPCs
                 modsES.Add(ModContent.ItemType<SulphurousEnchant>(), new Condition[] { Condition.DownedMechBossAll });
                 modsES.Add(ModContent.ItemType<FathomSwarmerEnchant>(), new Condition[] { Condition.DownedGolem });
                 modsES.Add(ModContent.ItemType<UmbraphileEnchant>(), new Condition[] { Condition.DownedGolem });
+                modsES.Add(ModContent.ItemType<TitanHeartEnchant>(), new Condition[] { Condition.DownedMechBossAny });
                 modsES.Add(ModContent.ItemType<AstralEnchant>(), new Condition[] { Condition.DownedMoonLord });
                 modsES.Add(ModContent.ItemType<OmegaBlueEnchant>(), new Condition[] { DownedDevourerOfGods });
                 //毁灭之力
@@ -437,6 +438,12 @@ namespace yitangFargo.NPCs
                 modsES.Add(ModContent.ItemType<GodSlayerEnchant>(), new Condition[] { DownedYharon });
                 modsES.Add(ModContent.ItemType<SilvaEnchant>(), new Condition[] { DownedYharon });
                 modsES.Add(ModContent.ItemType<AuricEnchant>(), new Condition[] { DownedExoOrCal });
+                //奇迹之力
+                modsES.Add(ModContent.ItemType<MarniteEnchant>(), new Condition[] { DownedSlimeGod });
+                modsES.Add(ModContent.ItemType<DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu });
+                modsES.Add(ModContent.ItemType<LunicCorpsEnchant>(), new Condition[] { Condition.DownedMoonLord });
+                modsES.Add(ModContent.ItemType<PrismaticEnchant>(), new Condition[] { DownedDevourerOfGods });
+                modsES.Add(ModContent.ItemType<GemTechEnchant>(), new Condition[] { DownedExoAndCal });
             }
             //永恒之力
             modsES.Add(ModContent.ItemType<NekomiEnchantment>(), new Condition[] { DownedDeviantt });

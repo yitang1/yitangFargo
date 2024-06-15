@@ -254,6 +254,7 @@ namespace yitangFargo.Global
                         || recipe.createItem.type == ModContent.ItemType<DesolationForce>()
                         || recipe.createItem.type == ModContent.ItemType<DevastationForce>()
                         || recipe.createItem.type == ModContent.ItemType<ExaltationForce>()
+                        || recipe.createItem.type == ModContent.ItemType<MiracleForce>()
 
                         || recipe.createItem.type == ModContent.ItemType<CalamitySoul>())
                     {

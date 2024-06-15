@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<SilvaEffect>(Item);
             player.AddEffect<SilvaEffectCrystal>(Item);
-            player.AddEffect<SilvaTheAbsorber>(Item);
+            player.AddEffect<SilvaHeartElements>(Item);
             player.AddEffect<SilvaTheSponge>(Item);
 
             //始源林海盔甲
@@ -53,11 +53,11 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 calamityPlayer.silvaSummon = true;
             }
-            //阴阳吸星石
-            if (player.HasEffect<SilvaTheAbsorber>())
-            {
-                ModContent.GetInstance<TheAbsorber>().UpdateAccessory(player, hideVisual);
-            }
+			//元灵之心
+			if (player.HasEffect<SilvaHeartElements>())
+			{
+				ModContent.GetInstance<HeartoftheElements>().UpdateAccessory(player, hideVisual);
+			}
             //化绵留香石
             if (player.HasEffect<SilvaTheSponge>())
             {
@@ -73,9 +73,9 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddRecipeGroup("yitangFargo:AnySilva")
                 .AddIngredient<SilvaArmor>()
                 .AddIngredient<SilvaLeggings>()
-                .AddIngredient<TheAbsorber>()
                 .AddIngredient<TheSponge>()
                 .AddIngredient<EtherealTalisman>()
+                .AddIngredient<HeartoftheElements>()
                 .AddTile<CosmicAnvil>()
                 .Register();
         }
@@ -108,13 +108,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
     }
-    public class SilvaTheAbsorber : AccessoryEffect
+    public class SilvaHeartElements : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();
         public override int ToggleItemType => ModContent.ItemType<SilvaEnchant>();
         public override bool IgnoresMutantPresence => true;
-        public override bool ExtraAttackEffect => true;
-    }
+		public override bool MinionEffect => true;
+	}
     public class SilvaTheSponge : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<ExaltationHeader>();

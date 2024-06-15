@@ -3,5 +3,5 @@ author = yitang
 version = 0.4.0.6
 modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod
 weakReferences = 
-buildIgnore = .git\*, .vs\*, bin\*, obj\*, Properties\*, .gitignore, *.csproj, *.sln
+buildIgnore = .git\*, .vs\*, bin\*, obj\*, Properties\*, .gitignore, .editorconfig, *.csproj, *.sln
 hideCode = true

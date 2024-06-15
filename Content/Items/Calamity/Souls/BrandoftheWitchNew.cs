@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -61,28 +61,20 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             {
                 ModContent.GetInstance<LeviathanAmbergris>().UpdateAccessory(player, hideVisual);
             }
-            //元灵之心
-            if (player.AddEffect<AHeartElements>(Item))
+			//渊洋之心
+			if (player.AddEffect<EAquaticHeart>(Item))
             {
-                ModContent.GetInstance<HeartoftheElements>().UpdateAccessory(player, hideVisual);
+                ModContent.GetInstance<AquaticHeart>().UpdateAccessory(player, hideVisual);
             }
-            //悖论增幅器
-            if (player.AddEffect<DBlunderBooster>(Item))
+			//血肉图腾
+			ModContent.GetInstance<FleshTotem>().UpdateAccessory(player, hideVisual);
+			//悖论增幅器
+			if (player.AddEffect<DBlunderBooster>(Item))
             {
                 ModContent.GetInstance<BlunderBooster>().UpdateAccessory(player, hideVisual);
             }
             //阳炎战旗
             ModContent.GetInstance<WarbanneroftheSun>().UpdateAccessory(player, hideVisual);
-            //进化者
-            if (player.AddEffect<HTheEvolution>(Item))
-            {
-                ModContent.GetInstance<TheEvolution>().UpdateAccessory(player, hideVisual);
-            }
-            //嘉登之心
-            if (player.AddEffect<EDraedonsHeart>(Item))
-            {
-                ModContent.GetInstance<DraedonsHeart>().UpdateAccessory(player, hideVisual);
-            }
             #endregion
 
             #region 如果开启【配方修改-Fargo魂本体】配置选项的话
@@ -164,11 +156,9 @@ namespace yitangFargo.Content.Items.Calamity.Souls
                     .AddIngredient<HowlsHeart>()
                     .AddIngredient<FrostFlare>()
                     .AddIngredient<LeviathanAmbergris>()
-                    .AddIngredient<HeartoftheElements>()
+                    .AddIngredient<FleshTotem>()
                     .AddIngredient<BlunderBooster>()
                     .AddIngredient<WarbanneroftheSun>()
-                    .AddIngredient<TheEvolution>()
-                    .AddIngredient<DraedonsHeart>()
 
                     .AddIngredient<ShieldoftheHighRuler>()
                     .AddIngredient<AbyssalDivingSuit>()
@@ -190,11 +180,9 @@ namespace yitangFargo.Content.Items.Calamity.Souls
                     .AddIngredient<HowlsHeart>()
                     .AddIngredient<FrostFlare>()
                     .AddIngredient<LeviathanAmbergris>()
-                    .AddIngredient<HeartoftheElements>()
+                    .AddIngredient<FleshTotem>()
                     .AddIngredient<BlunderBooster>()
                     .AddIngredient<WarbanneroftheSun>()
-                    .AddIngredient<TheEvolution>()
-                    .AddIngredient<DraedonsHeart>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }
@@ -204,11 +192,6 @@ namespace yitangFargo.Content.Items.Calamity.Souls
     public abstract class BrandWitchEffect : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<BrimstoneWitchHeader>();
-    }
-    public class AHeartElements : BrandWitchEffect
-    {
-        public override int ToggleItemType => ModContent.ItemType<HeartoftheElements>();
-        public override bool IgnoresMutantPresence => true;
     }
     public class BFrostFlare : BrandWitchEffect
     {
@@ -225,9 +208,9 @@ namespace yitangFargo.Content.Items.Calamity.Souls
         public override int ToggleItemType => ModContent.ItemType<BlunderBooster>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class EDraedonsHeart : BrandWitchEffect
+    public class EAquaticHeart : BrandWitchEffect
     {
-        public override int ToggleItemType => ModContent.ItemType<DraedonsHeart>();
+        public override int ToggleItemType => ModContent.ItemType<AquaticHeart>();
         public override bool IgnoresMutantPresence => true;
     }
     public class FFungalClump : BrandWitchEffect
@@ -238,11 +221,6 @@ namespace yitangFargo.Content.Items.Calamity.Souls
     public class GHowlsHeart : BrandWitchEffect
     {
         public override int ToggleItemType => ModContent.ItemType<HowlsHeart>();
-        public override bool IgnoresMutantPresence => true;
-    }
-    public class HTheEvolution : BrandWitchEffect
-    {
-        public override int ToggleItemType => ModContent.ItemType<TheEvolution>();
         public override bool IgnoresMutantPresence => true;
     }
 }

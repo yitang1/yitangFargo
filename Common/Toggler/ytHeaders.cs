@@ -45,6 +45,11 @@ namespace yitangFargo.Common.Toggler
         public override int Item => ModContent.ItemType<ExaltationForce>();
         public override float Priority => 20.5f;
     }
+    public class MiracleHeader : EnchantHeader
+    {
+        public override int Item => ModContent.ItemType<MiracleForce>();
+        public override float Priority => 20.6f;
+    }
     public class EternityHeader : EnchantHeader
     {
         public override int Item => ModContent.ItemType<EternityForce>();

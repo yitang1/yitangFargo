@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using CalamityMod.Rarities;
 using yitangFargo.Content.Items.Calamity.Enchantments;

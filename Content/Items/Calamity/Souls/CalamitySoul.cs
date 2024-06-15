@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using FargowiltasSouls.Content.Items.Materials;
@@ -27,6 +27,8 @@ namespace yitangFargo.Content.Items.Calamity.Souls
             ModContent.GetInstance<DevastationForce>().UpdateAccessory(player, hideVisual);
             //升华之力
             ModContent.GetInstance<ExaltationForce>().UpdateAccessory(player, hideVisual);
+            //奇迹之力
+            ModContent.GetInstance<MiracleForce>().UpdateAccessory(player, hideVisual);
         }
 
         public override void AddRecipes()
@@ -36,6 +38,7 @@ namespace yitangFargo.Content.Items.Calamity.Souls
                 .AddIngredient<DesolationForce>()
                 .AddIngredient<DevastationForce>()
                 .AddIngredient<ExaltationForce>()
+                .AddIngredient<MiracleForce>()
                 .AddIngredient<AbomEnergy>(10)
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();

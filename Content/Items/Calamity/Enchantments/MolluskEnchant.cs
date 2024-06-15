@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -34,8 +34,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<MolluskEffect>(Item);
-            player.AddEffect<MolluskGiantPearl>(Item);
-            player.AddEffect<MolluskFAquaticEmblem>(Item);
+            player.AddEffect<MolluskFDeepDiver>(Item);
+            player.AddEffect<MolluskGAquaticEmblem>(Item);
             ModContent.GetInstance<VictideEnchant>().UpdateAccessory(player, hideVisual);
 
             //软壳贝盔
@@ -43,13 +43,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             {
                 player.Calamity().molluskSet = true;
             }
-            //大珍珠
-            if (player.HasEffect<MolluskGiantPearl>())
+			//深潜者
+			if (player.HasEffect<MolluskFDeepDiver>())
             {
-                ModContent.GetInstance<GiantPearl>().UpdateAccessory(player, hideVisual);
+                ModContent.GetInstance<DeepDiver>().UpdateAccessory(player, hideVisual);
             }
             //海波纹章
-            if (player.HasEffect<MolluskFAquaticEmblem>())
+            if (player.HasEffect<MolluskGAquaticEmblem>())
             {
                 ModContent.GetInstance<AquaticEmblem>().UpdateAccessory(player, hideVisual);
             }
@@ -62,7 +62,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<MolluskShellplate>()
                 .AddIngredient<MolluskShelleggings>()
                 .AddIngredient<VictideEnchant>()
-                .AddIngredient<GiantPearl>()
+                .AddIngredient<DeepDiver>()
                 .AddIngredient<AquaticEmblem>()
                 .AddTile(TileID.CrystalBall)
                 .Register();
@@ -89,13 +89,13 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
     }
-    public class MolluskGiantPearl : AccessoryEffect
+    public class MolluskFDeepDiver : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<MolluskEnchant>();
         public override bool IgnoresMutantPresence => true;
     }
-    public class MolluskFAquaticEmblem : AccessoryEffect
+    public class MolluskGAquaticEmblem : AccessoryEffect
     {
         public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
         public override int ToggleItemType => ModContent.ItemType<MolluskEnchant>();

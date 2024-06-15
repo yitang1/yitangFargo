@@ -13,6 +13,7 @@ using FargowiltasSouls.Content.Items.Consumables;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Souls;
+using yitangFargo.Content.Items.Calamity.Enchantments;
 
 namespace yitangFargo.Global.GlobalItems
 {
@@ -68,26 +69,30 @@ namespace yitangFargo.Global.GlobalItems
         }
         private void SpecialRarityColor(Item item, TooltipLine nameLine)
         {
-            if (item.type == ModContent.ItemType<BerserkerSoulNew>())
-            {
-                nameLine.OverrideColor = new Color(255, 111, 6);
-            }
-            if (item.type == ModContent.ItemType<SnipersSoulNew>())
-            {
-                nameLine.OverrideColor = new Color(188, 253, 68);
-            }
-            if (item.type == ModContent.ItemType<ColossusSoulNew>())
-            {
-                nameLine.OverrideColor = new Color(252, 59, 0);
-            }
-            if (item.type == ModContent.ItemType<SupersonicSoulNew>())
-            {
-                nameLine.OverrideColor = new Color(238, 0, 69);
-            }
-            if (item.type == ModContent.ItemType<TrawlerSoulNew>())
-            {
-                nameLine.OverrideColor = new Color(0, 238, 125);
-            }
+   //         if (item.type == ModContent.ItemType<BerserkerSoulNew>())
+   //         {
+   //             nameLine.OverrideColor = new Color(255, 111, 6);
+   //         }
+   //         if (item.type == ModContent.ItemType<SnipersSoulNew>())
+   //         {
+   //             nameLine.OverrideColor = new Color(188, 253, 68);
+   //         }
+   //         if (item.type == ModContent.ItemType<ColossusSoulNew>())
+   //         {
+   //             nameLine.OverrideColor = new Color(252, 59, 0);
+   //         }
+   //         if (item.type == ModContent.ItemType<SupersonicSoulNew>())
+   //         {
+			//	nameLine.OverrideColor = new Color(238, 0, 69);
+			//}
+   //         if (item.type == ModContent.ItemType<TrawlerSoulNew>())
+   //         {
+			//	nameLine.OverrideColor = new Color(0, 238, 125);
+			//}
+   //         if (item.type == ModContent.ItemType<GemTechEnchant>())
+   //         {
+			//	nameLine.OverrideColor = new Color(255, 216, 216);
+			//}
         }
 
         //Boss或敌怪战利品

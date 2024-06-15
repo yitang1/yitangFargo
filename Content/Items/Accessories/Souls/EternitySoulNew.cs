@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -55,7 +55,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
             string description = Language.GetTextValue("Mods.yitangFargo.EternitySoulNewExtra.ESCommonTips");
 
-            if (Main.GameUpdateCount % 9 == 0 || EternitySoulSystem.TooltipLines == null)
+            if (Main.GameUpdateCount % 10 == 0 || EternitySoulSystem.TooltipLines == null)
             {
                 EternitySoulSystem.TooltipLines = new();
                 for (int i = 0; i < linesToShow; i++)

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using FargowiltasSouls;
@@ -19,10 +19,10 @@ namespace yitangFargo.Content.Items.Accessories.Souls
     {
         public new string LocalizationCategory => "Items";
 
-        //public static readonly Color ItemColor = new(188, 253, 68);
-        //protected override Color? nameColor => ItemColor;
+		public static readonly Color ItemColor = new(188, 253, 68);
+		protected override Color? nameColor => ItemColor;
 
-        public override void SetStaticDefaults()
+		public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
         }
@@ -40,7 +40,9 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void SafeModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+			base.SafeModifyTooltips(tooltips);
+
+			if (ytFargoConfig.Instance.CalamityFargoRecipe)
             {
                 tooltips.ReplaceText("[SnipersEffects]", this.GetLocalizedValue("SnipersCalamity"));
             }

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -21,10 +21,10 @@ namespace yitangFargo.Content.Items.Accessories.Souls
     {
         public new string LocalizationCategory => "Items";
 
-        //public static readonly Color ItemColor = new(238, 0, 69);
-        //protected override Color? nameColor => ItemColor;
+		public static readonly Color ItemColor = new(238, 0, 69);
+		protected override Color? nameColor => ItemColor;
 
-        public override void SetDefaults()
+		public override void SetDefaults()
         {
             base.SetDefaults();
 
@@ -129,7 +129,9 @@ namespace yitangFargo.Content.Items.Accessories.Souls
 
         public override void SafeModifyTooltips(List<TooltipLine> tooltips)
         {
-            if (ytFargoConfig.Instance.CalamityFargoRecipe)
+			base.SafeModifyTooltips(tooltips);
+
+			if (ytFargoConfig.Instance.CalamityFargoRecipe)
             {
                 tooltips.ReplaceText("[SupersonicEffects]", this.GetLocalizedValue("SupersonicCalamity"));
             }

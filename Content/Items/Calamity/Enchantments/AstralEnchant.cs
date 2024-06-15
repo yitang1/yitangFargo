@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using CalamityMod;
@@ -9,7 +9,6 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
 using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
-using CalamityMod.Items.Weapons.Summon;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -34,9 +33,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             player.AddEffect<AstralEffect>(Item);
             player.AddEffect<AstralHideofAstrum>(Item);
             player.AddEffect<AstralSabaton>(Item);
+			ModContent.GetInstance<TitanHeartEnchant>().UpdateAccessory(player, hideVisual);
 
-            //星幻盔甲
-            if (player.HasEffect<AstralEffect>())
+			//星幻盔甲
+			if (player.HasEffect<AstralEffect>())
             {
                 player.Calamity().astralStarRain = true;
             }
@@ -58,7 +58,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<AstralHelm>()
                 .AddIngredient<AstralBreastplate>()
                 .AddIngredient<AstralLeggings>()
-                .AddIngredient<HivePod>()
+                .AddIngredient<TitanHeartEnchant>()
                 .AddIngredient<HideofAstrumDeus>()
                 .AddIngredient<GravistarSabaton>()
                 .AddTile(TileID.LunarCraftingStation)

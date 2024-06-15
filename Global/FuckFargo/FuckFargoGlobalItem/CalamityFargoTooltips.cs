@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
@@ -93,8 +93,9 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
 
             if (item.ModItem != null && item.ModItem is BaseEnchant)
             {
-                tooltips.Replace(" [", "[");
-                tooltips.Replace("]:", "]");
+                tooltips.Replace($" [i:{ModContent.ItemType<WizardEnchant>()}]: ", $"[i:{ModContent.ItemType<WizardEnchant>()}] ");
+                //tooltips.Replace(" [i:", "[i:");
+                //tooltips.Replace("]:", "]");
             }
             #endregion
         }
