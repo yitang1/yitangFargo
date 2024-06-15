@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -236,6 +236,7 @@ namespace yitangFargo.Global
                         || recipe.createItem.type == ModContent.ItemType<SnowRuffianEnchant>()
                         || recipe.createItem.type == ModContent.ItemType<UmbraphileEnchant>()
                         || recipe.createItem.type == ModContent.ItemType<AstralEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<TitanHeartEnchant>()
                         || recipe.createItem.type == ModContent.ItemType<OmegaBlueEnchant>()
 
                         || recipe.createItem.type == ModContent.ItemType<WulfrumEnchant>()
@@ -249,6 +250,12 @@ namespace yitangFargo.Global
                         || recipe.createItem.type == ModContent.ItemType<GodSlayerEnchant>()
                         || recipe.createItem.type == ModContent.ItemType<SilvaEnchant>()
                         || recipe.createItem.type == ModContent.ItemType<AuricEnchant>()
+
+                        || recipe.createItem.type == ModContent.ItemType<MarniteEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<DesertProwlerEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<LunicCorpsEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<PrismaticEnchant>()
+                        || recipe.createItem.type == ModContent.ItemType<GemTechEnchant>()
 
                         || recipe.createItem.type == ModContent.ItemType<AnnihilationForce>()
                         || recipe.createItem.type == ModContent.ItemType<DesolationForce>()
