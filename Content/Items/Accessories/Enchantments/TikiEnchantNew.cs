@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using System.Collections.Generic;
@@ -37,8 +37,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[TikiOld]", "");
                     tooltips.ReplaceText("[TikiNew]", "");
                 }
-                else if (player.HasEffect<TikiEffect>())
-                {
+                else if (player.HasEffect<TikiEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[TikiNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.TikiEnchant.New"));
                     tooltips.ReplaceText("[TikiOld]", "");
                     tooltips.ReplaceText("[TikiDouble]", "");

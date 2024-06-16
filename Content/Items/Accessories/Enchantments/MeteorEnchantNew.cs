@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 using Terraria.Localization;
@@ -36,8 +36,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[MeteorOld]", "");
                     tooltips.ReplaceText("[MeteorNew]", "");
                 }
-                else if (player.HasEffect<MeteorEffect>())
-                {
+                else if (player.HasEffect<MeteorEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[MeteorNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.MeteorEnchant.New"));
                     tooltips.ReplaceText("[MeteorOld]", "");
                     tooltips.ReplaceText("[MeteorDouble]", "");

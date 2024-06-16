@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -35,8 +35,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[OrichalcumOld]", "");
                     tooltips.ReplaceText("[OrichalcumNew]", "");
                 }
-                else if (player.HasEffect<OrichalcumEffect>())
-                {
+                else if (player.HasEffect<OrichalcumEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[OrichalcumNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.OrichalcumEnchant.New"));
                     tooltips.ReplaceText("[OrichalcumOld]", "");
                     tooltips.ReplaceText("[OrichalcumDouble]", "");

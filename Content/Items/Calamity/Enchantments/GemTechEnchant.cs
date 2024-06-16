@@ -16,7 +16,6 @@ using FargowiltasSouls.Core.Toggler.Content;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
-using CalamityMod.Items.Weapons.Melee;
 using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
@@ -85,7 +84,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				.AddIngredient<GemTechSchynbaulds>()
 				.AddIngredient<MiracleMatter>()
 				.AddIngredient<DraedonsHeart>()
-				.AddTile(TileID.LunarCraftingStation)
+				.AddTile<DraedonsForge>()
 				.Register();
 		}
 	}

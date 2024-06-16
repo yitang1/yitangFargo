@@ -718,7 +718,6 @@ Items: {
 		DisplayName: 猫猫睡衣魔石
 		Tooltip:
 			'''
-			伤害和暴击率提高7%
 			闪烁崇心的擦弹范围扩大50%
 			擦弹可以暂时积蓄能量
 			受伤时会消耗能量获得快速治疗增益
@@ -758,7 +757,8 @@ Items: {
 		Tooltip:
 			'''
 			[i:yitangFargo/AerospecEnchant][i:yitangFargo/StatigelEnchant] 拥有天蓝盔甲和斯塔提斯盔甲的套装效果
-			[i:yitangFargo/AtaxiaEnchant][i:yitangFargo/XerocEnchant][i:yitangFargo/FearmongerEnchant] 拥有渊泉盔甲、皇天盔甲和神惧者盔甲的套装效果
+			[i:yitangFargo/AtaxiaEnchant][i:yitangFargo/XerocEnchant] 拥有渊泉盔甲和皇天盔甲的套装效果
+			[i:yitangFargo/FearmongerEnchant] 拥有神惧者盔甲的套装效果
 			[i:yitangFargo/AerospecEnchant] 拥有角斗士金锁和不稳定花岗岩核心的效果
 			[i:yitangFargo/StatigelEnchant] 拥有魔能谐振仪的效果，两个史莱姆仆从为你而战
 			[i:yitangFargo/AtaxiaEnchant] 拥有熔火碎矿肩甲的效果
@@ -778,7 +778,8 @@ Items: {
 			[i:yitangFargo/DaedalusEnchant] 拥有代达罗斯盔甲和雪境暴徒盔甲的套装效果
 			[i:yitangFargo/AstralEnchant] 拥有星幻盔甲和泰坦之心盔甲的套装效果
 			[i:yitangFargo/UmbraphileEnchant][i:yitangFargo/OmegaBlueEnchant] 拥有日影盔甲和蓝色欧米茄盔甲的套装效果
-			[i:yitangFargo/VictideEnchant] 拥有卢克索的礼物、海之盾和阿米迪亚斯电火花石的效果
+			[i:yitangFargo/VictideEnchant] 拥有卢克索的礼物和海之盾的效果
+			[i:yitangFargo/VictideEnchant] 拥有阿米迪亚斯电火花石的效果
 			[i:yitangFargo/MolluskEnchant] 拥有深潜者和海波纹章的效果
 			[i:yitangFargo/SulphurousEnchant] 拥有沙尘披风和腐蚀脊椎的效果
 			[i:yitangFargo/FathomSwarmerEnchant] 拥有流明护身符和变压器的效果
@@ -1635,7 +1636,7 @@ Configs: {
 			Tooltip:
 				'''
 				Fargo's Souls DLC模组对Fargo魂本体的一些魂饰品配方
-				进行了添加新合成材料来达到限制时期的改动，且部分无法通过配置关闭
+				进行了添加新合成材料来达到限制时期的改动，且无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
 
 				[c/FFD8A5:★此选项和下一个选项在实际游玩中，应该只选择其中一项开启★]

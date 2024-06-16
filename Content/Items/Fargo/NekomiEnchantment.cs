@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -36,7 +36,10 @@ namespace yitangFargo.Content.Items.Fargo
             if (player.HasEffect<ANekomiEffect>())
             {
                 ModContent.GetInstance<NekomiHood>().UpdateArmorSet(player);
-            }
+				//不再增加玩家的基础数值
+				player.GetDamage(DamageClass.Generic) -= 0.07f;
+				player.GetCritChance(DamageClass.Generic) -= 7f;
+			}
             //闪烁崇心
             if (player.HasEffect<ANekomiSparkling>())
             {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
@@ -55,8 +55,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[AncientHallowOld]", "");
                     tooltips.ReplaceText("[AncientHallowNew]", "");
                 }
-                else if (player.HasEffect<AncientHallowMinion>())
-                {
+                else if (player.HasEffect<AncientHallowMinion>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[AncientHallowNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.AncientHallowEnchant.New"));
                     tooltips.ReplaceText("[AncientHallowOld]", "");
                     tooltips.ReplaceText("[AncientHallowDouble]", "");

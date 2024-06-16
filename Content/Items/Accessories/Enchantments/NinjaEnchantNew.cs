@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using System.Collections.Generic;
@@ -53,8 +53,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[NinjaOld]", "");
                     tooltips.ReplaceText("[NinjaNew]", "");
                 }
-                else if (player.HasEffect<NinjaEffect>())
-                {
+                else if (player.HasEffect<NinjaEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[NinjaNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.NinjaEnchant.New"));
                     tooltips.ReplaceText("[NinjaOld]", "");
                     tooltips.ReplaceText("[NinjaDouble]", "");

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using System.Collections.Generic;
@@ -32,8 +32,8 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[MythrilOld]", "");
                     tooltips.ReplaceText("[MythrilNew]", "");
                 }
-                else if (player.HasEffect<MythrilEffect>())
-                {
+                else if (player.HasEffect<MythrilEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
+				{
                     tooltips.ReplaceText("[MythrilNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.MythrilEnchant.New"));
                     tooltips.ReplaceText("[MythrilOld]", "");
                     tooltips.ReplaceText("[MythrilDouble]", "");

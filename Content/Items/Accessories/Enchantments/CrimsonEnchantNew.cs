@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using FargowiltasSouls;
@@ -35,7 +35,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[CrimsonOld]", "");
                     tooltips.ReplaceText("[CrimsonNew]", "");
                 }
-                else if (player.HasEffect<CrimsonEffect>())
+                else if (player.HasEffect<CrimsonEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
                 {
                     tooltips.ReplaceText("[CrimsonNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.CrimsonEnchant.New"));
                     tooltips.ReplaceText("[CrimsonOld]", "");

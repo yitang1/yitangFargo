@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -37,7 +37,7 @@ namespace yitangFargo.Content.Items.Accessories.Enchantments
                     tooltips.ReplaceText("[AdamantiteOld]", "");
                     tooltips.ReplaceText("[AdamantiteNew]", "");
                 }
-                else if (player.HasEffect<AdamantiteEffect>())
+                else if (player.HasEffect<AdamantiteEffect>() || !ytFargoConfig.Instance.OldVanillaEnchant)
                 {
                     tooltips.ReplaceText("[AdamantiteNew]", Language.GetTextValue("Mods.yitangFargo.OtherItems.AdamantiteEnchant.New"));
                     tooltips.ReplaceText("[AdamantiteOld]", "");

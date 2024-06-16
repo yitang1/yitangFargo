@@ -24,7 +24,7 @@ namespace yitangFargo.Global.Config
         public bool FuckBalance;
 
         [Header("FCItems")]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool OldVanillaEnchant;
 
         [ReloadRequired]
