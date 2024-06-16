@@ -1,9 +1,13 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework.Input;
 using CalamityMod;
 using CalamityMod.Rarities;
+using CalamityMod.Items.Materials;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.GemTech;
 using CalamityMod.Tiles.Furniture.CraftingStations;
@@ -13,9 +17,6 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
 using CalamityMod.Items.Weapons.Melee;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework.Input;
-using Terraria.Localization;
 using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
@@ -82,7 +83,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				.AddIngredient<GemTechHeadgear>()
 				.AddIngredient<GemTechBodyArmor>()
 				.AddIngredient<GemTechSchynbaulds>()
-				.AddIngredient<PhotonRipper>()
+				.AddIngredient<MiracleMatter>()
 				.AddIngredient<DraedonsHeart>()
 				.AddTile(TileID.LunarCraftingStation)
 				.Register();
