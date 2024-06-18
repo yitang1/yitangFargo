@@ -12,7 +12,7 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
 using CalamityMod.Items.Fishing.AstralCatches;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Rogue;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
@@ -52,7 +52,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				.AddIngredient<TitanHeartMask>()
 				.AddIngredient<TitanHeartMantle>()
 				.AddIngredient<TitanHeartBoots>()
-				.AddIngredient<TitanArm>()
+				.AddIngredient<GacruxianMollusk>()
 				.AddIngredient<UrsaSergeant>()
 				.AddTile(TileID.CrystalBall)
 				.Register();
