@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -6,7 +6,7 @@ using CalamityMod;
 using CalamityMod.ExtraJumps;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Sulphurous;
-using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Rogue;
 using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
@@ -61,7 +61,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 .AddIngredient<SulphurousHelmet>()
                 .AddIngredient<SulphurousBreastplate>()
                 .AddIngredient<SulphurousLeggings>()
-                .AddIngredient<CausticCroakerStaff>()
+                .AddIngredient<ContaminatedBile>()
                 .AddIngredient<SandCloak>()
                 .AddIngredient<CorrosiveSpine>()
                 .AddTile(TileID.DemonAltar)
