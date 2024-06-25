@@ -1207,7 +1207,7 @@ Items: {
 }
 
 EternitySoulNewExtra: {
-	Honor: 「无论凡人或不朽，一切都承认你的神性」
+	Honor: “无论凡人或不朽，一切都承认你的神性”
 	ESCommonTips: 额外获得以下所有的加成：
 	AllLines:
 		'''
