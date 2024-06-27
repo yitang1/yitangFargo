@@ -378,7 +378,7 @@ Mods: {
 
 			SiblingPylonNotNearSiblings: 目标晶塔需要三兄妹在附近才能使用。
 			NearbySiblingPylonNotNearSiblings: 当前晶塔需要三兄妹在附近才能使用。
-			NewItemUnlocked: "{0}解锁了新商品！"
+			NewItemUnlocked: ""
 			HaveAwoken: "{0}已苏醒！"
 			// Cancel Event
 			CancelEvent: 入侵者已离开！
@@ -1219,7 +1219,7 @@ Mods: {
 			}
 
 			ClownLicense: {
-				DisplayName: 小丑执照
+				DisplayName: 小丑资格证
 				Tooltip:
 					'''
 					召唤小丑
@@ -1397,7 +1397,7 @@ Mods: {
 			}
 
 			SlimyLockBox: {
-				DisplayName: 黏糊糊的锁箱
+				DisplayName: 黏糊糊的锁
 				Tooltip: 召唤地牢史莱姆
 			}
 
