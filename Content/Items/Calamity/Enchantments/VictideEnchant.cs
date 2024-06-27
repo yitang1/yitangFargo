@@ -62,11 +62,9 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                 ModContent.GetInstance<AmidiasSpark>().UpdateAccessory(player, hideVisual);
             }
             //海之盾
-            /*(由于在实际游戏过程中，玩家几乎很少出现同时穿戴胜潮盔甲+佩戴胜潮魔石的情况，
-            在未穿戴全套胜潮盔甲的情况下，如果直接调用海之盾的效果，那仅仅只会生效溺水加成的效果。
-            所以在这里魔石的效果改为【无论是否穿戴全套胜潮盔甲，都能获得海之盾的移速和生命再生加成】
+            /*这里魔石的效果改为【无论是否穿戴全套胜潮盔甲，都能获得海之盾的移速和生命再生加成】
             因为胜潮魔石本身就包含了全套胜潮盔甲
-            当然，因为这个饰品的效果全是正面数值加成，所以不添加开关选项，而是常时生效。)*/
+            当然，因为这个饰品的效果全是正面数值加成，所以不添加开关选项，而是常时生效。*/
             if (Collision.DrownCollision(player.position, player.width, player.height, player.gravDir))
             {
                 player.statDefense += 5;
