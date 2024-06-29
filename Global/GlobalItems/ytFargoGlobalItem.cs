@@ -98,10 +98,10 @@ namespace yitangFargo.Global.GlobalItems
         //Boss或敌怪战利品
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
-            if (item.type == ItemID.WallOfFleshBossBag)
-            {
-                itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemID.DemonHeart));
-            }
+            //if (item.type == ItemID.WallOfFleshBossBag)
+            //{
+            //    itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemID.DemonHeart));
+            //}
             if(item.type == ItemID.MoonLordBossBag)
             {
                 itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsMasterMode(), ModContent.ItemType<CelestialOnion>()));

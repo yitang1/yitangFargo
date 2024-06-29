@@ -50,7 +50,6 @@ namespace yitangFargo.Content.Items.Others
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.DemonHeart)
                 .AddIngredient<MutantsPact>()
                 .AddIngredient<CelestialOnion>()
                 .AddTile(TileID.LunarCraftingStation)
