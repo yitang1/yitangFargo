@@ -89,7 +89,7 @@ Mods: {
 
 		Items: {
 			AddedEffects: {
-				AngelTreads: 拥有天使之靴的效果
+				AngelTreads: ""
 				AeolusBoots: 拥有风神之靴的效果
 				ThoriumSuperSonic: 拥有履空靴、求生家之飞鞋和举足轻重靴的效果
 				CalamityColossus: 拥有聚合之脑、阿斯加德之庇护和神之壁垒的效果
