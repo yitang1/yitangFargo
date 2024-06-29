@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Terraria;
 using Terraria.ID;
@@ -6,11 +6,13 @@ using Terraria.ModLoader;
 using CalamityMod;
 using CalamityMod.Events;
 using CalamityMod.Projectiles.Summon;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.NPCs;
 using yitangFargo.Global.Config;
 using yitangFargo.Common;
 using yitangFargo.Content.Projectiles.Minions;
+using yitangFargo.Content.Items.Accessories.Enchantments;
 
 namespace yitangFargo.Global
 {
@@ -56,7 +58,7 @@ namespace yitangFargo.Global
             }
             /*触发过上面的第一次对话内容后，字段被赋值为2，此时这个方法内的对话都不满足条件，以后都不会触发。
             ★除非忍者NPC又死亡了，那么此时又经历了一次hasChatedNinja++，此时字段变为3，
-            那么触发下面对话，现在这是玩家第二次对刚刚生成的NPC对话。*/
+            那么触发下面对话，现在这是玩家对第二次刚刚生成的NPC对话。*/
             if (npc.type == ModContent.NPCType<Ninja>() && yitangFargoSystem.hasChatedNinja > 2)
             {
                 chat = "呃呃……我好像经历了什么轮回，怎么又会进到史莱姆王的肚子里呢？";
@@ -68,8 +70,15 @@ namespace yitangFargo.Global
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)
         {
-            //沉沦之贝，咬咬咬
-            if (npc.Calamity().shellfishVore > 0)
+			Player player = Main.player[Main.myPlayer];
+			//山铜魔石
+			if (player.HasEffect<OrichalcumEffectNew>() && npc.lifeRegen < 0)
+			{
+				OrichalcumEffectNew.OriDotModifier(npc, player, ref damage);
+			}
+
+			//沉沦之贝，咬咬咬
+			if (npc.Calamity().shellfishVore > 0)
             {
                 int projectileCount = 0;
                 int owner = 255;
