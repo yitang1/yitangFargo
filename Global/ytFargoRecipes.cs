@@ -136,7 +136,7 @@ namespace yitangFargo.Global
 			#region Fargo突变Mod
 			if (ModLoader.HasMod("Fargowiltas"))
 			{
-				//过载能量的合成配方
+				//过载能量
 				ModLoader.TryGetMod("Fargowiltas", out Mod fargowiltas);
 				Recipe.Create(fargowiltas.Find<ModItem>("Overloader").Type)
 					.AddIngredient(ItemID.LunarBar, 5)
@@ -146,7 +146,7 @@ namespace yitangFargo.Global
 				//世界令牌
 				Recipe.Create(fargowiltas.Find<ModItem>("ModeToggle").Type)
 					.AddRecipeGroup("Wood", 10)
-					.AddIngredient(ItemID.Carrot, 1)
+					.AddIngredient(ItemID.Carrot)
 					.Register();
 
 				#region 过载强化剂
@@ -176,7 +176,7 @@ namespace yitangFargo.Global
 					.Register();
 				//神秘强化剂(暗黑魔法师)
 				Recipe.Create(fargowiltas.Find<ModItem>("EnergizerDarkMage").Type)
-					.AddIngredient(ItemID.WarTable, 50)
+					.AddIngredient(ItemID.WarTable, 25)
 					.AddTile(TileID.LunarCraftingStation)
 					.Register();
 				//巨鹿强化剂(独眼巨鹿)
@@ -264,77 +264,77 @@ namespace yitangFargo.Global
 				#region 召唤所有城镇NPC的物品形式
 				//憎恶
 				Recipe.Create(fargowiltas.Find<ModItem>("Abominationn").Type)
-					.AddIngredient(ItemID.GoblinBattleStandard, 1)
+					.AddIngredient(ItemID.SpikyBall)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//渔夫
 				Recipe.Create(fargowiltas.Find<ModItem>("Angler").Type)
-					.AddIngredient(ItemID.Seashell, 1)
+					.AddIngredient(ItemID.Seashell)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//军火商
 				Recipe.Create(fargowiltas.Find<ModItem>("ArmsDealer").Type)
-					.AddIngredient(ItemID.MusketBall, 1)
+					.AddIngredient(ItemID.MusketBall)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//服装商
 				Recipe.Create(fargowiltas.Find<ModItem>("Clothier").Type)
-					.AddIngredient(ItemID.Bone, 1)
+					.AddIngredient(ItemID.Bone)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//机器侠
 				Recipe.Create(fargowiltas.Find<ModItem>("Cyborg").Type)
-					.AddIngredient(fargowiltas.Find<ModItem>("PlanterasFruit").Type)
+					.AddIngredient(ItemID.Ectoplasm)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//爆破专家
 				Recipe.Create(fargowiltas.Find<ModItem>("Demolitionist").Type)
-					.AddIngredient(ItemID.Bomb, 1)
+					.AddIngredient(ItemID.Bomb)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//戴薇安
 				Recipe.Create(fargowiltas.Find<ModItem>("Deviantt").Type)
-					.AddIngredient(ItemID.PinkGel, 1)
+					.AddIngredient(ItemID.PinkGel)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//树妖
 				Recipe.Create(fargowiltas.Find<ModItem>("Dryad").Type)
-					.AddIngredient(fargowiltas.Find<ModItem>("SuspiciousEye").Type)
+					.AddIngredient<SulphuricScale>()
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//染料商
 				Recipe.Create(fargowiltas.Find<ModItem>("DyeTrader").Type)
-					.AddIngredient(ItemID.BlackLens, 1)
+					.AddIngredient(ItemID.YellowMarigold)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//哥布林工匠
 				Recipe.Create(fargowiltas.Find<ModItem>("GoblinTinkerer").Type)
-					.AddIngredient(ItemID.GoblinBattleStandard, 1)
+					.AddIngredient(ItemID.SpikyBall)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//高尔夫球手
 				Recipe.Create(fargowiltas.Find<ModItem>("Golfer").Type)
-					.AddIngredient(ItemID.DesertFossil, 1)
+					.AddIngredient(ItemID.DesertFossil)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -354,7 +354,7 @@ namespace yitangFargo.Global
 					.Register();
 				//机械师
 				Recipe.Create(fargowiltas.Find<ModItem>("Mechanic").Type)
-					.AddIngredient(ItemID.Bone, 1)
+					.AddIngredient(ItemID.Bone)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -368,14 +368,14 @@ namespace yitangFargo.Global
 					.Register();
 				//突变体
 				Recipe.Create(fargowiltas.Find<ModItem>("Mutant").Type)
-					.AddIngredient(fargowiltas.Find<ModItem>("SlimyCrown").Type)
+					.AddIngredient(ItemID.KingSlimeBossBag)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//护士
 				Recipe.Create(fargowiltas.Find<ModItem>("Nurse").Type)
-					.AddIngredient(ItemID.LifeCrystal, 1)
+					.AddIngredient(ItemID.LifeCrystal)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -394,14 +394,14 @@ namespace yitangFargo.Global
 					.Register();
 				//海盗
 				Recipe.Create(fargowiltas.Find<ModItem>("Pirate").Type)
-					.AddIngredient(ItemID.PirateMap, 1)
+					.AddIngredient(ItemID.PirateMap)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//圣诞老人
 				Recipe.Create(fargowiltas.Find<ModItem>("SantaClaus").Type)
-					.AddIngredient(ItemID.SnowGlobe, 1)
+					.AddIngredient(ItemID.SnowGlobe)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -421,28 +421,28 @@ namespace yitangFargo.Global
 					.Register();
 				//蒸汽朋克人
 				Recipe.Create(fargowiltas.Find<ModItem>("Steampunker").Type)
-					.AddIngredient(ItemID.HallowedBar, 1)
+					.AddIngredient(ItemID.HallowedBar)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//发型师
 				Recipe.Create(fargowiltas.Find<ModItem>("Stylist").Type)
-					.AddIngredient(ItemID.Cobweb, 1)
+					.AddIngredient(ItemID.Cobweb)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//酒馆老板
 				Recipe.Create(fargowiltas.Find<ModItem>("Tavernkeep").Type)
-					.AddRecipeGroup(nameof(ItemID.TissueSample), 1)
+					.AddRecipeGroup(nameof(ItemID.TissueSample))
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//税收官
 				Recipe.Create(fargowiltas.Find<ModItem>("TaxCollector").Type)
-					.AddIngredient(ItemID.SoulofNight, 1)
+					.AddIngredient(ItemID.SoulofNight)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -455,35 +455,38 @@ namespace yitangFargo.Global
 					.Register();
 				//松露人
 				Recipe.Create(fargowiltas.Find<ModItem>("Truffle").Type)
-					.AddIngredient(ItemID.SoulofLight, 1)
-					.AddIngredient(ItemID.GlowingMushroom, 1)
+					.AddIngredient(ItemID.SoulofLight)
+					.AddIngredient(ItemID.GlowingMushroom)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//巫医
 				Recipe.Create(fargowiltas.Find<ModItem>("WitchDoctor").Type)
-					.AddIngredient(ItemID.BeeWax, 1)
+					.AddIngredient(ItemID.BeeWax)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//巫师
 				Recipe.Create(fargowiltas.Find<ModItem>("Wizard").Type)
-					.AddIngredient(ItemID.SoulofLight, 1)
+					.AddIngredient(ItemID.SoulofLight)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//动物学家
 				Recipe.Create(fargowiltas.Find<ModItem>("Zoologist").Type)
+					.AddIngredient(ItemID.Bunny)
+					.AddIngredient(ItemID.Penguin)
+					.AddIngredient(ItemID.Buggy)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
 					.Register();
 				//公主
 				Recipe.Create(fargowiltas.Find<ModItem>("Princess").Type)
-					.AddIngredient(fargowiltas.Find<ModItem>("PlanterasFruit").Type)
+					.AddIngredient(ItemID.Ectoplasm)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -512,44 +515,44 @@ namespace yitangFargo.Global
 
 			#region Fargo魂Mod
 			//怒海狂涛(召唤猪鲨仆从)
-			Recipe.Create(ModContent.ItemType<StaffOfUnleashedOcean>(), 1)
-                .AddIngredient(ItemID.TempestStaff, 1)
+			Recipe.Create(ModContent.ItemType<StaffOfUnleashedOcean>())
+                .AddIngredient(ItemID.TempestStaff)
                 .AddIngredient(ModContent.ItemType<AbomEnergy>(), 10)
-                .AddIngredient(ModContent.Find<ModItem>("Fargowiltas", "EnergizerFish"), 1)
+                .AddIngredient(ModContent.Find<ModItem>("Fargowiltas", "EnergizerFish"))
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
             //艳岚谲锋
-            Recipe.Create(ModContent.ItemType<DeviousAestheticus>(), 1)
-                .AddIngredient(ItemID.EmpressBlade, 1)
+            Recipe.Create(ModContent.ItemType<DeviousAestheticus>())
+                .AddIngredient(ItemID.EmpressBlade)
                 .AddIngredient(ItemID.LunarBar, 20)
                 .AddIngredient<GalacticaSingularity>(10)
                 .AddIngredient<ExodiumCluster>(10)
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
             //浓缩彩虹物质
-            Recipe.Create(ModContent.ItemType<ConcentratedRainbowMatter>(), 1)
+            Recipe.Create(ModContent.ItemType<ConcentratedRainbowMatter>())
                 .AddIngredient(ItemID.Gel, 25)
                 .AddIngredient(ItemID.PinkGel, 25)
                 .AddIngredient(ItemID.SoulofLight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
             //吱吱响的玩具
-            Recipe.Create(ModContent.ItemType<SqueakyToy>(), 1)
-                .AddRecipeGroup("Ducks", 1)
+            Recipe.Create(ModContent.ItemType<SqueakyToy>())
+                .AddRecipeGroup("Ducks")
                 .AddIngredient<BloodOrb>(10)
                 .AddTile(TileID.DemonAltar)
                 .Register();
             //部落挂坠
-            Recipe.Create(ModContent.ItemType<TribalCharm>(), 1)
-                .AddIngredient(ItemID.TikiTotem, 1)
-                .AddIngredient(ItemID.PygmyNecklace, 1)
+            Recipe.Create(ModContent.ItemType<TribalCharm>())
+                .AddIngredient(ItemID.TikiTotem)
+                .AddIngredient(ItemID.PygmyNecklace)
                 .AddIngredient(ItemID.SoulofNight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
             //普通的胡萝卜
-            Recipe.Create(ModContent.ItemType<OrdinaryCarrot>(), 1)
-                .AddRecipeGroup("Fruit", 1)
-                .AddIngredient(ItemID.NightOwlPotion, 1)
+            Recipe.Create(ModContent.ItemType<OrdinaryCarrot>())
+                .AddRecipeGroup("Fruit")
+                .AddIngredient(ItemID.NightOwlPotion)
                 .AddIngredient(ItemID.SoulofNight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
