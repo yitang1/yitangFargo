@@ -1598,20 +1598,15 @@ PureHeart: {
 	Tooltip:
 		'''
 		[i:FargowiltasSouls/PureHeart]免疫大部分生物群落的减益：
-		   猩红之地的流血、腐化之地的黑暗、地下神圣之地的翻转、
-		   下雨时的潮湿、暴风雪期间的失温症、血月期间的水蜡烛、
-		   以及地狱的着火了减益
+		   猩红之地的流血、腐化之地的黑暗、地下神圣之地的翻转、下雨时的潮湿、
+		   暴风雪期间的失温症、血月期间的水蜡烛和地狱的着火了减益
 		免疫[i:FargowiltasSouls/DarkenedHeart]腐败和[i:FargowiltasSouls/GuttedHeart]嗜血减益
-		[i:FargowiltasSouls/DarkenedHeart] 移动速度提高10%，提高移动时的转向速度
-		[i:FargowiltasSouls/DarkenedHeart] 攻击时会生成几个追踪小吞噬怪
-		[i:FargowiltasSouls/GuttedHeart] 最多5个飞眼怪徘徊在你的周围，为你阻挡伤害
-		[i:FargowiltasSouls/GuttedHeart] 每10-15秒生成一个新的飞眼怪
-		[i:FargowiltasSouls/GuttedHeart] 不移动时飞眼怪的生成速度翻倍
-		[i:FargowiltasSouls/GuttedHeart] 最大生命值提高10%
+		[i:FargowiltasSouls/DarkenedHeart] 移动速度提高10%，提高移动时的转向速度，攻击会生成追踪小吞噬怪
+		[i:FargowiltasSouls/GuttedHeart] 最大生命值提高10%，最多5个飞眼怪徘徊在你的周围，为你阻挡伤害
+		[i:FargowiltasSouls/GuttedHeart] 每10-15秒生成一个新的飞眼怪，不移动时飞眼怪的生成速度翻倍
 		[i:FargowiltasSouls/DarkenedHeart][i:FargowiltasSouls/GuttedHeart] 小吞噬怪和飞眼怪会对敌人造成升华减益
 		[i:FargowiltasSouls/DarkenedHeart][i:FargowiltasSouls/GuttedHeart] 升华减益会让敌人每秒损失25点生命，降低10点防御
-		[i:FargowiltasSouls/GelicWings] 可让持有者二连跳，落地时向左右发射史莱姆尖刺
-		[i:FargowiltasSouls/GelicWings] 飞行时间延长30%
+		[i:FargowiltasSouls/GelicWings] 飞行时间延长30%，获得二连跳的能力，落地时向左右发射史莱姆尖刺
 		“它充满活力地跳动着”
 		'''
 }
