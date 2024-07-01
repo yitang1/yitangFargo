@@ -53,16 +53,22 @@ namespace yitangFargo.Common
             celestialSeal = tag.GetBool("CelestialSeal");
         }
 
-        public override void PostUpdate()
+		public bool CelestialSealEnabled = false;
+		public override void PostUpdate()
         {
             if (Player.yitangFargo().celestialSeal)
             {
-                DropPactSlot();
-                Player.Calamity().extraAccessoryML = false;
-                Player.FargoSouls().MutantsPactSlot = false;
-                Player.GetModPlayer<CalExtraSlotPlayer>().MutantPactShouldBeEnabled = false;
-            }
-        }
+				DropPactSlot();
+				Player.Calamity().extraAccessoryML = false;
+				Player.FargoSouls().MutantsPactSlot = false;
+				Player.GetModPlayer<CalExtraSlotPlayer>().MutantPactShouldBeEnabled = false;
+				CelestialSealEnabled = true;
+			}
+			else if (!Player.yitangFargo().celestialSeal)
+			{
+				CelestialSealEnabled = false;
+			}
+		}
 
         public override void PostUpdateEquips()
         {
@@ -420,25 +426,28 @@ namespace yitangFargo.Common
 
         private void DropPactSlot()
         {
-            void DropItem(Item item)
-            {
-                Item.NewItem(Player.GetSource_DropAsItem(), Player.Center, item);
-            }
-            void DropSlot(ref ModAccessorySlot slot)
-            {
-                DropItem(slot.FunctionalItem);
-                slot.FunctionalItem = new();
-                DropItem(slot.VanityItem);
-                slot.VanityItem = new();
-                DropItem(slot.DyeItem);
-                slot.DyeItem = new();
-            }
-            ModAccessorySlot eSlot0 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot0>().Type, Player);
-            ModAccessorySlot eSlot1 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot1>().Type, Player);
-            ModAccessorySlot eSlot2 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot2>().Type, Player);
-            DropSlot(ref eSlot0);
-            DropSlot(ref eSlot1);
-            DropSlot(ref eSlot2);
+			if (!CelestialSealEnabled)
+			{
+				void DropItem(Item item)
+				{
+					Item.NewItem(Player.GetSource_DropAsItem(), Player.Center, item);
+				}
+				void DropSlot(ref ModAccessorySlot slot)
+				{
+					DropItem(slot.FunctionalItem);
+					slot.FunctionalItem = new();
+					DropItem(slot.VanityItem);
+					slot.VanityItem = new();
+					DropItem(slot.DyeItem);
+					slot.DyeItem = new();
+				}
+				ModAccessorySlot eSlot0 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot0>().Type, Player);
+				ModAccessorySlot eSlot1 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot1>().Type, Player);
+				ModAccessorySlot eSlot2 = LoaderManager.Get<AccessorySlotLoader>().Get(ModContent.GetInstance<EModeAccessorySlot2>().Type, Player);
+				DropSlot(ref eSlot0);
+				DropSlot(ref eSlot1);
+				DropSlot(ref eSlot2);
+			}
         }
 
         public bool MinionCritsYT;
