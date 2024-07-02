@@ -25,7 +25,8 @@ Mods: {
 			ShortDescription:
 				'''
 				[c/00FFFF:以Fargo魂的永恒模式为主]
-				[c/00FFFF:并包含了部分][c/800080:死亡模式][c/00FFFF:和额外原版BossAI的更具极高挑战性的难度]
+				[c/00FFFF:并包含了部分][c/800080:死亡模式]
+				[c/00FFFF:以及额外原版BossAI的更具极高挑战性的难度]
 				'''
 			ExpandedDescription:
 				'''
@@ -145,17 +146,29 @@ Mods: {
 
 			ABombInMyNation: {
 				DisplayName: 瘟疫爆破装置
-				Tooltip: 召唤瘟疫使者歌莉娅
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤瘟疫使者歌莉娅
+					'''
 			}
 
 			AstrumCor: {
 				DisplayName: 星幻核
-				Tooltip: 召唤星神游龙
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤星神游龙
+					'''
 			}
 
 			BirbPheromones: {
 				DisplayName: 癫痫信息素
-				Tooltip: 召唤痴愚金龙
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤痴愚金龙
+					'''
 			}
 
 			BlightedEye: {
@@ -165,27 +178,46 @@ Mods: {
 
 			BloodyWorm: {
 				DisplayName: 血腥蠕虫
-				Tooltip: 召唤硫海遗爵
+				Tooltip: 不需要钓鱼来召唤硫海遗爵
 			}
 
 			ChunkyStardust: {
 				DisplayName: 碎屑星尘
-				Tooltip: 召唤白金星舰
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤白金星舰
+					'''
 			}
 
 			CryingKey: {
 				DisplayName: 泣寒之匙
-				Tooltip: 召唤极地之灵
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤极地之灵
+					不会狂暴
+					'''
 			}
 
 			DefiledCore: {
 				DisplayName: 神殇晶核
-				Tooltip: 召唤亵渎天神
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤亵渎天神
+					不会狂暴
+					'''
 			}
 
 			DefiledShard: {
 				DisplayName: 神殇碎片
-				Tooltip: 召唤亵渎守卫
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤亵渎守卫
+					不会狂暴
+					'''
 			}
 
 			DragonEgg: {
@@ -195,7 +227,7 @@ Mods: {
 
 			PortableCodebreaker: {
 				DisplayName: 便携密码破译器
-				Tooltip: 召唤星流巨械
+				Tooltip: 召唤嘉登
 			}
 
 			EyeofExtinction: {
@@ -205,22 +237,42 @@ Mods: {
 
 			FriedDoll: {
 				DisplayName: 焦炭娃娃
-				Tooltip: 召唤硫磺火元素
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤硫磺火元素
+					不会狂暴
+					'''
 			}
 
 			HiveTumor: {
 				DisplayName: 腐化肿瘤
-				Tooltip: 召唤腐巢意志
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤腐巢意志
+					不会狂暴
+					'''
 			}
 
 			LetterofKos: {
 				DisplayName: 宇宙信函
-				Tooltip: 召唤神之使徒西格纳斯
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤神之使徒西格纳斯
+					不会狂暴
+					'''
 			}
 
 			MedallionoftheDesert: {
 				DisplayName: 荒漠勋章
-				Tooltip: 召唤荒漠灾虫
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤荒漠灾虫
+					不会狂暴
+					'''
 			}
 
 			MurkySludge: {
@@ -235,32 +287,58 @@ Mods: {
 
 			OphiocordycipitaceaeSprout: {
 				DisplayName: 真菌生物芽孢
-				Tooltip: 召唤菌生蟹
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤菌生蟹
+					'''
 			}
 
 			PolterplasmicBeacon: {
 				DisplayName: 灵质魂炬
-				Tooltip: 召唤噬魂幽花
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤噬魂幽花
+					'''
 			}
 
 			RedStainedWormFood: {
 				DisplayName: 血蠕虫食物
-				Tooltip: 召唤血肉宿主
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤血肉宿主
+					不会狂暴
+					'''
 			}
 
 			RiftofKos: {
 				DisplayName: 宇宙裂隙
-				Tooltip: 召唤无尽虚空
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤无尽虚空
+					不会狂暴
+					'''
 			}
 
 			SeeFood: {
 				DisplayName: 饵料海鲜
-				Tooltip: 召唤渊海灾虫
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤渊海灾虫
+					'''
 			}
 
 			SirensPearl: {
 				DisplayName: 海妖珍珠
-				Tooltip: 召唤阿娜希塔
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤阿娜希塔
+					'''
 			}
 
 			SomeKindofSpaceWorm: {
@@ -270,7 +348,12 @@ Mods: {
 
 			WormFoodofKos: {
 				DisplayName: 宇宙蠕虫食物
-				Tooltip: 召唤风暴编织者
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤风暴编织者
+					不会狂暴
+					'''
 			}
 
 			AbandonedRemote: {
@@ -731,7 +814,7 @@ Mods: {
 			StatigelEffect: 斯塔提斯 移速和伤害
 			SulphurEffect: 硫磺 二连跳
 			VictideEffect: 胜潮 海胆尖刺
-			// TitanHeartEffect: Titan Size
+			TitanHeartEffect: Titan Size
 			UmbraphileEffect: 日影 吸血蝙蝠
 		}
 
@@ -783,10 +866,10 @@ Mods: {
 		Cooldowns.DaedalusPlatformCooldown: 代达罗斯平台
 
 		ExpandedTooltips: {
-			// FountainAstral: Forces surrounding biome state to Astral Infection upon activation
-			// FountainCrags: Forces surrounding biome state to Brimstone Crags upon activation
-			// FountainSulphur: Forces surrounding biome state to Sulphurous Sea upon activation
-			// FountainSunken: Forces surrounding biome state to Sunken Sea upon activation
+			FountainAstral: 激活后将周围的生物群落变为星辉瘟疫
+			FountainCrags: 激活后将周围的生物群落变为硫火之崖
+			FountainSulphur: 激活后将周围的生物群落变为硫磺海
+			FountainSunken: 激活后将周围的生物群落变为沉沦之海
 		}
 	}
 }

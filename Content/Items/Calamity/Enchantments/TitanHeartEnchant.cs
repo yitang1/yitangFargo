@@ -34,10 +34,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.AddEffect<CTitanHeartEffect>(Item);
+			player.AddEffect<AstralTitanHeartEffect>(Item);
 
 			//泰坦之心盔甲
-			if (player.HasEffect<CTitanHeartEffect>())
+			if (player.HasEffect<AstralTitanHeartEffect>())
 			{
 				player.Calamity().titanHeartSet = true;
 			}
@@ -59,9 +59,9 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 		}
 	}
 
-	public class CTitanHeartEffect : AccessoryEffect
+	public class AstralTitanHeartEffect : AccessoryEffect
 	{
-		public override Header ToggleHeader => Header.GetHeader<MiracleHeader>();
+		public override Header ToggleHeader => Header.GetHeader<DesolationHeader>();
 		public override int ToggleItemType => ModContent.ItemType<TitanHeartEnchant>();
 		public override bool IgnoresMutantPresence => true;
 		public override bool ExtraAttackEffect => true;

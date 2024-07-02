@@ -147,7 +147,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             modPlayer.UniverseSoul = true;
             modPlayer.UniverseCore = true;
             player.GetDamage(DamageClass.Generic) += 2.5f;
-            player.AddEffect<UniverseSpeedEffect>(Item);
+            player.AddEffect<UniverseSpeedNewEffect>(Item);
             player.maxMinions += 30;
             player.maxTurrets += 20;
 

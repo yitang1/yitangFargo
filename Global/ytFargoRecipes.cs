@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using CalamityMod.Items.Armor.Aerospec;
 using CalamityMod.Items.Armor.Auric;
 using CalamityMod.Items.Armor.Bloodflare;
@@ -17,6 +18,8 @@ using CalamityMod.Items.Armor.Tarragon;
 using CalamityMod.Items.Armor.Victide;
 using CalamityMod.Items.Materials;
 using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.SummonItems.Invasion;
+using FargowiltasSouls.Content.Items;
 using FargowiltasSouls.Content.Items.Materials;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Patreon.DemonKing;
@@ -30,6 +33,7 @@ using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Forces;
+using CalamityMod.Items.Ammo;
 
 namespace yitangFargo.Global
 {
@@ -41,95 +45,100 @@ namespace yitangFargo.Global
             //天蓝头盔
             RecipeGroup AnyAerospec = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyAerospec"),
-                ModContent.ItemType<AerospecHelmet>(), ModContent.ItemType<AerospecHelm>(),
-                ModContent.ItemType<AerospecHood>(), ModContent.ItemType<AerospecHat>(),
-                ModContent.ItemType<AerospecHeadgear>());
+                ItemType<AerospecHelmet>(), ItemType<AerospecHelm>(),
+                ItemType<AerospecHood>(), ItemType<AerospecHat>(),
+                ItemType<AerospecHeadgear>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyAerospec", AnyAerospec);
             //斯塔提斯头盔
             RecipeGroup AnyStatigel = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyStatigel"),
-                ModContent.ItemType<StatigelHeadSummon>(), ModContent.ItemType<StatigelHeadMelee>(),
-                ModContent.ItemType<StatigelHeadRanged>(), ModContent.ItemType<StatigelHeadMagic>(),
-                ModContent.ItemType<StatigelHeadRogue>());
+                ItemType<StatigelHeadSummon>(), ItemType<StatigelHeadMelee>(),
+                ItemType<StatigelHeadRanged>(), ItemType<StatigelHeadMagic>(),
+                ItemType<StatigelHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyStatigel", AnyStatigel);
             //渊泉头盔
             RecipeGroup AnyAtaxia = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyAtaxia"),
-                ModContent.ItemType<HydrothermicHeadSummon>(), ModContent.ItemType<HydrothermicHeadMelee>(),
-                ModContent.ItemType<HydrothermicHeadRanged>(), ModContent.ItemType<HydrothermicHeadMagic>(),
-                ModContent.ItemType<HydrothermicHeadRogue>());
+                ItemType<HydrothermicHeadSummon>(), ItemType<HydrothermicHeadMelee>(),
+                ItemType<HydrothermicHeadRanged>(), ItemType<HydrothermicHeadMagic>(),
+                ItemType<HydrothermicHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyAtaxia", AnyAtaxia);
             //胜潮头盔
             RecipeGroup AnyVictide = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyVictide"),
-                ModContent.ItemType<VictideHeadSummon>(), ModContent.ItemType<VictideHeadMelee>(),
-                ModContent.ItemType<VictideHeadRanged>(), ModContent.ItemType<VictideHeadMagic>(),
-                ModContent.ItemType<VictideHeadRogue>());
+                ItemType<VictideHeadSummon>(), ItemType<VictideHeadMelee>(),
+                ItemType<VictideHeadRanged>(), ItemType<VictideHeadMagic>(),
+                ItemType<VictideHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyVictide", AnyVictide);
             //代达罗斯头盔
             RecipeGroup AnyDaedalus = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyDaedalus"),
-                ModContent.ItemType<DaedalusHeadSummon>(), ModContent.ItemType<DaedalusHeadMelee>(),
-                ModContent.ItemType<DaedalusHeadRanged>(), ModContent.ItemType<DaedalusHeadMagic>(),
-                ModContent.ItemType<DaedalusHeadRogue>());
+                ItemType<DaedalusHeadSummon>(), ItemType<DaedalusHeadMelee>(),
+                ItemType<DaedalusHeadRanged>(), ItemType<DaedalusHeadMagic>(),
+                ItemType<DaedalusHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyDaedalus", AnyDaedalus);
             //掠夺者头盔
             RecipeGroup AnyReaver = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyReaver"),
-                ModContent.ItemType<ReaverHeadTank>(), ModContent.ItemType<ReaverHeadMobility>(),
-                ModContent.ItemType<ReaverHeadExplore>());
+                ItemType<ReaverHeadTank>(), ItemType<ReaverHeadMobility>(),
+                ItemType<ReaverHeadExplore>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyReaver", AnyReaver);
             //瘟疫头盔
             RecipeGroup AnyPlagueHelmet = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyPlagueHelmet"),
-                ModContent.ItemType<PlaguebringerVisor>(), ModContent.ItemType<PlagueReaperMask>());
+                ItemType<PlaguebringerVisor>(), ItemType<PlagueReaperMask>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyPlagueHelmet", AnyPlagueHelmet);
             //瘟疫胸甲
             RecipeGroup AnyPlagueBreastplate = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyPlagueBreastplate"),
-                ModContent.ItemType<PlaguebringerCarapace>(), ModContent.ItemType<PlagueReaperVest>());
+                ItemType<PlaguebringerCarapace>(), ItemType<PlagueReaperVest>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyPlagueBreastplate", AnyPlagueBreastplate);
             //瘟疫长靴
             RecipeGroup AnyPlagueBoot = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyPlagueBoot"),
-                ModContent.ItemType<PlaguebringerPistons>(), ModContent.ItemType<PlagueReaperStriders>());
+                ItemType<PlaguebringerPistons>(), ItemType<PlagueReaperStriders>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyPlagueBoot", AnyPlagueBoot);
             //龙蒿头盔
             RecipeGroup AnyTarragon = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyTarragon"),
-                ModContent.ItemType<TarragonHeadSummon>(), ModContent.ItemType<TarragonHeadMelee>(),
-                ModContent.ItemType<TarragonHeadRanged>(), ModContent.ItemType<TarragonHeadMagic>(),
-                ModContent.ItemType<TarragonHeadRogue>());
+                ItemType<TarragonHeadSummon>(), ItemType<TarragonHeadMelee>(),
+                ItemType<TarragonHeadRanged>(), ItemType<TarragonHeadMagic>(),
+                ItemType<TarragonHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyTarragon", AnyTarragon);
             //血炎头盔
             RecipeGroup AnyBloodflare = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyBloodflare"),
-                ModContent.ItemType<BloodflareHeadSummon>(), ModContent.ItemType<BloodflareHeadMelee>(),
-                ModContent.ItemType<BloodflareHeadRanged>(), ModContent.ItemType<BloodflareHeadMagic>(),
-                ModContent.ItemType<BloodflareHeadRogue>());
+                ItemType<BloodflareHeadSummon>(), ItemType<BloodflareHeadMelee>(),
+                ItemType<BloodflareHeadRanged>(), ItemType<BloodflareHeadMagic>(),
+                ItemType<BloodflareHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyBloodflare", AnyBloodflare);
             //弑神者头盔
             RecipeGroup AnyGodSlayer = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyGodSlayer"),
-                ModContent.ItemType<GodSlayerHeadMelee>(), ModContent.ItemType<GodSlayerHeadRanged>(),
-                ModContent.ItemType<GodSlayerHeadRogue>());
+                ItemType<GodSlayerHeadMelee>(), ItemType<GodSlayerHeadRanged>(),
+                ItemType<GodSlayerHeadRogue>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyGodSlayer", AnyGodSlayer);
             //始源林海头盔
             RecipeGroup AnySilva = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnySilva"),
-                ModContent.ItemType<SilvaHeadSummon>(), ModContent.ItemType<SilvaHeadMagic>());
+                ItemType<SilvaHeadSummon>(), ItemType<SilvaHeadMagic>());
             RecipeGroup.RegisterGroup("yitangFargo:AnySilva", AnySilva);
             //古圣金源头盔
             RecipeGroup AnyAuric = new RecipeGroup(() =>
                 Language.GetTextValue("Mods.yitangFargo.Common.RecipeGroups.AnyAuric"),
-                ModContent.ItemType<AuricTeslaSpaceHelmet>(), ModContent.ItemType<AuricTeslaRoyalHelm>(),
-                ModContent.ItemType<AuricTeslaHoodedFacemask>(), ModContent.ItemType<AuricTeslaWireHemmedVisage>(),
-                ModContent.ItemType<AuricTeslaPlumedHelm>());
+                ItemType<AuricTeslaSpaceHelmet>(), ItemType<AuricTeslaRoyalHelm>(),
+                ItemType<AuricTeslaHoodedFacemask>(), ItemType<AuricTeslaWireHemmedVisage>(),
+                ItemType<AuricTeslaPlumedHelm>());
             RecipeGroup.RegisterGroup("yitangFargo:AnyAuric", AnyAuric);
-            #endregion
-        }
+			#endregion
 
-        public override void AddRecipes()
+			#region 其他
+			RecipeGroup EvilBossMaterials = new RecipeGroup(() => "任意邪恶Boss材料", ItemID.TissueSample, ItemID.ShadowScale);
+			RecipeGroup.RegisterGroup(nameof(ItemID.TissueSample), EvilBossMaterials);
+			#endregion
+		}
+
+		public override void AddRecipes()
         {
 			#region 添加模组物品配方
 
@@ -261,7 +270,7 @@ namespace yitangFargo.Global
 					.Register();
 				#endregion
 
-				#region 召唤所有城镇NPC的物品形式
+				#region 召唤所有城镇NPC的物品
 				//憎恶
 				Recipe.Create(fargowiltas.Find<ModItem>("Abominationn").Type)
 					.AddIngredient(ItemID.SpikyBall)
@@ -361,7 +370,7 @@ namespace yitangFargo.Global
 					.Register();
 				//商人
 				Recipe.Create(fargowiltas.Find<ModItem>("Merchant").Type)
-					.AddIngredient(ItemID.SilverCoin, 10)
+					.AddIngredient(ItemID.SilverCoin, 25)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -449,6 +458,7 @@ namespace yitangFargo.Global
 					.Register();
 				//旅商
 				Recipe.Create(fargowiltas.Find<ModItem>("TravellingMerchant").Type)
+					.AddIngredient(ItemID.GoldCoin, 5)
 					.AddIngredient(ItemID.RottenChunk, 5)
 					.AddIngredient(ItemID.Vertebrae, 5)
 					.AddTile(TileID.DemonAltar)
@@ -515,47 +525,128 @@ namespace yitangFargo.Global
 
 			#region Fargo魂Mod
 			//怒海狂涛(召唤猪鲨仆从)
-			Recipe.Create(ModContent.ItemType<StaffOfUnleashedOcean>())
+			Recipe.Create(ItemType<StaffOfUnleashedOcean>())
                 .AddIngredient(ItemID.TempestStaff)
-                .AddIngredient(ModContent.ItemType<AbomEnergy>(), 10)
-                .AddIngredient(ModContent.Find<ModItem>("Fargowiltas", "EnergizerFish"))
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                .AddIngredient(ItemType<AbomEnergy>(), 10)
+                .AddIngredient(Find<ModItem>("Fargowiltas", "EnergizerFish"))
+                .AddTile(Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
             //艳岚谲锋
-            Recipe.Create(ModContent.ItemType<DeviousAestheticus>())
+            Recipe.Create(ItemType<DeviousAestheticus>())
                 .AddIngredient(ItemID.EmpressBlade)
                 .AddIngredient(ItemID.LunarBar, 20)
                 .AddIngredient<GalacticaSingularity>(10)
                 .AddIngredient<ExodiumCluster>(10)
-                .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
+                .AddTile(Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
             //浓缩彩虹物质
-            Recipe.Create(ModContent.ItemType<ConcentratedRainbowMatter>())
-                .AddIngredient(ItemID.Gel, 25)
-                .AddIngredient(ItemID.PinkGel, 25)
+            Recipe.Create(ItemType<ConcentratedRainbowMatter>())
+                .AddIngredient(ItemID.Gel, 30)
+                .AddIngredient(ItemID.PinkGel, 20)
                 .AddIngredient(ItemID.SoulofLight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
             //吱吱响的玩具
-            Recipe.Create(ModContent.ItemType<SqueakyToy>())
+            Recipe.Create(ItemType<SqueakyToy>())
                 .AddRecipeGroup("Ducks")
                 .AddIngredient<BloodOrb>(10)
                 .AddTile(TileID.DemonAltar)
                 .Register();
             //部落挂坠
-            Recipe.Create(ModContent.ItemType<TribalCharm>())
+            Recipe.Create(ItemType<TribalCharm>())
                 .AddIngredient(ItemID.TikiTotem)
                 .AddIngredient(ItemID.PygmyNecklace)
                 .AddIngredient(ItemID.SoulofNight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
             //普通的胡萝卜
-            Recipe.Create(ModContent.ItemType<OrdinaryCarrot>())
+            Recipe.Create(ItemType<OrdinaryCarrot>())
                 .AddRecipeGroup("Fruit")
                 .AddIngredient(ItemID.NightOwlPotion)
                 .AddIngredient(ItemID.SoulofNight, 15)
                 .AddTile(TileID.CrystalBall)
                 .Register();
+            //遗忘之礼
+            Recipe.Create(ItemType<MasochistReal>())
+                .AddIngredient<Masochist>()
+                .Register();
+			//突变体的礼物
+			Recipe.Create(ItemType<Masochist>())
+                .AddIngredient<MasochistReal>()
+                .Register();
+			//被遗忘的礼物
+			Recipe.Create(ItemType<ForgorGift>())
+                .AddIngredient<MasochistReal>()
+                .AddIngredient<Masochist>()
+                .Register();
+			//飞龙之羽
+			Recipe.Create(ItemType<WyvernFeather>())
+				.AddIngredient(ItemID.Feather, 20)
+				.AddIngredient<EssenceofSunlight>(3)
+				.AddIngredient(ItemID.SoulofFlight, 15)
+				.AddTile(TileID.CrystalBall)
+				.Register();
+			//安全钱包
+			Recipe.Create(ItemType<SecurityWallet>())
+				.AddIngredient(ItemID.FlyingDutchmanTrophy)
+				.AddTile(TileID.Solidifier)
+				.Register();
+			Recipe.Create(ItemType<SecurityWallet>())
+				.AddIngredient(ItemID.MoneyTrough)
+				.AddIngredient(ItemID.GoldCoin, 10)
+				.AddIngredient<MarksmanRound>(999)
+				.AddTile(TileID.CrystalBall)
+				.Register();
+			//诅咒袋子
+			Recipe.Create(ItemType<WretchedPouch>())
+				.AddIngredient(ItemID.Silk, 20)
+				.AddIngredient<EssenceofHavoc>(3)
+				.AddIngredient(ItemID.SoulofNight, 15)
+				.AddTile(TileID.CrystalBall)
+				.Register();
+			//南瓜王的披肩
+			Recipe.Create(ItemType<PumpkingsCape>())
+				.AddIngredient(ItemID.PumpkingTrophy)
+				.AddTile(TileID.Solidifier)
+				.Register();
+			Recipe.Create(ItemType<PumpkingsCape>())
+                .AddIngredient(ItemID.Silk, 10)
+                .AddIngredient(ItemID.Pumpkin, 20)
+                .AddIngredient<NightmareFuel>(20)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
+			//冰雪女王的皇冠
+			Recipe.Create(ItemType<IceQueensCrown>())
+                .AddIngredient(ItemID.IceQueenTrophy)
+				.AddTile(TileID.Solidifier)
+				.Register();
+			Recipe.Create(ItemType<IceQueensCrown>())
+                .AddIngredient(ItemID.PlatinumCrown)
+                .AddIngredient(ItemID.IceBlock, 20)
+                .AddIngredient<EndothermicEnergy>(20)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
+			//飞碟控制台
+			Recipe.Create(ItemType<SaucerControlConsole>())
+                .AddIngredient(ItemID.MartianSaucerTrophy)
+				.AddTile(TileID.Solidifier)
+				.Register();
+			Recipe.Create(ItemType<SaucerControlConsole>())
+                .AddIngredient<MartianDistressRemote>()
+                .AddIngredient<ArmoredShell>(3)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
+			//双足翼龙之心
+			Recipe.Create(ItemType<BetsysHeart>())
+                .AddIngredient(ItemID.BossBagBetsy)
+				.AddTile(TileID.Solidifier)
+				.Register();
+			Recipe.Create(ItemType<BetsysHeart>())
+				.AddIngredient(ItemID.Steak)
+				.AddIngredient<EffulgentFeather>(10)
+				.AddIngredient<DarksunFragment>(20)
+				.AddTile(TileID.LunarCraftingStation)
+				.Register();
 			#endregion
 
 			#endregion
@@ -569,22 +660,22 @@ namespace yitangFargo.Global
 
                 #region 移除Fargo魂本体的合成配方
                 //移除Fargo魂Mod一些魂饰品的合成配方
-                if (recipe.createItem.type == ModContent.ItemType<EternitySoul>()
-                    || recipe.createItem.type == ModContent.ItemType<UniverseSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<DimensionSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<MasochistSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<TerrariaSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<ColossusSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<SupersonicSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<FlightMasterySoul>()
-                    || recipe.createItem.type == ModContent.ItemType<TrawlerSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<WorldShaperSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<BerserkerSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<SnipersSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<ArchWizardsSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<ConjuristsSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<VagabondsSoul>()
-                    || recipe.createItem.type == ModContent.ItemType<BrandoftheBrimstoneWitch>())
+                if (recipe.createItem.type == ItemType<EternitySoul>()
+                    || recipe.createItem.type == ItemType<UniverseSoul>()
+                    || recipe.createItem.type == ItemType<DimensionSoul>()
+                    || recipe.createItem.type == ItemType<MasochistSoul>()
+                    || recipe.createItem.type == ItemType<TerrariaSoul>()
+                    || recipe.createItem.type == ItemType<ColossusSoul>()
+                    || recipe.createItem.type == ItemType<SupersonicSoul>()
+                    || recipe.createItem.type == ItemType<FlightMasterySoul>()
+                    || recipe.createItem.type == ItemType<TrawlerSoul>()
+                    || recipe.createItem.type == ItemType<WorldShaperSoul>()
+                    || recipe.createItem.type == ItemType<BerserkerSoul>()
+                    || recipe.createItem.type == ItemType<SnipersSoul>()
+                    || recipe.createItem.type == ItemType<ArchWizardsSoul>()
+                    || recipe.createItem.type == ItemType<ConjuristsSoul>()
+                    || recipe.createItem.type == ItemType<VagabondsSoul>()
+                    || recipe.createItem.type == ItemType<BrandoftheBrimstoneWitch>())
                 {
                     recipe.DisableRecipe();
                 }
@@ -606,48 +697,48 @@ namespace yitangFargo.Global
                 if (!ytFargoConfig.Instance.OldCalamityEnchant)
                 {
                     //如果没有开启这个选项，那么旧版灾厄魔石的相关合成配方都会被禁用掉。(不至于直接移除物品)
-                    if (recipe.createItem.type == ModContent.ItemType<AerospecEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<StatigelEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<AtaxiaEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<XerocEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<FearmongerEnchant>()
+                    if (recipe.createItem.type == ItemType<AerospecEnchant>()
+                        || recipe.createItem.type == ItemType<StatigelEnchant>()
+                        || recipe.createItem.type == ItemType<AtaxiaEnchant>()
+                        || recipe.createItem.type == ItemType<XerocEnchant>()
+                        || recipe.createItem.type == ItemType<FearmongerEnchant>()
 
-                        || recipe.createItem.type == ModContent.ItemType<MolluskEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<VictideEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<FathomSwarmerEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<SulphurousEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<DaedalusEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<SnowRuffianEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<UmbraphileEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<AstralEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<TitanHeartEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<OmegaBlueEnchant>()
+                        || recipe.createItem.type == ItemType<MolluskEnchant>()
+                        || recipe.createItem.type == ItemType<VictideEnchant>()
+                        || recipe.createItem.type == ItemType<FathomSwarmerEnchant>()
+                        || recipe.createItem.type == ItemType<SulphurousEnchant>()
+                        || recipe.createItem.type == ItemType<DaedalusEnchant>()
+                        || recipe.createItem.type == ItemType<SnowRuffianEnchant>()
+                        || recipe.createItem.type == ItemType<UmbraphileEnchant>()
+                        || recipe.createItem.type == ItemType<AstralEnchant>()
+                        || recipe.createItem.type == ItemType<TitanHeartEnchant>()
+                        || recipe.createItem.type == ItemType<OmegaBlueEnchant>()
 
-                        || recipe.createItem.type == ModContent.ItemType<WulfrumEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<ReaverEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<PlagueEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<DemonShadeEnchant>()
+                        || recipe.createItem.type == ItemType<WulfrumEnchant>()
+                        || recipe.createItem.type == ItemType<ReaverEnchant>()
+                        || recipe.createItem.type == ItemType<PlagueEnchant>()
+                        || recipe.createItem.type == ItemType<DemonShadeEnchant>()
 
-                        || recipe.createItem.type == ModContent.ItemType<TarragonEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<BloodflareEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<BrimflameEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<GodSlayerEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<SilvaEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<AuricEnchant>()
+                        || recipe.createItem.type == ItemType<TarragonEnchant>()
+                        || recipe.createItem.type == ItemType<BloodflareEnchant>()
+                        || recipe.createItem.type == ItemType<BrimflameEnchant>()
+                        || recipe.createItem.type == ItemType<GodSlayerEnchant>()
+                        || recipe.createItem.type == ItemType<SilvaEnchant>()
+                        || recipe.createItem.type == ItemType<AuricEnchant>()
 
-                        || recipe.createItem.type == ModContent.ItemType<MarniteEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<DesertProwlerEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<LunicCorpsEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<PrismaticEnchant>()
-                        || recipe.createItem.type == ModContent.ItemType<GemTechEnchant>()
+                        || recipe.createItem.type == ItemType<MarniteEnchant>()
+                        || recipe.createItem.type == ItemType<DesertProwlerEnchant>()
+                        || recipe.createItem.type == ItemType<LunicCorpsEnchant>()
+                        || recipe.createItem.type == ItemType<PrismaticEnchant>()
+                        || recipe.createItem.type == ItemType<GemTechEnchant>()
 
-                        || recipe.createItem.type == ModContent.ItemType<AnnihilationForce>()
-                        || recipe.createItem.type == ModContent.ItemType<DesolationForce>()
-                        || recipe.createItem.type == ModContent.ItemType<DevastationForce>()
-                        || recipe.createItem.type == ModContent.ItemType<ExaltationForce>()
-                        || recipe.createItem.type == ModContent.ItemType<MiracleForce>()
+                        || recipe.createItem.type == ItemType<AnnihilationForce>()
+                        || recipe.createItem.type == ItemType<DesolationForce>()
+                        || recipe.createItem.type == ItemType<DevastationForce>()
+                        || recipe.createItem.type == ItemType<ExaltationForce>()
+                        || recipe.createItem.type == ItemType<MiracleForce>()
 
-                        || recipe.createItem.type == ModContent.ItemType<CalamitySoul>())
+                        || recipe.createItem.type == ItemType<CalamitySoul>())
                     {
                         recipe.DisableRecipe();
                     }

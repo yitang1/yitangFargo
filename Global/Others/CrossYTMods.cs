@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -36,7 +36,19 @@ namespace yitangFargo.Global.Others
 
     public class CrossYTModSystem : ModSystem
     {
-        public override void PostAddRecipes()
+		public override void AddRecipes()
+		{
+			if (!ModLoader.HasMod("yitangCN"))
+			{
+				//胡萝卜
+				Recipe.Create(ItemID.Carrot)
+					.AddIngredient(ItemID.Daybloom)
+					.AddIngredient(ItemID.Acorn)
+					.Register();
+			}
+		}
+
+		public override void PostAddRecipes()
         {
             for (int i = 0; i < Recipe.numRecipes; i++)
             {

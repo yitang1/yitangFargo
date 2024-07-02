@@ -2,15 +2,17 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Collections.Generic;
+using CalamityMod.Items.Materials;
 using FargowiltasSouls;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Core.Toggler.Content;
 using FargowiltasSouls.Content.Items.Accessories.Expert;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Materials;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.ModPlayers;
-using CalamityMod.Items.Materials;
 using yitangFargo.Common.Rarities;
-using System.Collections.Generic;
 using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
@@ -50,7 +52,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             modPlayer.UniverseSoul = true;
             modPlayer.UniverseCore = true;
 
-            player.AddEffect<UniverseSpeedEffect>(Item);
+            player.AddEffect<UniverseSpeedNewEffect>(Item);
 
             player.maxMinions += 6;
             player.maxTurrets += 6;
@@ -100,4 +102,22 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                 .Register();
         }
     }
+
+	public class UniverseSpeedNewEffect : AccessoryEffect
+	{
+		public override Header ToggleHeader => Header.GetHeader<UniverseHeader>();
+		public override int ToggleItemType => ModContent.ItemType<UniverseSoul>();
+		public override void PostUpdateEquips(Player player)
+		{
+			float speed = player.FargoSouls().Eternity ? 2.5f : 0.5f;
+			player.FargoSouls().AttackSpeed += speed;
+
+			Item item = player.HeldItem;
+			if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[player.HeldItem.shoot]
+				|| item.damage <= 0)
+			{
+				player.FargoSouls().AttackSpeed -= speed;
+			}
+		}
+	}
 }

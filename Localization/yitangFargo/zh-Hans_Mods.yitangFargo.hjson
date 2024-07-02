@@ -53,6 +53,7 @@ Toggler: {
 	AstralEffect: 星幻 套装效果
 	AstralHideofAstrum: 星幻 星神隐壳
 	AstralSabaton: 星幻 引力靴
+	AstralTitanHeartEffect: 泰坦之心 套装效果
 	OmegaBlueEffect: 蓝色欧米茄 套装效果
 	OmegaBluePhantomic: 蓝色欧米茄 幻魂神物
 	DevastationHeader: 毁灭之力
@@ -95,7 +96,6 @@ Toggler: {
 	AMarniteShieldEffect: 合成岩 合成岩斥力盾
 	BDesertProwlerEffect: 沙漠巡游者 套装效果
 	BDesertProwlerRusty: 沙漠巡游者 锈蚀勋章
-	CTitanHeartEffect: 泰坦之心 套装效果
 	DLunicCorpsEffect: 雷神之锤 套装效果
 	DLunicCorpsTheAbsorber: 雷神之锤 阴阳吸星石
 	EPrismaticEffect: 光棱 套装效果
@@ -129,6 +129,7 @@ Toggler: {
 	ShieldHighRulerEffect: 至高统治之盾
 	StatisVoidSashEffect: 斯塔提斯的虚空饰带
 	AbyssalDivingSuitEffect: 深渊潜游服
+	UniverseSpeedNewEffect: 寰宇之魂攻速加成
 }
 
 Buffs: {
@@ -154,7 +155,7 @@ Buffs: {
 
 	DisruptedFocus: {
 		DisplayName: 心神不定
-		Description: 武器的使用速度降低
+		Description: 秘银魔石对武器攻速的加成失效
 	}
 
 	DesertProwlerBuff: {
@@ -671,7 +672,7 @@ Items: {
 		GemTechBonus:
 			'''
 			[i:Topaz] [c/EDAA2B:黄色宝石提高45%的近战伤害、26%的近战攻速和12%的近战暴击率]
-			    [c/EDAA2B:近战攻击时会定期释放数颗宝石碎片，真近战攻击释放的冷却间隔减半]
+			    [c/EDAA2B:近战攻击时会定期释放数颗宝石碎片，真近战攻击释放碎片的冷却间隔减半]
 			[i:Emerald] [c/25BC6C:绿色宝石提高50%的远程伤害和16%的远程暴击率]
 			    [c/25BC6C:远程攻击时，会召唤飞镖弹快速飞向被远程射弹击中的敌人]
 			[i:Amethyst] [c/C83AD1:紫色宝石提高50%的魔法伤害和16%的魔法暴击率]
@@ -778,16 +779,14 @@ Items: {
 			[i:yitangFargo/DaedalusEnchant] 拥有代达罗斯盔甲和雪境暴徒盔甲的套装效果
 			[i:yitangFargo/AstralEnchant] 拥有星幻盔甲和泰坦之心盔甲的套装效果
 			[i:yitangFargo/UmbraphileEnchant][i:yitangFargo/OmegaBlueEnchant] 拥有日影盔甲和蓝色欧米茄盔甲的套装效果
-			[i:yitangFargo/VictideEnchant] 拥有卢克索的礼物和海之盾的效果
-			[i:yitangFargo/VictideEnchant] 拥有阿米迪亚斯电火花石的效果
+			[i:yitangFargo/VictideEnchant] 拥有卢克索的礼物、海之盾和阿米迪亚斯电火花石的效果
 			[i:yitangFargo/MolluskEnchant] 拥有深潜者和海波纹章的效果
-			[i:yitangFargo/SulphurousEnchant] 拥有沙尘披风和腐蚀脊椎的效果
-			[i:yitangFargo/FathomSwarmerEnchant] 拥有流明护身符和变压器的效果
+			[i:yitangFargo/SulphurousEnchant][i:yitangFargo/FathomSwarmerEnchant] 拥有沙尘披风、腐蚀脊椎、流明护身符和变压器的效果
 			[i:yitangFargo/SnowRuffianEnchant] 拥有潜遁者宝石和腐烂犬齿的效果
 			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
+			[i:yitangFargo/TitanHeartEnchant][i:yitangFargo/AstralEnchant] 拥有大熊座雀鲷、星神隐壳和引力靴的效果
 			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
-			[i:yitangFargo/AstralEnchant][i:yitangFargo/TitanHeartEnchant] 拥有大熊座雀鲷、星神隐壳和引力靴的效果
-			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
+			[i:yitangFargo/OmegaBlueEnchant] 幻魂神物、惧魂神物和灾劫之尖啸的效果
 			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
 			[c/10E279:旧版物品]
 			'''
@@ -1703,8 +1702,9 @@ Configs: {
 				启用此选项后，会在游戏中添加一个售卖魂石的城镇NPC
 				原版魔石的售卖条件为击败对应月后英灵
 				灾厄魔石是当前时期会售卖上一时期可制作的魔石
-				对于魂和精华饰品，若处于正确的时期，
-				背包中有任意一个会解锁其他职业的饰品
+				对于魂和精华饰品，若处于正确或合适的时期，
+				背包中有任意一个会解锁其他职业的饰品，
+				或根据物品栏内拥有的上级魂直接售卖下级魂
 				NPC的解锁条件为——物品栏任意位置有忍者魔石、
 				或在饰品栏装备忍者魔石的情况下，击败史莱姆王
 

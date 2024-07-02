@@ -12,6 +12,7 @@ using FargowiltasSouls.Content.Items.Accessories.Forces;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.Systems;
 using FargowiltasCrossmod.Core.Calamity.Globals;
+using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Common;
 using yitangFargo.Content.Buffs;
 using yitangFargo.Content.Items.Others;
@@ -143,59 +144,52 @@ namespace yitangFargo.Common
 
         public override float UseSpeedMultiplier(Item item)
         {
-            //int useTime = item.useTime;
-            //int useAnimate = item.useAnimation;
+			//int useTime = item.useTime;
+			//int useAnimate = item.useAnimation;
 
-            //if (useTime <= 0 || useAnimate <= 0 || item.damage <= 0)
-            //{
-            //    return base.UseSpeedMultiplier(item);
-            //}
-            FargoSoulsPlayer fargoPlayer = Player.FargoSouls();
+			//if (useTime <= 0 || useAnimate <= 0 || item.damage <= 0)
+			//{
+			//    return base.UseSpeedMultiplier(item);
+			//}
+			FargoSoulsPlayer fargoPlayer = Player.FargoSouls();
 
-            //旧版忍者魔石 攻速翻倍
-            if (Player.HasEffect<NinjaEffectNew>())
-            {
-                fargoPlayer.AttackSpeed *= 2f;
-                //召唤杖
-                if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot])
-                {
-                    fargoPlayer.AttackSpeed /= 2f;
-                }
-                if (item.damage <= 0)
-                {
-                    fargoPlayer.AttackSpeed /= 2f;
-                }
-            }
-            //旧版秘银魔石 攻速提升
-            bool forceEffect = Player.FargoSouls().ForceEffect(item.type);
+			//旧版忍者魔石 攻速翻倍
+			if (Player.HasEffect<NinjaEffectNew>())
+			{
+				fargoPlayer.AttackSpeed *= 2f;
+				//召唤杖、消耗物品不吃加成
+				if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot]
+					|| item.damage <= 0)
+				{
+					fargoPlayer.AttackSpeed /= 2f;
+				}
+			}
+			//旧版秘银魔石 攻速提升
+			bool forceEffect = Player.FargoSouls().ForceEffect(item.type);
 
-            if (!Player.HasBuff<DisruptedFocus>() && Player.HasEffect<MythrilEffectNew>())
-            {
-                float MythrilSpeed = forceEffect ? 0.3f : 0.15f;
-                fargoPlayer.AttackSpeed += MythrilSpeed;
-                if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot])
-                {
-                    fargoPlayer.AttackSpeed -= MythrilSpeed;
-                }
-                if (item.damage <= 0)
-                {
-                    fargoPlayer.AttackSpeed -= MythrilSpeed;
-                }
-            }
-
-            //while (useTime / AttackSpeed < 1)
-            //{
-            //    AttackSpeed -= 0.01f;
-            //}
-            //while (useAnimate / AttackSpeed < 3)
-            //{
-            //    AttackSpeed -= 0.01f;
-            //}
-            //if (AttackSpeed < 0.1f)
-            //{
-            //    AttackSpeed = 0.1f;
-            //}
-            return fargoPlayer.AttackSpeed;
+			if (!Player.HasBuff<DisruptedFocus>() && Player.HasEffect<MythrilEffectNew>())
+			{
+				float MythrilSpeed = forceEffect ? 0.3f : 0.15f;
+				fargoPlayer.AttackSpeed += MythrilSpeed;
+				if (item.DamageType == DamageClass.Summon && !ProjectileID.Sets.IsAWhip[Player.HeldItem.shoot]
+					|| item.damage <= 0)
+				{
+					fargoPlayer.AttackSpeed -= MythrilSpeed;
+				}
+			}
+			//while (useTime / AttackSpeed < 1)
+			//{
+			//    AttackSpeed -= 0.01f;
+			//}
+			//while (useAnimate / AttackSpeed < 3)
+			//{
+			//    AttackSpeed -= 0.01f;
+			//}
+			//if (AttackSpeed < 0.1f)
+			//{
+			//    AttackSpeed = 0.1f;
+			//}
+			return fargoPlayer.AttackSpeed;
         }
 
         public void ModifyHitNPCBoth(NPC target, ref NPC.HitModifiers modifiers, DamageClass damageClass)

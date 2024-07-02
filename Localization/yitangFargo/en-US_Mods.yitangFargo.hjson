@@ -53,6 +53,7 @@ Toggler: {
 	AstralEffect: Astral Armor Bonus
 	AstralHideofAstrum: Astral Hide of Astrum
 	AstralSabaton: Astral Sabaton
+	AstralTitanHeartEffect: Titan Heart Armor Bonus
 	OmegaBlueEffect: Omega Blue Armor Bonus
 	OmegaBluePhantomic: Omega Blue Phantomic
 	DevastationHeader: Devastation Force
@@ -95,7 +96,6 @@ Toggler: {
 	AMarniteShieldEffect: Marnite Shield
 	BDesertProwlerEffect: Desert Prowler Armor Bonus
 	BDesertProwlerRusty: Desert Prowler Rusty Medallion
-	CTitanHeartEffect: Titan Heart Armor Bonus
 	DLunicCorpsEffect: Lunic Corps Armor Bonus
 	DLunicCorpsTheAbsorber: Lunic Corps The Absorber
 	EPrismaticEffect: Prismatic Armor Bonus
@@ -129,6 +129,7 @@ Toggler: {
 	ShieldHighRulerEffect: Shield of High Ruler
 	StatisVoidSashEffect: Statis Void Sash
 	AbyssalDivingSuitEffect: Abyssal Diving Suit
+	UniverseSpeedNewEffect: Universe Soul Speed
 }
 
 Buffs: {
