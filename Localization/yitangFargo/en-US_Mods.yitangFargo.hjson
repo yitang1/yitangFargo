@@ -1,0 +1,660 @@
+Toggler: {
+	AdamantiteEffectNew: Adamantite(Old)
+	AncientHallowMinionNew: AncientHallowMinion(Old)
+	AncientHallowShieldNew: AncientHallowShield(Old)
+	CrimsonEffectNew: Crimson(Old)
+	MeteorEffectNew: Meteor(Old)
+	MythrilEffectNew: Mythril(Old)
+	NinjaEffectNew: Ninja(Old)
+	OrichalcumEffectNew: Orichalcum(Old)
+	TikiEffectNew: Tiki(Old)
+	AnnihilationHeader: Annihilation Force
+	AerospecEffect: Aerospec Armor Bonus
+	AerospecEValkyrie: Aerospec Valkyrie
+	AerospecGladiatorsLocket: Aerospec Gladiators Locket
+	AerospecGraniteCore: Aerospec Granite Core
+	StatigelEffect: Statigel Armor Bonus
+	StatigelManaPolarizer: Statigel Mana Polarizer
+	StatigelSlimeMinions: Statigel Slime Minions
+	AtaxiaEffect: Hydrothermic Armor Bonus
+	AtaxiaMinion: Hydrothermic Minion
+	AtaxiaPauldron: Hydrothermic Slagsplitter Pauldron
+	XerocEffect: Empyrean Armor Bonus
+	XerocEtherealExtorter: Empyrean Ethereal Extorter
+	XerocSpectralVeil: Empyrean Spectral Veil
+	FearmongerEffect: Fearmonger Armor Bonus
+	FearmongerFSkullCrown: Fearmonger Skull Crown
+	FearmongerNucleogenesis: Fearmonger Nucleogenesis
+	DesolationHeader: Desolation Force
+	MolluskVictideEffect: Victide Armor Bonus
+	MolluskVictideESnail: Victide Snail
+	MolluskVictideLuxors: Victide Luxors
+	MolluskVictideSpark: Victide Spark
+	MolluskEffect: Mollusk Armor Bonus
+	MolluskFDeepDiver: Mollusk Deep Diver
+	MolluskGAquaticEmblem: Mollusk Aquatic Emblem
+	DaedalusEffect: Daedalus Armor Bonus
+	DaedalusEffectCrystal: Daedalus Crystal
+	DaedalusEffectGolem: Daedalus Golem
+	DaedalusFConcoction: Daedalus Concoction
+	DaedalusFrostBarrier: Daedalus Frost Barrier
+	DaedalusSnowEffect: Snow Ruffian Armor Bonus
+	DaedalusSnowJewel: Snow Ruffian Jewel
+	DaedalusSnowTooth: Snow Ruffian Tooth
+	FathomREffect: Fathom Armor Bonus
+	FathomRLumenAmulet: Fathom Lumenous Amulet
+	FathomRTransformer: Fathom Transformer
+	FathomSulphurousEffect: Sulphurous Armor Bonus
+	FathomSulphurousSand: Sulphurous Sand Cloak
+	FathomSulphurousSpine: Sulphurous Corrosive Spine
+	UmbraphileEffect: Umbraphile Armor Bonus
+	UmbraphileVampiric: Umbraphile Vampiric Talisman
+	UmbraphileGlove: Umbraphile Glove
+	AstralEffect: Astral Armor Bonus
+	AstralHideofAstrum: Astral Hide of Astrum
+	AstralSabaton: Astral Sabaton
+	AstralTitanHeartEffect: Titan Heart Armor Bonus
+	OmegaBlueEffect: Omega Blue Armor Bonus
+	OmegaBluePhantomic: Omega Blue Phantomic
+	DevastationHeader: Devastation Force
+	WulfrumEffect: Wulfrum Armor Bonus
+	WulfrumRoverDrive: Wulfrum WulfrumRoverDrive
+	WulfrumTrinketofChi: Wulfrum Chi
+	ReaverEffect: Reaver Armor Bonus
+	ReaverEffectOrb: Reaver Orb
+	ReaverNecklace: Reaver Necklace
+	ReaverStone: Reaver Stone
+	PlagueEffectBringer: Plague Armor Bonus(Bringer)
+	PlagueEffectReaper: Plague Armor Bonus(Reaper)
+	PlaguePAlchemicalFlask: Plague Alchemical Flask
+	PlagueToxicHeart: Plague ToxicHeart
+	DemonShadeEffect: DemonShade Armor Bonus
+	DemonShadeFAngelic: DemonShade Angelic
+	DemonShadeFCrystal: DemonShade Crystal
+	DemonShadeGCommunity: DemonShade Community
+	ExaltationHeader: Exaltation Force
+	TarragonEffect: Tarragon Armor Bonus
+	BloodEffect: Bloodflare Armor Bonus
+	BloodMinion: Bloodflare Minion
+	BloodTheChalice: Bloodflare The Chalice
+	BloodTheCore: Bloodflare The Core
+	BloodYBrimEffect: Brimflame Armor Bonus
+	BloodYVoidC: Brimflame Void of Calamity
+	BloodYVoidE: Brimflame Void of Extinction
+	GodSlayerEffect: GodSlayer Armor Bonus
+	GodSlayerNebulousCore: GodSlayer Nebulous Core
+	SilvaEffect: Silva Armor Bonus
+	SilvaEffectCrystal: Silva Crystal
+	SilvaHeartElements: Silva Heart Elements
+	SilvaTheSponge: Silva The Sponge
+	AuricEffect: Auric Armor Bonus
+	AuricMinion: Auric Minion
+	AuricPurity: Auric Purity
+	AuricYharimsGift: Auric Yharims Gift
+	MiracleHeader: Miracle Force
+	AMarniteEffect: Marnite Armor Bonus
+	AMarniteShieldEffect: Marnite Shield
+	BDesertProwlerEffect: Desert Prowler Armor Bonus
+	BDesertProwlerRusty: Desert Prowler Rusty Medallion
+	DLunicCorpsEffect: Lunic Corps Armor Bonus
+	DLunicCorpsTheAbsorber: Lunic Corps The Absorber
+	EPrismaticEffect: Prismatic Armor Bonus
+	EPrismaticTheEvolution: Prismatic The Evolution
+	FGemTechEffect: Gem Tech Armor Bonus
+	FGemTechHeart: Gem Tech Draedons Heart
+	EternityHeader: Eternity Force
+	ANekomiEffect: Nekomi Armor Bonus
+	ANekomiSparkling: Nekomi Sparkling
+	BGaiaEffect: Gaia Armor Bonus
+	EridanusEffect: Eridanus Armor Bonus
+	StyxEffect: Styx Armor Bonus
+	StyxWand: Styx Wand
+	TrueMutantEffect: TrueMutant Armor Bonus
+	TrueMutantEye: TrueMutant Eye
+	BrimstoneWitchHeader: Brand of the Witch
+	BFrostFlare: Frost Flare
+	CLeviathanAmbergris: Leviathan Ambergris
+	DBlunderBooster: Blunder Booster
+	EAquaticHeart: Aquatic Heart
+	FFungalClump: Fungal Clump
+	GHowlsHeart: Howls Heart
+	CalamityBerserkerHeader: Berserker Soul
+	ReaperToothEffect: Reaper Tooth Necklace
+	CalamitySnipersHeader: Snipers Soul
+	QuiverofNihilityEffect: Quiver of Nihility
+	StemCellsEffect: Stem Cells
+	AmalgamEffect: The Amalgam
+	AsgardianAegisEffect: Asgardian Aegis
+	RampartofDeitiesEffect: Rampart of Deities
+	ShieldHighRulerEffect: Shield of High Ruler
+	StatisVoidSashEffect: Statis Void Sash
+	AbyssalDivingSuitEffect: Abyssal Diving Suit
+	UniverseSpeedNewEffect: Universe Soul Speed
+}
+
+Buffs: {
+	CrimsonRegenNewBuff: {
+		DisplayName: Crimson Regen New Buff
+		Description: Mods.yitangFargo.Buffs.CrimsonRegenNewBuff.Description
+	}
+
+	HallowCooldownNewBuff: {
+		DisplayName: Hallow Cooldown New Buff
+		Description: Mods.yitangFargo.Buffs.HallowCooldownNewBuff.Description
+	}
+
+	NullCurseNoBuff: {
+		DisplayName: Null Curse No Buff
+		Description: Mods.yitangFargo.Buffs.NullCurseNoBuff.Description
+	}
+
+	DisruptedFocus: {
+		DisplayName: Disrupted Focus
+		Description: Mods.yitangFargo.Buffs.DisruptedFocus.Description
+	}
+
+	DesertProwlerBuff: {
+		DisplayName: Desert Prowler Buff
+		Description: Mods.yitangFargo.Buffs.DesertProwlerBuff.Description
+	}
+
+	LunicCorpsShieldBuff: {
+		DisplayName: Lunic Corps Shield Buff
+		Description: Mods.yitangFargo.Buffs.LunicCorpsShieldBuff.Description
+	}
+}
+
+ContentTexts: {
+	CommonTips: CommonTips
+	TimsConcoction: ""
+}
+
+Items: {
+	AerospecEnchant: {
+		DisplayName: Aerospec Enchant
+		Tooltip: ""
+	}
+
+	AtaxiaEnchant: {
+		DisplayName: Ataxia Enchant
+		Tooltip: ""
+	}
+
+	FearmongerEnchant: {
+		DisplayName: Fearmonger Enchant
+		Tooltip: ""
+	}
+
+	StatigelEnchant: {
+		DisplayName: Statigel Enchant
+		Tooltip: ""
+	}
+
+	XerocEnchant: {
+		DisplayName: Xeroc Enchant
+		Tooltip: ""
+	}
+
+	TitanHeartEnchant: {
+		DisplayName: Titan Heart Enchant
+		Tooltip: ""
+	}
+
+	AstralEnchant: {
+		DisplayName: Astral Enchant
+		Tooltip: ""
+	}
+
+	DaedalusEnchant: {
+		DisplayName: Daedalus Enchant
+		Tooltip: ""
+	}
+
+	FathomSwarmerEnchant: {
+		DisplayName: Fathom Swarmer Enchant
+		Tooltip: ""
+	}
+
+	MolluskEnchant: {
+		DisplayName: Mollusk Enchant
+		Tooltip: ""
+	}
+
+	OmegaBlueEnchant: {
+		DisplayName: Omega Blue Enchant
+		Tooltip: ""
+	}
+
+	SnowRuffianEnchant: {
+		DisplayName: Snow Ruffian Enchant
+		Tooltip: ""
+	}
+
+	SulphurousEnchant: {
+		DisplayName: Sulphurous Enchant
+		Tooltip: ""
+	}
+
+	UmbraphileEnchant: {
+		DisplayName: Umbraphile Enchant
+		Tooltip: ""
+	}
+
+	VictideEnchant: {
+		DisplayName: Victide Enchant
+		Tooltip: ""
+	}
+
+	DemonShadeEnchant: {
+		DisplayName: Demon Shade Enchant
+		Tooltip: ""
+	}
+
+	PlagueEnchant: {
+		DisplayName: Plague Enchant
+		Tooltip: ""
+	}
+
+	ReaverEnchant: {
+		DisplayName: Reaver Enchant
+		Tooltip: ""
+	}
+
+	WulfrumEnchant: {
+		DisplayName: Wulfrum Enchant
+		Tooltip: ""
+	}
+
+	AuricEnchant: {
+		DisplayName: Auric Enchant
+		Tooltip: ""
+	}
+
+	BloodflareEnchant: {
+		DisplayName: Bloodflare Enchant
+		Tooltip: ""
+	}
+
+	BrimflameEnchant: {
+		DisplayName: Brimflame Enchant
+		Tooltip: ""
+	}
+
+	GodSlayerEnchant: {
+		DisplayName: God Slayer Enchant
+		Tooltip: ""
+	}
+
+	SilvaEnchant: {
+		DisplayName: Silva Enchant
+		Tooltip: ""
+	}
+
+	TarragonEnchant: {
+		DisplayName: Tarragon Enchant
+		Tooltip: ""
+	}
+
+	MarniteEnchant: {
+		DisplayName: Marnite Enchant
+		Tooltip: ""
+	}
+
+	DesertProwlerEnchant: {
+		DisplayName: Desert Prowler Enchant
+		Tooltip: ""
+	}
+
+	LunicCorpsEnchant: {
+		DisplayName: Lunic Corps Enchant
+		Tooltip: ""
+	}
+
+	PrismaticEnchant: {
+		DisplayName: Prismatic Enchant
+		Tooltip: ""
+	}
+
+	GemTechEnchant: {
+		DisplayName: Gem Tech Enchant
+		Tooltip:
+			'''
+			[GemTechGeneral]
+			[GemTechBonus]
+			'''
+		GemTechGeneral: ""
+		GemTechBonus: ""
+	}
+
+	EridanusEnchantment: {
+		DisplayName: Eridanus Enchantment
+		Tooltip: ""
+	}
+
+	GaiaEnchantment: {
+		DisplayName: Gaia Enchantment
+		Tooltip: ""
+	}
+
+	NekomiEnchantment: {
+		DisplayName: Nekomi Enchantment
+		Tooltip: ""
+	}
+
+	StyxEnchantment: {
+		DisplayName: Styx Enchantment
+		Tooltip: ""
+	}
+
+	TrueMutantEnchantment: {
+		DisplayName: True Mutant Enchantment
+		Tooltip: ""
+	}
+
+	AnnihilationForce: {
+		DisplayName: Annihilation Force
+		Tooltip: ""
+	}
+
+	DesolationForce: {
+		DisplayName: Desolation Force
+		Tooltip: ""
+	}
+
+	DevastationForce: {
+		DisplayName: Devastation Force
+		Tooltip: ""
+	}
+
+	ExaltationForce: {
+		DisplayName: Exaltation Force
+		Tooltip: ""
+	}
+
+	MiracleForce: {
+		DisplayName: Miracle Force
+		Tooltip: ""
+	}
+
+	BrandoftheWitchNew: {
+		DisplayName: Brand of the Witch New
+		Tooltip: "[BrandoftheWitchEffects]"
+		BrandoftheWitchFargo: ""
+		BrandoftheWitchCalamity: ""
+	}
+
+	ColossusSoulNew: {
+		DisplayName: Colossus Soul New
+		Tooltip: "[ColossusEffects]"
+		ColossusFargo: ""
+		ColossusCalamity: ""
+	}
+
+	FlightMasterySoulNew: {
+		DisplayName: Flight Mastery Soul New
+		Tooltip: ""
+	}
+
+	SupersonicSoulNew: {
+		DisplayName: Supersonic Soul New
+		Tooltip: "[SupersonicEffects]"
+		SupersonicFargo: ""
+		SupersonicCalamity: ""
+	}
+
+	TrawlerSoulNew: {
+		DisplayName: Trawler Soul New
+		Tooltip: "[TrawlerEffects]"
+		TrawlerFargo: ""
+		TrawlerCalamity: ""
+	}
+
+	WorldShaperSoulNew: {
+		DisplayName: World Shaper Soul New
+		Tooltip: ""
+	}
+
+	ArchWizardsSoulNew: {
+		DisplayName: Arch Wizards Soul New
+		Tooltip: ""
+	}
+
+	BerserkerSoulNew: {
+		DisplayName: Berserker Soul New
+		Tooltip: "[BerserkerEffects]"
+		BerserkerFargo: ""
+		BerserkerCalamity: ""
+	}
+
+	ConjuristsSoulNew: {
+		DisplayName: Conjurists Soul New
+		Tooltip: ""
+	}
+
+	SnipersSoulNew: {
+		DisplayName: Snipers Soul New
+		Tooltip: "[SnipersEffects]"
+		SnipersFargo: ""
+		SnipersCalamity: ""
+	}
+
+	VagabondsSoulNew: {
+		DisplayName: Vagabonds Soul New
+		Tooltip: ""
+	}
+
+	UniverseSoulNew: {
+		DisplayName: Universe Soul New
+		Tooltip: ""
+	}
+
+	DimensionSoulNew: {
+		DisplayName: Dimension Soul New
+		Tooltip: ""
+	}
+
+	TerrariaSoulNew: {
+		DisplayName: Terraria Soul New
+		Tooltip: ""
+	}
+
+	MasochistSoulNew: {
+		DisplayName: Masochist Soul New
+		Tooltip: ""
+	}
+
+	CalamitySoul: {
+		DisplayName: Calamity Soul
+		Tooltip: ""
+	}
+
+	EternityForce: {
+		DisplayName: Eternity Force
+		Tooltip: ""
+	}
+
+	EternitySoulNew: {
+		DisplayName: Eternity Soul New
+		Tooltip: ""
+	}
+
+	CelestialSeal: {
+		DisplayName: Celestial Seal
+		Tooltip: ""
+	}
+
+	OldVanillaEnchantIcon: {
+		DisplayName: Old Vanilla Enchant Icon
+		Tooltip: ""
+	}
+
+	OldCalamityEnchantIcon: {
+		DisplayName: Old Calamity Enchant Icon
+		Tooltip: ""
+	}
+
+	FCNPCIcon: {
+		DisplayName: F C N P C Icon
+		Tooltip: ""
+	}
+}
+
+EternitySoulNewExtra: {
+	Honor: Honor
+	ESCommonTips: Additionally grants:
+	AllLines:
+		'''
+		and so on...
+		etc...
+		'''
+}
+
+OtherItems: {
+	EnchantDouble: ""
+
+	AdamantiteEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	AncientHallowEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	CrimsonEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	MeteorEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	MythrilEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	NinjaEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	OrichalcumEnchant: {
+		Old: ""
+		New: ""
+	}
+
+	TikiEnchant: {
+		Old: ""
+		New: ""
+	}
+}
+
+NPCs: {
+	Ninja: {
+		DisplayName: Ninja
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeBiome: 我喜欢{BiomeName}。
+			DislikeBiome: 我不喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
+}
+
+Common: {
+	RecipeGroups: {
+		AnyAerospec: ""
+		AnyStatigel: ""
+		AnyAtaxia: ""
+		AnyVictide: ""
+		AnyDaedalus: ""
+		AnyReaver: ""
+		AnyPlagueHelmet: ""
+		AnyPlagueBreastplate: ""
+		AnyPlagueBoot: ""
+		AnyTarragon: ""
+		AnyBloodflare: ""
+		AnyGodSlayer: ""
+		AnySilva: ""
+		AnyAuric: ""
+	}
+}
+
+Projectiles: {
+	HallowSwordNew.DisplayName: Hallow Sword New
+	CrimslimeMinionNew.DisplayName: Crimslime Minion New
+	CorroslimeMinionNew.DisplayName: Corroslime Minion New
+	DaedalusGolemNew.DisplayName: Daedalus Golem New
+	CrimsonSlimeGodNew.DisplayName: Crimson Slime God New
+	CorruptionSlimeGodNew.DisplayName: Corruption Slime God New
+	ShellfishNew.DisplayName: Shellfish New
+	PlaguebringerSummonNew.DisplayName: Plaguebringer Summon New
+}
+
+Configs: {
+	ytFargoConfig: {
+		DisplayName: yt Fargo Config
+
+		Headers: {
+			FCRecipes: FC Recipes
+			FCItems: FC Items
+			FCNPC: FC NPC
+			FCBuff: FC Buff
+			FCBalance: FC Balance
+		}
+
+		FargoSoulsRecipe: {
+			Label: Fargo Souls Recipe
+			Tooltip: ""
+		}
+
+		CalamityFargoRecipe: {
+			Label: Calamity Fargo Recipe
+			Tooltip: ""
+		}
+
+		FuckBalance: {
+			Label: Fuck Balance
+			Tooltip: ""
+		}
+
+		OldVanillaEnchant: {
+			Label: Old Vanilla Enchant
+			Tooltip: ""
+		}
+
+		OldCalamityEnchant: {
+			Label: Old Calamity Enchant
+			Tooltip: ""
+		}
+
+		FCNPC: {
+			Label: FC NPC
+			Tooltip: ""
+		}
+
+		NullCurseBuff: {
+			Label: Null Curse Buff
+			Tooltip: ""
+		}
+
+		NoBossDebuff: {
+			Label: No Boss Debuff
+			Tooltip: ""
+		}
+	}
+}

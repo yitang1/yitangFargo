@@ -1,0 +1,8 @@
+displayName = yitangFargo
+author = yitang
+version = 0.4.1.2
+modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod
+weakReferences =
+homepage = https://github.com/yitang1/yitangFargo
+buildIgnore = .git\*, .vs\*, bin\*, obj\*, Properties\*, .editorconfig, .gitignore, README.md, *.csproj, *.sln
+hideCode = true

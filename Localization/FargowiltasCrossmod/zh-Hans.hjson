@@ -1,0 +1,875 @@
+Mods: {
+	FargowiltasCrossmod: {
+		EternityRevDifficulty: {
+			Name: 永恒-复仇
+			ShortDescription:
+				'''
+				[c/00FFFF:以Fargo魂的永恒模式为主]
+				[c/00FFFF:并包含了部分][c/880808:复仇模式][c/00FFFF:的更具挑战性的难度]
+				'''
+			ExpandedDescription:
+				'''
+				融合了[c/00FFFF:永恒模式]与[c/880808:复仇模式]，Boss会掉落大师模式专属物品
+				部分灾厄Boss获得了新的[c/00FFFF:永恒模式]AI
+				默认[c/00FFFF:永恒模式]AI优先于[c/880808:复仇模式]，可在模组配置中更改
+				-戴薇安会提供初始礼包
+				-提升玩家的部分基础数据
+				-玩家不攻击时身上的减益会更快消失
+				'''
+			Activation: 永恒-复仇模式已开启！
+			Deactivation: 永恒-复仇模式已关闭。
+		}
+
+		EternityDeathDifficulty: {
+			Name: 永恒-死亡
+			ShortDescription:
+				'''
+				[c/00FFFF:以Fargo魂的永恒模式为主]
+				[c/00FFFF:并包含了部分][c/800080:死亡模式]
+				[c/00FFFF:以及额外原版BossAI的更具极高挑战性的难度]
+				'''
+			ExpandedDescription:
+				'''
+				融合了[c/00FFFF:永恒模式]与[c/800080:死亡模式]，Boss会掉落大师模式专属物品
+				部分灾厄Boss获得了新的[c/00FFFF:永恒模式]AI
+				为一些原版Boss的[c/00FFFF:永恒模式]AI添加了部分[c/800080:死亡模式]的攻击方式
+				默认[c/00FFFF:永恒模式]AI优先于[c/800080:死亡模式]，可在模组配置中更改
+				-戴薇安会提供初始礼包
+				-提升玩家的部分基础数据
+				-玩家不攻击时身上的减益会更快消失
+				'''
+			Activation: 永恒-死亡模式已开启！
+			Deactivation: 永恒-死亡模式已关闭。
+		}
+
+		Configs: {
+			CalDLCConfig: {
+				DisplayName: 灾厄相关配置
+
+				Headers: {
+					Modes: 模式
+					Balance: 平衡
+				}
+
+				ConsumableSummons: {
+					Label: Boss召唤物品在永恒模式下消耗
+					Tooltip:
+						'''
+						让原版和灾厄的召唤物品可以消耗，覆盖灾厄不消耗的更改
+						此更改纯粹是为了与以下功能保持一致：
+						-在永恒模式下，召唤Boss时，召唤物品会被退还
+						(这实际上与召唤不消耗机制相同)
+						-突变体NPC的商店功能
+						-Fargo突变添加的变种召唤物品
+						'''
+				}
+
+				EternityPriorityOverRev: {
+					Label: 永恒模式优先级高于复仇/死亡模式
+					Tooltip:
+						'''
+						让Boss的永恒模式AI优先于复仇/死亡模式或其它灾厄难度的AI
+						启用此选项后部分灾厄Boss会获得部分全新的永恒模式AI
+						禁用此选项后灾厄的难度模式优先级会高于永恒模式
+						'''
+				}
+
+				InfernumDisablesEternity: {
+					Label: 炼狱模式下禁用永恒模式
+					Tooltip:
+						'''
+						仅当启用炼狱模式时生效
+						开启此选项后炼狱模式下会完全禁用永恒模式
+						关闭此选项后开启炼狱模式时会同时开启永恒模式
+						但除非启用上一条配置选项
+						否则Boss将采用炼狱模式的AI
+						'''
+				}
+			}
+		}
+
+		Items: {
+			AddedEffects: {
+				AngelTreads: ""
+				AeolusBoots: 拥有风神之靴的效果
+				ThoriumSuperSonic: 拥有履空靴、求生家之飞鞋和举足轻重靴的效果
+				CalamityColossus: 拥有聚合之脑、阿斯加德之庇护和神之壁垒的效果
+				ThoriumColossus:
+					'''
+					拥有甜蜜的复仇、黑曜石鳞片、界元之庇佑、
+					以及魂匣、岩石之心和刺甲贝的效果
+					'''
+				CalamityBerserker: 拥有猎魂鲨齿项链、勇气勋章和元素之握的效果
+				ThoriumBerserker: 拥有长剑徽章的效果
+				CalamityWizard: 拥有空灵护符的效果
+				ThoriumWizard: 拥有暗影催化剂的效果
+				CalamitySniper: 拥有元素箭袋、虚无箭袋和痴愚金龙干细胞的效果
+				Vagabond:
+					'''
+					拥有纳米技术和日蚀魔镜的效果
+					拥有浴火龙鳞和敬天神盗盒的效果
+					'''
+				ThoriumSniper: 拥有震荡弹头的效果
+				CalamityConjurist: 拥有核子之源的效果
+				ThoriumConjurist: 拥有云玛垂饰和水晶蝎的效果
+				CalamityTrawler: 拥有深渊潜游服的效果
+				ThoriumUniverse:
+					'''
+					投掷速度提高15%
+					拥有投手大师指南：卷三、
+					美人鱼水壶盒和亡者眼罩的效果
+					'''
+			}
+
+			OutlawsEssence: {
+				DisplayName: 狂徒精华
+				Tooltip:
+					'''
+					盗贼伤害提高18%
+					盗贼射弹速度提高5%
+					盗贼暴击率提高5%
+					“这只是个开始……”
+					'''
+			}
+
+			VagabondsSoul: {
+				DisplayName: 流浪者之魂
+				Tooltip:
+					'''
+					盗贼伤害提高30%
+					盗贼射弹速度提高15%
+					盗贼暴击率提高15%
+					拥有纳米技术和日蚀魔镜的效果
+					拥有浴火龙鳞和敬天神盗盒的效果
+					'''
+			}
+
+			ABombInMyNation: {
+				DisplayName: 瘟疫爆破装置
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤瘟疫使者歌莉娅
+					'''
+			}
+
+			AstrumCor: {
+				DisplayName: 星幻核
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤星神游龙
+					'''
+			}
+
+			BirbPheromones: {
+				DisplayName: 癫痫信息素
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤痴愚金龙
+					'''
+			}
+
+			BlightedEye: {
+				DisplayName: 枯萎之眼
+				Tooltip: 召唤灾厄之影
+			}
+
+			BloodyWorm: {
+				DisplayName: 血腥蠕虫
+				Tooltip: 不需要钓鱼来召唤硫海遗爵
+			}
+
+			ChunkyStardust: {
+				DisplayName: 碎屑星尘
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤白金星舰
+					'''
+			}
+
+			CryingKey: {
+				DisplayName: 泣寒之匙
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤极地之灵
+					不会狂暴
+					'''
+			}
+
+			DefiledCore: {
+				DisplayName: 神殇晶核
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤亵渎天神
+					不会狂暴
+					'''
+			}
+
+			DefiledShard: {
+				DisplayName: 神殇碎片
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤亵渎守卫
+					不会狂暴
+					'''
+			}
+
+			DragonEgg: {
+				DisplayName: 犽戎蛋
+				Tooltip: 召唤重生之龙，犽戎
+			}
+
+			PortableCodebreaker: {
+				DisplayName: 便携密码破译器
+				Tooltip: 召唤嘉登
+			}
+
+			EyeofExtinction: {
+				DisplayName: 灭世之眼
+				Tooltip: 召唤至尊女巫，灾厄
+			}
+
+			FriedDoll: {
+				DisplayName: 焦炭娃娃
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤硫磺火元素
+					不会狂暴
+					'''
+			}
+
+			HiveTumor: {
+				DisplayName: 腐化肿瘤
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤腐巢意志
+					不会狂暴
+					'''
+			}
+
+			LetterofKos: {
+				DisplayName: 宇宙信函
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤神之使徒西格纳斯
+					不会狂暴
+					'''
+			}
+
+			MedallionoftheDesert: {
+				DisplayName: 荒漠勋章
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤荒漠灾虫
+					不会狂暴
+					'''
+			}
+
+			MurkySludge: {
+				DisplayName: 污浊淤泥
+				Tooltip: 召唤史莱姆之神
+			}
+
+			NoisyWhistle: {
+				DisplayName: 吵闹哨笛
+				Tooltip: 召唤毁灭魔像
+			}
+
+			OphiocordycipitaceaeSprout: {
+				DisplayName: 真菌生物芽孢
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤菌生蟹
+					'''
+			}
+
+			PolterplasmicBeacon: {
+				DisplayName: 灵质魂炬
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤噬魂幽花
+					'''
+			}
+
+			RedStainedWormFood: {
+				DisplayName: 血蠕虫食物
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤血肉宿主
+					不会狂暴
+					'''
+			}
+
+			RiftofKos: {
+				DisplayName: 宇宙裂隙
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤无尽虚空
+					不会狂暴
+					'''
+			}
+
+			SeeFood: {
+				DisplayName: 饵料海鲜
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤渊海灾虫
+					'''
+			}
+
+			SirensPearl: {
+				DisplayName: 海妖珍珠
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤阿娜希塔
+					'''
+			}
+
+			SomeKindofSpaceWorm: {
+				DisplayName: 某种宇宙蠕虫
+				Tooltip: 召唤神明吞噬者
+			}
+
+			WormFoodofKos: {
+				DisplayName: 宇宙蠕虫食物
+				Tooltip:
+					'''
+					在任何生物群落使用
+					召唤风暴编织者
+					不会狂暴
+					'''
+			}
+
+			AbandonedRemote: {
+				DisplayName: 废弃遥控装置
+				Tooltip:
+					'''
+					召唤装甲掘地虫
+					只能在地下使用
+					'''
+			}
+
+			ClamPearl: {
+				DisplayName: 蛤蜊珍珠
+				Tooltip:
+					'''
+					召唤巨像蛤
+					只能在沉沦之海使用
+					'''
+			}
+
+			ColossalTentacle: {
+				DisplayName: 巨型触手
+				Tooltip:
+					'''
+					召唤巨像乌贼
+					只能在深渊使用
+					'''
+			}
+
+			DeepseaProteinShake: {
+				DisplayName: 深渊蛋白奶昔
+				Tooltip:
+					'''
+					召唤猎魂鲨
+					只能在深渊使用
+					'''
+			}
+
+			MaulerSkull: {
+				DisplayName: 狂鲨之颅
+				Tooltip:
+					'''
+					召唤渊海狂鲨
+					只能在硫磺海使用
+					'''
+			}
+
+			NuclearChunk: {
+				DisplayName: 辐核之物
+				Tooltip:
+					'''
+					召唤辐核骇兽
+					只能在硫磺海使用
+					'''
+			}
+
+			PlaguedWalkieTalkie: {
+				DisplayName: 瘟疫对讲机
+				Tooltip:
+					'''
+					召唤瘟疫使者
+					只能在丛林使用
+					'''
+			}
+
+			QuakeIdol: {
+				DisplayName: 地震玩偶
+				Tooltip:
+					'''
+					召唤大地元素
+					只能在地下使用
+					'''
+			}
+
+			StormIdol: {
+				DisplayName: 风暴玩偶
+				Tooltip: 召唤雨云元素
+			}
+
+			SulphurBearTrap: {
+				DisplayName: 硫磺捕兽夹
+				Tooltip:
+					'''
+					召唤峭咽潭
+					只能在硫磺海使用
+					'''
+			}
+
+			WyrmTablet: {
+				DisplayName: 妖龙石板
+				Tooltip:
+					'''
+					召唤幻海妖龙
+					只能在深渊使用
+					'''
+			}
+
+			BrandoftheBrimstoneWitch: {
+				DisplayName: 硫火女巫烙印
+				Tooltip:
+					'''
+					拥有元灵之心、玄秘颅冠、无瑕粹魂晶、
+					以及化绵留香石和血神圣杯的效果
+					拥有星云之核、寻神者之礼、
+					以及嘉登之心和灾厄光标的效果
+					“不灭而铭心的痛楚，宛如永无释怀之日”
+					'''
+			}
+
+			AerospecEnchantment: {
+				DisplayName: 天蓝魔石
+				Tooltip:
+					'''
+					每进行一次跳跃或二连跳
+					暴击率和召唤伤害都会提高5%
+					任何二连跳都能参与计算
+					落地时叠加的暴击率会重置
+					'''
+				CritUp: +{0}%暴击率
+				CritReset: -{0}%暴击率
+			}
+
+			MarniteEnchantment: {
+				DisplayName: 合成岩魔石
+				Tooltip:
+					'''
+					物块的放置速度提高10%
+					挖掘和放置范围扩大5格
+					当你进行挖掘或放置物块时
+					身后会发射激光攻击附近的敌人
+					拥有合成岩斥力盾的效果
+					'''
+			}
+
+			DesertProwlerEnchantment: {
+				DisplayName: 沙漠巡游者魔石
+				Tooltip:
+					'''
+					按住“上”键进行蓄力
+					松开后会进行一次强力的沙暴跳跃
+					在水平移动时也可以进行蓄力跳跃
+					'''
+			}
+
+			WulfrumEnchantment: {
+				DisplayName: 钨钢魔石
+				Tooltip:
+					'''
+					召唤一架友好的钨钢无人机
+					无人机会扫描触碰到的敌人
+					扫描后会显示出敌人的减益弱点
+					绿色表示弱性减益，红色表示抗性减益
+					被扫描的敌人在受到任何减益效果时
+					也会受到一部分额外的伤害
+					减益类型分为：火系、水系、
+					冷系、电系以及疾病系
+					'''
+			}
+
+			ExplorationForce: {
+				DisplayName: 探索之力
+				Tooltip:
+					'''
+					[i:FargowiltasCrossmod/AerospecEnchantment] 每次跳跃或二连跳时，都会提高10%的暴击率和召唤伤害
+					[i:FargowiltasCrossmod/DesertProwlerEnchantment] 按住“上”键可进行蓄力，松开后会进行一次强力的沙暴跳跃
+					[i:FargowiltasCrossmod/MarniteEnchantment] 物块的放置速度提高25%，挖掘和放置范围扩大10格
+					[i:FargowiltasCrossmod/MarniteEnchantment] 挖掘或放置物块时，身后会发射激光攻击附近的敌人
+					[i:FargowiltasCrossmod/WulfrumEnchantment] 友好的钨钢无人机跟随你的光标，会扫描出敌人的减益弱点
+					[i:FargowiltasCrossmod/SulphurEnchantment] 获得二连跳的能力，二连跳时会生成释放有毒气体的硫磺泡泡
+					[i:FargowiltasCrossmod/VictideEnchantment] 海胆尖刺包裹着你，攻击一段时间后停止攻击会全部发射出去
+					[i:CalamityMod/MarniteRepulsionShield] 拥有合成岩斥力盾的效果
+					'''
+			}
+
+			SnowRuffianEnchantment: {
+				DisplayName: 雪境暴徒魔石
+				Tooltip:
+					'''
+					当你未装备翅膀时，按住跳跃键可以缓降
+					当你装备翅膀时，可以提升缓降速度
+					缓降时按住“上”键，可以向上短暂滑翔
+					缓降时按住“下”键，可以提升下落速度
+					'''
+			}
+
+			DaedalusEnchantment: {
+				DisplayName: 代达罗斯魔石
+				Tooltip:
+					'''
+					临时获得无限飞行的能力
+					但如果你飞得太高，飞行就会立刻结束
+					拥有雪境暴徒魔石的全部效果
+					'''
+			}
+
+			PlagueReaperEnchantment: {
+				DisplayName: 瘟疫死神魔石
+				Tooltip:
+					'''
+					所有攻击都会在短时间内让敌人感染瘟疫
+					靠近感染瘟疫的敌人会在你周围形成一片瘟疫云
+					一旦完全充满，会爆炸成一片巨大的滞留瘟疫云
+					'''
+			}
+
+			PlaguebringerEnchantment: {
+				DisplayName: 瘟疫使者魔石
+				Tooltip: 所有伤害性减益会在敌人之间传播
+			}
+
+			ReaverEnchantment: {
+				DisplayName: 掠夺者魔石
+				Tooltip:
+					'''
+					大幅提升你的所有伤害、生命值、
+					防御力和生命再生速度
+					受伤时所有加成数值会归零
+					再次受伤会继续降低为负数
+					所有加成数值在未受伤时会缓慢回升
+					'''
+			}
+
+			HydrothermicEnchantment: {
+				DisplayName: 渊泉魔石
+				Tooltip:
+					'''
+					长时间使用武器攻击，会让你的武器短暂过热
+					过热时，提升攻击速度，但伤害减免大幅降低
+					并且你会无法停止攻击
+					'''
+			}
+
+			DevastationForce: {
+				DisplayName: 毁灭之力
+				Tooltip:
+					'''
+					[i:FargowiltasCrossmod/SnowRuffianEnchantment] 你能够进行改善性的缓降
+					[i:FargowiltasCrossmod/DaedalusEnchantment] 临时获得无限飞行的能力，但受到最大高度的限制
+					[i:FargowiltasCrossmod/ReaverEnchantment] 大幅提升各项基础数据，但受伤时会降低至负数
+					[i:FargowiltasCrossmod/HydrothermicEnchantment] 长时间使用武器连续攻击，会让你的武器短暂过热
+					[i:FargowiltasCrossmod/HydrothermicEnchantment] 过热时会提升攻速并大幅降低伤害减免，且无法停止攻击
+					[i:FargowiltasCrossmod/PlaguebringerEnchantment] 伤害性减益可以在敌人之间蔓延传播
+					'''
+			}
+
+			UmbraphileEnchantment: {
+				DisplayName: 日影魔石
+				Tooltip:
+					'''
+					使用任何治疗药水时
+					不再恢复生命，而是会释放一群蝙蝠
+					蝙蝠会追踪敌人，造成伤害并治疗你
+					'''
+			}
+
+			TitanHeartEnchantment: {
+				DisplayName: Titan Heart Enchantment
+				Tooltip: ""
+			}
+
+			StatigelEnchantment: {
+				DisplayName: 斯塔提斯魔石
+				Tooltip:
+					'''
+					提升你的最大移动速度
+					大幅降低你的加速度和减速度
+					停止移动时的惯性变大
+					根据你移动时的速度
+					至多可获得15%的伤害加成
+					'''
+			}
+
+			SulphurEnchantment: {
+				DisplayName: 硫磺魔石
+				Tooltip:
+					'''
+					获得硫磺二连跳的能力
+					二连跳时会生成硫磺泡泡
+					攻击泡泡会释放有毒气体
+					'''
+			}
+
+			VictideEnchantment: {
+				DisplayName: 胜潮魔石
+				Tooltip:
+					'''
+					你的身上会生长出海胆尖刺
+					攻击时会为尖刺蓄力
+					停止攻击时会发射出所有尖刺
+					尖刺会造成中毒减益
+					'''
+			}
+		}
+
+		NPCs: {
+			FungalClump.DisplayName: 真菌菌落
+			LargePerforatorBody.DisplayName: 大号血肉宿主
+			LargePerforatorBody2.DisplayName: 大号血肉宿主
+			LargePerforatorHead.DisplayName: 大号血肉宿主
+			LargePerforatorTail.DisplayName: 大号血肉宿主
+			PermafrostBoss.DisplayName: 永冻
+		}
+
+		Projectiles: {
+			FungusBall.DisplayName: 真菌球
+			MushroomSpear.DisplayName: 蘑菇矛
+			ShroomGas.DisplayName: 真菌孢子
+			SandChunk.DisplayName: 沙岩球刺
+			SuckedSandBlast.DisplayName: 沙尘暴刺
+			CursedLightning.DisplayName: 诅咒闪电
+			CurvingCursedFlames.DisplayName: 诅咒焰
+			MovingCorruptCloud.DisplayName: 暗影乌云
+			ShadeLightningCloud.DisplayName: 乌云
+			ToothBall.DisplayName: 尖牙球
+			HomingRocket.DisplayName: 追踪火箭
+			HomingSickle.DisplayName: 追踪锄刀
+			HallowedSlimeSpike.DisplayName: 神圣尖刺
+			BouncingFireball.DisplayName: 弹跳火球
+			BigLight.DisplayName: 太阳舞
+			DestructionBolt.DisplayName: 毁灭弹
+			StarofDestruction.DisplayName: 毁灭之星
+
+			Boss: {
+				AcceleratingEbonianGlob.DisplayName: 不稳定的黑檀球
+				AcceleratingCrimulanGlob.DisplayName: 不稳定的血腥球
+				SlimeHomingEbonianGlob.DisplayName: 不稳定的黑檀球
+				SlimeHomingCrimuleanGlob.DisplayName: 不稳定的血腥球
+				MutantYharonVortex.DisplayName: 突变地狱旋涡
+			}
+
+			SlamTelegraph.DisplayName: 探测光束
+			IceBomb.DisplayName: 冰锥
+			IceCrystal.DisplayName: 冰晶
+			IceChain.DisplayName: 冰链
+			IceTrident.DisplayName: 冰坠三叉戟
+			CrimsonPaladinSpike.DisplayName: 尖刺
+			PermafrostHeldWeapon.DisplayName: 永冻三叉戟
+			MutantOldDuke.DisplayName: 突变老核弹
+			DLCMutantSpearSpin.DisplayName: 突变亚特兰蒂斯旋转
+			DLCMutantSpearDash.DisplayName: 突变亚特兰蒂斯冲刺
+			MutantAresNuke.DisplayName: 突变高斯核弹
+			MutantAresBomb.DisplayName: 突变高斯核弹爆炸
+			DLCMutantFishronRitual.DisplayName: 突变海洋仪式
+			MutantSlimeGod.DisplayName: 突变史莱姆之神
+			DLCBloomLine.DisplayName: 预警光线
+			MutantSCal.DisplayName: 突变至尊巨颌
+			MutantPBG.DisplayName: 突变瘟疫使者歌莉娅
+			MutantAureusSpawn.DisplayName: 突变小白星
+			MutantHolyRay.DisplayName: 突变圣之耀光
+			MutantDoGBody.DisplayName: 突变神明吞噬者
+			MutantDoGHead.DisplayName: 突变神明吞噬者
+			MutantDoGTail.DisplayName: 突变神明吞噬者
+			MutantPolter.DisplayName: 突变噬魂幽花
+			ArcticPaw.DisplayName: 北极熊爪
+			Blizzard.DisplayName: 死亡极光
+			DarkIceCrystal.DisplayName: 暗影冰晶
+			FrostFlare.DisplayName: 冰霜耀斑
+			FrostShard.DisplayName: 冰霜碎片
+			IceArrow.DisplayName: 寒冰矢
+			IceShot.DisplayName: 寒冰射击
+			IceStar.DisplayName: 寒冰之星
+			CryogenRitual.DisplayName: 极地仪式
+			PermafrostRitual.DisplayName: 永冻仪式
+			IceCloud.DisplayName: 极寒之雪
+			BrimstoneDebris.DisplayName: 硫火残骸
+			BrimstonePulse.DisplayName: 硫火脉冲
+			BrimstoneClone.DisplayName: 硫火克隆体
+			BrimBeam.DisplayName: 硫火激光
+			BrimstoneChainExplosion.DisplayName: 硫火连锁爆炸
+			BrimstoneTeleport.DisplayName: 硫火传送
+			BrimstoneFireblast.DisplayName: 硫火冲击
+			FeatherJumpFeather.DisplayName: Feather
+			MarniteDagger.DisplayName: 合成眼背刺强光
+			MarniteLaser.DisplayName: 合成眼激光
+			ProwlerTornado.DisplayName: 巡游者风暴
+			WulfrumCollector.DisplayName: 钨钢扫描
+			WulfrumScanner.DisplayName: 钨钢无人机
+			CrystalPlatform.DisplayName: 水晶平台
+			PlagueCloud.DisplayName: 瘟疫毒云
+			Eruption.DisplayName: 火焰爆发
+			VampireBat.DisplayName: 吸血鬼蝙蝠
+			SulphurBubble.DisplayName: 硫磺跳跃
+			VictideSpike.DisplayName: 胜潮海胆尖刺
+			GoldenShowerShot.DisplayName: 黄金雨滴
+			HiveMindFiretrail.DisplayName: 诅咒火焰
+			BrainMassProjectile.DisplayName: 腐烂脑组织
+			GravityVileClot.DisplayName: 恶毒瘤滴
+			VileClotDrop.DisplayName: 恶毒瘤滴
+			SulphurCloud.DisplayName: 硫磺毒云
+			PureGel.DisplayName: 纯净凝胶
+			HiveMindPulse.DisplayName: 腐巢脉冲
+			ScourgeSandstream.DisplayName: 灾虫流沙暴
+		}
+
+		Buffs: {
+			CalamitousPresenceBuff: {
+				Description:
+					'''
+					防御、伤害减免和生命再生速度降低
+					禁用闪亮石和无瑕粹魂晶的效果
+					禁用生命偷取效果，擦弹的范围减小
+					玩家的最大生命值最高为1000点
+					'''
+				DisplayName: 灾厄驾到
+			}
+
+			ArcticPaw.DisplayName: 北极之爪
+			Blizzard.DisplayName: 暴风雪
+			CrystalShard.DisplayName: 水晶碎片
+			DarkIceCrystal.DisplayName: 暗影冰晶
+			IceShot.DisplayName: 冰霜射击
+			FrostShard.DisplayName: 冰霜碎片
+			FrostFlare.DisplayName: 冰霜耀斑
+			IceArrow.DisplayName: 寒冰矢
+			IceStar.DisplayName: 寒冰之星
+		}
+
+		Toggler: {
+			CalamitySoulHeader: ""
+			VagabondsSoulHeader: 流浪者之魂
+			NanotechEffect: 纳米技术
+			EclipseMirrorEffect: 日蚀魔镜
+			DragonScalesEffect: 浴火龙鳞
+			VeneratedLocketEffect: 敬天神盗盒
+			AmalgamEffect: 聚合之脑
+			AsgardianAegisEffect: 阿斯加德之庇护
+			RampartofDeitiesEffect: 神之壁垒
+			ElementalGauntletEffect: 元素之握
+			EtherealTalismanEffect: 空灵护符
+			CalamitySniperHeader: 灾厄 神枪手之魂
+			ElementalQuiverEffect: 元素箭袋
+			QuiverofNihilityEffect: 虚无箭袋
+			DynamoStemCellsEffect: 痴愚金龙干细胞
+			NucleogenesisEffect: 核子之源
+			AbyssalDivingSuitEffect: 深渊潜游服
+			BrandoftheBrimstoneWitchHeader: "{$Mods.FargowiltasCrossmod.Items.BrandoftheBrimstoneWitch.DisplayName}"
+			HeartoftheElementsEffect: 元灵之心
+			OccultSkullCrownEffect: 玄秘颅冠
+			PurityEffect: 无瑕粹魂晶
+			TheSpongeEffect: 化绵留香石
+			ChaliceOfTheBloodGodEffect: 血神圣杯
+			NebulousCoreEffect: 星云之核
+			YharimsGiftEffect: 寻神者之礼
+			DraedonsHeartEffect: 嘉登之心
+			CalamityEffect: 灾厄光标
+			SplendorJamEffect: 异彩果酱
+			ExplorationHeader: 探索之力
+			AerospecJumpEffect: 天蓝 跳跃暴击
+			MarniteRepulsionEffect: 合成岩 合成岩斥力盾
+			MarniteLasersEffect: 合成岩 防扰激光
+			DesertProwlerEffect: 沙漠巡游者 蓄力跳跃
+			WulfrumEffect: 钨钢 无人机
+			SnowRuffianEffect: 雪境暴徒 缓降
+			DaedalusEffect: 代达罗斯 飞行高度限制
+			ReaverEffect: 掠夺者 全属性提升
+			HydrothermicEffect: 渊泉 武器过热
+			PlaguebringerEffect: 瘟疫使者 减益传播
+			StatigelEffect: 斯塔提斯 移速和伤害
+			SulphurEffect: 硫磺 二连跳
+			VictideEffect: 胜潮 海胆尖刺
+			TitanHeartEffect: Titan Size
+			UmbraphileEffect: 日影 吸血蝙蝠
+		}
+
+		WizardEffect: {
+			Aerospec: 提升的暴击率和召唤伤害翻倍
+			Marnite:
+				'''
+				激光的伤害提高
+				物块的放置速度额外提高15%
+				挖掘和放置范围额外扩大5格
+				'''
+			DesertProwler: 沙暴跳跃的强度大幅提升
+			Wulfrum:
+				'''
+				被扫描的敌人
+				会额外受到更多的减益伤害
+				'''
+			Hydrothermic:
+				'''
+				武器可连续攻击的时间提升
+				过热时的持续时间延长，攻击速度提升
+				'''
+			Daedalus:
+				'''
+				未装备翅膀时，会获得可飞行的翅膀
+				结束飞行的高度上限提升
+				'''
+			SnowRuffian: 获得额外的飞行时间
+			Reaver: 加成数值的最大和最小值差距更大
+			Plaguebringer: 减益传播的范围和持续时间提升
+			Umbraphile: 蝙蝠造成的伤害和飞行速度提高
+			Sulphur:
+				'''
+				泡泡数量提升至3个
+				释放的毒气伤害提高
+				'''
+			Victide:
+				'''
+				尖刺会无视重力影响
+				尖刺击中时会造成酸性毒液减益
+				'''
+			Statigel:
+				'''
+				最大移速提升
+				获得的伤害加成翻倍
+				'''
+		}
+
+		Cooldowns.DaedalusPlatformCooldown: 代达罗斯平台
+
+		ExpandedTooltips: {
+			FountainAstral: 激活后将周围的生物群落变为星辉瘟疫
+			FountainCrags: 激活后将周围的生物群落变为硫火之崖
+			FountainSulphur: 激活后将周围的生物群落变为硫磺海
+			FountainSunken: 激活后将周围的生物群落变为沉沦之海
+		}
+	}
+}
