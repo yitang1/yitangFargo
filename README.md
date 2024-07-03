@@ -1,6 +1,6 @@
 ### yitangFargo 💚
 这是一个tmodloader的模组（Mod）。  
-此模组开发时的定位是适配“**灾法双开**”这种玩法的情况。
+此模组开发时的定位是围绕“**Fargo Mod**”并适配“灾法双开”的玩法。
 
 #### Mod下载：
 *  👉[yitangFargo.tmod是Mod文件](https://github.com/yitang1/yitangFargo/releases)
