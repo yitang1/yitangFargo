@@ -3,7 +3,7 @@
 此模组开发时的定位是适配“**灾法双开**”这种玩法的情况。
 
 #### Mod下载：
-*  👉[“yitangFargo.tmod”是Mod文件](https://github.com/yitang1/yitangFargo/releases)
+*  👉[yitangFargo.tmod是Mod文件](https://github.com/yitang1/yitangFargo/releases)
 
 #### Mod安装：
 因为此Mod未在创意工坊发布，所以需要玩家**手动安装**。
