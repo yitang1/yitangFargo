@@ -18,7 +18,9 @@ namespace yitangFargo.Global
 {
     public class ytFargoGlobalNPC : GlobalNPC
     {
-        public override void OnKill(NPC npc)
+		public override bool InstancePerEntity => true;
+
+		public override void OnKill(NPC npc)
         {
             Player player = Main.LocalPlayer;
             yitangFargoPlayer modPlayerY = player.yitangFargo();

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -44,8 +44,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             if (player.HasEffect<FearmongerEffect>())
             {
                 player.Calamity().fearmongerSet = true;
-                int[] immuneDebuffs = {
-                    BuffID.OnFire,
+                int[] immuneDebuffs = { BuffID.OnFire,
                     BuffID.Frostburn,
                     BuffID.CursedInferno,
                     BuffID.ShadowFlame,
@@ -57,8 +56,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
                     ModContent.BuffType<GodSlayerInferno>(),
                     BuffID.Chilled,
                     BuffID.Frozen,
-                    ModContent.BuffType<GlacialState>(),
-                };
+                    ModContent.BuffType<GlacialState>() };
                 for (var i = 0; i < immuneDebuffs.Length; ++i)
                 {
                     player.buffImmune[immuneDebuffs[i]] = true;
