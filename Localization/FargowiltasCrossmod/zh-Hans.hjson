@@ -463,7 +463,7 @@ Mods: {
 					'''
 			}
 
-			AerospecEnchantment: {
+			AerospecEnchant: {
 				DisplayName: 天蓝魔石
 				Tooltip:
 					'''
@@ -476,7 +476,7 @@ Mods: {
 				CritReset: -{0}%暴击率
 			}
 
-			MarniteEnchantment: {
+			MarniteEnchant: {
 				DisplayName: 合成岩魔石
 				Tooltip:
 					'''
@@ -488,7 +488,7 @@ Mods: {
 					'''
 			}
 
-			DesertProwlerEnchantment: {
+			DesertProwlerEnchant: {
 				DisplayName: 沙漠巡游者魔石
 				Tooltip:
 					'''
@@ -498,7 +498,7 @@ Mods: {
 					'''
 			}
 
-			WulfrumEnchantment: {
+			WulfrumEnchant: {
 				DisplayName: 钨钢魔石
 				Tooltip:
 					'''
@@ -517,18 +517,18 @@ Mods: {
 				DisplayName: 探索之力
 				Tooltip:
 					'''
-					[i:FargowiltasCrossmod/AerospecEnchantment] 每次跳跃或二连跳时，都会提高10%的暴击率和召唤伤害
-					[i:FargowiltasCrossmod/DesertProwlerEnchantment] 按住“上”键可进行蓄力，松开后会进行一次强力的沙暴跳跃
-					[i:FargowiltasCrossmod/MarniteEnchantment] 物块的放置速度提高25%，挖掘和放置范围扩大10格
-					[i:FargowiltasCrossmod/MarniteEnchantment] 挖掘或放置物块时，身后会发射激光攻击附近的敌人
-					[i:FargowiltasCrossmod/WulfrumEnchantment] 友好的钨钢无人机跟随你的光标，会扫描出敌人的减益弱点
-					[i:FargowiltasCrossmod/SulphurEnchantment] 获得二连跳的能力，二连跳时会生成释放有毒气体的硫磺泡泡
-					[i:FargowiltasCrossmod/VictideEnchantment] 海胆尖刺包裹着你，攻击一段时间后停止攻击会全部发射出去
+					[i:FargowiltasCrossmod/AerospecEnchant] 每次跳跃或二连跳时，都会提高10%的暴击率和召唤伤害
+					[i:FargowiltasCrossmod/DesertProwlerEnchant] 按住“上”键可进行蓄力，松开后会进行一次强力的沙暴跳跃
+					[i:FargowiltasCrossmod/MarniteEnchant] 物块的放置速度提高25%，挖掘和放置范围扩大10格
+					[i:FargowiltasCrossmod/MarniteEnchant] 挖掘或放置物块时，身后会发射激光攻击附近的敌人
+					[i:FargowiltasCrossmod/WulfrumEnchant] 友好的钨钢无人机跟随你的光标，会扫描出敌人的减益弱点
+					[i:FargowiltasCrossmod/SulphurEnchant] 获得二连跳的能力，二连跳时会生成释放有毒气体的硫磺泡泡
+					[i:FargowiltasCrossmod/VictideEnchant] 海胆尖刺包裹着你，攻击一段时间后停止攻击会全部发射出去
 					[i:CalamityMod/MarniteRepulsionShield] 拥有合成岩斥力盾的效果
 					'''
 			}
 
-			SnowRuffianEnchantment: {
+			SnowRuffianEnchant: {
 				DisplayName: 雪境暴徒魔石
 				Tooltip:
 					'''
@@ -539,7 +539,7 @@ Mods: {
 					'''
 			}
 
-			DaedalusEnchantment: {
+			DaedalusEnchant: {
 				DisplayName: 代达罗斯魔石
 				Tooltip:
 					'''
@@ -549,7 +549,7 @@ Mods: {
 					'''
 			}
 
-			PlagueReaperEnchantment: {
+			PlagueReaperEnchant: {
 				DisplayName: 瘟疫死神魔石
 				Tooltip:
 					'''
@@ -559,12 +559,12 @@ Mods: {
 					'''
 			}
 
-			PlaguebringerEnchantment: {
+			PlaguebringerEnchant: {
 				DisplayName: 瘟疫使者魔石
 				Tooltip: 所有伤害性减益会在敌人之间传播
 			}
 
-			ReaverEnchantment: {
+			ReaverEnchant: {
 				DisplayName: 掠夺者魔石
 				Tooltip:
 					'''
@@ -576,7 +576,7 @@ Mods: {
 					'''
 			}
 
-			HydrothermicEnchantment: {
+			HydrothermicEnchant: {
 				DisplayName: 渊泉魔石
 				Tooltip:
 					'''
@@ -590,16 +590,16 @@ Mods: {
 				DisplayName: 毁灭之力
 				Tooltip:
 					'''
-					[i:FargowiltasCrossmod/SnowRuffianEnchantment] 你能够进行改善性的缓降
-					[i:FargowiltasCrossmod/DaedalusEnchantment] 临时获得无限飞行的能力，但受到最大高度的限制
-					[i:FargowiltasCrossmod/ReaverEnchantment] 大幅提升各项基础数据，但受伤时会降低至负数
-					[i:FargowiltasCrossmod/HydrothermicEnchantment] 长时间使用武器连续攻击，会让你的武器短暂过热
-					[i:FargowiltasCrossmod/HydrothermicEnchantment] 过热时会提升攻速并大幅降低伤害减免，且无法停止攻击
-					[i:FargowiltasCrossmod/PlaguebringerEnchantment] 伤害性减益可以在敌人之间蔓延传播
+					[i:FargowiltasCrossmod/SnowRuffianEnchant] 你能够进行改善性的缓降
+					[i:FargowiltasCrossmod/DaedalusEnchant] 临时获得无限飞行的能力，但受到最大高度的限制
+					[i:FargowiltasCrossmod/ReaverEnchant] 大幅提升各项基础数据，但受伤时会降低至负数
+					[i:FargowiltasCrossmod/HydrothermicEnchant] 长时间使用武器连续攻击，会让你的武器短暂过热
+					[i:FargowiltasCrossmod/HydrothermicEnchant] 过热时会提升攻速并大幅降低伤害减免，且无法停止攻击
+					[i:FargowiltasCrossmod/PlaguebringerEnchant] 伤害性减益可以在敌人之间蔓延传播
 					'''
 			}
 
-			UmbraphileEnchantment: {
+			UmbraphileEnchant: {
 				DisplayName: 日影魔石
 				Tooltip:
 					'''
@@ -609,12 +609,12 @@ Mods: {
 					'''
 			}
 
-			TitanHeartEnchantment: {
-				DisplayName: Titan Heart Enchantment
+			TitanHeartEnchant: {
+				DisplayName: Titan Heart Enchant
 				Tooltip: ""
 			}
 
-			StatigelEnchantment: {
+			StatigelEnchant: {
 				DisplayName: 斯塔提斯魔石
 				Tooltip:
 					'''
@@ -626,7 +626,7 @@ Mods: {
 					'''
 			}
 
-			SulphurEnchantment: {
+			SulphurEnchant: {
 				DisplayName: 硫磺魔石
 				Tooltip:
 					'''
@@ -636,7 +636,7 @@ Mods: {
 					'''
 			}
 
-			VictideEnchantment: {
+			VictideEnchant: {
 				DisplayName: 胜潮魔石
 				Tooltip:
 					'''

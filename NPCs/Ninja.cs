@@ -14,7 +14,7 @@ using FargowiltasSouls.Content.Items.Accessories.Essences;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Essences;
-using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Enchantments;
+using FargoDLC = FargowiltasCrossmod.Content.Calamity.Items.Accessories.Enchantments;
 using yitangFargo.Global.Config;
 using yitangFargo.Content.Items.Fargo;
 using yitangFargo.Content.Items.Accessories.Souls;
@@ -472,12 +472,12 @@ namespace yitangFargo.NPCs
 				.Add(ModContent.ItemType<TrueMutantEnchantment>(), new Condition[] { DownedMutant });
 
 			//探索之力
-			modsES.Add(ModContent.ItemType<WulfrumEnchantment>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<DesertProwlerEnchantment>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<MarniteEnchantment>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<VictideEnchantment>(), new Condition[] { Condition.DownedEowOrBoc })
-				.Add(ModContent.ItemType<SulphurEnchantment>(), new Condition[] { Condition.DownedEowOrBoc })
-				.Add(ModContent.ItemType<AerospecEnchantment>(), new Condition[] { DownedSlimeGod });
+			modsES.Add(ModContent.ItemType<FargoDLC.WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ModContent.ItemType<FargoDLC.DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ModContent.ItemType<FargoDLC.MarniteEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ModContent.ItemType<FargoDLC.VictideEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
+				.Add(ModContent.ItemType<FargoDLC.SulphurEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
+				.Add(ModContent.ItemType<FargoDLC.AerospecEnchant>(), new Condition[] { DownedSlimeGod });
 
 			//模组材料
 			modsES.Add(CustomPrice(ModContent.ItemType<BrokenBlade>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { DownedDeviantt })
