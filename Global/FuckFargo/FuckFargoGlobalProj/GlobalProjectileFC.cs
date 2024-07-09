@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -14,6 +14,7 @@ using FargowiltasSouls.Content.Projectiles.BossWeapons;
 using FargowiltasSouls.Content.Projectiles;
 using yitangFargo.Global.Config;
 using yitangFargo.Global.FuckFargo.FuckFargoGlobalItem;
+using FargowiltasCrossmod.Core.Calamity.Globals;
 
 namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
 {
@@ -77,15 +78,14 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
                     {
                         Player player = Main.player[projectile.owner];
                         Item item = player.HeldItem;
-                        if (item != null && (item.DamageType == ModContent.GetInstance<TrueMeleeDamageClass>()
-                            || item.DamageType == ModContent.GetInstance<TrueMeleeNoSpeedDamageClass>()))
+                        if (item != null && item.DamageType.CountsAsClass(DamageClass.Melee))
                         {
-                            float scale = CalamityFargoGlobalItem.TrueMeleeTungstenScaleUnNerf(player);
-                            projectile.position = projectile.Center;
-                            projectile.width = (int)(projectile.width * scale);
-                            projectile.height = (int)(projectile.height * scale);
-                            projectile.Center = projectile.position;
-                            projectile.scale *= scale;
+                            float scale = CalDLCItemBalance.TrueMeleeTungstenScaleNerf(player);
+							projectile.position = projectile.Center;
+							projectile.width = (int)(projectile.width / scale);
+							projectile.height = (int)(projectile.height / scale);
+							projectile.Center = projectile.position;
+							projectile.scale *= scale;
                         }
                     }
                 }

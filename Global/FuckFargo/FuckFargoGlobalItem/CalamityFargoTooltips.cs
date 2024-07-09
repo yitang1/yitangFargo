@@ -38,7 +38,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             }
             if (item.type == ModContent.ItemType<TungstenEnchant>())
             {
-                tooltips.Replace("Less effective on true melee weapons", "");
+                tooltips.Replace("Less effective on melee weapons", "");
             }
             if (item.type == ModContent.ItemType<MythrilEnchant>())
             {
@@ -66,12 +66,17 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             {
                 tooltips.Replace("Stat buffs decreased", "");
             }
+			if (item.type == ModContent.ItemType<AdamantiteEnchant>())
+			{
+				tooltips.Replace("Disabled with all Calamity projectiles, due to a massive amount of unintended interactions/bugs\nWill be fixed in the future", "灾厄Mod的射弹暂时不受加成");
+			}
 
-            #endregion
 
-            #region 通用/其他
-            //突变体的礼物
-            if (item.type == ModContent.ItemType<Masochist>())
+			#endregion
+
+			#region 通用/其他
+			//突变体的礼物
+			if (item.type == ModContent.ItemType<Masochist>())
             {
                 tooltips.Replace("[c/FF0000:Calamity Crossmod Support:] Disabled. Use Calamity's difficulty UI instead!", "已禁用\n请到灾厄的难度指示器UI里切换难度");
             }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -115,10 +115,11 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             }
         }
 
+		//钨魔石
         public static float TrueMeleeTungstenScaleUnNerf(Player player)
         {
             FargoSoulsPlayer fargoPlayer = player.FargoSouls();
-            return player.HasEffect<TungstenEffect>() && fargoPlayer.ForceEffect<TungstenEnchant>() ? 2f : 1.5f;
+            return player.HasEffect<TungstenEffect>() && fargoPlayer.ForceEffect<TungstenEnchant>() ? 1.6f : 1.6f;
         }
         public override void ModifyItemScale(Item item, Player player, ref float scale)
         {
@@ -134,8 +135,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
                         float tungScale = 1f + (fargoPlayer.ForceEffect<TungstenEnchant>() ? 2f : 1f);
                         //scale *= tungScale;
                     }
-                    else if (item != null && (item.DamageType == ModContent.GetInstance<TrueMeleeDamageClass>()
-                        || item.DamageType == ModContent.GetInstance<TrueMeleeNoSpeedDamageClass>()))
+                    else if (item != null && item.DamageType.CountsAsClass(DamageClass.Melee))
                     {
                         scale *= TrueMeleeTungstenScaleUnNerf(player);
                     }
