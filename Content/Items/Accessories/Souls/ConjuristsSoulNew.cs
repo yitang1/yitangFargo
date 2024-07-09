@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -58,18 +58,15 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             {
                 CreateRecipe()
                     .AddIngredient<OccultistsEssence>()
-                    .AddIngredient(ItemID.MonkBelt)
-                    .AddIngredient(ItemID.SquireShield)
-                    .AddIngredient(ItemID.HuntressBuckler)
                     .AddIngredient(ItemID.ApprenticeScarf)
+                    .AddIngredient(ItemID.SquireShield)
+                    .AddIngredient(ItemID.MonkBelt)
+                    .AddIngredient(ItemID.HuntressBuckler)
                     .AddIngredient(ItemID.PygmyNecklace)
                     .AddIngredient(ItemID.PapyrusScarab)
-                    .AddIngredient<AncientIceChunk>()
-                    .AddIngredient(ItemID.OpticStaff)
-                    .AddIngredient(ItemID.DeadlySphereStaff)
-                    .AddIngredient(ItemID.StormTigerStaff)
-                    .AddIngredient<ResurrectionButterfly>()
-                    .AddIngredient<StellarTorusStaff>()
+
+                    .AddIngredient<EtherealSubjugator>()
+                    .AddIngredient<GuidelightofOblivion>()
                     .AddIngredient<EndoHydraStaff>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
