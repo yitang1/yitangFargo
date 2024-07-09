@@ -68,7 +68,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
             }
 			if (item.type == ModContent.ItemType<AdamantiteEnchant>())
 			{
-				tooltips.Replace("Disabled with all Calamity projectiles, due to a massive amount of unintended interactions/bugs\nWill be fixed in the future", "灾厄Mod的射弹暂时不受加成");
+				tooltips.Replace("Disabled with all Calamity projectiles, due to a massive amount of unintended interactions/bugs\nWill be fixed in the future", "");
 			}
 
 
