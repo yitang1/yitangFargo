@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -65,15 +65,11 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.ArcaneFlower)
                     .AddIngredient(ItemID.CelestialCuffs)
                     .AddIngredient(ItemID.CelestialEmblem)
-                    .AddIngredient(ItemID.MedusaHead)
-                    .AddIngredient(ItemID.SharpTears)
-                    .AddIngredient<Atlantis>()
-                    .AddIngredient(ItemID.ApprenticeStaffT3)
-                    .AddIngredient<AsteroidStaff>()
+
+                    .AddIngredient<ChronomancersScythe>()
                     .AddIngredient<DarkSpark>()
-                    .AddIngredient<VitriolicViper>()
                     .AddIngredient<Omicron>()
-                    .AddIngredient<FaceMelter>()
+                    .AddIngredient<NebulousCataclysm>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                     .Register();
             }
