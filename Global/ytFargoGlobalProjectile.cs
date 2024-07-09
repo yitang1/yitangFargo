@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,6 +8,8 @@ using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Content.Items.Accessories.Enchantments;
+using FargowiltasCrossmod.Core;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Global
 {
@@ -26,7 +28,13 @@ namespace yitangFargo.Global
                     NinjaCanSpeedup = false;
                     break;
             }
-        }
+			//精金射弹分裂是否禁用
+			if (ytFargoConfig.Instance.FuckBalance
+				&& projectile.ModProjectile != null && projectile.ModProjectile.Mod == ModCompatibility.Calamity.Mod)
+			{
+				projectile.FargoSouls().CanSplit = true;
+			}
+		}
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
