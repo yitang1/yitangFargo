@@ -99,16 +99,12 @@ Mods: {
 					拥有甜蜜的复仇、黑曜石鳞片、界元之庇佑、
 					以及魂匣、岩石之心和刺甲贝的效果
 					'''
-				CalamityBerserker: 拥有猎魂鲨齿项链、勇气勋章和元素之握的效果
+				CalamityBerserker: 拥有勇气勋章和元素之握的效果
 				ThoriumBerserker: 拥有长剑徽章的效果
 				CalamityWizard: 拥有空灵护符的效果
 				ThoriumWizard: 拥有暗影催化剂的效果
-				CalamitySniper: 拥有元素箭袋、虚无箭袋和痴愚金龙干细胞的效果
-				Vagabond:
-					'''
-					拥有纳米技术和日蚀魔镜的效果
-					拥有浴火龙鳞和敬天神盗盒的效果
-					'''
+				CalamitySniper: 拥有元素箭袋和虚无箭袋的效果
+				Vagabond: 拥有纳米技术和日蚀魔镜的效果
 				ThoriumSniper: 拥有震荡弹头的效果
 				CalamityConjurist: 拥有核子之源的效果
 				ThoriumConjurist: 拥有云玛垂饰和水晶蝎的效果
@@ -776,8 +772,6 @@ Mods: {
 			VagabondsSoulHeader: 流浪者之魂
 			NanotechEffect: 纳米技术
 			EclipseMirrorEffect: 日蚀魔镜
-			DragonScalesEffect: 浴火龙鳞
-			VeneratedLocketEffect: 敬天神盗盒
 			AmalgamEffect: 聚合之脑
 			AsgardianAegisEffect: 阿斯加德之庇护
 			RampartofDeitiesEffect: 神之壁垒
@@ -786,7 +780,6 @@ Mods: {
 			CalamitySniperHeader: 灾厄 神枪手之魂
 			ElementalQuiverEffect: 元素箭袋
 			QuiverofNihilityEffect: 虚无箭袋
-			DynamoStemCellsEffect: 痴愚金龙干细胞
 			NucleogenesisEffect: 核子之源
 			AbyssalDivingSuitEffect: 深渊潜游服
 			BrandoftheBrimstoneWitchHeader: "{$Mods.FargowiltasCrossmod.Items.BrandoftheBrimstoneWitch.DisplayName}"
