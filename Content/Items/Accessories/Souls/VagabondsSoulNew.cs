@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using CalamityMod;
@@ -47,16 +47,12 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                 .AddIngredient<Nanotech>()
                 .AddIngredient<VeneratedLocket>()
                 .AddIngredient<DragonScales>()
-                .AddIngredient<WaveSkipper>()
-                .AddIngredient<GraveGrimreaver>()
-                .AddIngredient<Exorcism>()
-                .AddIngredient<HeavenfallenStardisk>()
-                .AddIngredient<Malachite>()
-                .AddIngredient<RegulusRiot>()
-                .AddIngredient<AlphaVirus>()
+
+                .AddIngredient<HellsSun>()
                 .AddIngredient<WavePounder>()
                 .AddIngredient<TheOldReaper>()
                 .AddIngredient<EclipsesFall>()
+                .AddIngredient<Seraphim>()
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
                 .Register();
         }
