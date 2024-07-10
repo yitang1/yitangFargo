@@ -2,19 +2,20 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using FargowiltasSouls;
 using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using yitangFargo.Global.Config;
-using CalamityMod.Items.Accessories;
 using FargowiltasSouls.Core.Toggler.Content;
 using FargowiltasSouls.Core.Toggler;
+using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Fishing.FishingRods;
 using CalamityMod.Items.Fishing.SunkenSeaCatches;
 using CalamityMod.Items.Weapons.Ranged;
-using System.Collections.Generic;
+using CalamityMod.Items.Fishing.BrimstoneCragCatches;
+using yitangFargo.Global.Config;
 using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
@@ -119,6 +120,7 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.SporeSac)
                     .AddIngredient<AbyssalDivingSuit>()
                     .AddIngredient(ItemID.GoldenFishingRod)
+                    .AddIngredient<DragoonDrizzlefish>()
                     .AddIngredient<SparklingEmpress>()
                     .AddIngredient<PolarisParrotfish>()
                     .AddIngredient<TheDevourerofCods>()
