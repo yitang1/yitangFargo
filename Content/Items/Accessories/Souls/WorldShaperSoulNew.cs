@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -135,7 +135,6 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient(ItemID.Toolbox)
                     .AddIngredient(ItemID.HandOfCreation)
                     .AddIngredient(ItemID.ActuationAccessory)
-                    .AddIngredient(ItemID.LaserRuler)
                     .AddIngredient(ItemID.RoyalGel)
                     .AddRecipeGroup("FargowiltasSouls:AnyShellphone")
                     .AddRecipeGroup("FargowiltasSouls:AnyDrax")
@@ -149,17 +148,13 @@ namespace yitangFargo.Content.Items.Accessories.Souls
             {
                 CreateRecipe()
                     .AddIngredient<MinerEnchant>()
-                    .AddIngredient(ItemID.Toolbelt)
-                    .AddIngredient(ItemID.Toolbox)
                     .AddIngredient(ItemID.HandOfCreation)
                     .AddIngredient(ItemID.ActuationAccessory)
-                    .AddIngredient(ItemID.LaserRuler)
                     .AddIngredient<ArchaicPowder>()
                     .AddIngredient<SpelunkersAmulet>()
                     .AddIngredient(ItemID.RoyalGel)
                     .AddRecipeGroup("FargowiltasSouls:AnyShellphone")
-                    .AddRecipeGroup("FargowiltasSouls:AnyDrax")
-                    .AddIngredient(ItemID.ShroomiteDiggingClaw)
+                    .AddIngredient<Grax>()
                     .AddIngredient<BlossomPickaxe>()
                     .AddIngredient<OnyxExcavatorKey>()
                     .AddIngredient(ItemID.DrillContainmentUnit)

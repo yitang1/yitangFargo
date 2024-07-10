@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -80,17 +80,11 @@ namespace yitangFargo.Content.Items.Accessories.Souls
                     .AddIngredient<SkylineWings>()
                     .AddIngredient(ItemID.FairyWings)
                     .AddIngredient(ItemID.FrozenWings)
-                    .AddIngredient(ItemID.HarpyWings)
-                    .AddIngredient(ItemID.BatWings)
                     .AddIngredient(ItemID.FlameWings)
-                    .AddIngredient(ItemID.BoneWings)
-                    .AddIngredient(ItemID.FestiveWings)
-                    .AddIngredient(ItemID.TatteredFairyWings)
+                    .AddIngredient<StarlightWings>()
                     .AddIngredient(ItemID.RainbowWings)
-                    .AddIngredient(ItemID.BetsyWings)
                     .AddIngredient(ItemID.FishronWings)
                     .AddIngredient(ItemID.LongRainbowTrailWings)
-                    .AddIngredient(ItemID.GravityGlobe)
                     .AddIngredient<TarragonWings>()
                     .AddIngredient<SilvaWings>()
                     .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
