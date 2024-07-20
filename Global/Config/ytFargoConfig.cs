@@ -5,7 +5,7 @@ namespace yitangFargo.Global.Config
 {
     public class ytFargoConfig : ModConfig
     {
-        public override ConfigScope Mode => ConfigScope.ServerSide;
+        public override ConfigScope Mode => ConfigScope.ClientSide;
 
         public static ytFargoConfig Instance;
 
