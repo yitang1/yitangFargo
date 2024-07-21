@@ -493,6 +493,11 @@ Items: {
 		Tooltip: ""
 	}
 
+	FullCalamityEnchantIcon: {
+		DisplayName: Full Calamity Enchant Icon
+		Tooltip: ""
+	}
+
 	FCNPCIcon: {
 		DisplayName: F C N P C Icon
 		Tooltip: ""
@@ -639,6 +644,11 @@ Configs: {
 
 		OldCalamityEnchant: {
 			Label: Old Calamity Enchant
+			Tooltip: ""
+		}
+
+		FullCalamityEnchant: {
+			Label: Full Calamity Enchant
 			Tooltip: ""
 		}
 

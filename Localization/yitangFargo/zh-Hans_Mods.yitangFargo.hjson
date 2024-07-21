@@ -1193,6 +1193,11 @@ Items: {
 		Tooltip: ""
 	}
 
+	FullCalamityEnchantIcon: {
+		DisplayName: 模组配置图标
+		Tooltip: ""
+	}
+
 	FCNPCIcon: {
 		DisplayName: 模组配置图标
 		Tooltip: ""
@@ -1689,6 +1694,18 @@ Configs: {
 				直接缝合了灾厄Mod的[c/F2E635:盔甲套装效果]和[c/F2E635:饰品效果]
 				不同的是，在本Mod内经过平衡，没有了之前旧版本的数值加成，
 				并且对合成配方和魔石效果进行了适当调整，以适配1.4的版本
+				'''
+		}
+
+		FullCalamityEnchant: {
+			Label: "[i:yitangFargo/FullCalamityEnchantIcon] 完整的旧版灾厄魔石效果"
+			Tooltip:
+				'''
+				[c/f54c4c:当前版本尚未实现]
+				启用此选项后
+				旧版灾厄魔石会拥有完整的灾厄盔甲套装效果
+				即套装效果里的数值加成也会添加进魔石里，如同1.3版本
+				可能会影响平衡，请酌情开启
 				'''
 		}
 
