@@ -1,6 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.CalPlayer;
 using CalamityMod.Projectiles.Typeless;
@@ -13,11 +14,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class DemonShadeEnchant : BaseEnchant
-    {
+    public class DemonShadeEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(184, 19, 19);
 
         public override void SetStaticDefaults()
@@ -43,8 +46,15 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<DemonShadeEffect>())
             {
-                calamityPlayer.dsSetBonus = true;
-                calamityPlayer.redDevil = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.dsSetBonus = true;
+					calamityPlayer.redDevil = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<DemonshadeHelm>().UpdateArmorSet(player);
+				}
             }
             //圣天誓盟
             if (player.HasEffect<DemonShadeFAngelic>())
@@ -63,7 +73,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DemonShadeFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DemonShadeFullEffects]", this.GetLocalizedValue("DemonShadeFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<DemonshadeHelm>()

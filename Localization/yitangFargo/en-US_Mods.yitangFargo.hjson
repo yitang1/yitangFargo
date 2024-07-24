@@ -280,7 +280,8 @@ Items: {
 
 	DemonShadeEnchant: {
 		DisplayName: Demon Shade Enchant
-		Tooltip: ""
+		Tooltip: "[DemonShadeFullEffects]"
+		DemonShadeFullTooltip: ""
 	}
 
 	AuricEnchant: {
