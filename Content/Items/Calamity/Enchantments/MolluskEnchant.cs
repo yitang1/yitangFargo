@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Mollusk;
@@ -12,11 +13,13 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Content.Projectiles.Minions;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class MolluskEnchant : BaseEnchant
-    {
+    public class MolluskEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(58, 134, 167);
 
         public override void SetStaticDefaults()
@@ -41,7 +44,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //软壳贝盔
             if (player.HasEffect<MolluskEffect>())
             {
-                player.Calamity().molluskSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().molluskSet = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<MolluskShellmet>().UpdateArmorSet(player);
+				}
             }
 			//深潜者
 			if (player.HasEffect<MolluskFDeepDiver>())
@@ -55,7 +65,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[MolluskFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[MolluskFullEffects]", this.GetLocalizedValue("MolluskFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<MolluskShellmet>()
