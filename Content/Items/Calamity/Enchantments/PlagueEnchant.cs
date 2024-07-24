@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -20,11 +20,12 @@ using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Content.Projectiles.Minions;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class PlagueEnchant : BaseEnchant
-    {
+    public class PlagueEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(111, 179, 156);
 
         public override void SetStaticDefaults()
@@ -52,46 +53,60 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //瘟疫使者
             if (player.HasEffect<PlagueEffectBringer>())
             {
-                calamityPlayer.plaguebringerPatronSet = true;
-                calamityPlayer.DashID = PlaguebringerArmorDash.ID;
-                player.dashType = 0;
-                Lighting.AddLight(player.Center, 0f, 0.39f, 0.24f);
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.plaguebringerPatronSet = true;
+					calamityPlayer.DashID = PlaguebringerArmorDash.ID;
+					player.dashType = 0;
+					Lighting.AddLight(player.Center, 0f, 0.39f, 0.24f);
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<PlaguebringerVisor>().UpdateArmorSet(player);
+				}
             }
 
             //瘟疫死神
             if (player.HasEffect<PlagueEffectReaper>())
             {
-                calamityPlayer.plagueReaper = true;
-                //不要提高飞行时间的数值
-                if (player.wingTimeMax > 0)
-                {
-                    player.wingTimeMax = (int)(player.wingTimeMax / 1.05f);
-                }
-                var hasPlagueBlackoutCD = calamityPlayer.cooldowns.TryGetValue(PlagueBlackout.ID, out var cd);
-                if (hasPlagueBlackoutCD && cd.timeLeft > 1500)
-                {
-                    player.blind = true;
-                    player.headcovered = true;
-                    player.blackout = true;
-                    player.GetDamage<RangedDamageClass>() += 0.6f;
-                    player.GetCritChance<RangedDamageClass>() += 20;
-                }
-                if (player.whoAmI == Main.myPlayer)
-                {
-                    var source = player.GetSource_Accessory(Item);
-                    if (player.immune)
-                    {
-                        if (player.miscCounter % 10 == 0)
-                        {
-                            var damage = (int)player.GetTotalDamage<RangedDamageClass>().ApplyTo(40);
-                            damage = player.ApplyArmorAccDamageBonusesTo(damage);
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.plagueReaper = true;
+					//不要提高飞行时间的数值
+					if (player.wingTimeMax > 0)
+					{
+						player.wingTimeMax = (int)(player.wingTimeMax / 1.05f);
+					}
+					var hasPlagueBlackoutCD = calamityPlayer.cooldowns.TryGetValue(PlagueBlackout.ID, out var cd);
+					if (hasPlagueBlackoutCD && cd.timeLeft > 1500)
+					{
+						player.blind = true;
+						player.headcovered = true;
+						player.blackout = true;
+						player.GetDamage<RangedDamageClass>() += 0.6f;
+						player.GetCritChance<RangedDamageClass>() += 20;
+					}
+					if (player.whoAmI == Main.myPlayer)
+					{
+						var source = player.GetSource_Accessory(Item);
+						if (player.immune)
+						{
+							if (player.miscCounter % 10 == 0)
+							{
+								var damage = (int)player.GetTotalDamage<RangedDamageClass>().ApplyTo(40);
+								damage = player.ApplyArmorAccDamageBonusesTo(damage);
 
-                            var cinder = CalamityUtils.ProjectileRain(source, player.Center, 400f, 100f, 500f, 800f, 22f, ModContent.ProjectileType<TheSyringeCinder>(), damage, 4f, player.whoAmI);
-                            if (cinder.whoAmI.WithinBounds(Main.maxProjectiles))
-                                cinder.DamageType = DamageClass.Generic;
-                        }
-                    }
-                }
+								var cinder = CalamityUtils.ProjectileRain(source, player.Center, 400f, 100f, 500f, 800f, 22f, ModContent.ProjectileType<TheSyringeCinder>(), damage, 4f, player.whoAmI);
+								if (cinder.whoAmI.WithinBounds(Main.maxProjectiles))
+									cinder.DamageType = DamageClass.Generic;
+							}
+						}
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<PlagueReaperMask>().UpdateArmorSet(player);
+				}
             }
             //冶金烧瓶
             if (player.HasEffect<PlaguePAlchemicalFlask>())
@@ -105,7 +120,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[PlagueFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[PlagueFullEffects]", this.GetLocalizedValue("PlagueFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyPlagueHelmet")

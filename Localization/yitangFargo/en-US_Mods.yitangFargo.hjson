@@ -274,7 +274,8 @@ Items: {
 
 	PlagueEnchant: {
 		DisplayName: Plague Enchant
-		Tooltip: ""
+		Tooltip: "[PlagueFullEffects]"
+		PlagueFullTooltip: ""
 	}
 
 	DemonShadeEnchant: {
