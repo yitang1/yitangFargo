@@ -1,19 +1,22 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Astral;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class AstralEnchant : BaseEnchant
-    {
+    public class AstralEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(87, 224, 224);
 
         public override void SetStaticDefaults()
@@ -38,7 +41,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 			//星幻盔甲
 			if (player.HasEffect<AstralEffect>())
             {
-                player.Calamity().astralStarRain = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().astralStarRain = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<AstralHelm>().UpdateArmorSet(player);
+				}
             }
             //星神隐壳
             if (player.HasEffect<AstralHideofAstrum>())
@@ -52,7 +62,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AstralFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AstralFullEffects]", this.GetLocalizedValue("AstralFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<AstralHelm>()
