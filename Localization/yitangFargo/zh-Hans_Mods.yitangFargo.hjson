@@ -1,0 +1,1753 @@
+Toggler: {
+	AdamantiteEffectNew: 精金 射弹分裂(旧)
+	AncientHallowMinionNew: 远古神圣 神圣之剑(旧)
+	AncientHallowShieldNew: 远古神圣 神圣护盾(旧)
+	CrimsonEffectNew: 猩红 再生(旧)
+	MeteorEffectNew: 流星 流星雨(旧)
+	MythrilEffectNew: 秘银 攻速加成(旧)
+	NinjaEffectNew: 忍者 射弹速度(旧)
+	OrichalcumEffectNew: 山铜 花瓣和中毒(旧)
+	TikiEffectNew: 提基 无限召唤(旧)
+	AnnihilationHeader: 湮灭之力
+	AerospecEffect: 天蓝 套装效果
+	AerospecEValkyrie: 天蓝 天武神
+	AerospecGladiatorsLocket: 天蓝 角斗士金锁
+	AerospecGraniteCore: 天蓝 不稳定花岗岩核心
+	StatigelEffect: 斯塔提斯 套装效果
+	StatigelManaPolarizer: 斯塔提斯 魔能谐振仪
+	StatigelSlimeMinions: 斯塔提斯 史莱姆仆从
+	AtaxiaEffect: 渊泉 套装效果
+	AtaxiaMinion: 渊泉 沸腾渊泉
+	AtaxiaPauldron: 渊泉 熔火碎矿肩甲
+	XerocEffect: 皇天 套装效果
+	XerocEtherealExtorter: 皇天 虚空掠夺者
+	XerocSpectralVeil: 皇天 幽灵披风
+	FearmongerEffect: 神惧者 套装效果
+	FearmongerFSkullCrown: 神惧者 玄秘颅冠
+	FearmongerNucleogenesis: 神惧者 核子之源
+	DesolationHeader: 荒芜之力
+	MolluskVictideEffect: 胜潮 套装效果
+	MolluskVictideESnail: 胜潮 海蜗牛
+	MolluskVictideLuxors: 胜潮 卢克索的礼物
+	MolluskVictideSpark: 胜潮 阿米迪亚斯电火花石
+	MolluskEffect: 软壳 套装效果
+	MolluskFDeepDiver: 软壳 深潜者
+	MolluskGAquaticEmblem: 软壳 海波纹章
+	DaedalusEffect: 代达罗斯 套装效果
+	DaedalusEffectCrystal: 代达罗斯 悬浮水晶
+	DaedalusEffectGolem: 代达罗斯 水晶守卫
+	DaedalusFConcoction: 代达罗斯 永冻秘药
+	DaedalusFrostBarrier: 代达罗斯 寒冰屏障
+	DaedalusSnowEffect: 雪境暴徒 套装效果
+	DaedalusSnowJewel: 雪境暴徒 潜遁者宝石
+	DaedalusSnowTooth: 雪境暴徒 腐烂犬齿
+	FathomREffect: 幻渊 套装效果
+	FathomRLumenAmulet: 幻渊 流明护身符
+	FathomRTransformer: 幻渊 变压器
+	FathomSulphurousEffect: 硫磺 套装效果
+	FathomSulphurousSand: 硫磺 沙尘披风
+	FathomSulphurousSpine: 硫磺 腐蚀脊椎
+	UmbraphileEffect: 日影 套装效果
+	UmbraphileVampiric: 日影 吸血鬼符咒
+	UmbraphileGlove: 日影 精准手套
+	AstralEffect: 星幻 套装效果
+	AstralHideofAstrum: 星幻 星神隐壳
+	AstralSabaton: 星幻 引力靴
+	AstralTitanHeartEffect: 泰坦之心 套装效果
+	OmegaBlueEffect: 蓝色欧米茄 套装效果
+	OmegaBluePhantomic: 蓝色欧米茄 幻魂神物
+	DevastationHeader: 毁灭之力
+	WulfrumEffect: 钨钢 套装效果
+	WulfrumRoverDrive: 钨钢 钨钢屏障生成仪
+	WulfrumTrinketofChi: 钨钢 气功念珠
+	ReaverEffect: 掠夺者 套装效果
+	ReaverEffectOrb: 掠夺者 掠夺者毒球
+	ReaverNecklace: 掠夺者 恼怒项链
+	ReaverStone: 掠夺者 绽花石
+	PlagueEffectBringer: 瘟疫 套装效果 (瘟疫使者)
+	PlagueEffectReaper: 瘟疫 套装效果 (瘟疫死神)
+	PlaguePAlchemicalFlask: 瘟疫 冶金烧瓶
+	PlagueToxicHeart: 瘟疫 毒疫之心
+	DemonShadeEffect: 魔影 套装效果
+	DemonShadeFAngelic: 魔影 圣天誓盟
+	DemonShadeFCrystal: 魔影 渎神魂晶
+	DemonShadeGCommunity: 魔影 幻灭心元石
+	ExaltationHeader: 升华之力
+	TarragonEffect: 龙蒿 套装效果
+	BloodEffect: 血炎 套装效果
+	BloodMinion: 血炎 噬魂幽花地雷
+	BloodTheChalice: 血炎 血神圣杯
+	BloodTheCore: 血炎 血炎晶核
+	BloodYBrimEffect: 硫火 套装效果
+	BloodYVoidC: 硫火 灾劫虚空
+	BloodYVoidE: 硫火 终结虚空
+	GodSlayerEffect: 弑神者 套装效果
+	GodSlayerNebulousCore: 弑神者 星云之核
+	SilvaEffect: 始源林海 套装效果
+	SilvaEffectCrystal: 始源林海 始源林海水晶
+	SilvaHeartElements: 始源林海 元灵之心
+	SilvaTheSponge: 始源林海 化绵留香石
+	AuricEffect: 古圣金源 套装效果
+	AuricMinion: 古圣金源 召唤仆从
+	AuricPurity: 古圣金源 无瑕粹魂晶
+	AuricYharimsGift: 古圣金源 寻神者之礼
+	MiracleHeader: 奇迹之力
+	AMarniteEffect: 合成岩 套装效果
+	AMarniteShieldEffect: 合成岩 合成岩斥力盾
+	BDesertProwlerEffect: 沙漠巡游者 套装效果
+	BDesertProwlerRusty: 沙漠巡游者 锈蚀勋章
+	DLunicCorpsEffect: 雷神之锤 套装效果
+	DLunicCorpsTheAbsorber: 雷神之锤 阴阳吸星石
+	EPrismaticEffect: 光棱 套装效果
+	EPrismaticTheEvolution: 光棱 进化者
+	FGemTechEffect: 天钻 套装效果
+	FGemTechHeart: 天钻 嘉登之心
+	EternityHeader: 永恒之力
+	ANekomiEffect: 猫猫睡衣 套装效果
+	ANekomiSparkling: 猫猫睡衣 闪烁崇心
+	BGaiaEffect: 盖亚 套装效果
+	EridanusEffect: 波江 套装效果
+	StyxEffect: 冥河 套装效果
+	StyxWand: 冥河 憎恶手杖
+	TrueMutantEffect: 真·突变 套装效果
+	TrueMutantEye: 真·突变 突变之眼
+	BrimstoneWitchHeader: 硫火女巫烙印
+	BFrostFlare: 霜冻之炎
+	CLeviathanAmbergris: 利维坦龙涎香
+	DBlunderBooster: 悖论增幅器
+	EAquaticHeart: 渊洋之心
+	FFungalClump: 真菌块
+	GHowlsHeart: 哈尔之心
+	CalamityBerserkerHeader: 狂战士之魂
+	ReaperToothEffect: 猎魂鲨齿项链
+	CalamitySnipersHeader: 神枪手之魂
+	QuiverofNihilityEffect: 虚无箭袋
+	StemCellsEffect: 痴愚金龙干细胞
+	AmalgamEffect: 聚合之脑
+	AsgardianAegisEffect: 阿斯加德之庇护
+	RampartofDeitiesEffect: 神之壁垒
+	ShieldHighRulerEffect: 至高统治之盾
+	StatisVoidSashEffect: 斯塔提斯的虚空饰带
+	AbyssalDivingSuitEffect: 深渊潜游服
+	UniverseSpeedNewEffect: 寰宇之魂攻速加成
+}
+
+Buffs: {
+	CrimsonRegenNewBuff: {
+		DisplayName: 猩红再生
+		Description: 你上次的伤口正在恢复
+	}
+
+	HallowCooldownNewBuff: {
+		DisplayName: 神圣护盾冷却
+		Description: 你的护盾现在无法反弹射弹
+	}
+
+	NullCurseNoBuff: {
+		DisplayName: 无效逆转
+		Description:
+			'''
+			你免疫无效诅咒！
+			你可以使用任何职业的武器
+			对月亮领主造成伤害
+			'''
+	}
+
+	DisruptedFocus: {
+		DisplayName: 心神不定
+		Description: 秘银魔石对武器攻速的加成失效
+	}
+
+	DesertProwlerBuff: {
+		DisplayName: 与沙共舞
+		Description: 你被死亡之海的远古尘埃湮没
+	}
+
+	LunicCorpsShieldBuff: {
+		DisplayName: 能量护盾
+		Description: 可抵挡50点伤害
+	}
+}
+
+ContentTexts: {
+	CommonTips: 长按“左Shift”键以详细显示
+	TimsConcoction:
+		'''
+		[i:2350]>蓝史莱姆[i:4870]>暗黑法师、混沌精[i:2351]>粉史莱姆、混沌精[i:2997]>巨型蠕虫、挖掘怪
+		[i:289]>血腥僵尸、彩虹史莱姆[i:290]>愤怒翻滚怪、蛇蜥怪[i:292]>花岗精
+		[i:299]>恶魔眼[i:298]>绿/蓝/粉水母[i:296]>骷髅博士、宝箱怪[i:2322]>不死矿工[i:2325]>蚁狮、蚁狮马
+		[i:2329]>爬墙/丛林蜘蛛、黑隐士[i:304]>墓穴爬虫、沙虫[i:288]>骨蛇[i:2348]>火焰小鬼
+		[i:302]>冰雪/尖刺冰雪史莱姆[i:2327]>鲨鱼[i:291]>食人鱼、巨骨舌鱼[i:2354]>飞鱼[i:2356]>螃蟹
+		[i:2355]>丛林/冰雪/洞穴/巨型/地狱/熔岩/夜明/吸血鬼蝙蝠、巨型飞狐
+		[i:2349]>蜜蜂、小蜜蜂[i:2347]>黄蜂、苔藓黄蜂[i:303]>哥布林弓箭手[i:2344]>装甲步兵、海盗船长
+		[i:2323]>滴滴怪[i:2345]>猩红/腐化/神圣/丛林宝箱怪[i:2346]>花岗岩巨人[i:2359]>熔岩史莱姆
+		[i:2326]>愤怒骷髅怪、生锈/蓝/地狱装甲骷髅[i:301]>巨型卷壳怪、巨型/冰雪陆龟
+		[i:300]>哥布林苦力/盗贼/战士[i:2324]>鸟妖[i:305]>飞龙[i:295]>雨伞史莱姆[i:297]>蝾螈
+		[i:293]>哥布林巫士、符文巫师[i:294]>蒂姆、符文巫师[i:2328]>史莱姆之母、哥布林术士
+		[i:2352]>宁芙[i:2756]>食人怪、胡桃夹士、鹦鹉[i:5211]>毒/腐化兔兔、毒/腐化金鱼、毒/腐化企鹅
+		[i:4477]>侏儒[i:4478]>地牢史莱姆[i:4479]>小丑[i:2353]>僵尸[i:678]>丛林宝箱怪
+		'''
+}
+
+Items: {
+	AerospecEnchant: {
+		DisplayName: 天蓝魔石
+		Tooltip:
+			'''
+			提高下落速度，免疫掉落伤害
+			一次性受到超过25点伤害时
+			会召唤追踪羽毛从天而降
+			召唤一个天武神保护你
+			拥有角斗士金锁的效果
+			拥有不稳定花岗岩核心的效果
+			“上天也眷顾你”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	AtaxiaEnchant: {
+		DisplayName: 渊泉魔石
+		Tooltip:
+			'''
+			生命值低于50%时会获得狱火药水的效果
+			你受伤时会在原地产生一场烈焰爆炸
+			近战攻击和射弹击中敌人会喷发出混沌火焰
+			远程攻击每0.33秒会发射一团追踪混沌火焰
+			魔法攻击命中时召唤伤害火球和治疗火球
+			你会召唤一个沸腾渊泉来保护你
+			盗贼攻击每2秒会在周围召唤追踪混沌火焰
+			拥有熔火碎矿肩甲的效果
+			“远古的炙热之景浮现在眼前”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	FearmongerEnchant: {
+		DisplayName: 神惧者魔石
+		Tooltip:
+			'''
+			手持非召唤武器时，仆从造成的伤害不再降低
+			仆从攻击敌人会让你获得极高的生命再生速度
+			在南瓜月和霜月事件期间获得15%的伤害减免
+			与普通伤害减免分开计算，且可以突破软上限
+			免疫绝大多数冷系和火系的减益
+			拥有核子之源和玄秘颅冠的效果
+			“你的身影迸发出极致的恐惧之源”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	StatigelEnchant: {
+		DisplayName: 斯塔提斯魔石
+		Tooltip:
+			'''
+			一次性受到超过100点伤害时
+			会延长受伤后的无敌帧时间
+			提升跳跃高度和跳跃速度
+			召唤史莱姆之神宝宝为你而战
+			它的种类取决于世界邪恶类型
+			召唤两个史莱姆仆从为你而战
+			拥有魔能谐振仪的效果
+			“神秘的斯塔提斯之力环绕着你……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	XerocEnchant: {
+		DisplayName: 皇天魔石
+		Tooltip:
+			'''
+			盗贼射弹击中敌人会产生特殊效果
+			受伤时会受到来自宇宙怒火的加持
+			拥有虚空掠夺者和幽灵披风的效果
+			“原始之神的力量被你所攫取……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	TitanHeartEnchant: {
+		DisplayName: 泰坦之心魔石
+		Tooltip:
+			'''
+			潜伏攻击会造成幻星爆炸
+			潜伏攻击造成的击退翻倍
+			拥有大熊座雀鲷的效果
+			无降低移速的负面效果
+			“漆黑的苍穹笼罩着你……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	AstralEnchant: {
+		DisplayName: 星幻魔石
+		Tooltip:
+			'''
+			对敌人造成暴击时会降下落星
+			此效果有1秒的冷却时间
+			拥有星神隐壳和引力靴的效果
+			拥有泰坦之心魔石的全部效果
+			“幻星感染已经吞噬了你……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	DaedalusEnchant: {
+		DisplayName: 代达罗斯魔石
+		Tooltip:
+			'''
+			你能够反弹射弹
+			被反弹的射弹只对你造成50%的伤害
+			反弹有90秒的冷却时间
+			当你被击中时会释放水晶碎片
+			你有10%的几率吸收一次接触或射弹伤害
+			当你成功吸收了一次攻击后
+			你将恢复相当于这次攻击1/2的生命值
+			悬浮在头顶的代达罗斯水晶会保护你
+			盗贼射弹飞行时会释放水晶碎片
+			召唤一个代达罗斯守卫保护你
+			拥有永冻秘药和寒冰屏障的效果
+			拥有雪境暴徒魔石的全部效果
+			“寒冰魔法包裹着你”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	FathomSwarmerEnchant: {
+		DisplayName: 幻渊魔石
+		Tooltip:
+			'''
+			浸没在液体中时，召唤伤害提高30%、
+			增加10点防御和2.5点生命再生速度、
+			并且提高40%的移动速度
+			获得爬墙、游泳和水下呼吸的能力
+			在水下和深渊提供适量光照
+			适度减少深渊中的氧气损耗
+			降低深渊造成的防御削减效果
+			拥有流明护身符和变压器的效果
+			拥有硫磺魔石的全部效果
+			“深渊正凝视着你”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	MolluskEnchant: {
+		DisplayName: 软壳魔石
+		Tooltip:
+			'''
+			四只贝壳会在战斗中助你一臂之力
+			拥有深潜者和海波纹章的效果
+			拥有胜潮魔石的全部效果
+			“世界掌握在你的手中”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	OmegaBlueEnchant: {
+		DisplayName: 蓝色欧米茄魔石
+		Tooltip:
+			'''
+			触手会攻击附近的敌人，偷取生命值治疗你
+			按下“套装奖励”键进入5秒的深渊狂乱状态
+			期间能大幅提高你的伤害和暴击率
+			同时触手的攻击欲望和攻击范围都会提高
+			此效果有25秒的冷却时间
+			拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
+			“深渊的黑暗笼罩着你……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	SnowRuffianEnchant: {
+		DisplayName: 雪境暴徒魔石
+		Tooltip:
+			'''
+			你可以通过缓降来消除掉落伤害
+			拥有潜遁者宝石和腐烂犬齿的效果
+			“捕食者，觅食者”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	SulphurousEnchant: {
+		DisplayName: 硫磺魔石
+		Tooltip:
+			'''
+			攻击敌人或被敌人攻击时，对其造成中毒减益
+			获得二连跳的能力，跳跃时生成硫磺泡泡
+			提升水下移动能力，降低硫磺海水的威胁性
+			拥有沙尘披风和腐蚀脊椎的效果
+			“你仿佛和硫磺海融为一体”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	UmbraphileEnchant: {
+		DisplayName: 日影魔石
+		Tooltip:
+			'''
+			盗贼武器击中敌人时有几率造成爆炸
+			潜伏攻击总是能造成爆炸
+			拥有吸血鬼符咒和精准手套的效果
+			“漫步于暗日之影下”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	VictideEnchant: {
+		DisplayName: 胜潮魔石
+		Tooltip:
+			'''
+			使用任何武器时，都有10%的几率发射回旋贝壳射弹
+			贝壳能造成真实伤害，不受任何职业伤害加成影响
+			提高水下机动性，稍微减缓深渊中呼吸条的消耗速度
+			你可以召唤一只海蜗牛保护你
+			拥有卢克索的礼物、海之盾和阿米迪亚斯电火花石的效果
+			“昔日的海洋王国赐予你力量……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	DemonShadeEnchant: {
+		DisplayName: 魔影魔石
+		Tooltip:
+			'''
+			受伤时发射暗影射线和恶魔镰刀
+			召唤一只友善的红恶魔为你战斗
+			按下“套装奖励”键，在10秒内：
+			以黑魔法咒语激怒周围的敌人
+			这道咒语使敌人受到2.25倍的伤害
+			同时敌人对你会造成1.25倍的伤害
+			拥有圣天誓盟、渎神魂晶
+			以及幻灭心元石的效果
+			“恶魔之力于你身上显形……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	PlagueEnchant: {
+		DisplayName: 瘟疫魔石
+		Tooltip:
+			'''
+			受瘟疫减益影响的敌人会额外受到10%的远程伤害
+			你受伤时，瘟疫残渣会从天而降
+			按下“套装奖励”键会让自己在5秒内失去视野
+			同时，远程伤害提高60%，远程暴击率提高20%
+			此效果有25秒的冷却时间
+			获得瘟疫冲刺的能力，冲刺轨迹上会留下毒云
+			召唤一个小小的瘟疫使者来保护你
+			拥有冶金烧瓶和毒疫之心的效果
+			“以毒攻毒，药到病除”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	ReaverEnchant: {
+		DisplayName: 掠夺者魔石
+		Tooltip:
+			'''
+			高亮显示附近的所有宝藏
+			提升物品拾取距离和物块放置距离
+			在水下挖掘物块时恢复氧气
+			召唤一个掠夺者毒球照亮周围区域
+			免疫掉落伤害并允许自动跳跃
+			降低冲刺类效果的冷却时间
+			受到持续性伤害减益时，生命恢复的损失降低20%
+			所有攻击都能偷取生命值，并会提高生命再生速度
+			敌人会受到你的反伤效果，受伤时会召唤一束荆棘
+			当你受伤时还会获得掠夺者之怒增益
+			拥有恼怒项链和绽花石的效果
+			“你的敌人将生不如死……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	WulfrumEnchant: {
+		DisplayName: 钨钢魔石
+		Tooltip:
+			'''
+			增加3点防御
+			生命值低于50%时增加10点防御
+			拥有钨钢屏障生成仪和气功念珠的效果
+			“不要与钨魔石弄混了……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	AuricEnchant: {
+		DisplayName: 古圣金源魔石
+		Tooltip:
+			'''
+			获得全职业的龙蒿盔甲、血炎盔甲、
+			弑神者盔甲和始源林海盔甲的套装效果
+			拥有无瑕粹魂晶和寻神者之礼的效果
+			“你的力量已堪比丛林暴君……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	BloodflareEnchant: {
+		DisplayName: 血炎魔石
+		Tooltip:
+			'''
+			大幅提高生命再生速度，击中生命值低于50%的敌人会掉落红心
+			真近战攻击会治疗你，每15次真近战攻击，会获得鲜血狂怒增益
+			按下“套装奖励”键会释放噬魂幽花的冤魂
+			远程武器每2.5秒发射一个爆炸血炎珠
+			魔法武器每1.67秒会发射一个灵魂射弹，暴击时每2秒会产生火焰爆炸
+			召唤噬魂幽花地雷环绕着你，高于90%生命值时，召唤伤害提高10%
+			低于50%生命值时，增加20点防御和1点生命再生
+			高于80%生命值时，增加30点防御，盗贼暴击率提高5%
+			低于80%生命值时，盗贼伤害提高10%，盗贼武器暴击时有几率治疗你
+			拥有血神圣杯和血炎晶核的效果
+			拥有硫火魔石的全部效果
+			“堕落者的灵魂任你处置……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	BrimflameEnchant: {
+		DisplayName: 硫火魔石
+		Tooltip:
+			'''
+			按下“套装奖励”键进入硫火狂暴模式
+			在此模式下，造成的魔法伤害会额外提高40%
+			然而代价是生命快速流失和魔力再生速度归零
+			此状态可以手动关闭，此效果有30秒的冷却时间
+			拥有灾劫虚空和终结虚空的效果
+			“失控的黑魔法之力”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	GodSlayerEnchant: {
+		DisplayName: 弑神者魔石
+		Tooltip:
+			'''
+			允许你进行任意方向距离极长的冲刺
+			在按下控制角色移动的按键同时
+			再按下“弑神者冲刺”键就能进行指定方向的冲刺
+			被冲刺撞到的敌人会受到极高的伤害
+			在冲刺过程中你免疫绝大多数的减益
+			弑神者冲刺有45秒的冷却时间
+			受到超过80点伤害会释放8个高伤害的弑神飞镖
+			敌人碰到你时反弹相当于碰撞伤害2.5倍的伤害
+			远程武器射击时，每2.5秒发射一枚弑神榴霰弹
+			生命值全满时所有盗贼属性提高10%
+			如果一次攻击对你造成了超过80点伤害
+			你会获得额外的无敌帧时间
+			拥有元素之握、元素箭袋和星云之核的效果
+			“弑神之力存于你的心中……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	SilvaEnchant: {
+		DisplayName: 始源林海魔石
+		Tooltip:
+			'''
+			所有射弹击中敌人时生成能治疗的林海光球
+			最大移动速度和加速度提高5%
+			剩余1点生命值时将获得始源林海无敌增益
+			增益期间，你在8秒内不会死亡
+			此效果有5分钟的冷却时间
+			冷却时间不会在Boss存在或事件期间计时
+			无法穿透的魔法射弹击中敌人后
+			有几率产生强大的自然能量爆炸
+			召唤一个向敌人发射生命能量的始源林海水晶
+			拥有化绵留香石、空灵护符和元灵之心的效果
+			“无尽的生命能量于你身上喷涌而出……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	TarragonEnchant: {
+		DisplayName: 龙蒿魔石
+		Tooltip:
+			'''
+			降低敌怪生成速度，扩大红心的拾取范围
+			敌人死亡时有几率额外掉落红心
+			受伤时会获得生命涌流增益：
+			能够增加1.5点生命再生速度
+			按下“套装奖励”键让自已被生命能量包裹
+			此时会大幅降低受到的接触伤害，持续10秒
+			远程射弹消失时会分裂为追踪敌人的生命能量
+			每造成五次暴击时会发射叶片风暴
+			魔法射弹击中敌人时有50%的几率治疗你
+			召唤围绕着你的生命光环，对附近敌人持续造成伤害
+			每造成50次盗贼暴击时，你会获得2.5秒无敌时间
+			若你处于被减益影响的状态，则提升10%的盗贼伤害
+			拥有勇气勋章和蚀日尊戒的效果
+			“布瑞莱尔的不朽之力在你体内流淌……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	MarniteEnchant: {
+		DisplayName: 合成岩魔石
+		Tooltip:
+			'''
+			物块的放置速度提高30%
+			物块放置范围和工具范围扩大8格
+			拥有合成岩斥力盾和古元粉末的效果
+			“供专业团队使用”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	DesertProwlerEnchant: {
+		DisplayName: 沙漠巡游者魔石
+		Tooltip:
+			'''
+			免疫强风减益
+			按下“套装奖励”键
+			会让自己在10秒内被沙尘覆盖
+			在此期间：你的暴击伤害翻倍、
+			免疫击退、移动速度提高1.5倍、
+			仇恨减半但降低30%的伤害减免
+			此效果有25秒的冷却时间
+			拥有锈蚀勋章的效果
+			“耳畔依稀回荡着碧波”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	LunicCorpsEnchant: {
+		DisplayName: 雷神之锤魔石
+		Tooltip:
+			'''
+			获得一个可抵挡50点伤害的护盾
+			在受击后需要7秒的时间再次充能
+			重新充能期间被击中会重置冷却时间
+			拥有阴阳吸星石和老旧骰子的效果
+			“人们需要英雄给他们希望”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	PrismaticEnchant: {
+		DisplayName: 光棱魔石
+		Tooltip:
+			'''
+			按下“套装奖励”键
+			在光标处召唤一轮死亡激光，持续5秒
+			此效果有30秒的冷却时间
+			拥有进化者的效果
+			“扭曲次元的风暴吞噬着你……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	GemTechEnchant: {
+		DisplayName: 天钻魔石
+		Tooltip:
+			'''
+			六颗宝石碎片缓缓围绕着你旋转
+			其中五颗对应五个职业，以及一颗基础宝石
+			激活的宝石对各个职业都有大幅加成
+			基础宝石则提供对防御属性的大幅提升
+			[GemTechGeneral]
+			[GemTechBonus]
+			'''
+		GemTechGeneral:
+			'''
+			长按“左Shift”键以详细显示
+			如果一次受到超过100点的伤害
+			你会损失一个手持武器对应职业的宝石
+			如果你已经损失了那个宝石
+			那么这次失去的将会是基础宝石
+			宝石在损失时会破碎
+			并向最近的敌人飞去，造成40000点基础伤害
+			破碎的宝石需要30秒来重新凝聚
+			拥有嘉登之心的效果
+			“恶魔说：好了，你赢得了你想要的，
+			但是代价呢，哼，你能承受得住吗？”
+			[c/10E279:旧版物品]
+			'''
+		GemTechBonus:
+			'''
+			[i:Topaz] [c/EDAA2B:黄色宝石提高45%的近战伤害、26%的近战攻速和12%的近战暴击率]
+			    [c/EDAA2B:近战攻击时会定期释放数颗宝石碎片，真近战攻击释放碎片的冷却间隔减半]
+			[i:Emerald] [c/25BC6C:绿色宝石提高50%的远程伤害和16%的远程暴击率]
+			    [c/25BC6C:远程攻击时，会召唤飞镖弹快速飞向被远程射弹击中的敌人]
+			[i:Amethyst] [c/C83AD1:紫色宝石提高50%的魔法伤害和16%的魔法暴击率]
+			    [c/C83AD1:最大魔力值增加100点，手持非魔法武器时增加8点魔力再生速度]
+			[i:Sapphire] [c/2577CE:蓝色宝石提高72%的召唤伤害，仆从数量上限提高4个，移除召唤惩罚机制]
+			[i:Ruby] [c/E01800:红色宝石提高50%的盗贼伤害和16%的盗贼暴击率]
+			    [c/E01800:最大潜行值增加130点，使用非盗贼武器不再消耗潜行值]
+			[i:Diamond] [c/FF73CE:粉色基础宝石增加75点防御，提高12%的伤害减免]
+			    [c/FF73CE:增加2点生命再生速度，提高40%的移动速度和8%的跳跃速度]
+			如果所有宝石碎片同时存在，则用任何武器击中敌人会提供8秒的1点生命再生
+			如果在这8秒内，你使用了另一种职业的武器超过2.5秒，增加的生命再生会变成1.5点
+			'''
+	}
+
+	EridanusEnchantment: {
+		DisplayName: 波江魔石
+		Tooltip:
+			'''
+			双击下键可开启宇宙英灵的祝福：
+			宇宙英灵的祝福会增强一个职业
+			每10秒切换一次增强的职业
+			当你使用对应职业的武器时
+			宇宙英灵会与你一同作战
+			增强的职业提高80%的伤害
+			增强的职业提高30%的暴击率
+			增强的职业提高30%的攻击速度
+			双击下键可关闭宇宙英灵的祝福
+			'''
+	}
+
+	GaiaEnchantment: {
+		DisplayName: 盖亚魔石
+		Tooltip:
+			'''
+			双击下键可开启进攻模式：
+			手持武器对应的职业伤害提高30%
+			手持武器对应的职业暴击率提高15%
+			增加20点盔甲穿透，但降低20点防御力
+			伤害减免降低15%，最大生命值降低10%
+			'''
+	}
+
+	NekomiEnchantment: {
+		DisplayName: 猫猫睡衣魔石
+		Tooltip:
+			'''
+			闪烁崇心的擦弹范围扩大50%
+			擦弹可以暂时积蓄能量
+			受伤时会消耗能量获得快速治疗增益
+			双击下键消耗能量来释放吸血爱心
+			能量蓄满时会挥舞象征爱与正义的恶魔之斧
+			恶魔之斧在困难模式中会造成双倍伤害
+			拥有闪烁崇心的效果
+			'''
+	}
+
+	StyxEnchantment: {
+		DisplayName: 冥河魔石
+		Tooltip:
+			'''
+			攻击敌人可以积蓄冥河能量
+			受伤时会消耗冥河能量，减免一部分伤害
+			双击下键消耗能量，释放追踪镰刀
+			能量蓄满时消耗能量会释放出冥狱魔剑
+			拥有憎恶手杖的效果
+			'''
+	}
+
+	TrueMutantEnchantment: {
+		DisplayName: 真·突变魔石
+		Tooltip:
+			'''
+			召唤幽灵憎恶与你一同战斗
+			幻影球会向附近的敌人发射死亡激光
+			你的攻击会造成地狱之火和噬神者减益
+			你复活时会爆发出巨大的幻影死亡射线
+			拥有突变之眼的效果
+			'''
+	}
+
+	AnnihilationForce: {
+		DisplayName: 湮灭之力
+		Tooltip:
+			'''
+			[i:yitangFargo/AerospecEnchant][i:yitangFargo/StatigelEnchant] 拥有天蓝盔甲和斯塔提斯盔甲的套装效果
+			[i:yitangFargo/AtaxiaEnchant][i:yitangFargo/XerocEnchant] 拥有渊泉盔甲和皇天盔甲的套装效果
+			[i:yitangFargo/FearmongerEnchant] 拥有神惧者盔甲的套装效果
+			[i:yitangFargo/AerospecEnchant] 拥有角斗士金锁和不稳定花岗岩核心的效果
+			[i:yitangFargo/StatigelEnchant] 拥有魔能谐振仪的效果，两个史莱姆仆从为你而战
+			[i:yitangFargo/AtaxiaEnchant] 拥有熔火碎矿肩甲的效果
+			[i:yitangFargo/FearmongerEnchant] 拥有核子之源和玄秘颅冠的效果
+			[i:yitangFargo/XerocEnchant] 拥有虚空掠夺者和幽灵披风的效果
+			“曾经存在生命与光明的地方，如今只剩下残破的废墟……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	DesolationForce: {
+		DisplayName: 荒芜之力
+		Tooltip:
+			'''
+			[i:yitangFargo/MolluskEnchant] 拥有软壳盔甲和胜潮盔甲的套装效果
+			[i:yitangFargo/FathomSwarmerEnchant] 拥有幻渊鱼群盔甲和硫磺盔甲的套装效果
+			[i:yitangFargo/DaedalusEnchant] 拥有代达罗斯盔甲和雪境暴徒盔甲的套装效果
+			[i:yitangFargo/AstralEnchant] 拥有星幻盔甲和泰坦之心盔甲的套装效果
+			[i:yitangFargo/UmbraphileEnchant][i:yitangFargo/OmegaBlueEnchant] 拥有日影盔甲和蓝色欧米茄盔甲的套装效果
+			[i:yitangFargo/VictideEnchant] 拥有卢克索的礼物、海之盾和阿米迪亚斯电火花石的效果
+			[i:yitangFargo/MolluskEnchant] 拥有深潜者和海波纹章的效果
+			[i:yitangFargo/SulphurousEnchant][i:yitangFargo/FathomSwarmerEnchant] 拥有沙尘披风、腐蚀脊椎、流明护身符和变压器的效果
+			[i:yitangFargo/SnowRuffianEnchant] 拥有潜遁者宝石和腐烂犬齿的效果
+			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
+			[i:yitangFargo/TitanHeartEnchant][i:yitangFargo/AstralEnchant] 拥有大熊座雀鲷、星神隐壳和引力靴的效果
+			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
+			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
+			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	DevastationForce: {
+		DisplayName: 毁灭之力
+		Tooltip:
+			'''
+			[i:yitangFargo/WulfrumEnchant] 拥有钨钢盔甲的套装效果
+			[i:yitangFargo/ReaverEnchant] 拥有掠夺者盔甲的套装效果
+			[i:yitangFargo/PlagueEnchant] 拥有瘟疫死神盔甲的套装效果
+			[i:yitangFargo/PlagueEnchant] 拥有瘟疫使者盔甲的套装效果
+			[i:yitangFargo/DemonShadeEnchant] 拥有魔影盔甲的套装效果
+			[i:yitangFargo/WulfrumEnchant] 拥有钨钢屏障生成仪和气功念珠的效果
+			[i:yitangFargo/ReaverEnchant] 拥有恼怒项链和绽花石的效果
+			[i:yitangFargo/PlagueEnchant] 拥有冶金烧瓶和毒疫之心的效果
+			[i:yitangFargo/DemonShadeEnchant] 拥有圣天誓盟、渎神魂晶和幻灭心元石的效果
+			“让那些反抗你的一切生灵下地狱吧”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	ExaltationForce: {
+		DisplayName: 升华之力
+		Tooltip:
+			'''
+			[i:yitangFargo/TarragonEnchant] 拥有龙蒿盔甲的套装效果
+			[i:yitangFargo/BloodflareEnchant][i:yitangFargo/BrimflameEnchant] 拥有血炎盔甲和硫火盔甲的套装效果
+			[i:yitangFargo/GodSlayerEnchant] 拥有弑神者盔甲的套装效果
+			[i:yitangFargo/SilvaEnchant] 拥有始源林海盔甲的套装效果
+			[i:yitangFargo/AuricEnchant] 拥有古圣金源盔甲的套装效果
+			[i:yitangFargo/TarragonEnchant] 拥有勇气勋章和蚀日尊戒的效果
+			[i:yitangFargo/BloodflareEnchant] 拥有血神圣杯和血炎晶核的效果
+			[i:yitangFargo/BrimflameEnchant] 拥有灾劫虚空和终结虚空的效果
+			[i:yitangFargo/GodSlayerEnchant] 拥有元素之握、元素箭袋和星云之核的效果
+			[i:yitangFargo/SilvaEnchant] 拥有化绵留香石、空灵护符和元灵之心的效果
+			[i:yitangFargo/AuricEnchant] 拥有无瑕粹魂晶、神之壁垒和寻神者之礼的效果
+			“涅槃之光抚慰着你的心灵，淬炼着你的意志”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	MiracleForce: {
+		DisplayName: 奇迹之力
+		Tooltip:
+			'''
+			[i:yitangFargo/MarniteEnchant] 拥有合成岩建筑师盔甲的套装效果
+			[i:yitangFargo/DesertProwlerEnchant] 拥有沙漠巡游者盔甲的套装效果
+			[i:yitangFargo/LunicCorpsEnchant] 拥有雷神之锤盔甲的套装效果
+			[i:yitangFargo/PrismaticEnchant] 拥有光棱盔甲的套装效果
+			[i:yitangFargo/GemTechEnchant] 拥有天钻盔甲的套装效果
+			[i:yitangFargo/MarniteEnchant] 拥有合成岩斥力盾和古元粉末的效果
+			[i:yitangFargo/DesertProwlerEnchant] 拥有锈蚀勋章的效果
+			[i:yitangFargo/LunicCorpsEnchant] 拥有阴阳吸星石和老旧骰子的效果
+			[i:yitangFargo/PrismaticEnchant][i:yitangFargo/GemTechEnchant] 拥有进化者和嘉登之心的效果
+			“任何时代都有一些世人难以理解的事物，
+			比如神灵，比如恶魔，比如你”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	BrandoftheWitchNew: {
+		DisplayName: 硫火女巫烙印
+		Tooltip:
+			'''
+			拥有真菌块、蜜蜂护符、哈尔之心、
+			霜冻之炎、利维坦龙涎香、渊洋之心、
+			血肉图腾、悖论增幅器和阳炎战旗的效果
+			[BrandoftheWitchEffects]
+			“不灭而铭心的痛楚，宛如永无释怀之日”
+			'''
+		BrandoftheWitchFargo:
+			'''
+			拥有至高统治之盾、深渊潜游服、
+			痴愚金龙干细胞、猎魂鲨齿项链、
+			虚无箭袋、斯塔提斯的虚空饰带、
+			聚合之脑、阿斯加德之庇护
+			以及神之壁垒的效果
+			'''
+		BrandoftheWitchCalamity: ""
+	}
+
+	ColossusSoulNew: {
+		DisplayName: 巨像之魂
+		Tooltip:
+			'''
+			最大生命值增加100点
+			伤害减免提高15%
+			增加5点生命再生速度
+			免疫一些减益、击退和掉落伤害
+			提升敌人以你为目标的几率
+			[ColossusEffects]
+			“你无人可挡”
+			'''
+		ColossusFargo:
+			'''
+			拥有混乱之脑、星星面纱、
+			蜜蜂斗篷、闪亮石、圣骑士护盾
+			以及冰冻海龟壳的效果
+			'''
+		ColossusCalamity:
+			'''
+			拥有聚合之脑、蜜蜂斗篷、
+			闪亮石、阿斯加德之庇护
+			以及神之壁垒的效果
+			'''
+	}
+
+	FlightMasterySoulNew: {
+		DisplayName: 飞行大师之魂
+		Tooltip:
+			'''
+			允许无限飞行
+			按住“下”和“跳跃”键悬停
+			按住“上”键可以更快加速
+			略微提升你的重力
+			允许你控制重力
+			“飞升”
+			'''
+	}
+
+	SupersonicSoulNew: {
+		DisplayName: 超音速之魂
+		Tooltip:
+			'''
+			可飞行、超音速奔跑
+			提供额外冰面行动力
+			可在水、蜂蜜、熔岩和微光表面行走
+			免疫火块、熔岩和掉落伤害
+			在没有装备翅膀时，获得五连跳的能力
+			提升跳跃高度和跳跃速度，允许自动跳跃
+			获得游泳能力，大幅延长水下呼吸时间
+			你走过的草地上会长出花朵
+			[SupersonicEffects]
+			“我就是速度”
+			'''
+		SupersonicFargo:
+			'''
+			拥有飞毯、克苏鲁护盾、甜心项链
+			以及忍者大师装备的效果
+			'''
+		SupersonicCalamity:
+			'''
+			拥有飞毯、至高统治之盾、甜心项链
+			以及斯塔提斯的虚空饰带的效果
+			'''
+	}
+
+	TrawlerSoulNew: {
+		DisplayName: 捕鱼之魂
+		Tooltip:
+			'''
+			渔力提高60点
+			钓竿会额外扔出10根鱼线
+			你几乎立刻就能钓到鱼
+			拥有声纳和宝匣药水的效果
+			[TrawlerEffects]
+			“愿者上钩”
+			'''
+		TrawlerFargo:
+			'''
+			拥有防熔岩渔具袋、孢子囊、
+			挥发明胶、粉马掌气球
+			以及北极潜水装备的效果
+			'''
+		TrawlerCalamity:
+			'''
+			拥有万能渔具包、孢子囊、
+			挥发明胶、粉马掌气球
+			以及深渊潜游服的效果
+			'''
+	}
+
+	WorldShaperSoulNew: {
+		DisplayName: 铸世者之魂
+		Tooltip:
+			'''
+			物块和墙的放置速度提高50%
+			放置范围和工具范围扩大10格
+			挖掘速度提高200%
+			自动给放置的物体上漆或制动器
+			高亮显示敌人、陷阱和宝藏
+			拥有夜猫子、光芒、洞穴探险
+			以及狩猎和危险感药水的效果
+			你能够开启“建筑师模式”：
+			放置物块和墙时不再消耗物品
+			大幅提升放置速度和放置范围
+			可在魂石效果配置菜单中禁用此效果
+			拥有贝壳电话、宝藏磁铁和皇家凝胶的效果
+			“无限的可能性”
+			'''
+	}
+
+	ArchWizardsSoulNew: {
+		DisplayName: 巫师之魂
+		Tooltip:
+			'''
+			魔法伤害提高30%
+			施法速度提高20%
+			魔法暴击率提高15%
+			最大魔力值增加200点
+			拥有天界手铐和魔力花的效果
+			“奥术之力，合核凝一”
+			'''
+	}
+
+	BerserkerSoulNew: {
+		DisplayName: 狂战士之魂
+		Tooltip:
+			'''
+			近战伤害提高30%
+			近战攻速提高20%
+			近战暴击率提高15%
+			提高近战击退力
+			[BerserkerEffects]
+			“吾之传说，生者弗能传颂”
+			'''
+		BerserkerFargo:
+			'''
+			拥有烈火手套、悠悠球袋
+			以及天界壳的效果
+			'''
+		BerserkerCalamity:
+			'''
+			拥有烈火手套、悠悠球袋、
+			天界壳和猎魂鲨齿项链的效果
+			'''
+	}
+
+	ConjuristsSoulNew: {
+		DisplayName: 召唤之魂
+		Tooltip:
+			'''
+			召唤伤害提高30%
+			召唤暴击率提高15%
+			鞭子的攻击速度提高20%
+			鞭子的攻击范围扩大15%
+			仆从和哨兵数量上限提高5个
+			提高仆从击退力
+			“一支听命于您的军队”
+			'''
+	}
+
+	SnipersSoulNew: {
+		DisplayName: 神枪手之魂
+		Tooltip:
+			'''
+			远程伤害提高30%
+			远程暴击率提高15%
+			20%的几率不消耗弹药
+			[SnipersEffects]
+			“预备，瞄准，开火”
+			'''
+		SnipersFargo: 拥有狙击镜的效果
+		SnipersCalamity:
+			'''
+			拥有狙击镜、虚无箭袋
+			以及痴愚金龙干细胞的效果
+			'''
+	}
+
+	VagabondsSoulNew: {
+		DisplayName: 流浪者之魂
+		Tooltip:
+			'''
+			盗贼伤害提高30%
+			盗贼射弹速度提高15%
+			盗贼暴击率提高15%
+			拥有纳米技术和日蚀魔镜的效果
+			拥有浴火龙鳞和敬天神盗盒的效果
+			'''
+	}
+
+	UniverseSoulNew: {
+		DisplayName: 寰宇之魂
+		Tooltip:
+			'''
+			手持武器对应的职业伤害提高66%、暴击率提高25%
+			所有武器的攻击速度和射弹速度提高50%、击退力翻倍
+			暴击会造成4倍伤害，暴击会造成宇宙之火减益
+			最大魔力值增加300点，仆从和哨兵数量上限提高6个
+			[i:yitangFargo/BerserkerSoulNew] 撼天动地的战吼激荡着战场，拥有狂战士之魂的效果
+			[i:yitangFargo/SnipersSoulNew] 雷霆般的精准之击撕裂苍空，拥有神枪手之魂的效果
+			[i:yitangFargo/ArchWizardsSoulNew] 远古的奥术光辉正浩荡涌现，拥有巫师之魂的效果
+			[i:yitangFargo/ConjuristsSoulNew] 统御万灵的共鸣颂唱于世间，拥有召唤之魂的效果
+			[i:yitangFargo/VagabondsSoulNew] 虚妄的幻影编织着命运之舞，拥有流浪者之魂的效果
+			“诸天也向你俯首”
+			'''
+	}
+
+	DimensionSoulNew: {
+		DisplayName: 维度之魂
+		Tooltip:
+			'''
+			最大生命值增加300点
+			增加8点生命再生速度，伤害减免提高20%
+			[i:yitangFargo/FlightMasterySoulNew][i:yitangFargo/SupersonicSoulNew] 允许无限飞行和超音速奔跑
+			[i:yitangFargo/ColossusSoulNew] 千军万马无法撼动你的意志力，拥有巨像之魂的效果
+			[i:yitangFargo/SupersonicSoulNew] 你风驰电掣般的速度掠过旷野，拥有超音速之魂的效果
+			[i:yitangFargo/FlightMasterySoulNew] 高远的苍穹在你眼中黯然失色，拥有飞行大师之魂的效果
+			[i:yitangFargo/TrawlerSoulNew] 奇珍异宝都尽数收于你的囊中，拥有捕鱼之魂的效果
+			[i:yitangFargo/WorldShaperSoulNew] 你拥有巧夺天工般的创造之力，拥有铸世者之魂的效果
+			“泰拉瑞亚的维度触手可及”
+			'''
+	}
+
+	TerrariaSoulNew: {
+		DisplayName: 泰拉之魂
+		Tooltip:
+			'''
+			[i:FargowiltasSouls/TimberForce] 苍劲有力的根须深入你的灵魂，拥有森林之力的效果
+			[i:FargowiltasSouls/TerraForce] 大地的奥秘在你眼中一览无余，拥有泰拉之力的效果
+			[i:FargowiltasSouls/EarthForce] 生生不息的祝福于你手中绽放，拥有大地之力的效果
+			[i:FargowiltasSouls/NatureForce] 天地万物在你的指尖翻腾起舞，拥有自然之力的效果
+			[i:FargowiltasSouls/LifeForce] 流转不灭的自然生灵庇佑着你，拥有生命之力的效果
+			[i:FargowiltasSouls/SpiritForce] 尘世亡魂追逐着你不朽的精神，拥有心灵之力的效果
+			[i:FargowiltasSouls/ShadowForce] 回荡恶魔低语的枷锁伴你身形，拥有暗影之力的效果
+			[i:FargowiltasSouls/WillForce] 力挽狂澜的决心驱散你的迷茫，拥有意志之力的效果
+			[i:FargowiltasSouls/CosmoForce] 你的身心充满力撼恒星的潜力，拥有宇宙之力的效果
+			“泰拉之主，天地共证”
+			'''
+	}
+
+	MasochistSoulNew: {
+		DisplayName: 大师之魂
+		Tooltip:
+			'''
+			免疫绝大多数永恒模式的减益
+			手持武器对应的职业伤害提高50%
+			飞行时间延长200%，移动速度提高20%，增加50点盔甲穿透
+			最大生命值翻倍，增加7点生命再生速度，伤害减免提高10%
+			[i:FargowiltasSouls/SinisterIcon] 禁忌诅咒的怨魂在恶战后不复存在，拥有邪恶头骨的效果
+			[i:FargowiltasSouls/SupremeDeathbringerFairy] 征服世界的欲望于你心中涌动不止，拥有至高告死精灵的效果
+			[i:FargowiltasSouls/BionomicCluster] 你眼中蠢蠢欲动的猎物在低声嘶吼，拥有生态球的效果
+			[i:FargowiltasSouls/DubiousCircuitry] 蕴含超凡灵魂的战争机械与你共舞，拥有可疑电路的效果
+			[i:FargowiltasSouls/PureHeart] 邪恶与神圣的守护者成为垫脚之石，拥有纯净之心的效果
+			[i:FargowiltasSouls/LumpOfFlesh] 世界真实的屏障在你脚下轰然倒塌，拥有血肉团的效果
+			[i:FargowiltasSouls/ChaliceoftheMoon] 陨落遗骸的镇魂曲将为你响彻天地，拥有月之圣杯的效果
+			[i:FargowiltasSouls/HeartoftheMasochist] 被侵蚀殆尽的恶兽皆对你俯首称臣，拥有永恒者之心的效果
+			“拥抱精通，拥抱永恒”
+			'''
+	}
+
+	CalamitySoul: {
+		DisplayName: 暴君之魂
+		Tooltip:
+			'''
+			拥有所有灾厄盔甲的套装效果
+			拥有绝大多数灾厄饰品的效果
+			[i:yitangFargo/AnnihilationForce] 嗜血的癫狂笼罩着恐惧之夜，拥有湮灭之力的效果
+			[i:yitangFargo/DesolationForce] 践踏与摧残遍布着废墟之地，拥有荒芜之力的效果
+			[i:yitangFargo/DevastationForce] 永燃的狱火奴役着游荡亡灵，拥有毁灭之力的效果
+			[i:yitangFargo/ExaltationForce] 不朽传说重塑着秩序与混乱，拥有升华之力的效果
+			[i:yitangFargo/MiracleForce] 开辟时代的巨浪颠覆着天地，拥有奇迹之力的效果
+			“而在最后，这片血与火的大地，终于再次归于沉寂……”
+			[c/10E279:旧版物品]
+			'''
+	}
+
+	EternityForce: {
+		DisplayName: 永恒之力
+		Tooltip:
+			'''
+			[i:yitangFargo/NekomiEnchantment] 拥有猫猫睡衣盔甲的套装效果
+			[i:yitangFargo/GaiaEnchantment] 拥有盖亚盔甲的套装效果
+			[i:yitangFargo/EridanusEnchantment] 拥有波江盔甲的套装效果
+			[i:yitangFargo/StyxEnchantment] 拥有冥河盔甲的套装效果
+			[i:yitangFargo/TrueMutantEnchantment] 拥有真·突变盔甲的套装效果
+			[i:yitangFargo/NekomiEnchantment] 拥有闪烁崇心的效果
+			[i:yitangFargo/StyxEnchantment] 拥有憎恶手杖的效果
+			[i:yitangFargo/TrueMutantEnchantment] 拥有突变之眼的效果
+			“其蕴含着伐木工0.00001%的力量”
+			'''
+	}
+
+	EternitySoulNew: {
+		DisplayName: 永恒之魂
+		Tooltip:
+			'''
+			将你的基础暴击率设为50%
+			每次暴击会提高10%的暴击率
+			暴击率达到100%后，每次攻击都会：
+			附带10%的生命偷取、提高5%的伤害并增加5点防御
+			此效果可叠加950次，直到你被击中
+			拥有[i:yitangFargo/UniverseSoulNew][c/FF1E1E:寰宇之魂]和[i:yitangFargo/DimensionSoulNew][c/FF8635:维度之魂]的效果
+			拥有[i:yitangFargo/TerrariaSoulNew][c/36EE48:泰拉之魂]和[i:yitangFargo/MasochistSoulNew][c/FF3196:大师之魂]的效果
+			拥有[i:yitangFargo/CalamitySoul][c/EB4A0F:暴君之魂]和[i:yitangFargo/EternityForce][c/08ECF0:永恒之力]的效果
+			'''
+	}
+
+	CelestialSeal: {
+		DisplayName: 天篆
+		Tooltip:
+			'''
+			永久增加一个饰品栏位
+			替换突变契约和天体洋葱的栏位
+			“无边的异界之力蕴藏其中”
+			永恒
+			'''
+	}
+
+	OldVanillaEnchantIcon: {
+		DisplayName: 模组配置图标
+		Tooltip: ""
+	}
+
+	OldCalamityEnchantIcon: {
+		DisplayName: 模组配置图标
+		Tooltip: ""
+	}
+
+	FullCalamityEnchantIcon: {
+		DisplayName: 模组配置图标
+		Tooltip: ""
+	}
+
+	FCNPCIcon: {
+		DisplayName: 模组配置图标
+		Tooltip: ""
+	}
+}
+
+EternitySoulNewExtra: {
+	Honor: “无论凡人或不朽，一切都承认你的神性”
+	ESCommonTips: 额外获得以下所有的加成：
+	AllLines:
+		'''
+		[i:yitangFargo/UniverseSoulNew] 所有伤害提高250%
+		[i:yitangFargo/UniverseSoulNew] 攻击速度提高250%
+		[i:yitangFargo/UniverseSoulNew] 射弹速度提高100%
+		[i:yitangFargo/UniverseSoulNew] 击退力提高100%
+		[i:yitangFargo/MasochistSoulNew] 增加50点盔甲穿透
+		[i:yitangFargo/UniverseSoulNew] 暴击造成10倍伤害
+		[i:FargowiltasSouls/DimensionSoul] 增加15点生命再生速度
+		[i:FargowiltasSouls/DimensionSoul] 伤害减免提高40%
+		[i:FargowiltasSouls/DimensionSoul] 最大生命值乘以5
+		[i:yitangFargo/UniverseSoulNew] 最大魔力值增加999点
+		[i:yitangFargo/UniverseSoulNew] 魔力消耗降低50%
+		[i:yitangFargo/UniverseSoulNew] 仆从数量上限提高30个
+		[i:yitangFargo/UniverseSoulNew] 哨兵数量上限提高20个
+		[i:yitangFargo/TerrariaSoulNew] 你能够反弹所有射弹
+		[i:yitangFargo/MasochistSoulNew] 免疫几乎所有永恒模式的减益
+		[i:yitangFargo/CalamitySoul] 拥有所有灾厄盔甲的套装效果
+		[i:yitangFargo/CalamitySoul] 拥有绝大多数灾厄饰品的效果
+		[i:FargowiltasSouls/UniverseCore] 拥有宇宙之核的效果
+		[i:yitangFargo/BerserkerSoulNew] 拥有狂战士之魂的效果
+		[i:yitangFargo/SnipersSoulNew] 拥有神枪手之魂的效果
+		[i:yitangFargo/ArchWizardsSoulNew] 拥有巫师之魂的效果
+		[i:yitangFargo/ConjuristsSoulNew] 拥有召唤之魂的效果
+		[i:yitangFargo/VagabondsSoulNew] 拥有流浪者之魂的效果
+		[i:FargowiltasSouls/BarbariansEssence] 拥有野蛮人精华的效果
+		[i:FargowiltasSouls/SharpshootersEssence] 拥有神射手精华的效果
+		[i:FargowiltasSouls/ApprenticesEssence] 拥有学徒精华的效果
+		[i:FargowiltasSouls/OccultistsEssence] 拥有术士精华的效果
+		[i:FargowiltasCrossmod/OutlawsEssence] 拥有狂徒精华的效果
+		[i:yitangFargo/ColossusSoulNew] 拥有巨像之魂的效果
+		[i:yitangFargo/SupersonicSoulNew] 拥有超音速之魂的效果
+		[i:yitangFargo/FlightMasterySoulNew] 拥有飞行大师之魂的效果
+		[i:yitangFargo/TrawlerSoulNew] 拥有捕鱼之魂的效果
+		[i:yitangFargo/WorldShaperSoulNew] 拥有铸世者之魂的效果
+		[i:FargowiltasSouls/AeolusBoots] 拥有风神之靴的效果
+		[i:FargowiltasSouls/AnglerEnchant] 拥有渔夫魔石的效果
+		[i:FargowiltasSouls/MinerEnchant] 拥有矿工魔石的效果
+		[i:FargowiltasSouls/TimberForce] 拥有森林之力的效果
+		[i:FargowiltasSouls/TerraForce] 拥有泰拉之力的效果
+		[i:FargowiltasSouls/EarthForce] 拥有大地之力的效果
+		[i:FargowiltasSouls/NatureForce] 拥有自然之力的效果
+		[i:FargowiltasSouls/LifeForce] 拥有生命之力的效果
+		[i:FargowiltasSouls/SpiritForce] 拥有心灵之力的效果
+		[i:FargowiltasSouls/ShadowForce] 拥有暗影之力的效果
+		[i:FargowiltasSouls/WillForce] 拥有意志之力的效果
+		[i:FargowiltasSouls/CosmoForce] 拥有宇宙之力的效果
+		[i:FargowiltasSouls/WoodEnchant] 拥有木魔石的效果
+		[i:FargowiltasSouls/BorealWoodEnchant] 拥有针叶木魔石的效果
+		[i:FargowiltasSouls/RichMahoganyEnchant] 拥有红木魔石的效果
+		[i:FargowiltasSouls/EbonwoodEnchant] 拥有乌木魔石的效果
+		[i:FargowiltasSouls/ShadewoodEnchant] 拥有阴影木魔石的效果
+		[i:FargowiltasSouls/PalmWoodEnchant] 拥有棕榈木魔石的效果
+		[i:FargowiltasSouls/PearlwoodEnchant] 拥有珍珠木魔石的效果
+		[i:FargowiltasSouls/CopperEnchant] 拥有铜魔石的效果
+		[i:FargowiltasSouls/TinEnchant] 拥有锡魔石的效果
+		[i:FargowiltasSouls/IronEnchant] 拥有铁魔石的效果
+		[i:FargowiltasSouls/LeadEnchant] 拥有铅魔石的效果
+		[i:FargowiltasSouls/SilverEnchant] 拥有银魔石的效果
+		[i:FargowiltasSouls/TungstenEnchant] 拥有钨魔石的效果
+		[i:FargowiltasSouls/AshWoodEnchant] 拥有灰烬木魔石的效果
+		[i:FargowiltasSouls/ObsidianEnchant] 拥有黑曜石魔石的效果
+		[i:FargowiltasSouls/AncientCobaltEnchant] 拥有远古钴魔石的效果
+		[i:FargowiltasSouls/CobaltEnchant] 拥有钴魔石的效果
+		[i:FargowiltasSouls/PalladiumEnchant] 拥有钯金魔石的效果
+		[i:FargowiltasSouls/MythrilEnchant] 拥有秘银魔石的效果
+		[i:FargowiltasSouls/OrichalcumEnchant] 拥有山铜魔石的效果
+		[i:FargowiltasSouls/AdamantiteEnchant] 拥有精金魔石的效果
+		[i:FargowiltasSouls/TitaniumEnchant] 拥有钛金魔石的效果
+		[i:FargowiltasSouls/CrimsonEnchant] 拥有猩红魔石的效果
+		[i:FargowiltasSouls/MoltenEnchant] 拥有熔岩魔石的效果
+		[i:FargowiltasSouls/RainEnchant] 拥有雨云魔石的效果
+		[i:FargowiltasSouls/SnowEnchant] 拥有冰雪魔石的效果
+		[i:FargowiltasSouls/FrostEnchant] 拥有寒霜魔石的效果
+		[i:FargowiltasSouls/JungleEnchant] 拥有丛林魔石的效果
+		[i:FargowiltasSouls/ChlorophyteEnchant] 拥有叶绿魔石的效果
+		[i:FargowiltasSouls/ShroomiteEnchant] 拥有蘑菇魔石的效果
+		[i:FargowiltasSouls/PumpkinEnchant] 拥有南瓜魔石的效果
+		[i:FargowiltasSouls/BeeEnchant] 拥有蜜蜂魔石的效果
+		[i:FargowiltasSouls/SpiderEnchant] 拥有蜘蛛魔石的效果
+		[i:FargowiltasSouls/CactusEnchant] 拥有仙人掌魔石的效果
+		[i:FargowiltasSouls/TurtleEnchant] 拥有乌龟魔石的效果
+		[i:FargowiltasSouls/BeetleEnchant] 拥有甲虫魔石的效果
+		[i:FargowiltasSouls/FossilEnchant] 拥有化石魔石的效果
+		[i:FargowiltasSouls/ForbiddenEnchant] 拥有禁戒魔石的效果
+		[i:FargowiltasSouls/HallowEnchant] 拥有神圣魔石的效果
+		[i:FargowiltasSouls/AncientHallowEnchant] 拥有远古神圣魔石的效果
+		[i:FargowiltasSouls/TikiEnchant] 拥有提基魔石的效果
+		[i:FargowiltasSouls/SpectreEnchant] 拥有幽灵魔石的效果
+		[i:FargowiltasSouls/ShadowEnchant] 拥有暗影魔石的效果
+		[i:FargowiltasSouls/AncientShadowEnchant] 拥有远古暗影魔石的效果
+		[i:FargowiltasSouls/NinjaEnchant] 拥有忍者魔石的效果
+		[i:FargowiltasSouls/CrystalAssassinEnchant] 拥有水晶刺客魔石的效果
+		[i:FargowiltasSouls/SpookyEnchant] 拥有阴森魔石的效果
+		[i:FargowiltasSouls/MonkEnchant] 拥有武僧魔石的效果
+		[i:FargowiltasSouls/ShinobiEnchant] 拥有渗透忍者魔石的效果
+		[i:FargowiltasSouls/ApprenticeEnchant] 拥有学徒魔石的效果
+		[i:FargowiltasSouls/DarkArtistEnchant] 拥有暗黑艺术家魔石的效果
+		[i:FargowiltasSouls/NecroEnchant] 拥有死灵魔石的效果
+		[i:FargowiltasSouls/GoldEnchant] 拥有金魔石的效果
+		[i:FargowiltasSouls/PlatinumEnchant] 拥有铂金魔石的效果
+		[i:FargowiltasSouls/GladiatorEnchant] 拥有角斗士魔石的效果
+		[i:FargowiltasSouls/HuntressEnchant] 拥有女猎人魔石的效果
+		[i:FargowiltasSouls/RedRidingEnchant] 拥有红色骑术魔石的效果
+		[i:FargowiltasSouls/SquireEnchant] 拥有侍卫魔石的效果
+		[i:FargowiltasSouls/ValhallaKnightEnchant] 拥有英灵殿骑士魔石的效果
+		[i:FargowiltasSouls/MeteorEnchant] 拥有流星魔石的效果
+		[i:FargowiltasSouls/WizardEnchant] 拥有巫师魔石的效果
+		[i:FargowiltasSouls/SolarEnchant] 拥有日耀魔石的效果
+		[i:FargowiltasSouls/VortexEnchant] 拥有星旋魔石的效果
+		[i:FargowiltasSouls/NebulaEnchant] 拥有星云魔石的效果
+		[i:FargowiltasSouls/StardustEnchant] 拥有星尘魔石的效果
+		[i:FargowiltasSouls/SinisterIcon] 拥有邪恶头骨的效果
+		[i:FargowiltasSouls/SupremeDeathbringerFairy] 拥有至高告死精灵的效果
+		[i:FargowiltasSouls/BionomicCluster] 拥有生态球的效果
+		[i:FargowiltasSouls/DubiousCircuitry] 拥有可疑电路的效果
+		[i:FargowiltasSouls/PureHeart] 拥有纯净之心的效果
+		[i:FargowiltasSouls/LumpOfFlesh] 拥有血肉团的效果
+		[i:FargowiltasSouls/ChaliceoftheMoon] 拥有月之圣杯的效果
+		[i:FargowiltasSouls/HeartoftheMasochist] 拥有永恒者之心的效果
+		[i:FargowiltasSouls/SlimyShield] 拥有粘液盾的效果
+		[i:FargowiltasSouls/AgitatingLens] 拥有躁动晶状体的效果
+		[i:FargowiltasSouls/QueenStinger] 拥有蜂后毒刺的效果
+		[i:FargowiltasSouls/NecromanticBrew] 拥有死灵秘酿的效果
+		[i:FargowiltasSouls/ConcentratedRainbowMatter] 拥有浓缩彩虹物质的效果
+		[i:FargowiltasSouls/WyvernFeather] 拥有飞龙之羽的效果
+		[i:FargowiltasSouls/FrigidGemstone] 拥有寒玉的效果
+		[i:FargowiltasSouls/SandsofTime] 拥有时之沙的效果
+		[i:FargowiltasSouls/SqueakyToy] 拥有吱吱响的玩具的效果
+		[i:FargowiltasSouls/TribalCharm] 拥有部落挂坠的效果
+		[i:FargowiltasSouls/MysticSkull] 拥有神秘头骨的效果
+		[i:FargowiltasSouls/SecurityWallet] 拥有安全钱包的效果
+		[i:FargowiltasSouls/OrdinaryCarrot] 拥有普通的胡萝卜的效果
+		[i:FargowiltasSouls/WretchedPouch] 拥有诅咒袋子的效果
+		[i:FargowiltasSouls/NymphsPerfume] 拥有宁芙的香水的效果
+		[i:FargowiltasSouls/TimsConcoction] 拥有蒂姆的秘药的效果
+		[i:FargowiltasSouls/FusedLens] 拥有融合晶状体的效果
+		[i:FargowiltasSouls/GroundStick] 拥有遥控装置的效果
+		[i:FargowiltasSouls/ReinforcedPlating] 拥有强化钢板的效果
+		[i:FargowiltasSouls/DarkenedHeart] 拥有暗黑之心的效果
+		[i:FargowiltasSouls/GuttedHeart] 拥有破碎之心的效果
+		[i:FargowiltasSouls/GelicWings] 拥有明胶羽翼的效果
+		[i:FargowiltasSouls/PungentEyeball] 拥有刺鼻眼球的效果
+		[i:FargowiltasSouls/SkullCharm] 拥有头骨挂坠的效果
+		[i:FargowiltasSouls/DreadShell] 拥有恐惧螺壳的效果
+		[i:FargowiltasSouls/Deerclawps] 拥有冰鹿爪的效果
+		[i:FargowiltasSouls/MagicalBulb] 拥有魔法球茎的效果
+		[i:FargowiltasSouls/LihzahrdTreasureBox] 拥有丛林蜥蜴宝藏盒的效果
+		[i:FargowiltasSouls/CelestialRune] 拥有天界符文的效果
+		[i:FargowiltasSouls/PumpkingsCape] 拥有南瓜王的披肩的效果
+		[i:FargowiltasSouls/IceQueensCrown] 拥有冰雪女王的皇冠的效果
+		[i:FargowiltasSouls/SaucerControlConsole] 拥有飞碟控制台的效果
+		[i:FargowiltasSouls/BetsysHeart] 拥有双足翼龙之心的效果
+		[i:FargowiltasSouls/MutantAntibodies] 拥有突变抗体的效果
+		[i:FargowiltasSouls/PrecisionSeal] 拥有玲珑圣印的效果
+		[i:FargowiltasSouls/GalacticGlobe] 拥有银河球的效果
+		[i:yitangFargo/AnnihilationForce] 拥有湮灭之力的效果
+		[i:yitangFargo/DesolationForce] 拥有荒芜之力的效果
+		[i:yitangFargo/DevastationForce] 拥有毁灭之力的效果
+		[i:yitangFargo/ExaltationForce] 拥有升华之力的效果
+		[i:yitangFargo/MiracleForce] 拥有奇迹之力的效果
+		[i:yitangFargo/AerospecEnchant] 拥有天蓝魔石的效果
+		[i:yitangFargo/StatigelEnchant] 拥有斯塔提斯魔石的效果
+		[i:yitangFargo/AtaxiaEnchant] 拥有渊泉魔石的效果
+		[i:yitangFargo/XerocEnchant] 拥有皇天魔石的效果
+		[i:yitangFargo/FearmongerEnchant] 拥有神惧者魔石的效果
+		[i:yitangFargo/VictideEnchant] 拥有胜潮魔石的效果
+		[i:yitangFargo/MolluskEnchant] 拥有软壳魔石的效果
+		[i:yitangFargo/SnowRuffianEnchant] 拥有雪境暴徒魔石的效果
+		[i:yitangFargo/DaedalusEnchant] 拥有代达罗斯魔石的效果
+		[i:yitangFargo/SulphurousEnchant] 拥有硫磺魔石的效果
+		[i:yitangFargo/FathomSwarmerEnchant] 拥有幻渊魔石的效果
+		[i:yitangFargo/UmbraphileEnchant] 拥有日影魔石的效果
+		[i:yitangFargo/TitanHeartEnchant] 拥有泰坦之心魔石的效果
+		[i:yitangFargo/AstralEnchant] 拥有星幻魔石的效果
+		[i:yitangFargo/OmegaBlueEnchant] 拥有蓝色欧米茄魔石的效果
+		[i:yitangFargo/WulfrumEnchant] 拥有钨钢魔石的效果
+		[i:yitangFargo/ReaverEnchant] 拥有掠夺者魔石的效果
+		[i:yitangFargo/PlagueEnchant] 拥有瘟疫魔石的效果
+		[i:yitangFargo/DemonShadeEnchant] 拥有魔影魔石的效果
+		[i:yitangFargo/TarragonEnchant] 拥有龙蒿魔石的效果
+		[i:yitangFargo/BrimflameEnchant] 拥有硫火魔石的效果
+		[i:yitangFargo/BloodflareEnchant] 拥有血炎魔石的效果
+		[i:yitangFargo/GodSlayerEnchant] 拥有弑神者魔石的效果
+		[i:yitangFargo/SilvaEnchant] 拥有始源林海魔石的效果
+		[i:yitangFargo/AuricEnchant] 拥有古圣金源魔石的效果
+		[i:yitangFargo/MarniteEnchant] 拥有合成岩魔石的套装效果
+		[i:yitangFargo/DesertProwlerEnchant] 拥有沙漠巡游者魔石的套装效果
+		[i:yitangFargo/LunicCorpsEnchant] 拥有雷神之锤魔石的套装效果
+		[i:yitangFargo/PrismaticEnchant] 拥有光棱魔石的套装效果
+		[i:yitangFargo/GemTechEnchant] 拥有天钻魔石的套装效果
+		[i:yitangFargo/EternityForce] 拥有永恒之力的效果
+		[i:yitangFargo/NekomiEnchantment] 拥有猫猫睡衣魔石的效果
+		[i:yitangFargo/GaiaEnchantment] 拥有盖亚魔石的效果
+		[i:yitangFargo/EridanusEnchantment] 拥有波江魔石的效果
+		[i:yitangFargo/StyxEnchantment] 拥有冥河魔石的效果
+		[i:yitangFargo/TrueMutantEnchantment] 拥有真·突变魔石的效果
+		'''
+}
+
+OtherItems: {
+	EnchantDouble:
+		'''
+		[c/E92C2C:你同时开启了此魔石的新版和旧版效果！]
+		[c/E92C2C:为防止出现严重的Bug，请只开启一个]
+		'''
+
+	AdamantiteEnchant: {
+		Old:
+			'''
+			所有武器的射弹都会分裂成两个
+			分裂的射弹只造成50%的伤害
+			获得射弹一半伤害的盔甲穿透
+			“一气化三清”
+			'''
+		New:
+			'''
+			所有武器的射弹都会分裂成两个
+			持续使用时射弹散射角度会逐渐增大
+			在不使用武器时会慢慢减少
+			分裂射弹只造成70%的伤害
+			追踪射弹只造成60%的伤害
+			射弹造成伤害的频率翻倍
+			并获得射弹一半伤害的盔甲穿透
+			“混乱”
+			'''
+	}
+
+	AncientHallowEnchant: {
+		Old:
+			'''
+			获得一个可以反弹射弹的护盾
+			召唤一柄神圣附魔剑仆从
+			其伤害受召唤伤害加成
+			“愿世人都尊你的剑与盾为圣”
+			'''
+		New:
+			'''
+			召唤一柄泰拉棱镜
+			其伤害受召唤伤害加成
+			光剑会跟随光标的方向
+			右键可用光剑进行攻击
+			用光剑切割敌对射弹会将其反弹
+			反弹有15秒的冷却时间
+			且只能切割造成伤害低于150点的射弹
+			“你有足够的力量驾驭我吗？”
+			'''
+	}
+
+	CrimsonEnchant: {
+		Old:
+			'''
+			在你受到伤害后
+			大幅提高你的生命再生速度
+			直至恢复此次受到伤害的一半生命
+			如果你在完成恢复前再次受伤
+			生命恢复的效果则会提前结束
+			“你从敌人的鲜血中重生”
+			'''
+		New:
+			'''
+			受到伤害后，若7秒内不再受击
+			则恢复此次受到伤害的一半生命
+			如果你在完成恢复前再次受伤
+			生命恢复效果则不会叠加
+			“你从敌人的鲜血中重生”
+			'''
+	}
+
+	MeteorEnchant: {
+		Old:
+			'''
+			攻击时每过8秒就会召唤一次流星雨
+			大幅提高移动速度和加速度
+			降低动量对你移动时的影响
+			移动时会产生伤害性的火焰轨迹
+			“宇宙之力构建你的毁灭力量”
+			'''
+		New:
+			'''
+			大幅提高移动速度和加速度
+			降低动量对你移动时的影响
+			穿戴时可提供照明效果
+			移动时会产生火焰轨迹
+			“宇宙之力构建你的毁灭力量”
+			'''
+	}
+
+	MythrilEnchant: {
+		Old:
+			'''
+			武器的使用速度提高15%
+			受伤会暂时取消使用速度加成
+			“你感觉武器的知识渗透进脑海中”
+			'''
+		New:
+			'''
+			在一段时间内不攻击后
+			若发动攻击则会短暂提高攻击速度
+			攻速加成会持续3秒，并在5秒后重置
+			“你感觉武器的知识渗透进你的脑海中”
+			'''
+	}
+
+	NinjaEnchant: {
+		Old:
+			'''
+			攻击速度和射弹速度翻倍
+			但造成的伤害会减半
+			增加15点射弹的盔甲穿透
+			“比肉眼所及更快”
+			'''
+		New:
+			'''
+			根据射弹速度提高射弹伤害
+			最高可达20%
+			当玩家缓慢移动时
+			射弹速度还会大幅提高
+			“等待正确的时机……”
+			'''
+	}
+
+	OrichalcumEnchant: {
+		Old:
+			'''
+			花瓣将落到你攻击的敌人身上
+			造成额外伤害和山铜中毒减益
+			伤害性减益造成的伤害乘以3
+			“自然祝福着你”
+			'''
+		New:
+			'''
+			花瓣将落到你攻击的敌人身上
+			造成额外伤害和山铜中毒减益
+			伤害性减益造成的伤害乘以2.5
+			“自然祝福着你”
+			'''
+	}
+
+	TikiEnchant: {
+		Old:
+			'''
+			召唤栏位用光后
+			你仍可以召唤临时的仆从和哨兵
+			对于额外召唤出的仆从或哨兵
+			其造成的伤害会逐级大幅降低
+			“阿库，阿库！”
+			'''
+		New:
+			'''
+			鞭打你的仆从
+			让它们在短时间内移动速度加倍
+			并且能造成暴击
+			“阿库，阿库！”
+			'''
+	}
+}
+
+NPCs: {
+	Ninja: {
+		DisplayName: 忍者
+
+		TownNPCMood: {
+			Content: 嗯，我感觉现在很满足，很不错。
+			NoHome: 我讨厌无家可归的感觉，这让我想起了一些不好的事情。
+			FarFromHome: 我离家太远了，实在是太远了……
+			LoveSpace: 啊，我非常喜欢有这么大的空间。
+			DislikeCrowded: 周围邻居们制造的噪音很难让我静下心来冥想……
+			HateCrowded: 这么多人在周围，对我来说练习投掷很不安全……
+			LikeBiome: "{BiomeName}提供了很多隐藏自己的机会，当然原始的风景也很不错。"
+			DislikeBiome: 嗯，{BiomeName}让我想起了我们曾经尝试成为忍者海盗的那次……结果一点也不好。
+			LoveNPC: 啊，{NPCName}是向导团的成员吗？我们忍者与向导之间有着深厚的友谊和联系，任何成员都是我的好朋友。
+			LikeNPC: 我觉得{NPCName}的智慧很值得尊敬。
+			DislikeNPC: "{NPCName}需要学习一些微妙的技巧……"
+			LikeNPC_Princess: "{NPCName}对忍者的方式很感兴趣。她学习的热情既有趣又真诚。"
+			Princess_LovesNPC: 当{NPCName}给我展示他酷炫的忍者技巧时，真的很有趣！
+		}
+	}
+}
+
+Common: {
+	RecipeGroups: {
+		AnyAerospec: 任意天蓝头盔
+		AnyStatigel: 任意斯塔提斯头盔
+		AnyAtaxia: 任意渊泉头盔
+		AnyVictide: 任意胜潮头盔
+		AnyDaedalus: 任意代达罗斯头盔
+		AnyReaver: 任意掠夺者头盔
+		AnyPlagueHelmet: 任意瘟疫头盔
+		AnyPlagueBreastplate: 任意瘟疫胸甲
+		AnyPlagueBoot: 任意瘟疫长靴
+		AnyTarragon: 任意龙蒿头盔
+		AnyBloodflare: 任意血炎头盔
+		AnyGodSlayer: 任意弑神者头盔
+		AnySilva: 任意始源林海头盔
+		AnyAuric: 任意古圣金源头盔
+	}
+}
+
+Projectiles: {
+	HallowSwordNew.DisplayName: 神圣之剑
+	CrimslimeMinionNew.DisplayName: 猩红史莱姆
+	CorroslimeMinionNew.DisplayName: 腐化史莱姆
+	DaedalusGolemNew.DisplayName: 水晶守卫
+	CrimsonSlimeGodNew.DisplayName: 史莱姆之神宝宝
+	CorruptionSlimeGodNew.DisplayName: 史莱姆之神宝宝
+	ShellfishNew.DisplayName: 沉沦之贝
+	PlaguebringerSummonNew.DisplayName: 小型瘟疫使者
+}
+
+Configs: {
+	ytFargoConfig: {
+		DisplayName: yitangFargo模组配置
+
+		Headers: {
+			FCRecipes: 配方相关
+			FCItems: 物品相关
+			FCNPC: NPC相关
+			FCBuff: 减益相关
+			FCBalance: 平衡相关
+		}
+
+		FargoSoulsRecipe: {
+			Label: "[i:FargowiltasSouls/BarbariansEssence] 配方还原-Fargo魂本体"
+			Tooltip:
+				'''
+				Fargo's Souls DLC模组对Fargo魂本体的一些魂饰品配方
+				进行了添加新合成材料来达到限制时期的改动，且无法通过配置关闭
+				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
+				即魂饰品的合成时期为月后
+
+				[c/FFD8A5:此选项和下一个选项在实际游玩中，应该只选择其中一项开启]
+				'''
+		}
+
+		CalamityFargoRecipe: {
+			Label: "[i:FargowiltasCrossmod/OutlawsEssence] 配方修改-适配灾法双开"
+			Tooltip:
+				'''
+				启用此选项后，对于Fargo魂本体的一些魂饰品配方
+				会对其添加新的合成材料来达到限制时期的目的
+				即魂饰品的合成时期改为神吞后或龙后
+
+				[c/FFD8A5:此选项和上一个选项在实际游玩中，应该只选择其中一项开启]
+				'''
+		}
+
+		FuckBalance: {
+			Label: "[i:FargowiltasSouls/AeolusBoots] 回调改动和削弱"
+			Tooltip:
+				'''
+				Fargo's Souls DLC模组默认对大量内容进行了平衡和削弱
+				启用此选项后，以下改动都[c/64EFFF:不会再生效]：
+				1.大量的武器和饰品被削弱了伤害
+				2.钨魔石对所有近战武器的尺寸和伤害削弱
+				3.粘液盾的凝胶球无法再造成涂油减益
+				4.天使之靴和风神之靴系列合成配方的锁时期改动
+				5.突变体后的武器配方被添加了古恒石
+				6.唤灵魔符的配方被添加了神圣晶石
+				7.所有力级饰品的配方被添加了神圣晶石
+				8.憎恶诅咒的配方被添加了圣金源锭
+				9.十字章护盾的配方被添加了暗影之魂
+				10.肉后新三矿武器的攻速和伤害削弱
+				11.精金魔石无法分裂灾厄Mod的武器射弹
+				'''
+		}
+
+		OldVanillaEnchant: {
+			Label: "[i:yitangFargo/OldVanillaEnchantIcon] 添加旧版的原版魔石效果"
+			Tooltip:
+				'''
+				启用此选项后，会在游戏中给一些原版魔石添加旧版本的效果
+				对于涉及到的原版魔石，详情可查看本Mod的模组简介
+				魔石的旧版效果在【饰品效果配置】里会标注“(旧)”字样
+				魔石的新旧效果强烈[c/E92C2C:不建议]同时开启
+				'''
+		}
+
+		OldCalamityEnchant: {
+			Label: "[i:yitangFargo/OldCalamityEnchantIcon] 添加旧版的灾厄魔石"
+			Tooltip:
+				'''
+				启用此选项后，会在游戏中添加1.3版本的旧版灾厄魔石
+				这些魔石和其上级饰品的特点是——
+				直接缝合了灾厄Mod的[c/F2E635:盔甲套装效果]和[c/F2E635:饰品效果]
+				不同的是，在本Mod内经过平衡，没有了之前旧版本的数值加成，
+				并且对合成配方和魔石效果进行了适当调整，以适配1.4的版本
+				'''
+		}
+
+		FullCalamityEnchant: {
+			Label: "[i:yitangFargo/FullCalamityEnchantIcon] 完整的旧版灾厄魔石效果"
+			Tooltip:
+				'''
+				[c/f54c4c:当前版本尚未实现]
+				启用此选项后
+				每个旧版灾厄魔石会拥有完整的灾厄盔甲套装效果
+				即套装效果里的数值加成也会添加进魔石里，如同1.3版本
+				可能会影响平衡，请酌情开启
+				'''
+		}
+
+		FCNPC: {
+			Label: "[i:yitangFargo/FCNPCIcon] 添加新的城镇NPC"
+			Tooltip:
+				'''
+				启用此选项后，会在游戏中添加一个售卖魂石的城镇NPC
+				原版魔石的售卖条件为击败对应月后英灵
+				灾厄魔石是当前时期会售卖上一时期可制作的魔石
+				对于魂和精华饰品，若处于正确或合适的时期，
+				背包中有任意一个会解锁其他职业的饰品，
+				也会根据物品栏内拥有的上级魂直接售卖下级魂
+
+				NPC的生成条件为——物品栏任意位置有[i:yitangFargo/FCNPCIcon]忍者魔石、
+				或在饰品栏装备忍者魔石的情况下，击败[i:SlimeCrown]史莱姆王
+				'''
+		}
+
+		NullCurseBuff: {
+			Label: "[i:FargowiltasSouls/GalacticGlobe] 移除无效诅咒减益"
+			Tooltip:
+				'''
+				正常情况下，如果你是单一职业开荒，那么面对永恒月总时，
+				你总是要被迫不得不用其他三个职业的武器来战斗
+				除非在轮换到其他职业时，你选择不攻击，
+				但这样会让战斗变得艰难并延长了整体战斗时间
+
+				启用这个选项后，会移除月总战中限制职业伤害的减益
+				这样主要是方便限制职业开荒这种玩法的情况
+				如果你是散人开荒，可以选择关闭这个选项
+				'''
+		}
+
+		NoBossDebuff: {
+			Label: "[i:FargowiltasSouls/MutantMask] 移除“驾到”减益"
+			Tooltip:
+				'''
+				启用此选项后，以下减益会被移除：
+				戴薇安驾到、憎恶驾到
+				突变驾到、灾厄驾到
+				'''
+		}
+	}
+}
