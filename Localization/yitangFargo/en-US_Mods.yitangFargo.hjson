@@ -1,13 +1,4 @@
 Toggler: {
-	AdamantiteEffectNew: Adamantite(Old)
-	AncientHallowMinionNew: AncientHallowMinion(Old)
-	AncientHallowShieldNew: AncientHallowShield(Old)
-	CrimsonEffectNew: Crimson(Old)
-	MeteorEffectNew: Meteor(Old)
-	MythrilEffectNew: Mythril(Old)
-	NinjaEffectNew: Ninja(Old)
-	OrichalcumEffectNew: Orichalcum(Old)
-	TikiEffectNew: Tiki(Old)
 	AnnihilationHeader: Annihilation Force
 	AerospecEffect: Aerospec Armor Bonus
 	AerospecEValkyrie: Aerospec Valkyrie
@@ -111,7 +102,6 @@ Toggler: {
 	StyxWand: Styx Wand
 	TrueMutantEffect: TrueMutant Armor Bonus
 	TrueMutantEye: TrueMutant Eye
-	BrimstoneWitchHeader: Brand of the Witch
 	BFrostFlare: Frost Flare
 	CLeviathanAmbergris: Leviathan Ambergris
 	DBlunderBooster: Blunder Booster
@@ -129,20 +119,9 @@ Toggler: {
 	ShieldHighRulerEffect: Shield of High Ruler
 	StatisVoidSashEffect: Statis Void Sash
 	AbyssalDivingSuitEffect: Abyssal Diving Suit
-	UniverseSpeedNewEffect: Universe Soul Speed
 }
 
 Buffs: {
-	CrimsonRegenNewBuff: {
-		DisplayName: Crimson Regen New Buff
-		Description: Mods.yitangFargo.Buffs.CrimsonRegenNewBuff.Description
-	}
-
-	HallowCooldownNewBuff: {
-		DisplayName: Hallow Cooldown New Buff
-		Description: Mods.yitangFargo.Buffs.HallowCooldownNewBuff.Description
-	}
-
 	NullCurseNoBuff: {
 		DisplayName: Null Curse No Buff
 		Description: Mods.yitangFargo.Buffs.NullCurseNoBuff.Description
@@ -345,31 +324,6 @@ Items: {
 		GemTechBonus: ""
 	}
 
-	EridanusEnchantment: {
-		DisplayName: Eridanus Enchantment
-		Tooltip: ""
-	}
-
-	GaiaEnchantment: {
-		DisplayName: Gaia Enchantment
-		Tooltip: ""
-	}
-
-	NekomiEnchantment: {
-		DisplayName: Nekomi Enchantment
-		Tooltip: ""
-	}
-
-	StyxEnchantment: {
-		DisplayName: Styx Enchantment
-		Tooltip: ""
-	}
-
-	TrueMutantEnchantment: {
-		DisplayName: True Mutant Enchantment
-		Tooltip: ""
-	}
-
 	AnnihilationForce: {
 		DisplayName: Annihilation Force
 		Tooltip: ""
@@ -395,110 +349,8 @@ Items: {
 		Tooltip: ""
 	}
 
-	BrandoftheWitchNew: {
-		DisplayName: Brand of the Witch New
-		Tooltip: "[BrandoftheWitchEffects]"
-		BrandoftheWitchFargo: ""
-		BrandoftheWitchCalamity: ""
-	}
-
-	ColossusSoulNew: {
-		DisplayName: Colossus Soul New
-		Tooltip: "[ColossusEffects]"
-		ColossusFargo: ""
-		ColossusCalamity: ""
-	}
-
-	FlightMasterySoulNew: {
-		DisplayName: Flight Mastery Soul New
-		Tooltip: ""
-	}
-
-	SupersonicSoulNew: {
-		DisplayName: Supersonic Soul New
-		Tooltip: "[SupersonicEffects]"
-		SupersonicFargo: ""
-		SupersonicCalamity: ""
-	}
-
-	TrawlerSoulNew: {
-		DisplayName: Trawler Soul New
-		Tooltip: "[TrawlerEffects]"
-		TrawlerFargo: ""
-		TrawlerCalamity: ""
-	}
-
-	WorldShaperSoulNew: {
-		DisplayName: World Shaper Soul New
-		Tooltip: ""
-	}
-
-	ArchWizardsSoulNew: {
-		DisplayName: Arch Wizards Soul New
-		Tooltip: ""
-	}
-
-	BerserkerSoulNew: {
-		DisplayName: Berserker Soul New
-		Tooltip: "[BerserkerEffects]"
-		BerserkerFargo: ""
-		BerserkerCalamity: ""
-	}
-
-	ConjuristsSoulNew: {
-		DisplayName: Conjurists Soul New
-		Tooltip: ""
-	}
-
-	SnipersSoulNew: {
-		DisplayName: Snipers Soul New
-		Tooltip: "[SnipersEffects]"
-		SnipersFargo: ""
-		SnipersCalamity: ""
-	}
-
-	VagabondsSoulNew: {
-		DisplayName: Vagabonds Soul New
-		Tooltip: ""
-	}
-
-	UniverseSoulNew: {
-		DisplayName: Universe Soul New
-		Tooltip: ""
-	}
-
-	DimensionSoulNew: {
-		DisplayName: Dimension Soul New
-		Tooltip: ""
-	}
-
-	TerrariaSoulNew: {
-		DisplayName: Terraria Soul New
-		Tooltip: ""
-	}
-
-	MasochistSoulNew: {
-		DisplayName: Masochist Soul New
-		Tooltip: ""
-	}
-
 	CalamitySoul: {
 		DisplayName: Calamity Soul
-		Tooltip: ""
-	}
-
-	EternityForce: {
-		DisplayName: Eternity Force
-		Tooltip: ""
-	}
-
-	EternitySoulNew: {
-		DisplayName: Eternity Soul New
-		Tooltip: ""
-	}
-
-	CelestialSeal: {
-		DisplayName: Celestial Seal
 		Tooltip: ""
 	}
 
@@ -520,60 +372,6 @@ Items: {
 	FCNPCIcon: {
 		DisplayName: F C N P C Icon
 		Tooltip: ""
-	}
-}
-
-EternitySoulNewExtra: {
-	Honor: Honor
-	ESCommonTips: Additionally grants:
-	AllLines:
-		'''
-		and so on...
-		etc...
-		'''
-}
-
-OtherItems: {
-	EnchantDouble: ""
-
-	AdamantiteEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	AncientHallowEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	CrimsonEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	MeteorEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	MythrilEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	NinjaEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	OrichalcumEnchant: {
-		Old: ""
-		New: ""
-	}
-
-	TikiEnchant: {
-		Old: ""
-		New: ""
 	}
 }
 
@@ -619,7 +417,6 @@ Common: {
 }
 
 Projectiles: {
-	HallowSwordNew.DisplayName: Hallow Sword New
 	CrimslimeMinionNew.DisplayName: Crimslime Minion New
 	CorroslimeMinionNew.DisplayName: Corroslime Minion New
 	DaedalusGolemNew.DisplayName: Daedalus Golem New
