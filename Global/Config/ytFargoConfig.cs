@@ -32,7 +32,7 @@ namespace yitangFargo.Global.Config
         public bool OldCalamityEnchant { get; set; }
 
         [DefaultValue(false)]
-        public bool FullCalamityEnchant { get; }
+        public bool FullCalamityEnchant { get; set; }
 
 		[Header("FCNPC")]
         [DefaultValue(true)]

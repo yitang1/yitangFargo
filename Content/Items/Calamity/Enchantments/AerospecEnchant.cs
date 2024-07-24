@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using CalamityMod;
@@ -16,11 +16,13 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Global.GlobalItems;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class AerospecEnchant : BaseEnchant
-    {
+    public class AerospecEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(190, 174, 120);
 
         public override void SetStaticDefaults()
@@ -45,8 +47,19 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //天蓝盔甲
             if (player.HasEffect<AerospecEffect>())
             {
-                player.Calamity().aeroSet = true;
-                player.noFallDmg = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().aeroSet = true;
+					player.noFallDmg = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<AerospecHelm>().UpdateArmorSet(player);
+					ModContent.GetInstance<AerospecHood>().UpdateArmorSet(player);
+					ModContent.GetInstance<AerospecHat>().UpdateArmorSet(player);
+					ModContent.GetInstance<AerospecHelmet>().UpdateArmorSet(player);
+					ModContent.GetInstance<AerospecHeadgear>().UpdateArmorSet(player);
+				}
             }
             //天武神
             if (player.HasEffect<AerospecEValkyrie>())
@@ -65,7 +78,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AerospecFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AerospecFullEffects]", this.GetLocalizedValue("AerospecFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyAerospec")
