@@ -1,7 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.SnowRuffian;
@@ -10,11 +11,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class SnowRuffianEnchant : BaseEnchant
-    {
+    public class SnowRuffianEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(138, 170, 182);
         private bool shouldBoost = false;
 
@@ -39,23 +42,29 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //雪境暴徒盔甲
             if (player.HasEffect<DaedalusSnowEffect>())
             {
-                player.Calamity().snowRuffianSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().snowRuffianSet = true;
 
-                if (player.controlJump)
-                {
-                    player.noFallDmg = true;
-                    player.UpdateJumpHeight();
-                    if (shouldBoost && !player.mount.Active)
-                    {
-                        player.velocity.X *= 1.1f;
-                        shouldBoost = false;
-                    }
-
-                }
-                else if (!shouldBoost && player.velocity.Y == 0)
-                {
-                    shouldBoost = true;
-                }
+					if (player.controlJump)
+					{
+						player.noFallDmg = true;
+						player.UpdateJumpHeight();
+						if (shouldBoost && !player.mount.Active)
+						{
+							player.velocity.X *= 1.1f;
+							shouldBoost = false;
+						}
+					}
+					else if (!shouldBoost && player.velocity.Y == 0)
+					{
+						shouldBoost = true;
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<SnowRuffianMask>().UpdateArmorSet(player);
+				}
             }
             //潜遁者宝石
             if (player.HasEffect<DaedalusSnowJewel>())
@@ -69,7 +78,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[SnowRuffianFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[SnowRuffianFullEffects]", this.GetLocalizedValue("SnowRuffianFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<SnowRuffianMask>()
