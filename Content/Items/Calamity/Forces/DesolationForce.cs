@@ -21,10 +21,10 @@ namespace yitangFargo.Content.Items.Calamity.Forces
             ModContent.GetInstance<MolluskEnchant>().UpdateAccessory(player, hideVisual);
             //代达罗斯魔石
             ModContent.GetInstance<DaedalusEnchant>().UpdateAccessory(player, hideVisual);
-            //幻渊魔石
-            ModContent.GetInstance<FathomSwarmerEnchant>().UpdateAccessory(player, hideVisual);
             //日影魔石
             ModContent.GetInstance<UmbraphileEnchant>().UpdateAccessory(player, hideVisual);
+            //幻渊魔石
+            ModContent.GetInstance<FathomSwarmerEnchant>().UpdateAccessory(player, hideVisual);
             //星幻魔石
             ModContent.GetInstance<AstralEnchant>().UpdateAccessory(player, hideVisual);
             //蓝色欧米茄魔石
@@ -36,8 +36,8 @@ namespace yitangFargo.Content.Items.Calamity.Forces
             CreateRecipe()
                 .AddIngredient<MolluskEnchant>()
                 .AddIngredient<DaedalusEnchant>()
-                .AddIngredient<FathomSwarmerEnchant>()
                 .AddIngredient<UmbraphileEnchant>()
+                .AddIngredient<FathomSwarmerEnchant>()
                 .AddIngredient<AstralEnchant>()
                 .AddIngredient<OmegaBlueEnchant>()
                 .AddTile(ModContent.Find<ModTile>("Fargowiltas", "CrucibleCosmosSheet"))
