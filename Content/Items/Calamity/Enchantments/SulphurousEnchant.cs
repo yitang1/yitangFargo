@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.ExtraJumps;
 using CalamityMod.Items.Accessories;
@@ -11,11 +12,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class SulphurousEnchant : BaseEnchant
-    {
+    public class SulphurousEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(173, 142, 91);
 
         public override void SetStaticDefaults()
@@ -39,9 +42,16 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //硫磺盔甲
             if (player.HasEffect<FathomSulphurousEffect>())
             {
-                player.Calamity().sulphurSet = true;
-                player.GetJumpState<SulphurJump>().Enable();
-                player.ignoreWater = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().sulphurSet = true;
+					player.GetJumpState<SulphurJump>().Enable();
+					player.ignoreWater = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<SulphurousHelmet>().UpdateArmorSet(player);
+				}
             }
             //沙尘披风
             if (player.HasEffect<FathomSulphurousSand>())
@@ -55,7 +65,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[SulphurousFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[SulphurousFullEffects]", this.GetLocalizedValue("SulphurousFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<SulphurousHelmet>()
