@@ -1,7 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.CalPlayer;
 using CalamityMod.Items.Accessories;
@@ -11,11 +12,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class FathomSwarmerEnchant : BaseEnchant
-    {
+    public class FathomSwarmerEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(121, 192, 196);
 
         public override void SetStaticDefaults()
@@ -41,27 +44,34 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<FathomREffect>())
             {
-                calamityPlayer.fathomSwarmer = true;
-                calamityPlayer.fathomSwarmerBreastplate = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.fathomSwarmer = true;
+					calamityPlayer.fathomSwarmerBreastplate = true;
 
-                player.spikedBoots = 2;
-                player.ignoreWater = true;
-                if (player.breath <= player.breathMax + 2 && !calamityPlayer.ZoneAbyss)
-                {
-                    player.breath = player.breathMax + 3;
-                }
-                if (Collision.DrownCollision(player.position, player.width, player.height, player.gravDir))
-                {
-                    player.GetDamage<SummonDamageClass>() += 0.3f;
-                    player.statDefense += 10;
-                    player.lifeRegen += 5;
-                    player.moveSpeed += 0.4f;
-                    Lighting.AddLight((int)player.Center.X / 16, (int)player.Center.Y / 16, 0.3f, 0.9f, 1.35f);
-                }
-                if (player.wingTime <= 0)
-                {
-                    player.accFlipper = true;
-                }
+					player.spikedBoots = 2;
+					player.ignoreWater = true;
+					if (player.breath <= player.breathMax + 2 && !calamityPlayer.ZoneAbyss)
+					{
+						player.breath = player.breathMax + 3;
+					}
+					if (Collision.DrownCollision(player.position, player.width, player.height, player.gravDir))
+					{
+						player.GetDamage<SummonDamageClass>() += 0.3f;
+						player.statDefense += 10;
+						player.lifeRegen += 5;
+						player.moveSpeed += 0.4f;
+						Lighting.AddLight((int)player.Center.X / 16, (int)player.Center.Y / 16, 0.3f, 0.9f, 1.35f);
+					}
+					if (player.wingTime <= 0)
+					{
+						player.accFlipper = true;
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<FathomSwarmerVisage>().UpdateArmorSet(player);
+				}
             }
             //流明护身符
             if (player.HasEffect<FathomRLumenAmulet>())
@@ -75,7 +85,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[FathomFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[FathomFullEffects]", this.GetLocalizedValue("FathomFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<FathomSwarmerVisage>()
