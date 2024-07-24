@@ -1,4 +1,5 @@
-### yitangFargo **Lite** 💚
+### ~~yitangFargo 💚~~
+### yitangFargo Lite 💚
 这是一个tModLoader的模组（Mod）。  
 ~~此模组开发时的定位是围绕 **“Fargo Mod”** ，添加了一些提高游戏体验的内容和功能。  
 还添加了旧版本的灾厄魔石，并适配 **“灾法双开”** 的玩法。~~
@@ -6,6 +7,7 @@
 #### 此模组目前仅拥有以下内容：
 *  添加了旧版灾厄魔石。
 *  添加了售卖魂石的城镇NPC。
+*  添加了一些合成配方。
 
 #### Mod下载：
 *  点击这里👉 [yitangFargo.tmod是Mod文件](https://github.com/yitang1/yitangFargo/releases)
