@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -14,11 +14,12 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class VictideEnchant : BaseEnchant
-    {
+    public class VictideEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(156, 192, 202);
 
         public override void SetStaticDefaults()
@@ -43,8 +44,19 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //胜潮盔甲
             if (player.HasEffect<MolluskVictideEffect>())
             {
-                player.Calamity().victideSet = true;
-                player.ignoreWater = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().victideSet = true;
+					player.ignoreWater = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<VictideHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<VictideHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<VictideHeadMagic>().UpdateArmorSet(player);
+					ModContent.GetInstance<VictideHeadSummon>().UpdateArmorSet(player);
+					ModContent.GetInstance<VictideHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //海蜗牛
             if (player.HasEffect<MolluskVictideESnail>())
@@ -79,7 +91,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[VictideFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[VictideFullEffects]", this.GetLocalizedValue("VictideFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyVictide")
