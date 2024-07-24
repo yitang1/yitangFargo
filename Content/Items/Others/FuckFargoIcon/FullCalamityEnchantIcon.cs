@@ -7,7 +7,7 @@ namespace yitangFargo.Content.Items.Others.FuckFargoIcon
 {
 	public class FullCalamityEnchantIcon : ModItem
 	{
-		public override string Texture => "yitangFargo/Content/Items/Calamity/Enchantments/MolluskEnchant";
+		public override string Texture => "yitangFargo/Content/Items/Calamity/Enchantments/AuricEnchant";
 
 		public override void SetDefaults()
 		{

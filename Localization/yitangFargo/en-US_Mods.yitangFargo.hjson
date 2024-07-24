@@ -172,26 +172,30 @@ ContentTexts: {
 Items: {
 	AerospecEnchant: {
 		DisplayName: Aerospec Enchant
-		Tooltip: ""
-	}
-
-	AtaxiaEnchant: {
-		DisplayName: Ataxia Enchant
-		Tooltip: ""
-	}
-
-	FearmongerEnchant: {
-		DisplayName: Fearmonger Enchant
-		Tooltip: ""
+		Tooltip: "[AerospecFullEffects]"
+		AerospecFullTooltip: ""
 	}
 
 	StatigelEnchant: {
 		DisplayName: Statigel Enchant
-		Tooltip: ""
+		Tooltip: "[StatigelFullEffects]"
+		StatigelFullTooltip: ""
+	}
+
+	AtaxiaEnchant: {
+		DisplayName: Ataxia Enchant
+		Tooltip: "[AtaxiaFullEffects]"
+		AtaxiaFullTooltip: ""
 	}
 
 	XerocEnchant: {
 		DisplayName: Xeroc Enchant
+		Tooltip: "[XerocFullEffects]"
+		XerocFullTooltip: ""
+	}
+
+	FearmongerEnchant: {
+		DisplayName: Fearmonger Enchant
 		Tooltip: ""
 	}
 

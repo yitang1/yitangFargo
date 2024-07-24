@@ -15,6 +15,7 @@ using yitangFargo.Common;
 using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Forces;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Global.GlobalItems
 {
@@ -82,17 +83,17 @@ namespace yitangFargo.Global.GlobalItems
 			}
 		}
 
-        //Boss或敌怪战利品
-        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
-        {
-            //if (item.type == ItemID.WallOfFleshBossBag)
-            //{
-            //    itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemID.DemonHeart));
-            //}
-            if(item.type == ItemID.MoonLordBossBag)
-            {
-                itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsMasterMode(), ModContent.ItemType<CelestialOnion>()));
-            }
-        }
-    }
+		//Boss或敌怪战利品
+		public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
+		{
+			//if (item.type == ItemID.WallOfFleshBossBag)
+			//{
+			//    itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsHardmode(), ItemID.DemonHeart));
+			//}
+			if (item.type == ItemID.MoonLordBossBag)
+			{
+				itemLoot.Add(ItemDropRule.ByCondition(new Conditions.IsMasterMode(), ModContent.ItemType<CelestialOnion>()));
+			}
+		}
+	}
 }

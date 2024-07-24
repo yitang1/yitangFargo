@@ -1,7 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Buffs.StatBuffs;
 using CalamityMod.Items.Accessories;
@@ -11,12 +12,14 @@ using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class XerocEnchant : BaseEnchant
-    {
+    public class XerocEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(129, 91, 101);
 
         public override void SetStaticDefaults()
@@ -40,13 +43,20 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //皇天盔甲
             if (player.HasEffect<XerocEffect>())
             {
-                player.Calamity().xerocSet = true;
-                if (player.statLife <= (int)(player.statLifeMax2 * 0.5))
-                {
-                    player.AddBuff(ModContent.BuffType<EmpyreanWrath>(), 2);
-                    player.AddBuff(ModContent.BuffType<EmpyreanRage>(), 2);
-                }
-            }
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().xerocSet = true;
+					if (player.statLife <= (int)(player.statLifeMax2 * 0.5))
+					{
+						player.AddBuff(ModContent.BuffType<EmpyreanWrath>(), 2);
+						player.AddBuff(ModContent.BuffType<EmpyreanRage>(), 2);
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<EmpyreanMask>().UpdateArmorSet(player);
+				}
+			}
             //虚空掠夺者
             if (player.HasEffect<XerocEtherealExtorter>())
             {
@@ -59,7 +69,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[XerocFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[XerocFullEffects]", this.GetLocalizedValue("XerocFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<EmpyreanMask>()
