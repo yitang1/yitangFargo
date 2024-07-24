@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -14,11 +14,12 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class TarragonEnchant : BaseEnchant
-    {
+    public class TarragonEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(199, 156, 75);
 
         public override void SetStaticDefaults()
@@ -41,12 +42,23 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<TarragonEffect>())
             {
-                calamityPlayer.tarraSet = true;
-                calamityPlayer.tarraMelee = true;
-                calamityPlayer.tarraRanged = true;
-                calamityPlayer.tarraMage = true;
-                calamityPlayer.tarraSummon = true;
-                calamityPlayer.tarraThrowing = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.tarraSet = true;
+					calamityPlayer.tarraMelee = true;
+					calamityPlayer.tarraRanged = true;
+					calamityPlayer.tarraMage = true;
+					calamityPlayer.tarraSummon = true;
+					calamityPlayer.tarraThrowing = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<TarragonHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<TarragonHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<TarragonHeadMagic>().UpdateArmorSet(player);
+					ModContent.GetInstance<TarragonHeadSummon>().UpdateArmorSet(player);
+					ModContent.GetInstance<TarragonHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //蚀日尊戒 (这两个全是正面添加数值的饰品效果，就直接默认生效好了)
             ModContent.GetInstance<DarkSunRing>().UpdateAccessory(player, hideVisual);
@@ -54,7 +66,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             ModContent.GetInstance<BadgeofBravery>().UpdateAccessory(player, hideVisual);
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[XeroFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[XeroFullEffects]", this.GetLocalizedValue("XeroFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyTarragon")

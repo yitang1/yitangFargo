@@ -658,41 +658,6 @@ namespace yitangFargo.Global
             {
                 Recipe recipe = Main.recipe[i];
 
-                #region 移除Fargo魂本体的合成配方
-                //移除Fargo魂Mod一些魂饰品的合成配方
-                if (recipe.createItem.type == ItemType<EternitySoul>()
-                    || recipe.createItem.type == ItemType<UniverseSoul>()
-                    || recipe.createItem.type == ItemType<DimensionSoul>()
-                    || recipe.createItem.type == ItemType<MasochistSoul>()
-                    || recipe.createItem.type == ItemType<TerrariaSoul>()
-                    || recipe.createItem.type == ItemType<ColossusSoul>()
-                    || recipe.createItem.type == ItemType<SupersonicSoul>()
-                    || recipe.createItem.type == ItemType<FlightMasterySoul>()
-                    || recipe.createItem.type == ItemType<TrawlerSoul>()
-                    || recipe.createItem.type == ItemType<WorldShaperSoul>()
-                    || recipe.createItem.type == ItemType<BerserkerSoul>()
-                    || recipe.createItem.type == ItemType<SnipersSoul>()
-                    || recipe.createItem.type == ItemType<ArchWizardsSoul>()
-                    || recipe.createItem.type == ItemType<ConjuristsSoul>()
-                    || recipe.createItem.type == ItemType<VagabondsSoul>()
-                    || recipe.createItem.type == ItemType<BrandoftheBrimstoneWitch>())
-                {
-                    recipe.DisableRecipe();
-                }
-                #endregion
-
-                #region 配方修改-适配灾法双开
-                if (ytFargoConfig.Instance.CalamityFargoRecipe)
-                {
-                    //一级魂的配方添加魔影锭
-                    if (recipe.HasResult<UniverseSoulNew>() || recipe.HasResult<DimensionSoulNew>()
-                        || recipe.HasResult<TerrariaSoulNew>() || recipe.HasResult<MasochistSoulNew>())
-                    {
-                        recipe.AddIngredient<ShadowspecBar>(5);
-                    }
-                }
-                #endregion
-
                 #region 添加旧版灾厄魔石
                 if (!ytFargoConfig.Instance.OldCalamityEnchant)
                 {
@@ -744,7 +709,8 @@ namespace yitangFargo.Global
                     }
                 }
                 #endregion
-            }
+
+			}
         }
     }
 }
