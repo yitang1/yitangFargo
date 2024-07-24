@@ -1,6 +1,6 @@
 displayName = yitangFargo Lite
 author = yitang
-version = 0.4.1.7
+version = 0.4.1.7.
 modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod
 weakReferences =
 homepage = https://github.com/yitang1/yitangFargo
