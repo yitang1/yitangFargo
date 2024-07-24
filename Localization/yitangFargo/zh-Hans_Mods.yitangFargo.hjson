@@ -361,7 +361,7 @@ Items: {
 			当你被击中时会释放水晶碎片
 			你有10%的几率吸收一次接触或射弹伤害
 			当你成功吸收了一次攻击后
-			你将恢复相当于这次攻击1/2的生命值
+			将恢复相当于这次攻击1/2的生命值
 			悬浮在头顶的代达罗斯水晶会保护你
 			盗贼射弹飞行时会释放水晶碎片
 			召唤一个代达罗斯守卫保护你
@@ -379,36 +379,40 @@ Items: {
 			'''
 	}
 
-	TitanHeartEnchant: {
-		DisplayName: 泰坦之心魔石
+	UmbraphileEnchant: {
+		DisplayName: 日影魔石
 		Tooltip:
 			'''
-			潜伏攻击会造成幻星爆炸
-			潜伏攻击造成的击退翻倍
-			拥有大熊座雀鲷的效果
-			无降低移速的负面效果
-			“漆黑的苍穹笼罩着你……”
+			[UmbraphileFullEffects]
+			盗贼武器击中敌人时有几率造成爆炸
+			潜伏攻击总是能造成爆炸
+			拥有吸血鬼符咒和精准手套的效果
+			“漫步于暗日之影下”
 			[c/10E279:旧版物品]
 			'''
+		UmbraphileFullTooltip: 最大潜行值增加110点
 	}
 
-	AstralEnchant: {
-		DisplayName: 星幻魔石
+	SulphurousEnchant: {
+		DisplayName: 硫磺魔石
 		Tooltip:
 			'''
-			对敌人造成暴击时会降下落星
-			此效果有1秒的冷却时间
-			拥有星神隐壳和引力靴的效果
-			拥有泰坦之心魔石的全部效果
-			“幻星感染已经吞噬了你……”
+			[SulphurousFullEffects]
+			攻击敌人或被敌人攻击时，对其造成中毒减益
+			获得二连跳的能力，跳跃时生成硫磺泡泡
+			提升水下移动能力，降低硫磺海水的威胁性
+			拥有沙尘披风和腐蚀脊椎的效果
+			“你仿佛和硫磺海融为一体”
 			[c/10E279:旧版物品]
 			'''
+		SulphurousFullTooltip: 最大潜行值增加65点
 	}
 
 	FathomSwarmerEnchant: {
 		DisplayName: 幻渊魔石
 		Tooltip:
 			'''
+			[FathomFullEffects]
 			浸没在液体中时，召唤伤害提高30%、
 			增加10点防御和2.5点生命再生速度、
 			并且提高40%的移动速度
@@ -421,12 +425,52 @@ Items: {
 			“深渊正凝视着你”
 			[c/10E279:旧版物品]
 			'''
+		FathomFullTooltip: 召唤伤害提高10%，仆从数量上限提高2个
+	}
+
+	TitanHeartEnchant: {
+		DisplayName: 泰坦之心魔石
+		Tooltip:
+			'''
+			[TitanHeartFullEffects]
+			潜伏攻击会造成幻星爆炸
+			潜伏攻击造成的击退翻倍
+			拥有大熊座雀鲷的效果
+			无降低移速的负面效果
+			“漆黑的苍穹笼罩着你……”
+			[c/10E279:旧版物品]
+			'''
+		TitanHeartFullTooltip:
+			'''
+			盗贼伤害和击退力提高15%
+			最大潜行值增加100点，免疫击退
+			'''
+	}
+
+	AstralEnchant: {
+		DisplayName: 星幻魔石
+		Tooltip:
+			'''
+			[AstralFullEffects]
+			对敌人造成暴击时会降下落星
+			此效果有1秒的冷却时间
+			拥有星神隐壳和引力靴的效果
+			拥有泰坦之心魔石的全部效果
+			“幻星感染已经吞噬了你……”
+			[c/10E279:旧版物品]
+			'''
+		AstralFullTooltip:
+			'''
+			伤害提高35%，暴击率提高25%
+			移动速度提高5%，仆从数量上限提高3个
+			'''
 	}
 
 	OmegaBlueEnchant: {
 		DisplayName: 蓝色欧米茄魔石
 		Tooltip:
 			'''
+			[OmegaFullEffects]
 			触手会攻击附近的敌人，偷取生命值治疗你
 			按下“套装奖励”键进入5秒的深渊狂乱状态
 			期间能大幅提高你的伤害和暴击率
@@ -436,47 +480,56 @@ Items: {
 			“深渊的黑暗笼罩着你……”
 			[c/10E279:旧版物品]
 			'''
-	}
-
-	SulphurousEnchant: {
-		DisplayName: 硫磺魔石
-		Tooltip:
+		OmegaFullTooltip:
 			'''
-			攻击敌人或被敌人攻击时，对其造成中毒减益
-			获得二连跳的能力，跳跃时生成硫磺泡泡
-			提升水下移动能力，降低硫磺海水的威胁性
-			拥有沙尘披风和腐蚀脊椎的效果
-			“你仿佛和硫磺海融为一体”
-			[c/10E279:旧版物品]
+			增加15点盔甲穿透，伤害和暴击率提高10%
+			仆从数量上限提高2个
 			'''
 	}
 
-	UmbraphileEnchant: {
-		DisplayName: 日影魔石
+	WulfrumEnchant: {
+		DisplayName: 钨钢魔石
 		Tooltip:
 			'''
-			盗贼武器击中敌人时有几率造成爆炸
-			潜伏攻击总是能造成爆炸
-			拥有吸血鬼符咒和精准手套的效果
-			“漫步于暗日之影下”
+			[WulfrumFullEffects]
+			增加3点防御
+			生命值低于50%时增加10点防御
+			拥有钨钢屏障生成仪和气功念珠的效果
+			“不要与钨魔石弄混了……”
 			[c/10E279:旧版物品]
+			'''
+		WulfrumFullTooltip:
+			'''
+			敌人更有可能以你为目标
+			仆从数量上限提高1个
+			最大潜行值增加50点
 			'''
 	}
 
-	DemonShadeEnchant: {
-		DisplayName: 魔影魔石
+	ReaverEnchant: {
+		DisplayName: 掠夺者魔石
 		Tooltip:
 			'''
-			受伤时发射暗影射线和恶魔镰刀
-			召唤一只友善的红恶魔为你战斗
-			按下“套装奖励”键，在10秒内：
-			以黑魔法咒语激怒周围的敌人
-			这道咒语使敌人受到2.25倍的伤害
-			同时敌人对你会造成1.25倍的伤害
-			拥有圣天誓盟、渎神魂晶
-			以及幻灭心元石的效果
-			“恶魔之力于你身上显形……”
+			[ReaverFullEffects]
+			高亮显示附近的所有宝藏
+			提升物品拾取距离和物块放置距离
+			在水下挖掘物块时恢复氧气
+			召唤一个掠夺者毒球照亮周围区域
+			免疫掉落伤害并允许自动跳跃
+			降低冲刺类效果的冷却时间
+			受到持续性伤害减益时，生命恢复的损失降低20%
+			所有攻击都能偷取生命值，并会提高生命再生速度
+			敌人会受到你的反伤效果，受伤时会召唤一束荆棘
+			当你受伤时还会获得掠夺者之怒增益
+			拥有恼怒项链和绽花石的效果
+			“你的敌人将生不如死……”
 			[c/10E279:旧版物品]
+			'''
+		ReaverFullTooltip:
+			'''
+			增加10点防御和1.5点生命再生速度
+			但移动速度与飞行时间降低30%，敌人更有可能以你为目标
+			飞行时间和水平飞行速度提高10%，钩爪的射速和牵引速度提高10%
 			'''
 	}
 
@@ -497,34 +550,19 @@ Items: {
 			'''
 	}
 
-	ReaverEnchant: {
-		DisplayName: 掠夺者魔石
+	DemonShadeEnchant: {
+		DisplayName: 魔影魔石
 		Tooltip:
 			'''
-			高亮显示附近的所有宝藏
-			提升物品拾取距离和物块放置距离
-			在水下挖掘物块时恢复氧气
-			召唤一个掠夺者毒球照亮周围区域
-			免疫掉落伤害并允许自动跳跃
-			降低冲刺类效果的冷却时间
-			受到持续性伤害减益时，生命恢复的损失降低20%
-			所有攻击都能偷取生命值，并会提高生命再生速度
-			敌人会受到你的反伤效果，受伤时会召唤一束荆棘
-			当你受伤时还会获得掠夺者之怒增益
-			拥有恼怒项链和绽花石的效果
-			“你的敌人将生不如死……”
-			[c/10E279:旧版物品]
-			'''
-	}
-
-	WulfrumEnchant: {
-		DisplayName: 钨钢魔石
-		Tooltip:
-			'''
-			增加3点防御
-			生命值低于50%时增加10点防御
-			拥有钨钢屏障生成仪和气功念珠的效果
-			“不要与钨魔石弄混了……”
+			受伤时发射暗影射线和恶魔镰刀
+			召唤一只友善的红恶魔为你战斗
+			按下“套装奖励”键，在10秒内：
+			以黑魔法咒语激怒周围的敌人
+			这道咒语使敌人受到2.25倍的伤害
+			同时敌人对你会造成1.25倍的伤害
+			拥有圣天誓盟、渎神魂晶
+			以及幻灭心元石的效果
+			“恶魔之力于你身上显形……”
 			[c/10E279:旧版物品]
 			'''
 	}
@@ -834,8 +872,8 @@ Items: {
 			[i:yitangFargo/SulphurousEnchant][i:yitangFargo/FathomSwarmerEnchant] 拥有沙尘披风、腐蚀脊椎、流明护身符和变压器的效果
 			[i:yitangFargo/SnowRuffianEnchant] 拥有潜遁者宝石和腐烂犬齿的效果
 			[i:yitangFargo/DaedalusEnchant] 拥有永冻秘药和寒冰屏障的效果，水晶守卫会保护你
-			[i:yitangFargo/TitanHeartEnchant][i:yitangFargo/AstralEnchant] 拥有大熊座雀鲷、星神隐壳和引力靴的效果
 			[i:yitangFargo/UmbraphileEnchant] 拥有吸血鬼符咒和精准手套的效果
+			[i:yitangFargo/TitanHeartEnchant][i:yitangFargo/AstralEnchant] 拥有大熊座雀鲷、星神隐壳和引力靴的效果
 			[i:yitangFargo/OmegaBlueEnchant] 拥有幻魂神物、惧魂神物和灾劫之尖啸的效果
 			“当世界变得贫瘠和寒冷时，你将是剩下的唯一”
 			[c/10E279:旧版物品]

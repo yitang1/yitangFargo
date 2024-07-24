@@ -220,42 +220,56 @@ Items: {
 
 	DaedalusEnchant: {
 		DisplayName: Daedalus Enchant
-		Tooltip: ""
-	}
-
-	TitanHeartEnchant: {
-		DisplayName: Titan Heart Enchant
-		Tooltip: ""
-	}
-
-	AstralEnchant: {
-		DisplayName: Astral Enchant
-		Tooltip: ""
-	}
-
-	FathomSwarmerEnchant: {
-		DisplayName: Fathom Swarmer Enchant
-		Tooltip: ""
-	}
-
-	OmegaBlueEnchant: {
-		DisplayName: Omega Blue Enchant
-		Tooltip: ""
-	}
-
-	SulphurousEnchant: {
-		DisplayName: Sulphurous Enchant
-		Tooltip: ""
+		Tooltip: "[DaedalusFullEffects]"
+		DaedalusFullTooltip: ""
 	}
 
 	UmbraphileEnchant: {
 		DisplayName: Umbraphile Enchant
-		Tooltip: ""
+		Tooltip: "[UmbraphileFullEffects]"
+		UmbraphileFullTooltip: ""
 	}
 
-	DemonShadeEnchant: {
-		DisplayName: Demon Shade Enchant
-		Tooltip: ""
+	SulphurousEnchant: {
+		DisplayName: Sulphurous Enchant
+		Tooltip: "[SulphurousFullEffects]"
+		SulphurousFullTooltip: ""
+	}
+
+	FathomSwarmerEnchant: {
+		DisplayName: Fathom Swarmer Enchant
+		Tooltip: "[FathomFullEffects]"
+		FathomFullTooltip: ""
+	}
+
+	TitanHeartEnchant: {
+		DisplayName: Titan Heart Enchant
+		Tooltip: "[TitanHeartFullEffects]"
+		TitanHeartFullTooltip: ""
+	}
+
+	AstralEnchant: {
+		DisplayName: Astral Enchant
+		Tooltip: "[AstralFullEffects]"
+		AstralFullTooltip: ""
+	}
+
+	OmegaBlueEnchant: {
+		DisplayName: Omega Blue Enchant
+		Tooltip: "[OmegaFullEffects]"
+		OmegaFullTooltip: ""
+	}
+
+	WulfrumEnchant: {
+		DisplayName: Wulfrum Enchant
+		Tooltip: "[WulfrumFullEffects]"
+		WulfrumFullTooltip: ""
+	}
+
+	ReaverEnchant: {
+		DisplayName: Reaver Enchant
+		Tooltip: "[ReaverFullEffects]"
+		ReaverFullTooltip: ""
 	}
 
 	PlagueEnchant: {
@@ -263,13 +277,8 @@ Items: {
 		Tooltip: ""
 	}
 
-	ReaverEnchant: {
-		DisplayName: Reaver Enchant
-		Tooltip: ""
-	}
-
-	WulfrumEnchant: {
-		DisplayName: Wulfrum Enchant
+	DemonShadeEnchant: {
+		DisplayName: Demon Shade Enchant
 		Tooltip: ""
 	}
 
