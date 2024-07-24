@@ -54,7 +54,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				else if (ytFargoConfig.Instance.FullCalamityEnchant)
 				{
 					player.aggro += 100;
-					player.slotsMinions++;
+					player.maxMinions++;
 					calamityPlayer.rogueStealthMax += 0.5f;
 					calamityPlayer.wearingRogueArmor = true;
 

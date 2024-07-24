@@ -284,18 +284,18 @@ Items: {
 		DemonShadeFullTooltip: ""
 	}
 
-	AuricEnchant: {
-		DisplayName: Auric Enchant
-		Tooltip: ""
-	}
-
-	BloodflareEnchant: {
-		DisplayName: Bloodflare Enchant
+	TarragonEnchant: {
+		DisplayName: Tarragon Enchant
 		Tooltip: ""
 	}
 
 	BrimflameEnchant: {
 		DisplayName: Brimflame Enchant
+		Tooltip: ""
+	}
+
+	BloodflareEnchant: {
+		DisplayName: Bloodflare Enchant
 		Tooltip: ""
 	}
 
@@ -309,8 +309,8 @@ Items: {
 		Tooltip: ""
 	}
 
-	TarragonEnchant: {
-		DisplayName: Tarragon Enchant
+	AuricEnchant: {
+		DisplayName: Auric Enchant
 		Tooltip: ""
 	}
 
