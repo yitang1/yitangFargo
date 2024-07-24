@@ -1,7 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Umbraphile;
@@ -10,11 +11,13 @@ using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class UmbraphileEnchant : BaseEnchant
-    {
+    public class UmbraphileEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(124, 86, 86);
 
         public override void SetStaticDefaults()
@@ -38,7 +41,14 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //日影盔甲
             if (player.HasEffect<UmbraphileEffect>())
             {
-                player.Calamity().umbraphileSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().umbraphileSet = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<UmbraphileHood>().UpdateArmorSet(player);
+				}
             }
             //吸血鬼符咒
             if (player.HasEffect<UmbraphileVampiric>())
@@ -52,7 +62,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[UmbraphileFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[UmbraphileFullEffects]", this.GetLocalizedValue("UmbraphileFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<UmbraphileHood>()
