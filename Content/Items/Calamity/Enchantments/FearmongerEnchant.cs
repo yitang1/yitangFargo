@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Buffs.StatDebuffs;
@@ -13,13 +14,15 @@ using CalamityMod.Tiles.Furniture.CraftingStations;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using FargowiltasSouls.Core.Toggler;
+using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Content.Items.Calamity.Souls;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class FearmongerEnchant : BaseEnchant
-    {
+    public class FearmongerEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(83, 86, 149);
 
         public override void SetStaticDefaults()
@@ -43,26 +46,33 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //神惧者盔甲套装效果
             if (player.HasEffect<FearmongerEffect>())
             {
-                player.Calamity().fearmongerSet = true;
-                int[] immuneDebuffs = { BuffID.OnFire,
-                    BuffID.Frostburn,
-                    BuffID.CursedInferno,
-                    BuffID.ShadowFlame,
-                    BuffID.Daybreak,
-                    BuffID.Burning,
-                    ModContent.BuffType<Shadowflame>(),
-                    ModContent.BuffType<BrimstoneFlames>(),
-                    ModContent.BuffType<HolyFlames>(),
-                    ModContent.BuffType<GodSlayerInferno>(),
-                    BuffID.Chilled,
-                    BuffID.Frozen,
-                    ModContent.BuffType<GlacialState>() };
-                for (var i = 0; i < immuneDebuffs.Length; ++i)
-                {
-                    player.buffImmune[immuneDebuffs[i]] = true;
-                }
-                Lighting.AddLight(player.Center, 0.3f, 0.18f, 0f);
-            }
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().fearmongerSet = true;
+					int[] immuneDebuffs = { BuffID.OnFire,
+						BuffID.Frostburn,
+						BuffID.CursedInferno,
+						BuffID.ShadowFlame,
+						BuffID.Daybreak,
+						BuffID.Burning,
+						ModContent.BuffType<Shadowflame>(),
+						ModContent.BuffType<BrimstoneFlames>(),
+						ModContent.BuffType<HolyFlames>(),
+						ModContent.BuffType<GodSlayerInferno>(),
+						BuffID.Chilled,
+						BuffID.Frozen,
+						ModContent.BuffType<GlacialState>() };
+					for (var i = 0; i < immuneDebuffs.Length; ++i)
+					{
+						player.buffImmune[immuneDebuffs[i]] = true;
+					}
+					Lighting.AddLight(player.Center, 0.3f, 0.18f, 0f);
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<FearmongerGreathelm>().UpdateArmorSet(player);
+				}
+			}
             //玄秘颅冠
             if (player.HasEffect<FearmongerFSkullCrown>())
             {
@@ -75,7 +85,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[FearmongerFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[FearmongerFullEffects]", this.GetLocalizedValue("FearmongerFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<FearmongerGreathelm>()
