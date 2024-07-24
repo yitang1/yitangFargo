@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -15,11 +15,12 @@ using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Content.Projectiles.Minions;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class DaedalusEnchant : BaseEnchant
-    {
+    public class DaedalusEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(113, 187, 237);
 
         public override void SetStaticDefaults()
@@ -47,10 +48,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<DaedalusEffect>())
             {
-                calamityPlayer.daedalusReflect = true;
-                calamityPlayer.daedalusShard = true;
-                calamityPlayer.daedalusAbsorb = true;
-                calamityPlayer.daedalusSplit = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.daedalusReflect = true;
+					calamityPlayer.daedalusShard = true;
+					calamityPlayer.daedalusAbsorb = true;
+					calamityPlayer.daedalusSplit = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<DaedalusHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<DaedalusHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<DaedalusHeadMagic>().UpdateArmorSet(player);
+					ModContent.GetInstance<DaedalusHeadSummon>().UpdateArmorSet(player);
+					ModContent.GetInstance<DaedalusHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //代达罗斯水晶
             if (player.HasEffect<DaedalusEffectCrystal>())
@@ -69,7 +81,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DaedalusFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DaedalusFullEffects]", this.GetLocalizedValue("DaedalusFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyDaedalus")

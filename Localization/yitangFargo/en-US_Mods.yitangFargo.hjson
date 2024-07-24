@@ -196,6 +196,30 @@ Items: {
 
 	FearmongerEnchant: {
 		DisplayName: Fearmonger Enchant
+		Tooltip: "[FearmongerFullEffects]"
+		FearmongerFullTooltip: ""
+	}
+
+	VictideEnchant: {
+		DisplayName: Victide Enchant
+		Tooltip: "[VictideFullEffects]"
+		VictideFullTooltip: ""
+	}
+
+	MolluskEnchant: {
+		DisplayName: Mollusk Enchant
+		Tooltip: "[MolluskFullEffects]"
+		MolluskFullTooltip: ""
+	}
+
+	SnowRuffianEnchant: {
+		DisplayName: Snow Ruffian Enchant
+		Tooltip: "[SnowRuffianFullEffects]"
+		SnowRuffianFullTooltip: ""
+	}
+
+	DaedalusEnchant: {
+		DisplayName: Daedalus Enchant
 		Tooltip: ""
 	}
 
@@ -209,28 +233,13 @@ Items: {
 		Tooltip: ""
 	}
 
-	DaedalusEnchant: {
-		DisplayName: Daedalus Enchant
-		Tooltip: ""
-	}
-
 	FathomSwarmerEnchant: {
 		DisplayName: Fathom Swarmer Enchant
 		Tooltip: ""
 	}
 
-	MolluskEnchant: {
-		DisplayName: Mollusk Enchant
-		Tooltip: ""
-	}
-
 	OmegaBlueEnchant: {
 		DisplayName: Omega Blue Enchant
-		Tooltip: ""
-	}
-
-	SnowRuffianEnchant: {
-		DisplayName: Snow Ruffian Enchant
 		Tooltip: ""
 	}
 
@@ -241,11 +250,6 @@ Items: {
 
 	UmbraphileEnchant: {
 		DisplayName: Umbraphile Enchant
-		Tooltip: ""
-	}
-
-	VictideEnchant: {
-		DisplayName: Victide Enchant
 		Tooltip: ""
 	}
 
