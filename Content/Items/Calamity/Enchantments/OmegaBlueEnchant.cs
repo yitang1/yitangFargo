@@ -1,7 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Cooldowns;
 using CalamityMod.CalPlayer;
@@ -12,11 +13,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class OmegaBlueEnchant : BaseEnchant
-    {
+    public class OmegaBlueEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(68, 139, 218);
 
         public override void SetStaticDefaults()
@@ -40,17 +43,24 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<OmegaBlueEffect>())
             {
-                calamityPlayer.omegaBlueSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.omegaBlueSet = true;
 
-                var hasOmegaBlueCooldown = calamityPlayer.cooldowns.TryGetValue(CalamityMod.Cooldowns.OmegaBlue.ID, out var cd);
-                if (hasOmegaBlueCooldown && cd.timeLeft > 1500)
-                {
-                    var d = Dust.NewDust(player.position, player.width, player.height, 20, 0, 0, 100, Color.Transparent, 1.6f);
-                    Main.dust[d].noGravity = true;
-                    Main.dust[d].noLight = true;
-                    Main.dust[d].fadeIn = 1f;
-                    Main.dust[d].velocity *= 3f;
-                }
+					var hasOmegaBlueCooldown = calamityPlayer.cooldowns.TryGetValue(CalamityMod.Cooldowns.OmegaBlue.ID, out var cd);
+					if (hasOmegaBlueCooldown && cd.timeLeft > 1500)
+					{
+						var d = Dust.NewDust(player.position, player.width, player.height, 20, 0, 0, 100, Color.Transparent, 1.6f);
+						Main.dust[d].noGravity = true;
+						Main.dust[d].noLight = true;
+						Main.dust[d].fadeIn = 1f;
+						Main.dust[d].velocity *= 3f;
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<OmegaBlueHelmet>().UpdateArmorSet(player);
+				}
             }
             //幻魂神物
             if (player.HasEffect<OmegaBluePhantomic>())
@@ -63,7 +73,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             ModContent.GetInstance<Affliction>().UpdateAccessory(player, hideVisual);
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[OmegaFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[OmegaFullEffects]", this.GetLocalizedValue("OmegaFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<OmegaBlueHelmet>()
