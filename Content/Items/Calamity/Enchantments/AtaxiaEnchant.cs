@@ -1,25 +1,26 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using CalamityMod;
+using CalamityMod.CalPlayer;
+using CalamityMod.Projectiles.Summon;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.Hydrothermic;
 using CalamityMod.Items.Weapons.Melee;
-using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using FargowiltasSouls.Core.AccessoryEffectSystem;
-using FargowiltasSouls.Core.Toggler;
-using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using yitangFargo.Common;
-using yitangFargo.Common.Toggler;
-using CalamityMod;
-using CalamityMod.CalPlayer;
 using FargowiltasSouls;
-using CalamityMod.Projectiles.Summon;
+using FargowiltasSouls.Core.Toggler;
+using FargowiltasSouls.Core.AccessoryEffectSystem;
+using FargowiltasSouls.Content.Items.Accessories.Enchantments;
+using yitangFargo.Common;
+using yitangFargo.Global.Config;
+using yitangFargo.Common.Toggler;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class AtaxiaEnchant : BaseEnchant
-    {
+    public class AtaxiaEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(162, 77, 77);
 
         public override void SetStaticDefaults()
@@ -44,12 +45,23 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<AtaxiaEffect>())
             {
-                calamityPlayer.ataxiaBlaze = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.ataxiaBlaze = true;
 
-                calamityPlayer.ataxiaGeyser = true;
-                calamityPlayer.ataxiaBolt = true;
-                calamityPlayer.ataxiaMage = true;
-                calamityPlayer.ataxiaVolley = true;
+					calamityPlayer.ataxiaGeyser = true;
+					calamityPlayer.ataxiaBolt = true;
+					calamityPlayer.ataxiaMage = true;
+					calamityPlayer.ataxiaVolley = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<HydrothermicHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<HydrothermicHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<HydrothermicHeadMagic>().UpdateArmorSet(player);
+					ModContent.GetInstance<HydrothermicHeadSummon>().UpdateArmorSet(player);
+					ModContent.GetInstance<HydrothermicHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //沸腾渊泉
             if (player.HasEffect<AtaxiaMinion>())
@@ -63,7 +75,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AtaxiaFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AtaxiaFullEffects]", this.GetLocalizedValue("AtaxiaFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyAtaxia")
