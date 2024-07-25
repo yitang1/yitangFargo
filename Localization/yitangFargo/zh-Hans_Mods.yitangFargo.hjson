@@ -717,6 +717,7 @@ Items: {
 		DisplayName: 沙漠巡游者魔石
 		Tooltip:
 			'''
+			[DesertProwlerFullEffects]
 			免疫强风减益
 			按下“套装奖励”键
 			会让自己在10秒内被沙尘覆盖
@@ -728,12 +729,14 @@ Items: {
 			“耳畔依稀回荡着碧波”
 			[c/10E279:旧版物品]
 			'''
+		DesertProwlerFullTooltip: 远程攻击额外造成1点伤害
 	}
 
 	LunicCorpsEnchant: {
 		DisplayName: 雷神之锤魔石
 		Tooltip:
 			'''
+			[LunicCorpsFullEffects]
 			获得一个可抵挡50点伤害的护盾
 			在受击后需要7秒的时间再次充能
 			重新充能期间被击中会重置冷却时间
@@ -741,18 +744,30 @@ Items: {
 			“人们需要英雄给他们希望”
 			[c/10E279:旧版物品]
 			'''
+		LunicCorpsFullTooltip:
+			'''
+			子弹伤害提高10%，特殊远程伤害提高10%
+			跳跃速度提高20%
+			'''
 	}
 
 	PrismaticEnchant: {
 		DisplayName: 光棱魔石
 		Tooltip:
 			'''
+			[PrismaticFullEffects]
 			按下“套装奖励”键
 			在光标处召唤一轮死亡激光，持续5秒
 			此效果有30秒的冷却时间
 			拥有进化者的效果
 			“扭曲次元的风暴吞噬着你……”
 			[c/10E279:旧版物品]
+			'''
+		PrismaticFullTooltip:
+			'''
+			最大魔力值增加40点
+			魔力消耗降低15%
+			增加9点魔力再生速度
 			'''
 	}
 
@@ -1000,7 +1015,7 @@ Configs: {
 			Label: "[i:FargowiltasSouls/BarbariansEssence] 配方还原-Fargo魂本体"
 			Tooltip:
 				'''
-				[c/ff4949:此功能在当前版本被暂时移除]
+				[c/ff4949:【此功能在当前版本被暂时移除】]
 				Fargo's Souls DLC模组对Fargo魂本体的一些魂饰品配方
 				进行了添加新合成材料来达到限制时期的改动，且无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
@@ -1014,7 +1029,7 @@ Configs: {
 			Label: "[i:FargowiltasCrossmod/OutlawsEssence] 配方修改-适配灾法双开"
 			Tooltip:
 				'''
-				[c/ff4949:此功能在当前版本被暂时移除]
+				[c/ff4949:【此功能在当前版本被暂时移除】]
 				启用此选项后，对于Fargo魂本体的一些魂饰品配方
 				会对其添加新的合成材料来达到限制时期的目的
 				即魂饰品的合成时期改为神吞后或龙后
@@ -1027,7 +1042,7 @@ Configs: {
 			Label: "[i:FargowiltasSouls/AeolusBoots] 回调改动和削弱"
 			Tooltip:
 				'''
-				[c/ff4949:此功能在当前版本被暂时移除]
+				[c/ff4949:【此功能在当前版本被暂时移除】]
 				Fargo's Souls DLC模组默认对大量内容进行了平衡和削弱
 				启用此选项后，以下改动都[c/64EFFF:不会再生效]：
 				1.大量的武器和饰品被削弱了伤害
@@ -1048,7 +1063,7 @@ Configs: {
 			Label: "[i:yitangFargo/OldVanillaEnchantIcon] 添加旧版的原版魔石效果"
 			Tooltip:
 				'''
-				[c/ff4949:此功能在当前版本被暂时移除]
+				[c/ff4949:【此功能在当前版本被暂时移除】]
 				启用此选项后，会在游戏中给一些原版魔石添加旧版本的效果
 				对于涉及到的原版魔石，详情可查看本Mod的模组简介
 				魔石的旧版效果在【饰品效果配置】里会标注“(旧)”字样

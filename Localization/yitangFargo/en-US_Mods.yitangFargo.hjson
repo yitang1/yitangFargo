@@ -306,17 +306,20 @@ Items: {
 
 	DesertProwlerEnchant: {
 		DisplayName: Desert Prowler Enchant
-		Tooltip: ""
+		Tooltip: "[DesertProwlerFullEffects]"
+		DesertProwlerFullTooltip: ""
 	}
 
 	LunicCorpsEnchant: {
 		DisplayName: Lunic Corps Enchant
-		Tooltip: ""
+		Tooltip: "[LunicCorpsFullEffects]"
+		LunicCorpsFullTooltip: ""
 	}
 
 	PrismaticEnchant: {
 		DisplayName: Prismatic Enchant
-		Tooltip: ""
+		Tooltip: "[PrismaticFullEffects]"
+		PrismaticFullTooltip: ""
 	}
 
 	GemTechEnchant: {

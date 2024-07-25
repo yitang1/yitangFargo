@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Rarities;
 using CalamityMod.Items.Accessories;
@@ -13,10 +14,12 @@ using FargowiltasSouls.Core.Toggler.Content;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-	public class PrismaticEnchant : BaseEnchant
+	public class PrismaticEnchant : BaseEnchant, ILocalizedModType
 	{
 		public override Color nameColor => new(170, 178, 207);
 
@@ -40,12 +43,33 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 			//光棱盔甲
 			if (player.HasEffect<EPrismaticEffect>())
 			{
-				player.Calamity().prismaticSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().prismaticSet = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<PrismaticHelmet>().UpdateArmorSet(player);
+				}
 			}
 			//进化者
 			if (player.HasEffect<EPrismaticTheEvolution>())
 			{
 				ModContent.GetInstance<TheEvolution>().UpdateAccessory(player, hideVisual);
+			}
+		}
+
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[PrismaticFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[PrismaticFullEffects]", this.GetLocalizedValue("PrismaticFullTooltip"));
 			}
 		}
 
