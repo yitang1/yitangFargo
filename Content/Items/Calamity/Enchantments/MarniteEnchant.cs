@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using CalamityMod;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Armor.MarniteArchitect;
@@ -10,11 +11,13 @@ using FargowiltasSouls.Core.Toggler;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
+using yitangFargo.Common;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class MarniteEnchant : BaseEnchant
-    {
+    public class MarniteEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(201, 220, 234);
 
         public override void SetStaticDefaults()
@@ -38,8 +41,15 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //合成岩建筑师盔甲
             if (player.HasEffect<AMarniteEffect>())
             {
-                player.tileSpeed += 0.3f;
-                player.blockRange += 8;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.tileSpeed += 0.3f;
+					player.blockRange += 8;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<MarniteArchitectHeadgear>().UpdateArmorSet(player);
+				}
             }
             //合成岩斥力盾
             if (player.HasEffect<AMarniteShieldEffect>())
@@ -50,7 +60,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             ModContent.GetInstance<ArchaicPowder>().UpdateAccessory(player, hideVisual);
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[MarniteFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[MarniteFullEffects]", this.GetLocalizedValue("MarniteFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<MarniteArchitectHeadgear>()
