@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
@@ -17,8 +17,8 @@ using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class BloodflareEnchant : BaseEnchant
-    {
+    public class BloodflareEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(157, 12, 77);
 
         public override void SetStaticDefaults()
@@ -36,7 +36,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<BloodEffect>(Item);
-            player.AddEffect<BloodMinion>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<BloodMinion>(Item);
+			}
             player.AddEffect<BloodTheChalice>(Item);
             player.AddEffect<BloodTheCore>(Item);
             ModContent.GetInstance<BrimflameEnchant>().UpdateAccessory(player, hideVisual);
@@ -45,13 +48,24 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<BloodEffect>())
             {
-                calamityPlayer.bloodflareSet = true;
-                player.crimsonRegen = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.bloodflareSet = true;
+					player.crimsonRegen = true;
 
-                calamityPlayer.bloodflareMelee = true;
-                calamityPlayer.bloodflareRanged = true;
-                calamityPlayer.bloodflareMage = true;
-                calamityPlayer.bloodflareThrowing = true;
+					calamityPlayer.bloodflareMelee = true;
+					calamityPlayer.bloodflareRanged = true;
+					calamityPlayer.bloodflareMage = true;
+					calamityPlayer.bloodflareThrowing = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<BloodflareHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<BloodflareHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<BloodflareHeadMagic>().UpdateArmorSet(player);
+					ModContent.GetInstance<BloodflareHeadSummon>().UpdateArmorSet(player);
+					ModContent.GetInstance<BloodflareHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //噬魂幽花地雷
             if (player.HasEffect<BloodMinion>())
@@ -70,7 +84,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[BloodflareFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[BloodflareFullEffects]", this.GetLocalizedValue("BloodflareFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyBloodflare")
