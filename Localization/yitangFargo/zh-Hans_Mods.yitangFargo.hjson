@@ -132,6 +132,11 @@ Buffs: {
 			'''
 	}
 
+	DisruptedFocus: {
+		// DisplayName: Disrupted Focus
+		// Description: Mods.yitangFargo.Buffs.DisruptedFocus.Description
+	}
+
 	DesertProwlerBuff: {
 		DisplayName: 与沙共舞
 		Description: 你被死亡之海的远古尘埃湮没
@@ -995,6 +1000,7 @@ Configs: {
 			Label: "[i:FargowiltasSouls/BarbariansEssence] 配方还原-Fargo魂本体"
 			Tooltip:
 				'''
+				[c/ff4949:此功能在当前版本被暂时移除]
 				Fargo's Souls DLC模组对Fargo魂本体的一些魂饰品配方
 				进行了添加新合成材料来达到限制时期的改动，且无法通过配置关闭
 				启用此选项后，这些改动都会被移除，并回调为原来Fargo魂本体的配方
@@ -1008,6 +1014,7 @@ Configs: {
 			Label: "[i:FargowiltasCrossmod/OutlawsEssence] 配方修改-适配灾法双开"
 			Tooltip:
 				'''
+				[c/ff4949:此功能在当前版本被暂时移除]
 				启用此选项后，对于Fargo魂本体的一些魂饰品配方
 				会对其添加新的合成材料来达到限制时期的目的
 				即魂饰品的合成时期改为神吞后或龙后
@@ -1020,6 +1027,7 @@ Configs: {
 			Label: "[i:FargowiltasSouls/AeolusBoots] 回调改动和削弱"
 			Tooltip:
 				'''
+				[c/ff4949:此功能在当前版本被暂时移除]
 				Fargo's Souls DLC模组默认对大量内容进行了平衡和削弱
 				启用此选项后，以下改动都[c/64EFFF:不会再生效]：
 				1.大量的武器和饰品被削弱了伤害
@@ -1040,6 +1048,7 @@ Configs: {
 			Label: "[i:yitangFargo/OldVanillaEnchantIcon] 添加旧版的原版魔石效果"
 			Tooltip:
 				'''
+				[c/ff4949:此功能在当前版本被暂时移除]
 				启用此选项后，会在游戏中给一些原版魔石添加旧版本的效果
 				对于涉及到的原版魔石，详情可查看本Mod的模组简介
 				魔石的旧版效果在【饰品效果配置】里会标注“(旧)”字样
