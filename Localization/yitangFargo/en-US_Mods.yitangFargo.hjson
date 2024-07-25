@@ -127,11 +127,6 @@ Buffs: {
 		Description: Mods.yitangFargo.Buffs.NullCurseNoBuff.Description
 	}
 
-	DisruptedFocus: {
-		DisplayName: Disrupted Focus
-		Description: Mods.yitangFargo.Buffs.DisruptedFocus.Description
-	}
-
 	DesertProwlerBuff: {
 		DisplayName: Desert Prowler Buff
 		Description: Mods.yitangFargo.Buffs.DesertProwlerBuff.Description

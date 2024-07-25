@@ -17,13 +17,12 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Common;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
 	public class GemTechEnchant : BaseEnchant, ILocalizedModType
 	{
-		public new string LocalizationCategory => "Items";
-
 		public override Color nameColor => new(255, 216, 216);
 
 		public override void SetStaticDefaults()
@@ -46,12 +45,19 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 			//天钻盔甲
 			if (player.HasEffect<FGemTechEffect>())
 			{
-				player.Calamity().GemTechSet = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					player.Calamity().GemTechSet = true;
 
-				if (player.Calamity().GemTechState.IsRedGemActive)
-					player.Calamity().rogueStealthMax += GemTechHeadgear.RogueStealthBoost * 0.01f;
-				if (player.Calamity().GemTechState.IsYellowGemActive)
-					player.GetAttackSpeed<MeleeDamageClass>() += GemTechHeadgear.MeleeSpeedBoost;
+					if (player.Calamity().GemTechState.IsRedGemActive)
+						player.Calamity().rogueStealthMax += GemTechHeadgear.RogueStealthBoost * 0.01f;
+					if (player.Calamity().GemTechState.IsYellowGemActive)
+						player.GetAttackSpeed<MeleeDamageClass>() += GemTechHeadgear.MeleeSpeedBoost;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<GemTechHeadgear>().UpdateArmorSet(player);
+				}
 			}
 			//嘉登之心
 			if (player.HasEffect<FGemTechHeart>())

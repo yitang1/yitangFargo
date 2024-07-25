@@ -44,7 +44,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				if (!ytFargoConfig.Instance.FullCalamityEnchant)
 				{
 					player.tileSpeed += 0.3f;
-					player.blockRange += 8;
+					player.blockRange += 5;
 				}
 				else if (ytFargoConfig.Instance.FullCalamityEnchant)
 				{
