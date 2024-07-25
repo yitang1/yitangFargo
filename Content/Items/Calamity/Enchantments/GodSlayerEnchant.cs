@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -14,11 +14,12 @@ using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Core.Toggler;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class GodSlayerEnchant : BaseEnchant
-    {
+    public class GodSlayerEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(214, 75, 217);
 
         public override void SetStaticDefaults()
@@ -42,17 +43,26 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<GodSlayerEffect>())
             {
-                calamityPlayer.godSlayer = true;
-                calamityPlayer.godSlayerDamage = true;
-                calamityPlayer.godSlayerRanged = true;
-                calamityPlayer.godSlayerThrowing = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					calamityPlayer.godSlayer = true;
+					calamityPlayer.godSlayerDamage = true;
+					calamityPlayer.godSlayerRanged = true;
+					calamityPlayer.godSlayerThrowing = true;
 
-                player.thorns += 2.5f;
-                if (calamityPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && calamityPlayer.LastUsedDashID == GodslayerArmorDash.ID))
-                {
-                    calamityPlayer.DeferredDashID = GodslayerArmorDash.ID;
-                    player.dash = 0;
-                }
+					player.thorns += 2.5f;
+					if (calamityPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && calamityPlayer.LastUsedDashID == GodslayerArmorDash.ID))
+					{
+						calamityPlayer.DeferredDashID = GodslayerArmorDash.ID;
+						player.dash = 0;
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<GodSlayerHeadMelee>().UpdateArmorSet(player);
+					ModContent.GetInstance<GodSlayerHeadRanged>().UpdateArmorSet(player);
+					ModContent.GetInstance<GodSlayerHeadRogue>().UpdateArmorSet(player);
+				}
             }
             //元素之握
             ModContent.GetInstance<ElementalGauntlet>().UpdateAccessory(player, hideVisual);
@@ -65,7 +75,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[GodSlayerFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[GodSlayerFullEffects]", this.GetLocalizedValue("GodSlayerFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyGodSlayer")

@@ -277,12 +277,14 @@ Items: {
 
 	BloodflareEnchant: {
 		DisplayName: Bloodflare Enchant
-		Tooltip: ""
+		Tooltip: "[BloodflareFullEffects]"
+		BloodflareFullTooltip: ""
 	}
 
 	GodSlayerEnchant: {
 		DisplayName: God Slayer Enchant
-		Tooltip: ""
+		Tooltip: "[GodSlayerFullEffects]"
+		GodSlayerFullTooltip: ""
 	}
 
 	SilvaEnchant: {
