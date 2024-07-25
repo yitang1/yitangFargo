@@ -277,14 +277,14 @@ namespace yitangFargo.NPCs
                 .Add(CustomPrice(ModContent.ItemType<OutlawsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences });
 
             #region 寰宇之魂下级
-            if (ytFargoConfig.Instance.CalamityFargoRecipe)
-            {
-                vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<SnipersSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<ConjuristsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
-            }
+            //if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            //{
+            vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<SnipersSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<ConjuristsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
+            //}
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
                 vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
@@ -296,14 +296,14 @@ namespace yitangFargo.NPCs
             #endregion
 
             #region 维度之魂下级
-            if (ytFargoConfig.Instance.CalamityFargoRecipe)
-            {
-                vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<SupersonicSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<FlightMasterySoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<TrawlerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                    .Add(CustomPrice(ModContent.ItemType<WorldShaperSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity });
-            }
+            //if (ytFargoConfig.Instance.CalamityFargoRecipe)
+            //{
+            vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<SupersonicSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<FlightMasterySoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<TrawlerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ModContent.ItemType<WorldShaperSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity });
+            //}
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
                 vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
