@@ -271,7 +271,8 @@ Items: {
 
 	BrimflameEnchant: {
 		DisplayName: Brimflame Enchant
-		Tooltip: ""
+		Tooltip: "[BrimflameFullEffects]"
+		BrimflameFullTooltip: ""
 	}
 
 	BloodflareEnchant: {

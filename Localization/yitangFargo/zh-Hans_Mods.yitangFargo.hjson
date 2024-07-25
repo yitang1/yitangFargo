@@ -587,6 +587,7 @@ Items: {
 		DisplayName: 硫火魔石
 		Tooltip:
 			'''
+			[BrimflameFullEffects]
 			按下“套装奖励”键进入硫火狂暴模式
 			在此模式下，造成的魔法伤害会额外提高40%
 			然而代价是生命快速流失和魔力再生速度归零
@@ -595,6 +596,7 @@ Items: {
 			“失控的黑魔法之力”
 			[c/10E279:旧版物品]
 			'''
+		BrimflameFullTooltip: 魔法伤害和暴击率提高15%
 	}
 
 	BloodflareEnchant: {
