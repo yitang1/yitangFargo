@@ -12,7 +12,6 @@ using CalamityMod.Items.PermanentBoosters;
 using FargowiltasSouls.Content.Items.Consumables;
 using FargowiltasSouls.Content.Items.Accessories.Masomode;
 using yitangFargo.Common;
-using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Forces;
 using yitangFargo.Global.Config;

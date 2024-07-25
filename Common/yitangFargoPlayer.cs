@@ -16,7 +16,6 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Common;
 using yitangFargo.Content.Buffs;
 using yitangFargo.Content.Items.Others;
-using yitangFargo.Content.Items.Accessories.Enchantments;
 using yitangFargo.Global.FuckFargo.FuckFargoSystem;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 
@@ -26,11 +25,8 @@ namespace yitangFargo.Common
     {
         public override void ResetEffects()
         {
-            MinionCritsYT = false;
-            //AttackSpeed = 1f;
-            VenomMinions = false;
-            VenomNecklace = false;
-            IamNinja = false;
+			VenomNecklace = false;
+			IamNinja = false;
             DesertProwlerBonus = false;
 			LunicCorpsShield = false;
         }
@@ -88,7 +84,46 @@ namespace yitangFargo.Common
 			}
 		}
 
-        public bool IamNinja = false;
+		public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			if (Player.whoAmI != Main.myPlayer)
+				return;
+
+			NPCDebuffs(target, item.CountsAsClass<MeleeDamageClass>(),
+				item.CountsAsClass<RangedDamageClass>(),
+				item.CountsAsClass<MagicDamageClass>(),
+				item.CountsAsClass<SummonDamageClass>(),
+				item.CountsAsClass<ThrowingDamageClass>(),
+				item.CountsAsClass<SummonMeleeSpeedDamageClass>());
+		}
+
+		public override void OnHitNPCWithProj(Projectile proj, NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			if (Player.whoAmI != Main.myPlayer)
+				return;
+
+			if (!proj.npcProj && !proj.trap && proj.friendly)
+			{
+				NPCDebuffs(target, proj.CountsAsClass<MeleeDamageClass>(),
+					proj.CountsAsClass<RangedDamageClass>(),
+					proj.CountsAsClass<MagicDamageClass>(),
+					proj.CountsAsClass<SummonDamageClass>(),
+					proj.CountsAsClass<ThrowingDamageClass>(),
+					proj.CountsAsClass<SummonMeleeSpeedDamageClass>(), true, proj.noEnchantments);
+			}
+		}
+
+		public void NPCDebuffs(NPC target, bool melee, bool ranged, bool magic, bool summon, bool rogue, bool whip, bool proj = false, bool noFlask = false)
+		{
+			//恼怒项链
+			if (VenomNecklace)
+			{
+				target.AddBuff(BuffID.Venom, 120);
+			}
+		}
+
+		public bool VenomNecklace = false;
+		public bool IamNinja = false;
         public bool DesertProwlerBonus;
 		public int DesertProwlerCooldown;
 		public bool LunicCorpsShield;

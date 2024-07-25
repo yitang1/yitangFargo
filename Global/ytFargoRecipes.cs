@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using CalamityMod.Items.Ammo;
 using CalamityMod.Items.Armor.Aerospec;
 using CalamityMod.Items.Armor.Auric;
 using CalamityMod.Items.Armor.Bloodflare;
@@ -29,11 +30,9 @@ using FargowiltasSouls.Content.Items.Consumables;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
 using yitangFargo.Global.Config;
-using yitangFargo.Content.Items.Accessories.Souls;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Forces;
-using CalamityMod.Items.Ammo;
 
 namespace yitangFargo.Global
 {
