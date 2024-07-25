@@ -71,7 +71,7 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 
 			if (!ytFargoConfig.Instance.FullCalamityEnchant)
 			{
-				tooltips.ReplaceText("[MolluskFullEffects]", "");
+				tooltips.ReplaceText("[MolluskFullEffects]", "四只贝壳会在战斗中助你一臂之力");
 			}
 			else if (ytFargoConfig.Instance.FullCalamityEnchant)
 			{
@@ -102,15 +102,18 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         //沉沦之贝
         public override void PostUpdateEquips(Player player)
         {
-            if (player.whoAmI == Main.myPlayer)
-            {
-                int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(140);
-                if (player.ownedProjectileCounts[ModContent.ProjectileType<ShellfishNew>()] < 4)
-                {
-                    FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
-                        ModContent.ProjectileType<ShellfishNew>(), damage, 0f, player.whoAmI);
-                }
-            }
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				if (player.whoAmI == Main.myPlayer)
+				{
+					int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(140);
+					if (player.ownedProjectileCounts[ModContent.ProjectileType<ShellfishNew>()] < 4)
+					{
+						FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
+							ModContent.ProjectileType<ShellfishNew>(), damage, 0f, player.whoAmI);
+					}
+				}
+			}
         }
     }
     public class MolluskFDeepDiver : AccessoryEffect

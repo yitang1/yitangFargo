@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,6 +10,7 @@ using CalamityMod.CalPlayer;
 using CalamityMod.Projectiles;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using yitangFargo.Content.Items.Calamity.Enchantments;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Projectiles.Minions
 {
@@ -56,7 +57,7 @@ namespace yitangFargo.Content.Projectiles.Minions
             Projectile.timeLeft = 2;
 
             if (player.whoAmI == Main.myPlayer && (!player.active || player.dead || player.ghost
-                || !player.HasEffect<MolluskEffect>()))
+                || !player.HasEffect<MolluskEffect>() || ytFargoConfig.Instance.FullCalamityEnchant))
             {
                 Projectile.Kill();
                 return;

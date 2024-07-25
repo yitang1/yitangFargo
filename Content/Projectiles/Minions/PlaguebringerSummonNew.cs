@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,6 +11,7 @@ using CalamityMod;
 using CalamityMod.Projectiles.Summon;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using yitangFargo.Content.Items.Calamity.Enchantments;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Projectiles.Minions
 {
@@ -40,7 +41,7 @@ namespace yitangFargo.Content.Projectiles.Minions
             Player Owner = Main.player[Projectile.owner];
             Projectile.timeLeft = 2;
             if (Owner.whoAmI == Main.myPlayer && (!Owner.active || Owner.dead || Owner.ghost
-                || !Owner.HasEffect<PlagueEffectBringer>()))
+                || !Owner.HasEffect<PlagueEffectBringer>() || ytFargoConfig.Instance.FullCalamityEnchant))
             {
                 Projectile.Kill();
                 return;

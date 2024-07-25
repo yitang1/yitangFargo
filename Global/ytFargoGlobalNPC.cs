@@ -117,5 +117,5 @@ namespace yitangFargo.Global
                 npc.Calamity().ApplyDPSDebuff(projectileCount * totalDamage, projectileCount * totalDisplayedDamage, ref npc.lifeRegen, ref damage);
             }
         }
-    }
+	}
 }
