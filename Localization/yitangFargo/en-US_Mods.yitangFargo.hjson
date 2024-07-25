@@ -265,7 +265,8 @@ Items: {
 
 	TarragonEnchant: {
 		DisplayName: Tarragon Enchant
-		Tooltip: ""
+		Tooltip: "[TarragonFullEffects]"
+		TarragonFullTooltip: ""
 	}
 
 	BrimflameEnchant: {

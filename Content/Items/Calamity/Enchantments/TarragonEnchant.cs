@@ -72,11 +72,11 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 
 			if (!ytFargoConfig.Instance.FullCalamityEnchant)
 			{
-				tooltips.ReplaceText("[XeroFullEffects]", "");
+				tooltips.ReplaceText("[TarragonFullEffects]", "");
 			}
 			else if (ytFargoConfig.Instance.FullCalamityEnchant)
 			{
-				tooltips.ReplaceText("[XeroFullEffects]", this.GetLocalizedValue("XeroFullTooltip"));
+				tooltips.ReplaceText("[TarragonFullEffects]", this.GetLocalizedValue("TarragonFullTooltip"));
 			}
 		}
 
