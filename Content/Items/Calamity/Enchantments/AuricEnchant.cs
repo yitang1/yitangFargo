@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -18,11 +18,12 @@ using CalamityMod.Items.Weapons.Magic;
 using CalamityMod.Tiles.Furniture.CraftingStations;
 using yitangFargo.Common;
 using yitangFargo.Common.Toggler;
+using yitangFargo.Global.Config;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class AuricEnchant : BaseEnchant
-    {
+    public class AuricEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(236, 185, 18);
 
         public override void SetStaticDefaults()
@@ -40,7 +41,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<AuricEffect>(Item);
-            player.AddEffect<AuricMinion>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<AuricMinion>(Item);
+			}
             player.AddEffect<AuricPurity>(Item);
             player.AddEffect<AuricYharimsGift>(Item);
 
@@ -48,36 +52,47 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             CalamityPlayer calamityPlayer = player.Calamity();
             if (player.HasEffect<AuricEffect>())
             {
-                //全职业通用效果
-                calamityPlayer.tarraSet = true;
-                calamityPlayer.bloodflareSet = true;
-                calamityPlayer.godSlayer = true;
-                calamityPlayer.silvaSet = true;
-                calamityPlayer.auricSet = true;
-                player.thorns += 3f;
-                player.ignoreWater = true;
-                player.crimsonRegen = true;
-                //近战
-                calamityPlayer.tarraMelee = true;
-                calamityPlayer.bloodflareMelee = true;
-                calamityPlayer.godSlayerDamage = true;
-                //远程
-                calamityPlayer.tarraRanged = true;
-                calamityPlayer.bloodflareRanged = true;
-                calamityPlayer.godSlayerRanged = true;
-                //魔法
-                calamityPlayer.tarraMage = true;
-                calamityPlayer.bloodflareMage = true;
-                calamityPlayer.silvaMage = true;
-                //盗贼
-                calamityPlayer.tarraThrowing = true;
-                calamityPlayer.bloodflareThrowing = true;
-                calamityPlayer.godSlayerThrowing = true;
-                //弑神者冲刺
-                if (calamityPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && calamityPlayer.LastUsedDashID == GodslayerArmorDash.ID))
-                {
-                    calamityPlayer.DeferredDashID = GodslayerArmorDash.ID;
-                }
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					//全职业通用效果
+					calamityPlayer.tarraSet = true;
+					calamityPlayer.bloodflareSet = true;
+					calamityPlayer.godSlayer = true;
+					calamityPlayer.silvaSet = true;
+					calamityPlayer.auricSet = true;
+					player.thorns += 3f;
+					player.ignoreWater = true;
+					player.crimsonRegen = true;
+					//近战
+					calamityPlayer.tarraMelee = true;
+					calamityPlayer.bloodflareMelee = true;
+					calamityPlayer.godSlayerDamage = true;
+					//远程
+					calamityPlayer.tarraRanged = true;
+					calamityPlayer.bloodflareRanged = true;
+					calamityPlayer.godSlayerRanged = true;
+					//魔法
+					calamityPlayer.tarraMage = true;
+					calamityPlayer.bloodflareMage = true;
+					calamityPlayer.silvaMage = true;
+					//盗贼
+					calamityPlayer.tarraThrowing = true;
+					calamityPlayer.bloodflareThrowing = true;
+					calamityPlayer.godSlayerThrowing = true;
+					//弑神者冲刺
+					if (calamityPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && calamityPlayer.LastUsedDashID == GodslayerArmorDash.ID))
+					{
+						calamityPlayer.DeferredDashID = GodslayerArmorDash.ID;
+					}
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					ModContent.GetInstance<AuricTeslaRoyalHelm>().UpdateArmorSet(player);
+					ModContent.GetInstance<AuricTeslaHoodedFacemask>().UpdateArmorSet(player);
+					ModContent.GetInstance<AuricTeslaWireHemmedVisage>().UpdateArmorSet(player);
+					ModContent.GetInstance<AuricTeslaSpaceHelmet>().UpdateArmorSet(player);
+					ModContent.GetInstance<AuricTeslaPlumedHelm>().UpdateArmorSet(player);
+				}
             }
             //生命光环、噬魂幽花地雷、始源林海水晶
             if (player.HasEffect<AuricMinion>())
@@ -99,7 +114,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AuricFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[AuricFullEffects]", this.GetLocalizedValue("AuricFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddRecipeGroup("yitangFargo:AnyAuric")

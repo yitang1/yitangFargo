@@ -295,7 +295,8 @@ Items: {
 
 	AuricEnchant: {
 		DisplayName: Auric Enchant
-		Tooltip: ""
+		Tooltip: "[AuricFullEffects]"
+		AuricFullTooltip: ""
 	}
 
 	MarniteEnchant: {
