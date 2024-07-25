@@ -658,6 +658,7 @@ Items: {
 		DisplayName: 始源林海魔石
 		Tooltip:
 			'''
+			[SilvaFullEffects]
 			所有射弹击中敌人时生成能治疗的林海光球
 			最大移动速度和加速度提高5%
 			剩余1点生命值时将获得始源林海无敌增益
@@ -671,6 +672,7 @@ Items: {
 			“无尽的生命能量于你身上喷涌而出……”
 			[c/10E279:旧版物品]
 			'''
+		SilvaFullTooltip: 召唤伤害提高65%，仆从数量上限提高5个
 	}
 
 	AuricEnchant: {
