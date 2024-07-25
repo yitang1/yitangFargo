@@ -13,11 +13,13 @@ using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 using yitangFargo.Common.Toggler;
 using yitangFargo.Common;
 using yitangFargo.Content.Buffs;
+using yitangFargo.Global.Config;
+using System.Collections.Generic;
 
 namespace yitangFargo.Content.Items.Calamity.Enchantments
 {
-    public class DesertProwlerEnchant : BaseEnchant
-    {
+    public class DesertProwlerEnchant : BaseEnchant, ILocalizedModType
+	{
         public override Color nameColor => new(172, 152, 96);
 
         public override void SetStaticDefaults()
@@ -39,10 +41,18 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 
 			player.buffImmune[BuffID.WindPushed] = true;
 
+			yitangFargoPlayer yitangPlayer = player.yitangFargo();
 			if (player.HasEffect<BDesertProwlerEffect>())
             {
-                yitangFargoPlayer yitangPlayer = player.yitangFargo();
-                yitangPlayer.DesertProwlerBonus = true;
+				if (!ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					yitangPlayer.DesertProwlerBonus = true;
+				}
+				else if (ytFargoConfig.Instance.FullCalamityEnchant)
+				{
+					yitangPlayer.DesertProwlerBonus = true;
+					player.GetDamage<RangedDamageClass>().Flat += 1;
+				}
 			}
 
 			//锈蚀勋章
@@ -52,7 +62,21 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             }
         }
 
-        public override void AddRecipes()
+		public override void SafeModifyTooltips(List<TooltipLine> tooltips)
+		{
+			base.SafeModifyTooltips(tooltips);
+
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DesertProwlerFullEffects]", "");
+			}
+			else if (ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				tooltips.ReplaceText("[DesertProwlerFullEffects]", this.GetLocalizedValue("DesertProwlerFullTooltip"));
+			}
+		}
+
+		public override void AddRecipes()
         {
             CreateRecipe()
                 .AddIngredient<DesertProwlerHat>()
