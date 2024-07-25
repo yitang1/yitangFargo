@@ -38,7 +38,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<DaedalusEffect>(Item);
-            player.AddEffect<DaedalusEffectCrystal>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<DaedalusEffectCrystal>(Item);
+			}
             player.AddEffect<DaedalusEffectGolem>(Item);
             player.AddEffect<DaedalusFConcoction>(Item);
             player.AddEffect<DaedalusFrostBarrier>(Item);

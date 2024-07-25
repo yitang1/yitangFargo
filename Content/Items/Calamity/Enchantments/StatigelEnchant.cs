@@ -39,7 +39,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         {
             player.AddEffect<StatigelEffect>(Item);
             player.AddEffect<StatigelManaPolarizer>(Item);
-            player.AddEffect<StatigelSlimeMinions>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<StatigelSlimeMinions>(Item);
+			}
 
             //斯塔提斯盔甲
             if (player.HasEffect<StatigelEffect>())

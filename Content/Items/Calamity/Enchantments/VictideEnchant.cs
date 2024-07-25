@@ -37,7 +37,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<MolluskVictideEffect>(Item);
-            player.AddEffect<MolluskVictideESnail>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<MolluskVictideESnail>(Item);
+			}
             player.AddEffect<MolluskVictideLuxors>(Item);
             player.AddEffect<MolluskVictideSpark>(Item);
 

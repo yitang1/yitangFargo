@@ -48,7 +48,9 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 				}
 				else if (ytFargoConfig.Instance.FullCalamityEnchant)
 				{
-					ModContent.GetInstance<MarniteArchitectHeadgear>().UpdateArmorSet(player);
+					player.statDefense += 1;
+					player.tileSpeed += 0.5f;
+					player.blockRange += 5;
 				}
             }
             //合成岩斥力盾
@@ -66,11 +68,11 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
 
 			if (!ytFargoConfig.Instance.FullCalamityEnchant)
 			{
-				tooltips.ReplaceText("[MarniteFullEffects]", "");
+				tooltips.ReplaceText("[MarniteFullEffects]", "物块的放置速度提高30%");
 			}
 			else if (ytFargoConfig.Instance.FullCalamityEnchant)
 			{
-				tooltips.ReplaceText("[MarniteFullEffects]", this.GetLocalizedValue("MarniteFullTooltip"));
+				tooltips.ReplaceText("[MarniteFullEffects]", "增加1点防御\n物块的放置速度提高50%");
 			}
 		}
 

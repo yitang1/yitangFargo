@@ -700,7 +700,7 @@ Items: {
 		DisplayName: 合成岩魔石
 		Tooltip:
 			'''
-			物块的放置速度提高30%
+			[MarniteFullEffects]
 			物块放置范围和工具范围扩大5格
 			拥有合成岩斥力盾和古元粉末的效果
 			“供专业团队使用”

@@ -296,7 +296,7 @@ Items: {
 
 	MarniteEnchant: {
 		DisplayName: Marnite Enchant
-		Tooltip: ""
+		Tooltip: "[MarniteFullEffects]"
 	}
 
 	DesertProwlerEnchant: {

@@ -110,15 +110,18 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         //红恶魔
         public override void PostUpdateEquips(Player player)
         {
-            if (player.whoAmI == Main.myPlayer)
-            {
-                int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(10000);
-                if (player.ownedProjectileCounts[ModContent.ProjectileType<DemonshadeRedDevil>()] < 1)
-                {
-                    FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
-                        ModContent.ProjectileType<DemonshadeRedDevil>(), damage, 0f, player.whoAmI, 0f, 0f);
-                }
-            }
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				if (player.whoAmI == Main.myPlayer)
+				{
+					int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(10000);
+					if (player.ownedProjectileCounts[ModContent.ProjectileType<DemonshadeRedDevil>()] < 1)
+					{
+						FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
+							ModContent.ProjectileType<DemonshadeRedDevil>(), damage, 0f, player.whoAmI, 0f, 0f);
+					}
+				}
+			}
         }
     }
     public class DemonShadeFAngelic : AccessoryEffect

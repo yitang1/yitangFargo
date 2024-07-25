@@ -38,7 +38,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<ReaverEffect>(Item);
-            player.AddEffect<ReaverEffectOrb>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<ReaverEffectOrb>(Item);
+			}
             player.AddEffect<ReaverNecklace>(Item);
             player.AddEffect<ReaverStone>(Item);
 

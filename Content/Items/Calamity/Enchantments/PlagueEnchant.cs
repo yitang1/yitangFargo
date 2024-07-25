@@ -157,15 +157,18 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         //瘟疫使者盔甲 瘟疫使者仆从
         public override void PostUpdateEquips(Player player)
         {
-            if (player.whoAmI == Main.myPlayer)
-            {
-                int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(25);
-                if (player.ownedProjectileCounts[ModContent.ProjectileType<PlaguebringerSummonNew>()] < 1)
-                {
-                    FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
-                        ModContent.ProjectileType<PlaguebringerSummonNew>(), damage, 0f, player.whoAmI, 0f, 0f);
-                }
-            }
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				if (player.whoAmI == Main.myPlayer)
+				{
+					int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(25);
+					if (player.ownedProjectileCounts[ModContent.ProjectileType<PlaguebringerSummonNew>()] < 1)
+					{
+						FargoSoulsUtil.NewSummonProjectile(GetSource_EffectItem(player), player.Center, Vector2.Zero,
+							ModContent.ProjectileType<PlaguebringerSummonNew>(), damage, 0f, player.whoAmI, 0f, 0f);
+					}
+				}
+			}
         }
     }
     public class PlagueEffectReaper : AccessoryEffect

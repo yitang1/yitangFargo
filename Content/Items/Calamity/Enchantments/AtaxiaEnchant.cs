@@ -38,7 +38,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<AtaxiaEffect>(Item);
-            player.AddEffect<AtaxiaMinion>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<AtaxiaMinion>(Item);
+			}
             player.AddEffect<AtaxiaPauldron>(Item);
 
             //渊泉盔甲

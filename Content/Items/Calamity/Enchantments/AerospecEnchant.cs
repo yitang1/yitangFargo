@@ -40,7 +40,10 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<AerospecEffect>(Item);
-            player.AddEffect<AerospecEValkyrie>(Item);
+			if (!ytFargoConfig.Instance.FullCalamityEnchant)
+			{
+				player.AddEffect<AerospecEValkyrie>(Item);
+			}
             player.AddEffect<AerospecGladiatorsLocket>(Item);
             player.AddEffect<AerospecGraniteCore>(Item);
 
