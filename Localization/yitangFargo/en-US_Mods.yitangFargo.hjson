@@ -358,6 +358,11 @@ Items: {
 		Tooltip: ""
 	}
 
+	BaseBaseEnchant: {
+		DisplayName: Base Base Enchant
+		Tooltip: ""
+	}
+
 	OldVanillaEnchantIcon: {
 		DisplayName: Old Vanilla Enchant Icon
 		Tooltip: ""
