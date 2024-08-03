@@ -1,7 +1,7 @@
 displayName = yitangFargo Lite
 author = yitang
-version = 0.4.1.7
-modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod
+version = 0.4.1.8
+modReferences = FargowiltasSouls, CalamityMod, FargowiltasCrossmod, ShopExtender
 weakReferences =
 homepage = https://github.com/yitang1/yitangFargo
 buildIgnore = .git\*, .vs\*, bin\*, obj\*, Properties\*, .editorconfig, .gitignore, README.md, *.csproj, *.sln
