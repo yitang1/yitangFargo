@@ -28,7 +28,6 @@ namespace yitangFargo.Common
 			VenomNecklace = false;
 			IamNinja = false;
             DesertProwlerBonus = false;
-			LunicCorpsShield = false;
         }
 
 		public override void UpdateDead()
@@ -36,20 +35,9 @@ namespace yitangFargo.Common
 			DesertProwlerBonus = false;
 		}
 
-        public override void ModifyHurt(ref Player.HurtModifiers modifiers)
-        {
-			if (Player == Main.LocalPlayer)
-			{
-				//雷神之锤魔石
-				if (LunicCorpsShield)
-				{
-					modifiers.FinalDamage -= (int)50;
-				}
-			}
-        }
-
         public override void OnHurt(Player.HurtInfo info)
         {
+			//雷神之锤魔石
 			if (Player.HasEffect<DLunicCorpsEffect>())
 			{
 				LunicCorpsCooldown = 420;
@@ -126,7 +114,6 @@ namespace yitangFargo.Common
 		public bool IamNinja = false;
         public bool DesertProwlerBonus;
 		public int DesertProwlerCooldown;
-		public bool LunicCorpsShield;
 		public int LunicCorpsCooldown;
 	}
 }

@@ -73,8 +73,8 @@ namespace yitangFargo.Content.Items.Calamity.Enchantments
             //化绵留香石
             if (player.HasEffect<SilvaTheSponge>())
             {
-                ModContent.GetInstance<TheSponge>().UpdateAccessory(player, hideVisual);
-            }
+				ModContent.GetInstance<TheSponge>().UpdateAccessory(player, hideVisual);
+			}
             //空灵护符
             ModContent.GetInstance<EtherealTalisman>().UpdateAccessory(player, hideVisual);
         }

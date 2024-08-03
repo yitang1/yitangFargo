@@ -15,7 +15,7 @@ namespace yitangFargo.Content.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.yitangFargo().LunicCorpsShield = true;
+			player.statDefense += 50;
 		}
 	}
 }
