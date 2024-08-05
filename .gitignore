@@ -3,5 +3,6 @@
 /.vs
 /bin
 *.sln
+/Common
 /Accessories
 /Localization
