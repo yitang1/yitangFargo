@@ -4,5 +4,6 @@
 /bin
 *.sln
 /Common
-/Content/Items/Accessories
+/Content
 /Localization
+description.txt
