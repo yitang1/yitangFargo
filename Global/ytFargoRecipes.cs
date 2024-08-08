@@ -33,6 +33,7 @@ using yitangFargo.Global.Config;
 using yitangFargo.Content.Items.Calamity.Souls;
 using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Forces;
+using yitangFargo.Content.Items.Accessories.Souls;
 
 namespace yitangFargo.Global
 {
@@ -657,8 +658,49 @@ namespace yitangFargo.Global
             {
                 Recipe recipe = Main.recipe[i];
 
-                #region 添加旧版灾厄魔石
-                if (!ytFargoConfig.Instance.OldCalamityEnchant)
+				#region 移除Fargo魂的合成配方
+				//移除Fargo魂Mod一些魂饰品的合成配方
+				if (recipe.createItem.type == ItemType<EternitySoul>()
+					|| recipe.createItem.type == ItemType<UniverseSoul>()
+					|| recipe.createItem.type == ItemType<DimensionSoul>()
+					|| recipe.createItem.type == ItemType<MasochistSoul>()
+					|| recipe.createItem.type == ItemType<TerrariaSoul>()
+
+					|| recipe.createItem.type == ItemType<BerserkerSoul>()
+					|| recipe.createItem.type == ItemType<SnipersSoul>()
+					|| recipe.createItem.type == ItemType<ArchWizardsSoul>()
+					|| recipe.createItem.type == ItemType<ConjuristsSoul>()
+					|| recipe.createItem.type == ItemType<VagabondsSoul>()
+
+					|| recipe.createItem.type == ItemType<ColossusSoul>()
+					|| recipe.createItem.type == ItemType<SupersonicSoul>()
+					|| recipe.createItem.type == ItemType<FlightMasterySoul>()
+					|| recipe.createItem.type == ItemType<TrawlerSoul>()
+					|| recipe.createItem.type == ItemType<WorldShaperSoul>()
+
+					|| recipe.createItem.type == ItemType<BrandoftheBrimstoneWitch>())
+				{
+					recipe.DisableRecipe();
+				}
+				#endregion
+
+				#region 配方修改-适配灾法双开
+				if (ytFargoConfig.Instance.CalamityFargoRecipe)
+				{
+					//一级魂的配方添加魔影锭
+					if (recipe.HasResult<UniverseSoulOld>()
+						//|| recipe.HasResult<DimensionSoulOld>()
+						//|| recipe.HasResult<TerrariaSoulOld>()
+						//|| recipe.HasResult<MasochistSoulOld>()
+						)
+					{
+						recipe.AddIngredient<ShadowspecBar>(5);
+					}
+				}
+				#endregion
+
+				#region 添加旧版灾厄魔石
+				if (!ytFargoConfig.Instance.OldCalamityEnchant)
                 {
                     //如果没有开启这个选项，那么旧版灾厄魔石的相关合成配方都会被禁用掉。(不至于直接移除物品)
                     if (recipe.createItem.type == ItemType<AerospecEnchant>()
