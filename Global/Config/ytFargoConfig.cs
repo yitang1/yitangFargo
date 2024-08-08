@@ -9,19 +9,19 @@ namespace yitangFargo.Global.Config
 
         public static ytFargoConfig Instance;
 
-        [Header("FCRecipes")]
-        [ReloadRequired]
-        [DefaultValue(false)]
-        public bool FargoSoulsRecipe { get; }
+		[Header("FCRecipes")]
+		[ReloadRequired]
+		[DefaultValue(false)]
+		public bool FargoSoulsRecipe;
 
-        [ReloadRequired]
-        [DefaultValue(true)]
-        public bool CalamityFargoRecipe { get; }
+		[ReloadRequired]
+		[DefaultValue(true)]
+		public bool CalamityFargoRecipe;
 
 		[Header("FCBalance")]
         [ReloadRequired]
         [DefaultValue(true)]
-        public bool FuckBalance { get; }
+        public bool FuckBalance { get; set; }
 
 		[Header("FCItems")]
         [DefaultValue(true)]
