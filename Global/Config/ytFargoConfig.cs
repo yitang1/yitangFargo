@@ -16,7 +16,7 @@ namespace yitangFargo.Global.Config
 
 		[ReloadRequired]
 		[DefaultValue(true)]
-		public bool CalamityFargoRecipe;
+		public bool CalamityFargoRecipe { get; }
 
 		[Header("FCBalance")]
         [ReloadRequired]

@@ -90,16 +90,16 @@ namespace yitangFargo.Global.GlobalItems
 					}
 				}
 
-				////捕鱼之魂
-				//if (item.type == ModContent.ItemType<TrawlerSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
-				//    || item.type == ModContent.ItemType<EternitySoulOld>())
-				//{
-				//    //深渊潜游服
-				//    if (player.AddEffect<AbyssalDivingSuitEffect>(item))
-				//    {
-				//        ModContent.GetInstance<AbyssalDivingSuit>().UpdateAccessory(player, hideVisual);
-				//    }
-				//}
+				//捕鱼之魂
+				if (item.type == ModContent.ItemType<TrawlerSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
+					|| item.type == ModContent.ItemType<EternitySoulOld>())
+				{
+					//深渊潜游服
+					if (player.AddEffect<AbyssalDivingSuitEffect>(item))
+					{
+						ModContent.GetInstance<AbyssalDivingSuit>().UpdateAccessory(player, hideVisual);
+					}
+				}
 			}
         }
     }
