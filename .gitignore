@@ -4,5 +4,5 @@
 /bin
 *.sln
 /Common
-/Accessories
+/Content/Items/Accessories
 /Localization

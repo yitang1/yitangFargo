@@ -50,57 +50,57 @@ namespace yitangFargo.Global.GlobalItems
                     }
                 }
 
-                ////巨像之魂
-                //if (item.type == ModContent.ItemType<ColossusSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
-                //    || item.type == ModContent.ItemType<EternitySoulOld>())
-                //{
-                //    //聚合之脑
-                //    if (player.AddEffect<AmalgamEffect>(item))
-                //    {
-                //        ModContent.GetInstance<TheAmalgam>().UpdateAccessory(player, hideVisual);
-                //    }
-                //    //阿斯加德之庇护
-                //    if (player.AddEffect<AsgardianAegisEffect>(item))
-                //    {
-                //        ModContent.GetInstance<AsgardianAegis>().UpdateAccessory(player, hideVisual);
-                //        fargoPlayer.HasDash = true;
-                //    }
-                //    //神之壁垒
-                //    if (player.AddEffect<RampartofDeitiesEffect>(item))
-                //    {
-                //        ModContent.GetInstance<RampartofDeities>().UpdateAccessory(player, hideVisual);
-                //    }
-                //}
+				//巨像之魂
+				if (item.type == ModContent.ItemType<ColossusSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
+					|| item.type == ModContent.ItemType<EternitySoulOld>())
+				{
+					//聚合之脑
+					if (player.AddEffect<AmalgamEffect>(item))
+					{
+						ModContent.GetInstance<TheAmalgam>().UpdateAccessory(player, hideVisual);
+					}
+					//阿斯加德之庇护
+					if (player.AddEffect<AsgardianAegisEffect>(item))
+					{
+						ModContent.GetInstance<AsgardianAegis>().UpdateAccessory(player, hideVisual);
+						fargoPlayer.HasDash = true;
+					}
+					//神之壁垒
+					if (player.AddEffect<RampartofDeitiesEffect>(item))
+					{
+						ModContent.GetInstance<RampartofDeities>().UpdateAccessory(player, hideVisual);
+					}
+				}
 
-                ////超音速之魂
-                //if (item.type == ModContent.ItemType<SupersonicSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
-                //    || item.type == ModContent.ItemType<EternitySoulOld>())
-                //{
-                //    //至高统治之盾
-                //    if (player.AddEffect<ShieldHighRulerEffect>(item))
-                //    {
-                //        ModContent.GetInstance<ShieldoftheHighRuler>().UpdateAccessory(player, hideVisual);
-                //        fargoPlayer.HasDash = true;
-                //    }
-                //    //斯塔提斯的虚空饰带
-                //    if (player.AddEffect<StatisVoidSashEffect>(item))
-                //    {
-                //        ModContent.GetInstance<StatisVoidSash>().UpdateAccessory(player, hideVisual);
-                //        fargoPlayer.HasDash = true;
-                //    }   
-                //}
+				//超音速之魂
+				if (item.type == ModContent.ItemType<SupersonicSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
+					|| item.type == ModContent.ItemType<EternitySoulOld>())
+				{
+					//至高统治之盾
+					if (player.AddEffect<ShieldHighRulerEffect>(item))
+					{
+						ModContent.GetInstance<ShieldoftheHighRuler>().UpdateAccessory(player, hideVisual);
+						fargoPlayer.HasDash = true;
+					}
+					//斯塔提斯的虚空饰带
+					if (player.AddEffect<StatisVoidSashEffect>(item))
+					{
+						ModContent.GetInstance<StatisVoidSash>().UpdateAccessory(player, hideVisual);
+						fargoPlayer.HasDash = true;
+					}
+				}
 
-                ////捕鱼之魂
-                //if (item.type == ModContent.ItemType<TrawlerSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
-                //    || item.type == ModContent.ItemType<EternitySoulOld>())
-                //{
-                //    //深渊潜游服
-                //    if (player.AddEffect<AbyssalDivingSuitEffect>(item))
-                //    {
-                //        ModContent.GetInstance<AbyssalDivingSuit>().UpdateAccessory(player, hideVisual);
-                //    }
-                //}
-            }
+				////捕鱼之魂
+				//if (item.type == ModContent.ItemType<TrawlerSoulOld>() || item.type == ModContent.ItemType<DimensionSoulOld>()
+				//    || item.type == ModContent.ItemType<EternitySoulOld>())
+				//{
+				//    //深渊潜游服
+				//    if (player.AddEffect<AbyssalDivingSuitEffect>(item))
+				//    {
+				//        ModContent.GetInstance<AbyssalDivingSuit>().UpdateAccessory(player, hideVisual);
+				//    }
+				//}
+			}
         }
     }
 }

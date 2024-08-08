@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using FargowiltasSouls;
@@ -9,7 +10,6 @@ using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Accessories.Essences;
 using CalamityMod.Items.Accessories;
 using CalamityMod.Items.Weapons.Ranged;
-using Terraria.Localization;
 using yitangFargo.Common;
 using yitangFargo.Global.Config;
 

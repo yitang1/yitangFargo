@@ -2,11 +2,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using CalamityMod.Items.Weapons.Summon;
 using FargowiltasSouls;
 using FargowiltasSouls.Content.Items.Accessories.Souls;
 using FargowiltasSouls.Content.Items.Accessories.Essences;
 using yitangFargo.Global.Config;
-using CalamityMod.Items.Weapons.Summon;
 
 namespace yitangFargo.Content.Items.Accessories.Souls
 {
