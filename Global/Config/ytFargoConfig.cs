@@ -12,38 +12,38 @@ namespace yitangFargo.Global.Config
 		[Header("FCRecipes")]
 		[ReloadRequired]
 		[DefaultValue(false)]
-		public bool FargoSoulsRecipe;
+		public bool FargoSoulsRecipe { get; set; }
 
 		[ReloadRequired]
 		[DefaultValue(true)]
-		public bool CalamityFargoRecipe;
+		public bool CalamityFargoRecipe { get; set; }
 
 		[Header("FCBalance")]
 		[ReloadRequired]
 		[DefaultValue(true)]
-		public bool FuckBalance;
+		public bool FuckBalance { get; set; }
 
 		[Header("FCItems")]
 		[DefaultValue(true)]
-		public bool OldVanillaEnchant;
+		public bool OldVanillaEnchant { get; set; }
 
 		[ReloadRequired]
 		[DefaultValue(true)]
-		public bool OldCalamityEnchant;
+		public bool OldCalamityEnchant { get; set; }
 
 		[DefaultValue(false)]
-		public bool FullCalamityEnchant;
+		public bool FullCalamityEnchant { get; set; }
 
 		[Header("FCNPC")]
 		[DefaultValue(true)]
-		public bool FCNPC;
+		public bool FCNPC { get; set; }
 
 		[Header("FCBuff")]
 		[DefaultValue(false)]
-		public bool NullCurseBuff;
+		public bool NullCurseBuff { get; set; }
 
 		[DefaultValue(false)]
-		public bool NoBossDebuff;
+		public bool NoBossDebuff { get; set; }
 
 	}
 }
