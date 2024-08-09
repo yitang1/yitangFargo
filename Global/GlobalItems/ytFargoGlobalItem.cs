@@ -20,18 +20,19 @@ namespace yitangFargo.Global.GlobalItems
 {
 	public class ytFargoGlobalItem : GlobalItem
 	{
-		// public override bool CanUseItem(Item item, Player player)
-		// {
-		// 	if (item.type == ModContent.ItemType<CelestialOnion>())
-		// 	{
-		// 		return false;
-		// 	}
-		// 	if (item.type == ModContent.ItemType<MutantsPact>() && player.yitangFargo().celestialSeal)
-		// 	{
-		// 		return false;
-		// 	}
-		// 	return true;
-		// }
+		//禁用天篆的两个下级物品
+		public override bool CanUseItem(Item item, Player player)
+		{
+			if (item.type == ModContent.ItemType<CelestialOnion>())
+			{
+				return false;
+			}
+			if (item.type == ModContent.ItemType<MutantsPact>() && player.yitangFargo().celestialSeal)
+			{
+				return false;
+			}
+			return true;
+		}
 
 		public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
 		{

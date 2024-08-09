@@ -1,4 +1,4 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using FargowiltasSouls;
@@ -13,6 +13,17 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalBuff
     {
         public override void Update(int type, Player player, ref int buffIndex)
         {
+            //移除神圣闪避后的Debuff
+            if (player.HasBuff<HolyPriceBuff>())
+            {
+                player.ClearBuff(ModContent.BuffType<HolyPriceBuff>());
+                //player.FargoSouls().AttackSpeed += 0.30f;
+            }
+            //移除混乱之脑闪避后的Debuff
+            //if (player.HasBuff<BrainOfConfusionBuff>())
+            //{
+            //    player.ClearBuff(ModContent.BuffType<BrainOfConfusionBuff>());
+            //}
             //移除“驾到”减益
             if (ytFargoConfig.Instance.NoBossDebuff)
             {
@@ -20,6 +31,22 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalBuff
                 player.buffImmune[ModContent.BuffType<AbomPresenceBuff>()] = true;
                 player.buffImmune[ModContent.BuffType<MutantPresenceBuff>()] = true;
                 player.buffImmune[ModContent.BuffType<CalamitousPresenceBuff>()] = true;
+            }
+
+            switch (type)
+            {
+                //鞭子增益可叠加
+                case BuffID.ThornWhipPlayerBuff:
+                case BuffID.SwordWhipPlayerBuff:
+                case BuffID.ScytheWhipPlayerBuff:
+                case BuffID.CoolWhipPlayerBuff:
+                    if (player.Eternity().HasWhipBuff)
+                    {
+                        player.Eternity().HasWhipBuff = false;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     }

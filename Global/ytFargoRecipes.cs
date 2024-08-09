@@ -688,11 +688,8 @@ namespace yitangFargo.Global
 				if (ytFargoConfig.Instance.CalamityFargoRecipe)
 				{
 					//一级魂的配方添加魔影锭
-					if (recipe.HasResult<UniverseSoulOld>()
-						//|| recipe.HasResult<DimensionSoulOld>()
-						//|| recipe.HasResult<TerrariaSoulOld>()
-						//|| recipe.HasResult<MasochistSoulOld>()
-						)
+					if (recipe.HasResult<UniverseSoulOld>() || recipe.HasResult<DimensionSoulOld>()
+						|| recipe.HasResult<TerrariaSoulOld>() || recipe.HasResult<MasochistSoulOld>())
 					{
 						recipe.AddIngredient<ShadowspecBar>(5);
 					}
