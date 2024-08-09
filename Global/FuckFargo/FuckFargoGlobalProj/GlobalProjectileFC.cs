@@ -34,6 +34,12 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalProj
 
         public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
         {
+			//月亮传送门法杖
+			if (projectile.type == ProjectileID.MoonlordTurretLaser)
+			{
+				modifiers.FinalDamage *= 2f;
+			}
+
             if (ytFargoConfig.Instance.FuckBalance)
             {
                 if (projectile.type == ModContent.ProjectileType<BlushieStaffProj>())
