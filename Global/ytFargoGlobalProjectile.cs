@@ -3,13 +3,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using CalamityMod.Projectiles.Summon;
 using FargowiltasSouls;
+using FargowiltasCrossmod.Core;
 using FargowiltasSouls.Core.ModPlayers;
 using FargowiltasSouls.Core.AccessoryEffectSystem;
 using FargowiltasSouls.Content.Items.Accessories.Enchantments;
-using yitangFargo.Content.Items.Accessories.Enchantments;
-using FargowiltasCrossmod.Core;
 using yitangFargo.Global.Config;
+using yitangFargo.Content.Items.Accessories.Enchantments;
+using yitangFargo.Content.Items.Calamity.Enchantments;
 
 namespace yitangFargo.Global
 {
@@ -138,6 +140,18 @@ namespace yitangFargo.Global
                     projectile.Kill();
                 }
             }
+			//一些仆从射弹的死亡删除检测
+			if (!player.active || player.dead || player.ghost)
+			{
+				if (player.HasEffect<AerospecEValkyrie>() && projectile.type == ModContent.ProjectileType<Valkyrie>())
+				{
+					projectile.Kill();
+				}
+				if (player.HasEffect<DaedalusEffectCrystal>() && projectile.type == ModContent.ProjectileType<DaedalusCrystal>())
+				{
+					projectile.Kill();
+				}
+			}
         }
     }
 }
