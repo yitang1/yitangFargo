@@ -56,7 +56,7 @@ namespace yitangFargo.Global.FuckFargo.FuckFargoGlobalItem
                 player.maxTurrets += 4;
             }
         }
-        //怪事，Fargo魂1.6.10.2版本，为什么传送杖的扣血惩罚又都没有了……
+        //奇怪，Fargo魂1.6.10.2版本，为什么传送杖的扣血惩罚又都没有了……
         //public override bool CanUseItem(Item item, Player player)
         //{
         //    //混沌传送杖

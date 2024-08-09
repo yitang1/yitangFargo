@@ -12,6 +12,7 @@ using yitangFargo.NPCs;
 using yitangFargo.Global.Config;
 using yitangFargo.Common;
 using yitangFargo.Content.Projectiles.Minions;
+using yitangFargo.Content.Items.Accessories.Enchantments;
 
 namespace yitangFargo.Global
 {
@@ -72,6 +73,11 @@ namespace yitangFargo.Global
         public override void UpdateLifeRegen(NPC npc, ref int damage)
         {
 			Player player = Main.player[Main.myPlayer];
+			//旧版 山铜魔石
+			if (player.HasEffect<OrichalcumEffectOld>() && npc.lifeRegen < 0)
+			{
+				OrichalcumEffectOld.OriDotModifier(npc, player, ref damage);
+			}
 
 			//沉沦之贝，咬咬咬
 			if (npc.Calamity().shellfishVore > 0)
