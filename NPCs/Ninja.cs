@@ -4,6 +4,7 @@ using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 using System.Collections.Generic;
 using CalamityMod;
 using FargowiltasSouls.Core.Systems;
@@ -20,6 +21,8 @@ using yitangFargo.Content.Items.Calamity.Enchantments;
 using yitangFargo.Content.Items.Calamity.Souls;
 using static yitangFargo.yitangFargo;
 using FargowiltasCrossmod.Content.Calamity.Items.Accessories.Souls;
+using yitangFargo.Content.Items.LOM;
+using System;
 
 namespace yitangFargo.NPCs
 {
@@ -113,7 +116,7 @@ namespace yitangFargo.NPCs
                     return "什么，你是说还有第二只皇家史莱姆？嗯……我很高兴现在两者都被打败了，干得好！朋友。";
                 }
             }
-            switch (Main.rand.Next(7))
+            switch (Main.rand.Next(8))
             {
                 case 0:
                     return "泰拉人，感谢你为我的自由所做的一切。";
@@ -127,6 +130,8 @@ namespace yitangFargo.NPCs
                     return "你知道有些人认为远程武器和投掷武器是一样的吗？这……这很荒谬。";
                 case 5:
                     return "你有没有听说过“稽古衣”，它又被称为“剑道衣”，真想穿一穿看看是什么感觉呢。";
+                case 6:
+                    return "我在世界各处的角落里找到了一些灰白色的魔石，或许你可以试试能用它们做些什么东西？";
                 default:
                     return "你有没有听说过一位传奇忍者的名字——斯塔提斯，说实话，我只在他人讲述的古老传说中听到过。";
             }
@@ -215,263 +220,266 @@ namespace yitangFargo.NPCs
             #endregion
 
             Condition HasClassEssences = new Condition("HasClassEssences", () =>
-            Main.LocalPlayer.HasItem(ModContent.ItemType<BarbariansEssence>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SharpshootersEssence>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ApprenticesEssence>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<OccultistsEssence>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<OutlawsEssence>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoul>()));
+            Main.LocalPlayer.HasItem(ItemType<BarbariansEssence>())
+            || Main.LocalPlayer.HasItem(ItemType<SharpshootersEssence>())
+            || Main.LocalPlayer.HasItem(ItemType<ApprenticesEssence>())
+            || Main.LocalPlayer.HasItem(ItemType<OccultistsEssence>())
+            || Main.LocalPlayer.HasItem(ItemType<OutlawsEssence>())
+            || Main.LocalPlayer.HasItem(ItemType<UniverseSoul>()));
 
             #region 开启【配方修改-适配灾法双开】选项后
             //已击败丛林龙，且物品栏内有任意一个寰宇之魂下级
             Condition HasClassSoulsCalamity = new Condition("HasClassSoulsCalamity", () =>
-            DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ModContent.ItemType<BerserkerSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SnipersSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchWizardsSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ConjuristsSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<VagabondsSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoul>())));
+            DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ItemType<BerserkerSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<SnipersSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<ArchWizardsSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<ConjuristsSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<VagabondsSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<UniverseSoul>())));
 
             //已击败丛林龙，且物品栏内有任意一个维度之魂下级
             Condition HasDimeSoulsCalamity = new Condition("HasDimeSoulsCalamity", () =>
-            DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ModContent.ItemType<ColossusSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SupersonicSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<FlightMasterySoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<TrawlerSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<WorldShaperSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<DimensionSoul>())));
+            DownedBossSystem.downedYharon && (Main.LocalPlayer.HasItem(ItemType<ColossusSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<SupersonicSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<FlightMasterySoul>())
+            || Main.LocalPlayer.HasItem(ItemType<TrawlerSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<WorldShaperSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<DimensionSoul>())));
             #endregion
 
             #region 开启【配方修改-Fargo魂本体】选项后
             //月后，且物品栏内有任意一个寰宇之魂下级 (不包括盗贼魂)
             Condition HasClassSoulsFargo = new Condition("HasClassSoulsFargo", () =>
-            Main.LocalPlayer.HasItem(ModContent.ItemType<BerserkerSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SnipersSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ArchWizardsSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<ConjuristsSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<UniverseSoul>()));
+            Main.LocalPlayer.HasItem(ItemType<BerserkerSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<SnipersSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<ArchWizardsSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<ConjuristsSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<UniverseSoul>()));
 
             //月后，且物品栏内有任意一个维度之魂下级
             Condition HasDimeSoulsFargo = new Condition("HasDimeSoulsFargo", () =>
-            Main.LocalPlayer.HasItem(ModContent.ItemType<ColossusSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<SupersonicSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<FlightMasterySoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<TrawlerSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<WorldShaperSoul>())
-            || Main.LocalPlayer.HasItem(ModContent.ItemType<DimensionSoul>()));
+            Main.LocalPlayer.HasItem(ItemType<ColossusSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<SupersonicSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<FlightMasterySoul>())
+            || Main.LocalPlayer.HasItem(ItemType<TrawlerSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<WorldShaperSoul>())
+            || Main.LocalPlayer.HasItem(ItemType<DimensionSoul>()));
             #endregion
 
             Condition HasMasochistSoul = new Condition("HasMasochistSoul", () =>
-            Main.LocalPlayer.HasItem(ModContent.ItemType<MasochistSoul>()));
+            Main.LocalPlayer.HasItem(ItemType<MasochistSoul>()));
 
             Condition HasEternitySoul = new Condition("HasEternitySoul", () =>
-            Main.LocalPlayer.HasItem(ModContent.ItemType<EternitySoul>()));
+            Main.LocalPlayer.HasItem(ItemType<EternitySoul>()));
 
             #endregion
 
             #region 魂相关饰品
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BarbariansEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
-                .Add(CustomPrice(ModContent.ItemType<SharpshootersEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
-                .Add(CustomPrice(ModContent.ItemType<ApprenticesEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
-                .Add(CustomPrice(ModContent.ItemType<OccultistsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
-                .Add(CustomPrice(ModContent.ItemType<OutlawsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences });
+            vanillaES.Add(CustomPrice(ItemType<BarbariansEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
+                .Add(CustomPrice(ItemType<SharpshootersEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
+                .Add(CustomPrice(ItemType<ApprenticesEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
+                .Add(CustomPrice(ItemType<OccultistsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences })
+                .Add(CustomPrice(ItemType<OutlawsEssence>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { HasClassEssences });
 
             #region 寰宇之魂下级
             //if (ytFargoConfig.Instance.CalamityFargoRecipe)
             //{
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<SnipersSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<ConjuristsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
+            vanillaES.Add(CustomPrice(ItemType<BerserkerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ItemType<SnipersSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ItemType<ArchWizardsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ItemType<ConjuristsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity })
+                .Add(CustomPrice(ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
             //}
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
-                vanillaES.Add(CustomPrice(ModContent.ItemType<BerserkerSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<SnipersSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<ArchWizardsSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<ConjuristsSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
+                vanillaES.Add(CustomPrice(ItemType<BerserkerSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ItemType<SnipersSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ItemType<ArchWizardsSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ItemType<ConjuristsSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasClassSoulsFargo })
+                    .Add(CustomPrice(ItemType<VagabondsSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasClassSoulsCalamity });
             }
             #endregion
 
             #region 维度之魂下级
             //if (ytFargoConfig.Instance.CalamityFargoRecipe)
             //{
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<SupersonicSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<FlightMasterySoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<TrawlerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
-                .Add(CustomPrice(ModContent.ItemType<WorldShaperSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity });
+            vanillaES.Add(CustomPrice(ItemType<ColossusSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ItemType<SupersonicSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ItemType<FlightMasterySoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ItemType<TrawlerSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity })
+                .Add(CustomPrice(ItemType<WorldShaperSoul>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasDimeSoulsCalamity });
             //}
             if (ytFargoConfig.Instance.FargoSoulsRecipe)
             {
-                vanillaES.Add(CustomPrice(ModContent.ItemType<ColossusSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<SupersonicSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<FlightMasterySoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<TrawlerSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
-                    .Add(CustomPrice(ModContent.ItemType<WorldShaperSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo });
+                vanillaES.Add(CustomPrice(ItemType<ColossusSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ItemType<SupersonicSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ItemType<FlightMasterySoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ItemType<TrawlerSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo })
+                    .Add(CustomPrice(ItemType<WorldShaperSoul>(), Item.buyPrice(0, 65, 0, 0)), new Condition[] { HasDimeSoulsFargo });
             }
 			#endregion
 
 			#region 大师之魂下级
-			vanillaES.Add(CustomPrice(ModContent.ItemType<SinisterIcon>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<SupremeDeathbringerFairy>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<BionomicCluster>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<DubiousCircuitry>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<PureHeart>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<LumpOfFlesh>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<ChaliceoftheMoon>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
-				.Add(CustomPrice(ModContent.ItemType<HeartoftheMasochist>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul });
+			vanillaES.Add(CustomPrice(ItemType<SinisterIcon>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<SupremeDeathbringerFairy>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<BionomicCluster>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<DubiousCircuitry>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<PureHeart>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<LumpOfFlesh>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<ChaliceoftheMoon>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul })
+				.Add(CustomPrice(ItemType<HeartoftheMasochist>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { HasMasochistSoul });
 			#endregion
 
-			vanillaES.Add(CustomPrice(ModContent.ItemType<UniverseSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-				.Add(CustomPrice(ModContent.ItemType<DimensionSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-				.Add(CustomPrice(ModContent.ItemType<TerrariaSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-				.Add(CustomPrice(ModContent.ItemType<MasochistSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
-				.Add(CustomPrice(ModContent.ItemType<CalamitySoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul });
+			vanillaES.Add(CustomPrice(ItemType<UniverseSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+				.Add(CustomPrice(ItemType<DimensionSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+				.Add(CustomPrice(ItemType<TerrariaSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+				.Add(CustomPrice(ItemType<MasochistSoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul })
+				.Add(CustomPrice(ItemType<CalamitySoul>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { HasEternitySoul });
 
             #endregion
 
             #region 原版魂石
             //森林之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<WoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BorealWoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<RichMahoganyEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<EbonwoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ShadewoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<PalmWoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<PearlwoodEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<WoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<BorealWoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<RichMahoganyEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<EbonwoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<ShadewoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<PalmWoodEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedTimberChampion });
+            vanillaES.Add(CustomPrice(ItemType<PearlwoodEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedTimberChampion });
             //泰拉之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<CopperEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<TinEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<IronEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<LeadEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SilverEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<TungstenEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<AshWoodEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ObsidianEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<CopperEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<TinEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<IronEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<LeadEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<SilverEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<TungstenEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<AshWoodEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
+            vanillaES.Add(CustomPrice(ItemType<ObsidianEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedTerraChampion });
             //大地之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<AncientCobaltEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<CobaltEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<PalladiumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<MythrilEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<OrichalcumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<AdamantiteEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<TitaniumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<AncientCobaltEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<CobaltEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<PalladiumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<MythrilEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<OrichalcumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<AdamantiteEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
+            vanillaES.Add(CustomPrice(ItemType<TitaniumEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedEarthChampion });
             //自然之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<CrimsonEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<MoltenEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<RainEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SnowEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<FrostEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<JungleEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ChlorophyteEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedNatureChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ShroomiteEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<CrimsonEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<MoltenEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<RainEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<SnowEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<FrostEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<JungleEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<ChlorophyteEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedNatureChampion });
+            vanillaES.Add(CustomPrice(ItemType<ShroomiteEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedNatureChampion });
             //生命之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<PumpkinEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedLifeChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BeeEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedLifeChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SpiderEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedLifeChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<CactusEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedLifeChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<TurtleEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedLifeChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<BeetleEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<PumpkinEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<BeeEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<SpiderEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<CactusEnchant>(), Item.buyPrice(0, 1, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<TurtleEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedLifeChampion });
+            vanillaES.Add(CustomPrice(ItemType<BeetleEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedLifeChampion });
             //心灵之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<FossilEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedSpiritChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ForbiddenEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<HallowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<AncientHallowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<TikiEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedSpiritChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SpectreEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<FossilEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<ForbiddenEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<HallowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<AncientHallowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<TikiEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedSpiritChampion });
+            vanillaES.Add(CustomPrice(ItemType<SpectreEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedSpiritChampion });
             //暗影之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ShadowEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<AncientShadowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<NinjaEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<CrystalAssassinEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SpookyEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<MonkEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ShinobiEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ApprenticeEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<DarkArtistEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedShadowChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<NecroEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<ShadowEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<AncientShadowEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<NinjaEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<CrystalAssassinEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<SpookyEnchant>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<MonkEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<ShinobiEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<ApprenticeEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<DarkArtistEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedShadowChampion });
+            vanillaES.Add(CustomPrice(ItemType<NecroEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedShadowChampion });
             //意志之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<GoldEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<PlatinumEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<GladiatorEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<HuntressEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<RedRidingEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SquireEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedWillChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<ValhallaKnightEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<GoldEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<PlatinumEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<GladiatorEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<HuntressEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<RedRidingEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<SquireEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedWillChampion });
+            vanillaES.Add(CustomPrice(ItemType<ValhallaKnightEnchant>(), Item.buyPrice(0, 15, 0, 0)), new Condition[] { DownedWillChampion });
             //宇宙之力的魔石↓
-            vanillaES.Add(CustomPrice(ModContent.ItemType<MeteorEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedCosmosChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<WizardEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedCosmosChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<SolarEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<VortexEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<NebulaEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
-            vanillaES.Add(CustomPrice(ModContent.ItemType<StardustEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<MeteorEnchant>(), Item.buyPrice(0, 3, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<WizardEnchant>(), Item.buyPrice(0, 5, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<SolarEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<VortexEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<NebulaEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
+            vanillaES.Add(CustomPrice(ItemType<StardustEnchant>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedCosmosChampion });
 
 			#endregion
 
 			#region 模组魂石
 			//宝藏袋
-			modsES.Add(CustomPrice(ModContent.ItemType<TrojanSquirrelBag>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedTrojanSquirrel })
-				.Add(CustomPrice(ModContent.ItemType<DeviBag>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedDeviantt })
-				.Add(CustomPrice(ModContent.ItemType<BanishedBaronBag>(), Item.buyPrice(0, 40, 0, 0)), new Condition[] { DownedBanishedBaron })
-				.Add(CustomPrice(ModContent.ItemType<LifelightBag>(), Item.buyPrice(0, 50, 0, 0)), new Condition[] { DownedLifelight })
-				.Add(CustomPrice(ModContent.ItemType<CosmosBag>(), Item.buyPrice(0, 80, 0, 0)), new Condition[] { DownedCosmosChampion })
-				.Add(CustomPrice(ModContent.ItemType<AbomBag>(), Item.buyPrice(2, 50, 0, 0)), new Condition[] { DownedAbom })
-				.Add(CustomPrice(ModContent.ItemType<MutantBag>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedMutant });
-            
-            if (ytFargoConfig.Instance.OldCalamityEnchant)
+			modsES.Add(CustomPrice(ItemType<TrojanSquirrelBag>(), Item.buyPrice(0, 10, 0, 0)), new Condition[] { DownedTrojanSquirrel })
+				.Add(CustomPrice(ItemType<DeviBag>(), Item.buyPrice(0, 30, 0, 0)), new Condition[] { DownedDeviantt })
+				.Add(CustomPrice(ItemType<BanishedBaronBag>(), Item.buyPrice(0, 40, 0, 0)), new Condition[] { DownedBanishedBaron })
+				.Add(CustomPrice(ItemType<LifelightBag>(), Item.buyPrice(0, 50, 0, 0)), new Condition[] { DownedLifelight })
+				.Add(CustomPrice(ItemType<CosmosBag>(), Item.buyPrice(0, 80, 0, 0)), new Condition[] { DownedCosmosChampion })
+				.Add(CustomPrice(ItemType<AbomBag>(), Item.buyPrice(2, 50, 0, 0)), new Condition[] { DownedAbom })
+				.Add(CustomPrice(ItemType<MutantBag>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedMutant });
+
+			//诡秘系列魔石
+			modsES.Add(CustomPrice(ItemType<BaseBaseEnchant>(), Item.buyPrice(0, 1, 0, 0)), Array.Empty<Condition>());
+
+			if (ytFargoConfig.Instance.OldCalamityEnchant)
             {
                 //湮灭之力
-                modsES.Add(ModContent.ItemType<AerospecEnchant>(), new Condition[] { DownedSlimeGod })
-					.Add(ModContent.ItemType<StatigelEnchant>(), new Condition[] { Condition.Hardmode })
-					.Add(ModContent.ItemType<AtaxiaEnchant>(), new Condition[] { Condition.DownedCultist })
-					.Add(ModContent.ItemType<XerocEnchant>(), new Condition[] { DownedTheThree })
-					.Add(ModContent.ItemType<FearmongerEnchant>(), new Condition[] { DownedYharon });
+                modsES.Add(ItemType<AerospecEnchant>(), new Condition[] { DownedSlimeGod })
+					.Add(ItemType<StatigelEnchant>(), new Condition[] { Condition.Hardmode })
+					.Add(ItemType<AtaxiaEnchant>(), new Condition[] { Condition.DownedCultist })
+					.Add(ItemType<XerocEnchant>(), new Condition[] { DownedTheThree })
+					.Add(ItemType<FearmongerEnchant>(), new Condition[] { DownedYharon });
                 //荒芜之力
-                modsES.Add(ModContent.ItemType<VictideEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
-					.Add(ModContent.ItemType<MolluskEnchant>(), new Condition[] { Condition.DownedMechBossAll })
-					.Add(ModContent.ItemType<SnowRuffianEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-					.Add(ModContent.ItemType<DaedalusEnchant>(), new Condition[] { Condition.DownedMechBossAll })
-					.Add(ModContent.ItemType<SulphurousEnchant>(), new Condition[] { Condition.DownedMechBossAll })
-					.Add(ModContent.ItemType<FathomSwarmerEnchant>(), new Condition[] { Condition.DownedGolem })
-					.Add(ModContent.ItemType<UmbraphileEnchant>(), new Condition[] { Condition.DownedGolem })
-					.Add(ModContent.ItemType<TitanHeartEnchant>(), new Condition[] { Condition.DownedMechBossAny })
-					.Add(ModContent.ItemType<AstralEnchant>(), new Condition[] { Condition.DownedMoonLord })
-					.Add(ModContent.ItemType<OmegaBlueEnchant>(), new Condition[] { DownedDevourerOfGods });
+                modsES.Add(ItemType<VictideEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
+					.Add(ItemType<MolluskEnchant>(), new Condition[] { Condition.DownedMechBossAll })
+					.Add(ItemType<SnowRuffianEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+					.Add(ItemType<DaedalusEnchant>(), new Condition[] { Condition.DownedMechBossAll })
+					.Add(ItemType<SulphurousEnchant>(), new Condition[] { Condition.DownedMechBossAll })
+					.Add(ItemType<FathomSwarmerEnchant>(), new Condition[] { Condition.DownedGolem })
+					.Add(ItemType<UmbraphileEnchant>(), new Condition[] { Condition.DownedGolem })
+					.Add(ItemType<TitanHeartEnchant>(), new Condition[] { Condition.DownedMechBossAny })
+					.Add(ItemType<AstralEnchant>(), new Condition[] { Condition.DownedMoonLord })
+					.Add(ItemType<OmegaBlueEnchant>(), new Condition[] { DownedDevourerOfGods });
                 //毁灭之力
-                modsES.Add(ModContent.ItemType<WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-					.Add(ModContent.ItemType<ReaverEnchant>(), new Condition[] { Condition.DownedGolem })
-					.Add(ModContent.ItemType<PlagueEnchant>(), new Condition[] { Condition.DownedCultist })
-					.Add(ModContent.ItemType<DemonShadeEnchant>(), new Condition[] { DownedExoAndCal });
+                modsES.Add(ItemType<WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+					.Add(ItemType<ReaverEnchant>(), new Condition[] { Condition.DownedGolem })
+					.Add(ItemType<PlagueEnchant>(), new Condition[] { Condition.DownedCultist })
+					.Add(ItemType<DemonShadeEnchant>(), new Condition[] { DownedExoAndCal });
                 //升华之力
-                modsES.Add(ModContent.ItemType<TarragonEnchant>(), new Condition[] { DownedDevourerOfGods })
-					.Add(ModContent.ItemType<BrimflameEnchant>(), new Condition[] { Condition.DownedCultist })
-					.Add(ModContent.ItemType<BloodflareEnchant>(), new Condition[] { DownedDevourerOfGods })
-					.Add(ModContent.ItemType<GodSlayerEnchant>(), new Condition[] { DownedYharon })
-					.Add(ModContent.ItemType<SilvaEnchant>(), new Condition[] { DownedYharon })
-					.Add(ModContent.ItemType<AuricEnchant>(), new Condition[] { DownedExoOrCal });
+                modsES.Add(ItemType<TarragonEnchant>(), new Condition[] { DownedDevourerOfGods })
+					.Add(ItemType<BrimflameEnchant>(), new Condition[] { Condition.DownedCultist })
+					.Add(ItemType<BloodflareEnchant>(), new Condition[] { DownedDevourerOfGods })
+					.Add(ItemType<GodSlayerEnchant>(), new Condition[] { DownedYharon })
+					.Add(ItemType<SilvaEnchant>(), new Condition[] { DownedYharon })
+					.Add(ItemType<AuricEnchant>(), new Condition[] { DownedExoOrCal });
                 //奇迹之力
-                modsES.Add(ModContent.ItemType<MarniteEnchant>(), new Condition[] { DownedSlimeGod })
-					.Add(ModContent.ItemType<DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-					.Add(ModContent.ItemType<LunicCorpsEnchant>(), new Condition[] { Condition.DownedMoonLord })
-					.Add(ModContent.ItemType<PrismaticEnchant>(), new Condition[] { DownedDevourerOfGods })
-					.Add(ModContent.ItemType<GemTechEnchant>(), new Condition[] { DownedExoAndCal });
+                modsES.Add(ItemType<MarniteEnchant>(), new Condition[] { DownedSlimeGod })
+					.Add(ItemType<DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+					.Add(ItemType<LunicCorpsEnchant>(), new Condition[] { Condition.DownedMoonLord })
+					.Add(ItemType<PrismaticEnchant>(), new Condition[] { DownedDevourerOfGods })
+					.Add(ItemType<GemTechEnchant>(), new Condition[] { DownedExoAndCal });
             }
 
 			//探索之力
-			modsES.Add(ModContent.ItemType<FargoDLC.WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<FargoDLC.DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<FargoDLC.MarniteEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
-				.Add(ModContent.ItemType<FargoDLC.VictideEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
-				.Add(ModContent.ItemType<FargoDLC.SulphurEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
-				.Add(ModContent.ItemType<FargoDLC.AerospecEnchant>(), new Condition[] { DownedSlimeGod });
+			modsES.Add(ItemType<FargoDLC.WulfrumEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ItemType<FargoDLC.DesertProwlerEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ItemType<FargoDLC.MarniteEnchant>(), new Condition[] { Condition.DownedEyeOfCthulhu })
+				.Add(ItemType<FargoDLC.VictideEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
+				.Add(ItemType<FargoDLC.SulphurEnchant>(), new Condition[] { Condition.DownedEowOrBoc })
+				.Add(ItemType<FargoDLC.AerospecEnchant>(), new Condition[] { DownedSlimeGod });
 
 			//模组材料
-			modsES.Add(CustomPrice(ModContent.ItemType<BrokenBlade>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { DownedDeviantt })
-				.Add(CustomPrice(ModContent.ItemType<BrokenHilt>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedAbom })
-				.Add(CustomPrice(ModContent.ItemType<PhantasmalEnergy>(), Item.buyPrice(10, 0, 0, 0)), new Condition[] { DownedMutant });
+			modsES.Add(CustomPrice(ItemType<BrokenBlade>(), Item.buyPrice(1, 0, 0, 0)), new Condition[] { DownedDeviantt })
+				.Add(CustomPrice(ItemType<BrokenHilt>(), Item.buyPrice(5, 0, 0, 0)), new Condition[] { DownedAbom })
+				.Add(CustomPrice(ItemType<PhantasmalEnergy>(), Item.buyPrice(10, 0, 0, 0)), new Condition[] { DownedMutant });
 
             #endregion
 
